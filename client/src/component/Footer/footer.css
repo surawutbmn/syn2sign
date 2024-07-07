@@ -1,0 +1,67 @@
+@import url("/src/index.css");
+.box-logo {
+  margin-right: 1.3em;
+}
+.box-logo:last-child {
+  margin-right: 0;
+}
+.foot-logo {
+  transition: transform 0.3s ease;
+}
+.foot-logo:hover {
+  transform: scale(1.2);
+}
+.footer-r .box-logo img{
+  width: 1.6em;
+}
+.box-logo img{
+  width: 100%;
+}
+.footer-r .box-logo {
+  margin-right: 1em;
+}
+.bg-gd-foot {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  height: 130%;
+  position: absolute;
+  pointer-events: none;
+  background: rgb(5, 186, 100);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 186, 100, 0.3) 0%,
+    rgba(5, 186, 100, 0) 60%
+  );
+}
+#footer {
+  z-index: 1;
+}
+@media (max-width: 1199.98px) {
+  #footer {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 991.98px) {
+  #footer {
+    font-size: 0.6em;
+  }
+}
+@media (max-width: 767.98px) {
+  #footer .container {
+    flex-wrap: wrap;
+  }
+  #footer .container {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  #footer .container h3 {
+    font-size: 1.8em;
+    text-align: center !important;
+  }
+  .footer-l {
+    flex-wrap: wrap;
+  }
+  .logo-w-1{width: 100%;}
+}

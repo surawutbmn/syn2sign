@@ -1,0 +1,100 @@
+@import url('/src/index.css');
+.header-section{
+position: relative;
+z-index: 0;
+}
+.header-section .navbar{
+padding: 0;
+}
+.nav-r.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: .6em;
+    border-radius: 100px;
+    border: .1em solid;
+}
+.nav-r li{
+    margin-right: 1em;
+}
+.nav-r li:last-child {
+    margin-right: 0;
+}
+
+.link-nav {
+    font-size: 1.2em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    border-radius: 100px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    padding: 6px 24px;
+}
+
+.link-nav.active,
+.link-nav:hover {
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--txt-bold);
+}
+.bg-trans{
+    background-color: transparent;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-grey {
+    background-color: #ECECEC;
+}
+.bg-gd-head{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+    height: 130%;
+    position: absolute;
+    pointer-events: none;
+    background: rgba(83,76,254);
+background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%);}
+/* .navbar-ctm{z-index: 1; } */
+@media (max-width: 1199.98px){
+    .navbar .navbar-nav{width: 100%; padding: 30px 0 0 0; border: none;}
+    .navbar-collapse {
+        transition: all ease-in-out .5s;
+        height: 0;
+        top: 95px;
+        overflow: hidden;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .menuClick .navbar-collapse {height: calc(100vh - 48px);}
+    .link-nav{font-size: 1.5em;}
+    .nav-r li{margin: 0; display: flex; justify-self: start; margin-bottom: 8px;}
+    .btn-menu { display:flex;  right:30px; align-items:center; cursor:pointer; z-index:12;padding: 12px 0;}
+    .btn-menu .groupMenu {margin: 0 auto;width: 26px; cursor:pointer; height:16px; position:relative; float:right;}
+    .btn-menu .groupMenu span { position:absolute;width: 26px;height: 2px;background-color: #fff;float: left;margin-bottom: 4px; overflow:hidden;-webkit-transition:ease .4s; transition:ease .4s; }
+    .btn-menu .groupMenu span:last-child {margin-bottom: 0px;}
+    .btn-menu .groupMenu .pan1 { top:0px; left:0px; transform-origin:center center;-webkit-transform-origin:center center;}
+    .btn-menu .groupMenu .pan2 { top:7px; left:0px; transform-origin:center center;-webkit-transform-origin:center center; }
+    .btn-menu .groupMenu .pan3 { top:14px; left:0px; transform-origin:center center;-webkit-transform-origin:center center;}
+    .closeMenu { position:absolute; top:20px; right:20px; width:50px; height:50px; z-index:-1; cursor:pointer;}
+    .menuClick .groupMenu .pan1 { left: 0; transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg); top:6px; z-index:2; height:2px;}
+    .menuClick .groupMenu .pan2 { left: 0; width:0px; height:0px;}
+    .menuClick .groupMenu .pan3 { left: 0; transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg); top:6px; z-index:2; height:2px;}
+    .menuClick .closeMenu { z-index:12;}
+    .menuClick .btn-menu { z-index:12;}
+    .navbar-brand img{width: 80px;}
+    .navbar-brand picture img{width: 150px;}
+
+}
+@media (max-width: 991.98px){
+.navbar-brand img{width: 70px;}
+    .navbar-brand picture img{width: 130px;}
+}
+@media (max-width: 767.98px) {
+ .navbar-brand picture img{width: 56px;}
+}   

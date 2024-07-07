@@ -1,0 +1,23 @@
+@import url(font/font.css);
+@import url(./index.css);
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 0 0 2rem 0; */
+  text-align: center;
+  font-family: 'DB Heavent Ext';
+}
+
+
+.bg-trans {
+  background-color: transparent;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-grey {
+  background-color: #ECECEC;
+}

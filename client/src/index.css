@@ -1,0 +1,104 @@
+@import url(./font/font.css);
+@import url(./reset.css);
+
+:root {
+  font-family: "DB Heavent Ext";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-light: #f5f5f5;
+  --color-dark: #111;
+  --color-primary: #534cfe;
+  --color-secondary: #05ba64;
+  --color-yellow: #ffde17;
+  --txt-med: 'DB Heavent Med Ext';
+  --txt-bold: 'DB Heavent Bold Ext';
+  --txt-black: 'DB Heavent Black Ext';
+}
+#root {
+  overflow: hidden;
+}
+.container-1360 {
+  max-width: 1360px;
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.txt-upper {
+  text-transform: uppercase;
+}
+.txt-cap {
+  text-transform: capitalize;
+}
+.txt-med {
+  font-family: var(--txt-med);
+}
+.txt-bold {
+  font-family: var(--txt-bold);
+}
+.txt-black {
+  font-family: var(--txt-black);
+}
+.txt-light {
+  color: var(--color-light);
+}
+.txt-dark {
+  color: var(--color-dark);
+}
+body {
+  background-color: var(--color-dark) !important;
+  color: var(--color-light) !important;
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.menuClick {
+  overflow: hidden;
+}
+
+@media (min-width: 767.98px) {
+}
+@media (max-width: 1359.98px) {
+  .container-1360 {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .container-1360 {
+    max-width: 960px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container-1360 {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container-1360 {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand img {
+    width: 70px;
+  }
+  .container-1360 {
+    max-width: 100%;
+  }
+}
