@@ -56,6 +56,12 @@
 .txt-dark {
   color: var(--color-dark);
 }
+.txt-prim {
+  color: var(--color-primary);
+}
+.txt-second {
+  color: var(--color-secondary);
+}
 body {
   background-color: var(--color-dark) !important;
   color: var(--color-light) !important;

@@ -3,9 +3,11 @@ import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "../Home";
 import Credit from "../../Pages/Credit/credit";
-import Creator from "../Creators/Creator";
-import Showcase from "../../Pages/Showcase/Showcase";
+// import Creator from "../Creators/Creator";
+// import Showcase from "../../Pages/Showcase/Showcase";
 import StayTune from "../../Pages/StayTune/StayTune";
+import Students from "../../Pages/Students/Students";
+import Project from "../../Pages/Projects/Projects";
 
 function Nav2() {
   const location = useLocation();
@@ -146,8 +148,8 @@ function Nav2() {
       <div className="container mt-3">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/showcase" element={<Showcase />} />
-          <Route path="/exhibiton" element={<Creator />} />
+          <Route path="/showcase" element={<Project />} />
+          <Route path="/exhibiton" element={<Students/>} />
           <Route path="/credit" element={<Credit />} />
           <Route path="/stay-tune" element={<StayTune />} />
         </Routes>

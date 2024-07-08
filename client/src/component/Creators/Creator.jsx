@@ -9,7 +9,7 @@ function Creator() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/creators")
+      .get("http://localhost:3001/students")
       .then((response) => {
         setUsers(response.data);
         if (response.data.length > 0) {
