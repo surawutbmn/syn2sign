@@ -9,7 +9,7 @@ import em from "./spon-logo/em.svg";
 import dd from "./spon-logo/dd.svg";
 import st from "./spon-logo/st.svg";
 import dl from "./spon-logo/dl.svg";
-import meg from "./spon-logo/mg.svg";
+import meg from "./spon-logo/merge.svg";
 import nb from "./spon-logo/nb.svg";
 import dm from "./spon-logo/dm.svg";
 import dlo from "./spon-logo/dlo.svg";

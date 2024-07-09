@@ -60,50 +60,52 @@ function Students() {
   }
   return (
     <>
-      <div className="row">
-        <div className="col">
-          <h2 className="text-start">
-            Get to know N ํ {student.nickname_en}, <br />
-            Maker of{" "}
-            <img
-              src={`/icon/prj/${project.icon}`}
-              alt=""
-              style={{ maxWidth: "5vw", width: "100%" }}
-            />{" "}
-            {project.name_en} {project.type}
-          </h2>
-          <h3 className="text-start">{student.qoutes}</h3>
-        </div>
-        <div className="col">
-          <div className="text-start">
-            <img
-              src={`/profile_img/${student.profile_img}`}
-              alt=""
-              style={{ maxWidth: "30vw", width: "100%", borderRadius: "5%" }}
-            />
-            <h3>
-              {student.name_en} ({student.nickname_en})
-            </h3>
-            <h3>
-              {student.name_th}({student.nickname_th})
-            </h3>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h2 className="text-start">
+              Get to know N ํ {student.nickname_en}, <br />
+              Maker of{" "}
+              <img
+                src={`/icon/prj/${project.icon}`}
+                alt=""
+                style={{ maxWidth: "5vw", width: "100%" }}
+              />{" "}
+              {project.name_en} {project.type}
+            </h2>
+            <h3 className="text-start">{student.qoutes}</h3>
+          </div>
+          <div className="col">
+            <div className="text-start">
+              <img
+                src={`/profile_img/${student.profile_img}`}
+                alt=""
+                style={{ maxWidth: "30vw", width: "100%", borderRadius: "5%" }}
+              />
+              <h3>
+                {student.name_en} ({student.nickname_en})
+              </h3>
+              <h3>
+                {student.name_th}({student.nickname_th})
+              </h3>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <h1>collaborate</h1>
-          <img
-            src={`/profile_img/${otherStudents.profile_img}`}
-            alt=""
-            style={{ maxWidth: "20vw", width: "100%", borderRadius: "5%" }}
-          />
-        </div>
-        <div className="col">
-          <p>
-            ({otherStudents.nickname_en}) {otherStudents.name_en}
-            {otherStudents.name_th}({otherStudents.nickname_th})
-          </p>
+        <div className="row">
+          <div className="col">
+            <h1>collaborate</h1>
+            <img
+              src={`/profile_img/${otherStudents.profile_img}`}
+              alt=""
+              style={{ maxWidth: "20vw", width: "100%", borderRadius: "5%" }}
+            />
+          </div>
+          <div className="col">
+            <p>
+              ({otherStudents.nickname_en}) {otherStudents.name_en}
+              {otherStudents.name_th}({otherStudents.nickname_th})
+            </p>
+          </div>
         </div>
       </div>
     </>

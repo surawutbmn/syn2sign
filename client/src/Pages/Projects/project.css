@@ -1,2 +1,5 @@
 @import url("/src/index.css");
 
+.video-border{
+ border-radius: 1rem;
+}
