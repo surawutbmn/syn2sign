@@ -10,7 +10,7 @@ import "./nav.css";
 function Navs() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
-
+ //test
   useEffect(() => {
     const pathname = location.pathname;
     setActiveLink(pathname);
