@@ -35,6 +35,7 @@ function Nav2() {
                 <img
                   src="/public/s2s-logo/syn2sign_logo.svg"
                   alt="syn2sign_logo"
+                  className="nav-logo"
                 />
               </Link>
               <a
@@ -56,6 +57,7 @@ function Nav2() {
                   <img
                     src="/public/s2s-logo/su_logo.svg"
                     alt="ict_silpakorn_logo"
+                    className="nav-logo"
                   />
                 </picture>
               </a>
