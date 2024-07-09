@@ -21,7 +21,7 @@ function Navs() {
         <div className="bg-gd-head"></div>
         <div className="container px-4">
           <div className="navbar-brand">
-            <a className="me-3">
+            <a className="me-3 nav-logo">
               <Link to="/">
                 <img
                   src="/public/s2s-logo/syn2sign_logo.svg"
