@@ -26,6 +26,12 @@
 #root {
   overflow: hidden;
 }
+strong{
+  font-family: var(--txt-bold);
+}
+b{
+  font-family: var(--txt-black);
+}
 .container-1360 {
   max-width: 1360px;
 }

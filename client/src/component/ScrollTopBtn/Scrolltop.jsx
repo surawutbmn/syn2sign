@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./scrolltop.css"
 
-function ScrollTop(){
+export const ScrollTop = () => {
   const [showScroll, setShowScroll] = useState(false);
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -30,5 +30,3 @@ function ScrollTop(){
     </>
   );
 }
-
-export default ScrollTop;

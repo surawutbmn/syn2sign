@@ -5,9 +5,9 @@ import "./App.css";
 // import Creator from "./component/creator";
 // import AddCreator from "./component/addUser";
 // import Navs from "./component/Nav/Nav";
-import Nav2 from "./component/Nav/Nav_v2";
-import Footers from "./component/Footer/Footer";
-import ScrollTop from "./component/ScrollTopBtn/Scrolltop";
+import {Nav2} from "./component/Nav/Nav_v2";
+import {Footers} from "./component/Footer/Footer";
+import {ScrollTop} from "./component/ScrollTopBtn/Scrolltop";
 
 function App() {
   return (

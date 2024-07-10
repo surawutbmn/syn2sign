@@ -10,7 +10,7 @@ import StayTune from "../../Pages/StayTune/StayTune";
 import Students from "../../Pages/Students/Students";
 import Project from "../../Pages/Projects/Projects";
 
-function Nav2() {
+export const Nav2 = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -194,4 +194,3 @@ function Nav2() {
   );
 }
 
-export default Nav2;

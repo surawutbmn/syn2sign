@@ -16,7 +16,7 @@ import dlo from "./spon-logo/dlo.svg";
 import ql from "./spon-logo/ql.svg";
 import m7 from "./spon-logo/m7.svg";
 
-function Footers() {
+export const Footers = () => {
   return (
     <>
       <footer id="footer" className="pb-3 position-relative">
@@ -239,5 +239,3 @@ function Footers() {
     </>
   );
 }
-
-export default Footers;
