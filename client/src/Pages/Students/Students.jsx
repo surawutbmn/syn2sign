@@ -6,55 +6,54 @@ function Students() {
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
 
-  useEffect(() => {
-    // Fetch the primary student data
-    const std_id = 631310081;
-    axios
-      .get(`http://localhost:3001/students/${std_id}`)
-      .then((response) => {
-        setStudent(response.data);
+  const Getstudents = async () => {
+    try {
+      const std_id = 631310081;
+      const studentResponse = await axios.get(
+        `http://localhost/syn2sign/students/${std_id}`
+      );
+      const studentData = studentResponse.data;
+      setStudent(studentData);
 
-        const project_id = response.data.project_id;
-        fetch(`http://localhost:3001/projects/${project_id}`)
-          .then((response) => response.json())
-          .then((projectData) => {
-            setProject({
-              id: projectData[0].id,
-              project_id: projectData[0].project_id,
-              name_en: projectData[0].name_en,
-              name_th: projectData[0].name_th,
-              type: projectData[0].type,
-              icon: projectData[0].icon,
-            });
-
-            fetch(`http://localhost:3001/Otherstudents/${project_id}/${std_id}`)
-              .then((response) => response.json())
-              .then((otherStudentsData) => {
-                setOtherStudents({
-                  name_th: otherStudentsData[0].name_th,
-                  name_en: otherStudentsData[0].name_en,
-                  nickname_th: otherStudentsData[0].nickname_th,
-                  nickname_en: otherStudentsData[0].nickname_en,
-                  profile_img: otherStudentsData[0].profile_img,
-                  qoutes: otherStudentsData[0].qoutes,
-                  email: otherStudentsData[0].email,
-                  linkin: otherStudentsData[0].linkin,
-                  portfolio_link: otherStudentsData[0].portfolio_link,
-                  resume_filename: otherStudentsData[0].resume_filename,
-                });
-              })
-              .catch((error) => {
-                console.error("Error fetching other students:", error);
-              });
-          })
-          .catch((error) => {
-            console.error("Error fetching project data:", error);
-          });
-      })
-      .catch((error) => {
-        console.error("Error fetching student data:", error);
+      const project_id = studentData.project_id;
+      const projectResponse = await axios.get(
+        `http://localhost/syn2sign/projects/${project_id}`
+      );
+      const projectData = projectResponse.data;
+      setProject({
+        id: projectData.id,
+        project_id: projectData.project_id,
+        name_en: projectData.name_en,
+        name_th: projectData.name_th,
+        type: projectData.type,
+        icon: projectData.icon,
       });
+
+      const otherStudentsResponse = await axios.get(
+        `http://localhost/syn2sign/otherstudents/${project_id}/${std_id}`
+      );
+      const otherStudentsData = otherStudentsResponse.data;
+      setOtherStudents({
+        name_th: otherStudentsData.name_th,
+        name_en: otherStudentsData.name_en,
+        nickname_th: otherStudentsData.nickname_th,
+        nickname_en: otherStudentsData.nickname_en,
+        profile_img: otherStudentsData.profile_img,
+        qoutes: otherStudentsData.qoutes,
+        email: otherStudentsData.email,
+        linkin: otherStudentsData.linkin,
+        portfolio_link: otherStudentsData.portfolio_link,
+        resume_filename: otherStudentsData.resume_filename,
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
+  useEffect(() => {
+    Getstudents();
   }, []);
+
   if (!student) {
     return <div>Loading...</div>;
   }
@@ -70,6 +69,7 @@ function Students() {
                 src={`/icon/prj/${project.icon}`}
                 alt=""
                 style={{ maxWidth: "5vw", width: "100%" }}
+                loading="lazy"
               />{" "}
               {project.name_en} {project.type}
             </h2>
@@ -78,6 +78,7 @@ function Students() {
           <div className="col">
             <div className="text-start">
               <img
+              loading="lazy"
                 src={`/profile_img/${student.profile_img}`}
                 alt=""
                 style={{ maxWidth: "30vw", width: "100%", borderRadius: "5%" }}
@@ -98,6 +99,7 @@ function Students() {
               src={`/profile_img/${otherStudents.profile_img}`}
               alt=""
               style={{ maxWidth: "20vw", width: "100%", borderRadius: "5%" }}
+              loading="lazy"
             />
           </div>
           <div className="col">

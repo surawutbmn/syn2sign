@@ -6,9 +6,12 @@
   margin: 0 auto;
   /* padding: 0 0 2rem 0; */
   text-align: center;
-  font-family: 'DB Heavent Ext';
+  font-family: 'IBM Plex Sans Thai Regular';
 }
-
+.wrapper{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 
 .bg-trans {
   background-color: transparent;

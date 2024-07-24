@@ -1,14 +1,14 @@
 import "./nav.css";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import Home from "../Home";
-import Credit from "../../Pages/Credit/Credit";
+// import Home from "../Home";
+// import Credit from "../../Pages/Credit/Credit";
 // import Creator from "../Creators/Creator";
 // import Showcase from "../../Pages/Showcase/Showcase";
-import StayTune from "../../Pages/StayTune/StayTune";
-import Students from "../../Pages/Students/Students";
-import Project from "../../Pages/Projects/Projects";
+// import StayTune from "../../Pages/StayTune/StayTune";
+// import Students from "../../Pages/Students/Students";
+// import Project from "../../Pages/Projects/Projects";
 
 export const Nav2 = () => {
   const location = useLocation();
@@ -43,10 +43,10 @@ export const Nav2 = () => {
   }, [location]);
 
 
-  useEffect(() => {
-    const pathname = location.pathname;
-    setActiveLink(pathname);
-  }, [location]);
+  // useEffect(() => {
+  //   const pathname = location.pathname;
+  //   setActiveLink(pathname);
+  // }, [location]);
 
   const menuClick = () => {
       setMenuOpen(!menuOpen);
@@ -64,12 +64,12 @@ export const Nav2 = () => {
           <nav className="navbar navbar-expand-xl sticky-top bg-trans">
             <div className="pt-3 container container-1360 position-relative">
               <div className="navbar-brand">
-                <Link className="me-3" to="/">
+                <NavLink className="me-3" to="/">
                   <img
                     src="/public/s2s-logo/syn2sign_logo.svg"
                     alt="syn2sign_logo"
                   />
-                </Link>
+                </NavLink>
                 <a
                   href="http://ict.su.ac.th/"
                   target="_blank"
@@ -106,7 +106,7 @@ export const Nav2 = () => {
               >
                 <ul className="navbar-nav nav-r txt-upper ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       to="/"
                       className={`link-nav ${
                         activeLink === "/" ? "active" : ""
@@ -117,10 +117,10 @@ export const Nav2 = () => {
                       }}
                     >
                       SYN2SIGN
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       to="/showcase"
                       className={`link-nav ${
                         activeLink === "/showcase" ? "active" : ""
@@ -131,10 +131,10 @@ export const Nav2 = () => {
                       }}
                     >
                       Showcase
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       to="/exhibiton"
                       className={`link-nav ${
                         activeLink === "/exhibiton" ? "active" : ""
@@ -145,10 +145,10 @@ export const Nav2 = () => {
                       }}
                     >
                       exhibition
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       to="/credit"
                       className={`link-nav ${
                         activeLink === "/credit" ? "active" : ""
@@ -159,10 +159,10 @@ export const Nav2 = () => {
                       }}
                     >
                       CREDIT
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       to="/stay-tune"
                       className={`link-nav ${
                         activeLink === "/stay-tune" ? "active" : ""
@@ -173,21 +173,12 @@ export const Nav2 = () => {
                       }}
                     >
                       STAY TUNE
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-        </div>
-        <div className="mt-3">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/showcase" element={<Project />} />
-            <Route path="/exhibiton" element={<Students />} />
-            <Route path="/credit" element={<Credit />} />
-            <Route path="/stay-tune" element={<StayTune />} />
-          </Routes>
         </div>
       </HelmetProvider>
     </>

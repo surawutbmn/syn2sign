@@ -1,7 +1,7 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "../Home";
-import Credit from "../../Pages/Credit/credit";
+// import Credit from "../../Pages/Credit/credit";
 import Creator from "../Creators/Creator";
 import Showcase from "../../Pages/Showcase/Showcase";
 import StayTune from "../../Pages/StayTune/StayTune";
@@ -112,7 +112,7 @@ function Navs() {
           <Route path="/" element={<Home />} />
           <Route path="/showcase" element={<Showcase />} />
           <Route path="/exhibiton" element={<Creator />} />
-          <Route path="/credit" element={<Credit />} />
+          {/* <Route path="/credit" element={<Credit />} /> */}
           <Route path="/stay-tune" element={<StayTune />} />
         </Routes>
       </div>

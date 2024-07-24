@@ -3,27 +3,24 @@ import axios from "axios";
 import "./project.css";
 
 function Project() {
-  const prj_id = "cpl01";
   const [project, setProject] = useState({});
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3001/projects/${prj_id}`)
-      .then((response) => response.data)
-      .then((projectData) => {
-        setProject({
-          id: projectData[0].id,
-          project_id: projectData[0].project_id,
-          name_en: projectData[0].name_en,
-          name_th: projectData[0].name_th,
-          type: projectData[0].type,
-          icon: projectData[0].icon,
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching student data:", error);
-      });
+    const fetchData = async () => {
+      try {
+        const prj_id = "cpl01";
+        const response = await axios.get(
+          `http://localhost/syn2sign/projects/${prj_id}`
+        );
+        const projectData = response.data;
+        setProject(projectData);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    };
+    fetchData();
   }, []);
+
   return (
     <>
       <div className="container">
