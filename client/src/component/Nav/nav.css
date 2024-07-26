@@ -36,7 +36,7 @@ padding: 0;
     cursor: pointer;
     transition: background-color 0.4s ease, color 0.4s ease;
     padding: 4px 20px;
-    font-family: var(--txt-med);
+    font-weight: var(--txt-med);
 
 }
 
@@ -44,7 +44,7 @@ padding: 0;
 .link-nav:hover {
     background-color: var(--color-primary);
     color: white;
-    font-family: var(--txt-med);
+    font-weight: var(--txt-med);
 }
 .bg-trans{
     background-color: transparent;
