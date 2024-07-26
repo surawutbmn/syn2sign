@@ -10,7 +10,7 @@ import Showcase from "./Pages/Showcase/Showcase";
 import Project from "./Pages/Projects/Projects";
 import Students from "./Pages/Students/Students";
 import Exhibition from "./Pages/Exhibition/Exhibition";
-import Credit from "./Pages/Credit/Credit"
+import Credit from "./Pages/Credits/credit"
 import StayTune from "./Pages/StayTune/StayTune";
 import Notfound from "./Pages/Notfound/Notfound";
 
