@@ -2,7 +2,7 @@
 @import url(./reset.css);
 
 :root {
-  font-family: "DB Heavent Ext";
+  font-family: 'IBM Plex Sans Thai Regular';
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,16 +15,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --color-light: #f5f5f5;
-  --color-dark: #111;
+  --color-dark: #121212;
   --color-primary: #534cfe;
   --color-secondary: #05ba64;
   --color-yellow: #ffde17;
-  --txt-med: 'DB Heavent Med Ext';
-  --txt-bold: 'DB Heavent Bold Ext';
-  --txt-black: 'DB Heavent Black Ext';
+  --txt-med: 'IBM Plex Sans Thai Medium';
+  --txt-bold: 'IBM Plex Sans Thai SemiBold';
+  --txt-black: 'IBM Plex Sans Thai Bold';
 }
 #root {
   overflow: hidden;
+}
+strong{
+  font-family: var(--txt-bold);
+}
+b{
+  font-family: var(--txt-black);
 }
 .container-1360 {
   max-width: 1360px;

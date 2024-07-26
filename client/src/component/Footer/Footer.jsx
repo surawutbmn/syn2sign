@@ -9,14 +9,14 @@ import em from "./spon-logo/em.svg";
 import dd from "./spon-logo/dd.svg";
 import st from "./spon-logo/st.svg";
 import dl from "./spon-logo/dl.svg";
-import meg from "./spon-logo/mg.svg";
+import meg from "./spon-logo/merge.svg";
 import nb from "./spon-logo/nb.svg";
 import dm from "./spon-logo/dm.svg";
 import dlo from "./spon-logo/dlo.svg";
 import ql from "./spon-logo/ql.svg";
 import m7 from "./spon-logo/m7.svg";
 
-function Footers() {
+export const Footers = () => {
   return (
     <>
       <footer id="footer" className="pb-3 position-relative">
@@ -24,7 +24,7 @@ function Footers() {
         <div className="container px-4 w-100 d-flex justify-content-between">
           <div className="row">
             <div className="col">
-              <h3 className="txt-cap text-start">sponsored by:</h3>
+              <h4 className="txt-cap text-start">sponsored by:</h4>
               <div className="d-flex align-items-center foot-l">
                 <div className="box-logo">
                   <a
@@ -78,7 +78,7 @@ function Footers() {
                       className="foot-logo"
                       src={dl}
                       alt=""
-                      style={{ maxWidth: "2em" }}
+                      style={{ maxWidth: "1.5em" }}
                     />
                   </a>
                 </div>
@@ -121,7 +121,7 @@ function Footers() {
                       className="foot-logo"
                       src={dm}
                       alt=""
-                      style={{ maxWidth: "1.5em" }}
+                      style={{ maxWidth: "1.3em" }}
                     />
                   </a>
                 </div>
@@ -136,7 +136,7 @@ function Footers() {
                       className="foot-logo"
                       src={dlo}
                       alt=""
-                      style={{ maxWidth: "2.5em" }}
+                      style={{ maxWidth: "2em" }}
                     />
                   </a>
                 </div>
@@ -151,7 +151,7 @@ function Footers() {
                       className="foot-logo"
                       src={ql}
                       alt=""
-                      style={{ maxWidth: "1.3em" }}
+                      style={{ maxWidth: "1em" }}
                     />
                   </a>
                 </div>
@@ -166,7 +166,7 @@ function Footers() {
                       className="foot-logo"
                       src={m7}
                       alt=""
-                      style={{ maxWidth: "1.4em" }}
+                      style={{ maxWidth: "1.1em" }}
                     />
                   </a>
                 </div>
@@ -175,7 +175,7 @@ function Footers() {
           </div>
           <div className="row">
             <div className="col">
-              <h3 className="txt-cap text-start">Follow us:</h3>
+              <h4 className="txt-cap text-start">Follow us:</h4>
               <div className="d-flex align-items-center footer-r">
                 <div className="box-logo">
                   <a
@@ -239,5 +239,3 @@ function Footers() {
     </>
   );
 }
-
-export default Footers;
