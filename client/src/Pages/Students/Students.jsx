@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Students() {
   const [student, setStudent] = useState(null);
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
+  const { std_id } = useParams();
 
   const Getstudents = async () => {
     try {
-      const std_id = 631310081;
+      // const std_id = 631310081;
       const studentResponse = await axios.get(
         `http://localhost/syn2sign/students/${std_id}`
       );

@@ -24,7 +24,7 @@ export const Footers = () => {
         <div className="container px-4 w-100 d-flex justify-content-between">
           <div className="row">
             <div className="col">
-              <h4 className="txt-cap text-start">sponsored by:</h4>
+              <h6 className="txt-cap text-start">sponsored by:</h6>
               <div className="d-flex align-items-center foot-l">
                 <div className="box-logo">
                   <a
@@ -175,7 +175,7 @@ export const Footers = () => {
           </div>
           <div className="row">
             <div className="col">
-              <h4 className="txt-cap text-start">Follow us:</h4>
+              <h6 className="txt-cap text-start">Follow us:</h6>
               <div className="d-flex align-items-center footer-r">
                 <div className="box-logo">
                   <a

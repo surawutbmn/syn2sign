@@ -9,36 +9,45 @@ import dlo from "./img/logo_spon/dlo_cl.svg";
 import ql from "./img/logo_spon/ql_cl.svg";
 import m7 from "./img/logo_spon/m7_cl.svg";
 import graphic from "./img/icon/graphic.svg";
-import gsap, { Power1 } from "gsap"
-import {ScrollTrigger} from "gsap/ScrollTrigger"
+import thx from "./img/icon/thx.svg";
+import sp from "./img/icon/spon.svg";
+import web from "./img/icon/web.svg";
+import int from "./img/icon/interact.svg";
+import pr from "./img/icon/pr.svg";
+import knb from "./img/icon/knowboard.svg";
+import lo from "./img/icon/location.svg";
+import led from "./img/icon/led.svg";
+import gsap, { Power1 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
-
+import "./credit.css";
 
 function Credit() {
   gsap.registerPlugin(ScrollTrigger);
-  useLayoutEffect(()=>{
+  useLayoutEffect(() => {
     gsap.fromTo(
       ".logo",
       2,
       { y: 0 },
       { y: -10, ease: Power1.easeInOut, repeat: -1, yoyo: true, delay: 0.4 }
     );
-
-  },[]);
+  }, []);
   return (
     <div style={{}}>
+      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
       <div className="container">
-        <div className="text-center mt-3">
-          <h1>CREDIT syn2sign</h1>
-          <div className="my-5">
-            <span className="">
-              <h2>SENIOR PROJECT ACADEMIC YEAR 2023</h2>
+        <div className="text-center mt-5">
+          <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
+          <div className="mt-3">
+            <span className="txt-sbold txt-upper">
+              <h3 className="mb-2">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
               Senior Project Exhibition 2024 • FROM 802408 SENIOR PROJECT
               PREPARATION AND 802409 SENIOR PROJECT
               <p>
-                INTERACTIVE APPLICATION PROGRAMME <br /> DIGITAL TECHNOLOGY FOR
-                DESIGN INFORMATION AND COMMUNICATION TECHNOLOGY SILPAKORN
-                UNIVERSITY
+                INTERACTIVE APPLICATION PROGRAMME DIGITAL TECHNOLOGY FOR DESIGN{" "}
+                <br />
+                INFORMATION AND COMMUNICATION TECHNOLOGY SILPAKORN UNIVERSITY
               </p>
             </span>
           </div>
@@ -48,52 +57,76 @@ function Credit() {
             style={{ width: "20vw" }}
             className="logo"
           />
-
         </div>
-        <div className="mt-5">
-          <h2>Silpakorn University Administration Committee</h2>
+        <div className="mt-3">
+          <h2 className="txt-scdhead mb-4">
+            Silpakorn University Administration Committee
+          </h2>
           <span>
-            Nathaporn Karnjanapoomi
+            <h5>
+              <strong>Nathaporn Karnjanapoomi</strong>
+            </h5>
             <p>Dean Of Faculty Of Information And Communication Technology</p>
           </span>
           <span>
-            Nathaporn Karnjanapoomi
-            <p>Dean Of Faculty Of Information And Communication Technology</p>
+            <h5>
+              <strong>Yuwaboon Thamrongsombatsakul</strong>
+            </h5>
+            <p>
+              Chairman Of Academic Disciplines, Digital Technology For Design
+            </p>
           </span>
         </div>
         <div className="my-5">
-          <h1>Project Advisory Committee</h1>
-          <div className="row" style={{ fontSize: "1.3em" }}>
-            <div className="col d-flex justify-content-center">
+          <h2 className="txt-scdhead mb-3">Project Advisory Committee</h2>
+          <div
+            className="row justify-content-center"
+            style={{ fontSize: "1.2em" }}
+          >
+            <div className="col d-flex justify-content-center advice-con">
               <div className="text-start">
-                <span>ADVISORS GROUP 1</span>
-                <p>Rakchanok Sukagalanan (Chairman)</p>
-                <p>Nattavut Luenthaisong</p>
-                <p>Sranya Maraprygsavan</p>
-                <p>Sarayut Thibhodee</p>
+                <span>
+                  <strong>ADVISORS GROUP 1</strong>
+                </span>
+                <p>
+                  Rakchanok Sukagalanan (Chairman) <br />
+                  Nattavut Luenthaisong <br />
+                  Sranya Maraprygsavan <br />
+                  Sarayut Thibhodee
+                </p>
               </div>
             </div>
-            <div className="col d-flex justify-content-center">
+            <div className="col d-flex justify-content-center advice-con">
               <div className="text-start">
-                <span>ADVISORS GROUP 2</span>
-                <p>Rakchanok Sukagalanan (Chairman)</p>
-                <p>Nattavut Luenthaisong</p>
-                <p>Sranya Maraprygsavan</p>
-                <p>Sarayut Thibhodee</p>
+                <span>
+                  <strong>ADVISORS GROUP 2</strong>
+                </span>
+                <p>
+                  Orawan Praphruetdee (Chairman) <br />
+                  Methin Pingsutthiwong <br />
+                  Kittinon Oywongpaisan <br />
+                  Nathapong Masathien
+                </p>
               </div>
             </div>
-            <div className="col d-flex justify-content-center">
+            <div className="col d-flex justify-content-center advice-con">
               <div className="text-start">
-                <span>ADVISORS GROUP 3</span>
-                <p>Rakchanok Sukagalanan (Chairman)</p>
-                <p>Nattavut Luenthaisong</p>
-                <p>Sranya Maraprygsavan</p>
-                <p>Sarayut Thibhodee</p>
+                <span>
+                  <strong>ADVISORS GROUP 3</strong>
+                </span>
+                <p>
+                  Kachornpon Hiranchotepaisan (Chairman) <br />
+                  Kalumpahaiti <br />
+                  Chuladid Suntitoranee <br />
+                  Pasupong Prasertroongrueng
+                </p>
               </div>
             </div>
             <div className="col-12 text-center mt-5">
               <div className="">
-                <h2>Introducing the ICT:SILPAKORN</h2>
+                <h2 className="txt-scdhead mb-4">
+                  Introducing the ICT:SILPAKORN
+                </h2>
                 <p>
                   <a
                     href="https://ict.su.ac.th/?page_id=30"
@@ -131,10 +164,7 @@ function Credit() {
           </div>
         </div>
       </div>
-      <div
-        className="w-100"
-        style={{ background: "rgb(57 57 57)", padding: ".5em 0" }}
-      >
+      <div className="w-100 su-line">
         <div className="container">
           <img
             src="../../s2s-logo/su_logo.svg"
@@ -144,420 +174,516 @@ function Credit() {
         </div>
       </div>
       <div className="container mt-5">
-        <div className="">
-          <h2 className="mb-3">syn2sign exhibition venue</h2>
+        <div className="mb-5">
+          <h2 className="mb-3 txt-scdhead">syn2sign exhibition venue</h2>
           <span>
-            DIRECTED BY: FACULTY OF INFORMATION AND COMMUNICATION TECHNOLOGY,
-            SILPAKORN UNIVERSITY
+            <strong>DIRECTED BY:</strong> FACULTY OF INFORMATION AND
+            COMMUNICATION TECHNOLOGY, SILPAKORN UNIVERSITY
             <p>
-              DIRECTED BY: FACULTY OF INFORMATION AND COMMUNICATION TECHNOLOGY,
-              SILPAKORN UNIVERSITY
+              <strong>EXHIBITION VENUE & DATE:</strong> 26-29 JUNE 2024 • SPHERE
+              GALLERY 1, M FLOOR, EMSPHERE
             </p>
           </span>
         </div>
-        <div className="my-5">
-          <h2>INSI(gn)DER</h2>
-          <div className="row mt-3">
-            <div className="col-6 d-flex justify-content-center justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mb-5">
-          <h2 className="mb-3">Thank you for your support</h2>
-          <div className="row ">
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
-              </div>
-              <div className="text-start ">
-                <span>Creative, strategy, MOTION and designer</span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-              </div>
-            </div>
-            <div className="col-6 d-flex justify-content-center">
-              <div className="">
-                <img
-                  src={graphic}
-                  alt=""
-                  style={{ width: "3vw", marginRight: "1rem" }}
-                />
+        <div className="my-4">
+          <h2 className="txt-scdhead mb-5">INSI(gn)DER</h2>
+          <div className="grid grid-cols-2 ml-20 gap-4">
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={graphic} alt="" />
               </div>
               <div className="text-start ">
                 <span>
-                  <strong> Creative, strategy, MOTION and designer</strong>
+                  <h5 className="txt-upper">
+                    <strong>ART DIRection & Graphic team</strong>
+                  </h5>
                 </span>
-                <p>Leader: Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
-                <p>Panyada Suxruxsa</p>
+                <p>
+                  <strong>Leader:</strong> Panyada Suxruxsa
+                  <br />
+                  Chalida Ingkapattanakul <br />
+                  Methasit Sitthametha <br />
+                  Onranpha Morsamarn <br />
+                  Pattawan Srattatam <br />
+                  Pattarawan Srattatam
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={sp} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Sponsor relation & Financial Team</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Leader:</strong> Panita Lainananuku
+                  <br />
+                  Chanamon Kewsomnuk <br /> Natthanan Vaowkhajon <br />
+                  Nattharnunt Zooriyarzazithum <br />
+                  Natthatida Sritulanontha <br />
+                  Sasikan Tianchanthuek
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={web} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>WebSITE</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Designer: </strong> Chalida Ingkapattanakul
+                  <br /> Panita Lainananukul
+                  <br /> Sasikan Tianchanthuek
+                  <br />
+                  <strong>Developer: </strong>
+                  Chawakorn Jitpathak <br /> Surawut Binmamud
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={int} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Interactive</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Designer: </strong>
+                  Chalida Ingkapattanakul
+                  <br /> Natthanan Vaowkhajon
+                  <br /> Sasikan Tianchanthuek
+                  <br />
+                  <strong>Developer: </strong>
+                  Chawakorn Jitpathak <br /> Surawut Binmamud
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={pr} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Public relation & marketing</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Leader:</strong> Chanamon Kewsomnuk
+                  <br />
+                  Chawakorn Jitpathak <br />
+                  Panita Lainananukul <br />
+                  Panyada Suxruxsa <br />
+                  Piyapat Homkrajay <br />
+                  Sasikan Tianchanthuek <br />
+                  Surawut Binmamud
+                  <br /> Supakorn Achcha
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={knb} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>exhibition knowledge board</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Leader:</strong> Nattharnunt Zooriyarzazithum <br />{" "}
+                  Chanamon Kewsomnuk <br />
+                  Natthanan Vaowkhajon <br />
+                  Natthatida Sritulanontha <br />
+                  Panita Lainananukul <br />
+                  Sasikan Tianchanthuek
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={lo} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Location and equipments</strong>
+                  </h5>
+                </span>
+                <p>
+                  <strong>Leader:</strong> Surawut Binmamud <br />
+                  Methasit Sitthametha <br />
+                  Panita Lainananukul <br />
+                  Pattawan Srattatam <br />
+                  Piyapat Homkrajay Supakorn Achcha
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={led} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Animated media screen on LED pillar</strong>
+                  </h5>
+                </span>
+                <p>
+                  Chanamon Kewsomnuk <br />
+                  Panita Lainananukul <br />
+                  Piyapat Homkrajay <br />
+                  Supakorn Achcha
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="">
-          <h2 className="mb-4">Thank you to all sponsors</h2>
-          <div className="row gy-4">
-            <div className="col-12">
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+        <div className="mt-5">
+          <h2 className="mb-3 txt-scdhead">Thank you for your support</h2>
+          <div className="grid grid-cols-2 ml-20 gap-4">
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={thx} alt="" />
+              </div>
+              <div className="text-start ">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>Supporter in counseling and assistance</strong>
+                  </h5>
+                </span>
+                <p>
+                  Wutiporn Fungkajorn <br />
+                  Nattakit Jaruyotin <br />
+                  Chanchon Pansuwan
+                  <br />
+                  Alongkron Worasuit
+                </p>
+              </div>
+            </div>
+            <div className="d-flex">
+              <div className="ele-icon">
+                <img src={thx} alt="" />
+              </div>
+              <div className="text-start">
+                <span>
+                  <h5 className="txt-upper">
+                    <strong>EQUIPMENTs, FOODs AND OTHER</strong>
+                  </h5>
+                </span>
+                <p>
+                  Methin Pingsutthiwong <br /> Sarayut Thibhodee
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mtop-6">
+          <div className="row sponser-con justify-content-center">
+            <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
+            <div className="col-12 mb-5">
+              <a
+                href="http://https://emdistrict.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
                 <img
                   src={em}
                   alt=""
                   loading="lazy"
-                  style={{ marginBottom: "1.3em" }}
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem" }}
                 />
+                <p>
+                  <u>The Em District</u> <br /> ดิ เอ็มดิสทริค
+                </p>
               </a>
-              <p>The Em District</p>
-              <p>ดิ เอ็มดิสทริค</p>
             </div>
-            <div className="col-4">
-              <img
-                src={dd}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>DDproperty</p>
-              <p>บริษัท ออลพร็อพเพอร์ตี้ มีเดีย จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={st}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>EMDISTRICT</p>
-              <p>ศิษย์เก่าเอกออกแบบเว็บและสื่อโต้ตอบ รุ่น 16</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={dl}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>DUCK LAB</p>
-              <p>บริษัท ดัค แล็บ จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={meg}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>MERGE DIGITAL AGENCY</p>
-              <p>บริษัท เมิร์จ ดิจิตอล เอเจนซี่ จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={nb}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>NABLA DIGITAL COMPANY LIMITED</p>
-              <p>บริษัท แนบบลา ดิจิตอล จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={dm}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>Deemmi AI and Tech Consultant</p>
-              <p>บริษัท ดีมมี่ คอนซัลแตนท์ จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={dlo}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>DILO PRODUCTS GROUP</p>
-              <p>บริษัท ดิโล โปรดักส์ กรุ๊ป จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={ql}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>Q Light & Sound</p>
-              <p>บริษัท คิว ไลท์ แอนด์ ซาวด์ จำกัด</p>
-            </div>
-            <div className="col-4">
-              <img
-                src={m7}
-                alt=""
-                loading="lazy"
-                style={{ marginBottom: "1.3em" }}
-              />
-              <p>Manggo07 Official</p>
-              <p>แมงโก้ เซเว่น ออฟฟิศเชียล</p>
+            <div className="grid grid-cols-3 gap-5">
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://www.ddproperty.com/en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={dd}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "18rem" }}
+                  />
+
+                  <p>
+                    <u>DDproperty</u>
+                    <br />
+                    บริษัท ออลพร็อพเพอร์ตี้ มีเดีย จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://funcslash.com/styleyeet/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={st}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "8em" }}
+                  />
+                  <p>
+                    <u>sty&#125;e:yeet/</u>
+                    <br />
+                    ศิษย์เก่าเอกออกแบบเว็บและสื่อโต้ตอบ รุ่น 16
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://ducklab.co.th/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={dl}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem" }}
+                  />
+                  <p>
+                    <u>DUCK LAB</u>
+                    <br />
+                    บริษัท ดัค แล็บ จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://www.merge.co.th/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={meg}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "10rem" }}
+                  />
+                  <p>
+                    <u>MERGE DIGITAL AGENCY</u>
+                    <br />
+                    บริษัท เมิร์จ ดิจิตอล เอเจนซี่ จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://nabladigital.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={nb}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "9rem" }}
+                  />
+                  <p>
+                    <u>NABLA DIGITAL COMPANY LIMITED</u>
+                    <br />
+                    บริษัท แนบบลา ดิจิตอล จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  href="https://www.deemmi.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="txt-link"
+                >
+                  <img
+                    src={dm}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                  />
+                  <p>
+                    <u>Deemmi AI and Tech Consultant</u>
+                    <br />
+                    บริษัท ดีมมี่ คอนซัลแตนท์ จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  className="txt-link"
+                  href="https://www.diloproducts.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={dlo}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "8rem" }}
+                  />
+                  <p>
+                    <u>DILO PRODUCTS GROUP</u>
+                    <br />
+                    บริษัท ดิโล โปรดักส์ กรุ๊ป จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  className="txt-link"
+                  href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={ql}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                  />
+                  <p>
+                    <u>Q Light & Sound</u>
+                    <br />
+                    บริษัท คิว ไลท์ แอนด์ ซาวด์ จำกัด
+                  </p>
+                </a>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  className="txt-link"
+                  href="https://www.facebook.com/ApologizeCh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={m7}
+                    alt=""
+                    loading="lazy"
+                    className="spon-logo"
+                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                  />
+                  <p>
+                    <u>Manggo07 Official</u>
+                    <br />
+                    แมงโก้ เซเว่น ออฟฟิศเชียล
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <div className="my-5">
-          <h2 className="mb-3">onsite supporter</h2>
+          <h2 className="mb-3 txt-scdhead">onsite supporter</h2>
           <span>
-            ONSITE PHOTOGRAPHY TEAM:
+            <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
             <p>
               Kantaphod Phumphruek, Kissana Suwannawong and Thitiwat Chormanee
             </p>
           </span>
-          <span>
-            EQUIPMENT TRANSPORT PROVIDER:
-            <p>Bualoi Roongrueangsub Transport</p>
-          </span>
-          <div className="row">
-            <div className="col-6">
-              <p>LIGHTING & SOUND: Q Light & Sound</p>
+          <div className="grid grid-cols-2 ml-30 gap-4">
+            <div className="d-flex">
+              <p>
+                <strong>LIGHTING & SOUND:</strong> Q Light & Sound
+              </p>
             </div>
-            <div className="col-6">
-              <p>CARPET INSTALLATION: DILO PRODUCTS</p>
+            <div className="d-flex">
+              <p>
+                <strong>CARPET INSTALLATION:</strong> DILO PRODUCTS
+              </p>
             </div>
-            <div className="col-6">
-              <p>MEDIA PRINTING: IMP factory</p>
+            <div className="d-flex">
+              <p>
+                <strong>MEDIA PRINTING:</strong> IMP factory
+              </p>
             </div>
-            <div className="col-6">
-              <p>Board service provider: Thumnaksilp Advertising</p>
+            <div className="d-flex">
+              <p>
+                <strong>Board service provider:</strong> Thumnaksilp Advertising
+              </p>
             </div>
-            <div className="col-6">
-              <p>T-SHIRT SUPPLIER: INDYt-shirt</p>
+            <div className="d-flex">
+              <p>
+                <strong>T-SHIRT SUPPLIER:</strong> INDYt-shirt
+              </p>
             </div>
-            <div className="col-6">
-              <p>Attachments and more: Company Name</p>
+            <div className="d-flex">
+              <p>
+                <strong>EQUIPMENT TRANSPORT PROVIDER:</strong> Bualoi
+                Roongrueangsub Transport
+              </p>
             </div>
           </div>
         </div>
         <div className="mb-5">
-          <h2 className="mb-3">EXHIBITION PROJECT MANAGER</h2>
-          <p>Project Manager: Chalida Ingkapattanakul </p>
-          <p>Assistant Project Manager: Panita Lainananukul</p>
-          <h2 className="mt-5 mb-3">SUPPORTER AND ADVISOR</h2>
-          <p>Project Consultant: Kowit Meboon</p>
-          <p>SUPPORTER: Methin Pingsutthiwong</p>
-          <p>SUPPORTER: Orawan Praphruetdee</p>
-          <p>SUPPORTER: Sarayut Thibhodee</p>
-          <h4 className="mt-5">Publicize Project BY:</h4>
+          <h2 className="mb-3 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
+          <p>
+            <strong>Project Manager:</strong> Chalida Ingkapattanakul{" "}
+          </p>
+          <p>
+            <strong>Assistant Project Manager:</strong> Panita Lainananukul
+          </p>
+          <h2 className="mt-5 mb-3 txt-scdhead">SUPPORTER AND ADVISOR</h2>
+          <p>
+            <strong>Project Consultant:</strong> Kowit Meboon
+          </p>
+          <p>
+            <strong>SUPPORTER:</strong> Methin Pingsutthiwong
+          </p>
+          <p>
+            <strong>SUPPORTER:</strong> Orawan Praphruetdee
+          </p>
+          <p>
+            <strong>SUPPORTER:</strong> Sarayut Thibhodee
+          </p>
+          <h2 className="mt-5 txt-scdhead">Publicize Project BY</h2>
           <span>
-            FUNC/ (funcslash) <br /> INTERACTIVE APPLICATION PROGRAMME <br />{" "}
-            ICT SILPAKORN UNIVERSITY
+            <a
+              href="https://ict.su.ac.th/func/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="txt-link"
+            >
+              <u>
+                <strong>FUNC/ (FUNCSLASH)</strong>
+              </u>
+            </a>
+            <br /> INTERACTIVE APPLICATION PROGRAMME <br /> ICT SILPAKORN
+            UNIVERSITY
           </span>
         </div>
       </div>

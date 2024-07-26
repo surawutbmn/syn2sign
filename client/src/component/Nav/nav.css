@@ -1,7 +1,7 @@
 @import url('/src/index.css');
 .header-section{
 position: relative;
-z-index: 0;
+z-index: 10;
 }
 .header-section .navbar{
 padding: 0;
@@ -10,29 +10,33 @@ padding: 0;
     display: flex;
     list-style: none;
     margin: 0;
-    padding: .6em;
-    border-radius: 100px;
-    border: .1em solid;
+    padding: .7em .6em;
+    border-radius: 10rem;
+    border: .1em solid rgba(142, 142, 142, 1);
+    background-color: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* box-shadow: 0px 4px 12px 0px rgba(255, 255, 255, 0.25); */
 }
 
 .nav-r li{
-    margin-right: 1em;
+    margin-right: .6em;
 }
 .nav-r li:last-child {
     margin-right: 0;
 }
 
 .link-nav {
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     white-space: nowrap;
     color: white;
-    border-radius: 100px;
+    border-radius: 10rem;
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.4s ease, color 0.4s ease;
-    padding: 6px 24px;
-    font-family: var(--txt-bold);
+    padding: 4px 20px;
+    font-family: var(--txt-med);
 
 }
 
@@ -40,7 +44,7 @@ padding: 0;
 .link-nav:hover {
     background-color: var(--color-primary);
     color: white;
-    font-family: var(--txt-bold);
+    font-family: var(--txt-med);
 }
 .bg-trans{
     background-color: transparent;
@@ -63,7 +67,7 @@ padding: 0;
 background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%);}
 /* .navbar-ctm{z-index: 1; } */
 @media (max-width: 1199.98px){
-    .navbar .navbar-nav{width: 100%; padding: 30px 0 0 0; border: none;}
+    .navbar .navbar-nav{width: 100%; padding: 30px 0 0 0; border: none; background-color: transparent;}
     .navbar-collapse {
         transition: all ease-in-out .5s;
         height: 0;
@@ -75,7 +79,8 @@ background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%
         margin-left: auto;
     }
     .menuClick .navbar-collapse {height: calc(100vh - 48px);}
-    .link-nav{font-size: 1.5em;}
+    .link-nav{font-size: 1.2em;}
+    .link-nav.active{border-radius: 10px;}
     .nav-r li{margin: 0; display: flex; justify-self: start; margin-bottom: 8px;}
     .btn-menu { display:flex;  right:30px; align-items:center; cursor:pointer; z-index:12;padding: 12px 0;}
     .btn-menu .groupMenu {margin: 0 auto;width: 26px; cursor:pointer; height:16px; position:relative; float:right;}

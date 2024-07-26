@@ -1,25 +1,37 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./project.css";
+import { useParams } from "react-router-dom";
 
 function Project() {
   const [project, setProject] = useState({});
+  const { prj_id } = useParams();
+  // const prj_id = "cpl01";
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const prj_id = "cpl01";
+  const Getprojects = async () => {
+    try {
+      console.log(
+        `Fetching project from URL: http://localhost/syn2sign/projects/${prj_id}`
+      );
+      if (prj_id) {
         const response = await axios.get(
           `http://localhost/syn2sign/projects/${prj_id}`
         );
         const projectData = response.data;
         setProject(projectData);
-      } catch (error) {
-        console.error("Error fetching project data:", error);
+      } else {
+        console.error("Project ID is missing");
       }
-    };
-    fetchData();
-  }, []);
+    } catch (error) {
+      console.error("Error fetching project data:", error);
+    }
+  };
+  useEffect(() => {
+    console.log("Project ID:", prj_id);
+    if (prj_id) {
+      Getprojects();
+    }
+  }, [prj_id]);
 
   return (
     <>
@@ -42,19 +54,13 @@ function Project() {
             </div>
             <div className="d-flex flex-column">
               <span>
-                <p>
-                  การออกแบบและพัฒนาแอปพลิเคชันประเมินสมรรถภาพทางกายเพื่อลดความเสี่ยง
-                  ในการหกล้ม
-                  และออกกำลังกายเพื่อเสริมสร้างความแข็งแรงของกล้ามเนื้อในผู้สูงอายุ
-                  บนระบบปฏิบัติการไอโอเอส
-                </p>
+                <p>{project.fullname_th}</p>
               </span>
-              <div className="">MEDICAL AND HEALTH</div>
             </div>
           </div>
           <div className="mx-auto ratio ratio-16x9">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/_41WQgd5qKw?si=W2b0PFntsp9OpYss"
+              src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

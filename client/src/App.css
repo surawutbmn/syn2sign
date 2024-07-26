@@ -1,4 +1,3 @@
-@import url(font/font.css);
 @import url(./index.css);
 
 #root {
@@ -6,7 +5,8 @@
   margin: 0 auto;
   /* padding: 0 0 2rem 0; */
   text-align: center;
-  font-family: 'IBM Plex Sans Thai Regular';
+  font-family: "IBM Plex Sans Thai", sans-serif;
+
 }
 .wrapper{
   display: grid;

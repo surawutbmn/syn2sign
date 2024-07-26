@@ -1,2 +1,18 @@
 @import url("/src/index.css");
 
+.txt-scdhead{color: var(--color-secondary); font-family: var(--txt-sbold); text-transform: uppercase;}
+.su-line{padding: .5rem 0; background: rgb(5,186,100); background: linear-gradient(-90deg, rgba(5,186,100,0) 0%, rgba(5,186,100,1) 100%);}
+.txt-link{color: var(--color-light); text-decoration: none; font-size: 1.2rem;}
+.sponser-con{background: rgba(255,255,255,.9); color: #8E8E8E; border-radius: 50px; backdrop-filter: blur(50px); padding: 50px 0px;}
+.spon-logo{margin-bottom: 1.3em; width: 100%;}
+.sponser-con .txt-link{color: #8E8E8E;}
+.advice-con{border-left: .5px solid;}
+.advice-con:first-child{border-left: none;}
+.grid{display: grid;}
+.grid-cols-2{grid-template-columns: repeat(2, minmax(0,1fr));}
+.grid-cols-3{grid-template-columns: repeat(3, minmax(0,1fr));}
+.ml-20{margin-left: 10%;}
+.ml-30{margin-left: 14%;}
+.ele-icon{max-width: 5dvw; margin-right: 1rem;}
+.ele-icon img{ width: 100%;}
+.mtop-6{margin-top: 5rem;}
