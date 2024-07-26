@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import { Nav2 } from "./component/Nav/Nav";
@@ -59,7 +59,8 @@ function App() {
             <Route path="/showcase/student/:std_id" element={<Students />} />
             <Route path="/credit" element={<Credit />} />
             <Route path="/stay-tune" element={<StayTune />} />
-            <Route path="*" element={<Notfound />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+            <Route path="/404" element={<Notfound />} />
           </Routes>
         </main>
         <ScrollTop />
