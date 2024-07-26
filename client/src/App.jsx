@@ -9,11 +9,14 @@ import { Nav2 } from "./component/Nav/Nav_v2";
 import { Footers } from "./component/Footer/Footer";
 import { ScrollTop } from "./component/ScrollTopBtn/Scrolltop";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home"
-import Project from "./Pages/Projects/Projects"
-import Students from "./Pages/Students/Students"
-import Credit from "./Pages/Credit/Credit"
+import Home from "./Pages/Home";
+import Project from "./Pages/Projects/Projects";
+import Students from "./Pages/Students/Students";
+// import Credit from "./Pages/Credit/Credit";
 import StayTune from "./Pages/StayTune/StayTune";
+import Credit from "./Pages/Credit/credit";
+
+
 
 function App() {
   return (

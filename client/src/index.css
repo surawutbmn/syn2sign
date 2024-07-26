@@ -62,11 +62,26 @@ b{
 .txt-dark {
   color: var(--color-dark);
 }
+.txt-dark-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f5f5f5;
+  color: var(--color-dark);
+}
 .txt-prim {
   color: var(--color-primary);
 }
 .txt-second {
   color: var(--color-secondary);
+}
+.txt-grey{
+  color: #B1B1B1
+}
+
+.txt-head3{
+  font-size: 1.2rem;
+}
+.txt-body1{
+  font-size: 1rem;
 }
 body {
   background-color: var(--color-dark) !important;
