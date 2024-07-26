@@ -7,5 +7,5 @@ function Home() {
     </div>
   );
 }
-//uptodate
+
 export default Home;
