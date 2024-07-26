@@ -66,7 +66,7 @@ export const Nav2 = () => {
             <div className="navbar-brand">
               <NavLink className="me-3" to="/">
                 <img
-                  src="/public/s2s-logo/syn2sign_logo.svg"
+                  src="/s2s-logo/syn2sign_logo.svg"
                   alt="syn2sign_logo"
                 />
               </NavLink>
@@ -78,16 +78,16 @@ export const Nav2 = () => {
                 <picture>
                   <source
                     media="(max-width:767.98px)"
-                    srcSet="/public/s2s-logo/su_logo_sm.svg"
+                    srcSet="/s2s-logo/su_logo_sm.svg"
                     type="image/svg+xml"
                   />
                   <source
                     media="(min-width:767.98px)"
-                    srcSet="/public/s2s-logo/su_logo.svg"
+                    srcSet="/s2s-logo/su_logo.svg"
                     type="image/svg+xml"
                   />
                   <img
-                    src="/public/s2s-logo/su_logo.svg"
+                    src="/s2s-logo/su_logo.svg"
                     alt="ict_silpakorn_logo"
                   />
                 </picture>
