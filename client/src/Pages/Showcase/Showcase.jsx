@@ -115,7 +115,7 @@ function Showcase() {
               {updatedProjects.length === 0 && (
                 <div className="col-4">
                   <div className="card-prj">
-                    <Link to={`/showcase/project/`} className="card-link">
+                    <Link to={`/showcase/projects/`} className="card-link">
                       <div className="card-prj-head">
                         <div className="card-prj-icon">
                           <img
@@ -165,7 +165,7 @@ function Showcase() {
                 <div className="col-4" key={project.id}>
                   <div className="card-prj">
                     <Link
-                      to={`/showcase/project/${project.project_id}`}
+                      to={`/showcase/projects/${project.project_id}`}
                       className="card-link"
                     >
                       <div className="card-prj-head">
@@ -224,7 +224,7 @@ function Showcase() {
             <div className="row g-4">
               {updatedStudents.length === 0 && (
                 <div className="col-3">
-                  <Link to={`/showcase/student/`} className="card-link">
+                  <Link to={`/showcase/creators/`} className="card-link">
                     <div className="card-std-img">
                       <img
                         src={`/profile_img/073-thumb.webp`}
@@ -251,7 +251,7 @@ function Showcase() {
                 <div className="col-3" key={student.id}>
                   <div className="card-std">
                     <Link
-                      to={`/showcase/student/${student.std_id}`}
+                      to={`/showcase/creators/${student.std_id}`}
                       className="card-link"
                     >
                       <div className="card-std-img">

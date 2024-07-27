@@ -55,9 +55,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/showcase" element={<Showcase />} />
-            <Route path="/showcase/project/:prj_id" element={<Project />} />
+            <Route path="/showcase/projects/:prj_id" element={<Project />} />
             <Route path="/exhibition" element={<Exhibition />} />
-            <Route path="/showcase/student/:std_id" element={<Students />} />
+            <Route path="/showcase/creators/:std_id" element={<Students />} />
             <Route path="/credit" element={<Credit />} />
             <Route path="/stay-tune" element={<StayTune />} />
             <Route path="*" element={<Navigate to="/404" replace />} />

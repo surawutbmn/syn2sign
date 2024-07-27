@@ -1,47 +1,11 @@
 import "./nav.css";
 import { useLocation, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import { Helmet, HelmetProvider } from "react-helmet-async";
-// import Home from "../Home";
-// import Credit from "../../Pages/Credit/Credit";
-// import Creator from "../Creators/Creator";
-// import Showcase from "../../Pages/Showcase/Showcase";
-// import StayTune from "../../Pages/StayTune/StayTune";
-// import Students from "../../Pages/Students/Students";
-// import Project from "../../Pages/Projects/Projects";
 
 export const Nav2 = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // const [title, setTitle] = useState("syn2sign");
-  // useEffect(() => {
-  //   const pathname = location.pathname;
-  //   setActiveLink(pathname);
-
-  //   // Update the title based on the current route
-  //   switch (pathname) {
-  //     case "/":
-  //       setTitle("syn2sign senior project exhibition 2024 - Home Page");
-  //       break;
-  //     case "/showcase":
-  //       setTitle("Showcase - syn2sign senior project exhibition 2024");
-  //       break;
-  //     case "/exhibition":
-  //       setTitle("Exhibition - syn2sign senior project exhibition 2024");
-  //       break;
-  //     case "/credit":
-  //       setTitle("Credit - syn2sign senior project exhibition 2024");
-  //       break;
-  //     case "/stay-tune":
-  //       setTitle("Stay Tune - syn2sign senior project exhibition 2024");
-  //       break;
-  //     default:
-  //       setTitle("syn2sign senior project exhibition 2024");
-  //   }
-  // }, [location]);
-
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -55,10 +19,6 @@ export const Nav2 = () => {
 
   return (
     <>
-      {/* <HelmetProvider> */}
-      {/* <Helmet>
-          <title>{title}</title>
-        </Helmet> */}
       <header className="header-section">
         {/* <div className="bg-gd-head"></div> */}
         <nav className="navbar navbar-expand-xl ">
@@ -178,7 +138,6 @@ export const Nav2 = () => {
           </div>
         </nav>
       </header>
-      {/* </HelmetProvider> */}
     </>
   );
 }
