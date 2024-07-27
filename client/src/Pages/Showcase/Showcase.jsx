@@ -222,7 +222,31 @@ function Showcase() {
           )}
           {activeTab === 2 && (
             <div className="row g-4">
-              {updatedStudents.length === 0 && <p>No students available.</p>}
+              {updatedStudents.length === 0 && (
+                <div className="col-3">
+                  <Link to={`/showcase/student/`} className="card-link">
+                    <div className="card-std-img">
+                      <img
+                        src={`/profile_img/073-thumb.webp`}
+                        loading="lazy"
+                        alt=""
+                      />
+                      <div className="card-std-overlay">
+                        <div className="card-std-txt">
+                          <span className="card-std-title">
+                            Chanamon Kaewsomnuk (Mook)
+                          </span>
+                          <p className="card-std-cap">
+                            Chanamon Kaewsomnuk (Mook)
+                            <br />
+                            เจ้าของผลงาน: #1 EVAL BALANCE
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              )}
               {updatedStudents.map((student) => (
                 <div className="col-3" key={student.id}>
                   <div className="card-std">
