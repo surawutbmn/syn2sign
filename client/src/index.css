@@ -76,12 +76,23 @@ b{
 .txt-grey{
   color: #B1B1B1
 }
-
+.txt-head1{
+  font-size: 2rem;
+}
+.txt-head2{
+  font-size: 1.7rem;
+}
 .txt-head3{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .txt-body1{
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+.txt-body2{
+  font-size: 1.1rem;
+}
+.txt-body3{
+  font-size: 0.9rem;
 }
 body {
   background-color: var(--color-dark) !important;

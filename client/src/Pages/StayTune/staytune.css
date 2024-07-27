@@ -1,14 +1,18 @@
 .staytune-main-box {
-    height: 400vh;
+    height: 600vh;
     position: relative;
+    /* background-color: #05ba64; */
 }
 
 .staytune-sub-box {
-    margin-top: -10vh;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
     height: 125vh;
     display: flex;
     position: relative;
+    /* background-color: red; */
 }
+
 
 .staytune-left-box {
     width: 40%;
@@ -18,7 +22,7 @@
     justify-content: center;
     padding: 2rem;
     position: relative;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .staytune-right-box {
@@ -28,37 +32,53 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 2rem;
-    background-color: green;
+    /* background-color: green; */
 }
 
+.line-box{
+    width: 5rem;
+    height: 180rem;
+    opacity: 0;
+    /* background-color: red; */
+    
+}
 .staytune-image {
-    width: 3%;
-    height: fit-content;
+    position: relative;
+    width: fit-content;
+    height: 174rem;
 }
 
 .staytune-year {
     position: absolute;
-    font-size: 3rem;
+    font-size: 5rem;
     margin-top: 1rem;
     align-self: flex-end;
     top: -3vh;
+}
+.sub-year{
+    margin-top: -3rem;
 }
 
 .staytune-poster-text {
     align-self: flex-start;
     margin-bottom: 0.1rem;
-    margin-top: 20vh;
+    margin-top: 12rem;
+    margin-left: 4rem;
 }
 
-.staytune-dotwision-poster {
-    width: 65vh;
+.staytune-poster {
+    margin-left: 4rem;
+    width: 33rem;
     height: fit-content;
 }
 
-.staytune-dotwision-logo {
+.staytune-logo {
     width: 15vh;
-    height: fit-content;
+    height: 15vh;
     align-self: flex-start;
+    margin-top: -20vh;
+    /* background-color: #05ba64; */
+
 }
 
 .logo-box {
@@ -66,7 +86,7 @@
     height: fit-content;
     display: flex;
     align-items: center;
-    margin-bottom: 2vh;
+    margin-bottom: -1rem;
 }
 
 .title-exhibitionName-box {
@@ -74,6 +94,7 @@
     height: fit-content;
     display: flex;
     align-items: center;
+    /* background-color: rebeccapurple; */
 }
 
 .link-box {
@@ -84,6 +105,7 @@
     border-color: aliceblue;
     border-radius: 10rem;
     padding: 10px;
+    margin-bottom: 1.2rem;
 }
 
 .link-box:hover {
@@ -107,9 +129,129 @@
     margin-left: 0; /* Adjust this value to position it closer to the left */
     padding: 1rem; /* Optional: Adjust padding for better spacing */
     text-align: left; /* Ensure text is aligned to the left */
+    padding-bottom: 3rem;
 }
 .video-box{
     width: 100%;
+    height: 50rem;
+    /* height: 100%; */
+    /* background-color: #ba4405; */
+    border: 0.1rem;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 24px 24px 0px 0px;
+    text-align: left;
+    
+}
+.txt-seniorProjectName{
+    margin-top: 1rem;
+    padding: 1rem;
+    /* padding-top:2vh; */
+    /* margin-left: 5vh;; */
+
+}
+.tab-video{
+    width: 100%;
+    height: 44%;
+    background-color: antiquewhite;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 255, 128, 0.5));
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    &:hover {
+        .overlay {
+          opacity: .8;
+        }
+   
+    &:hover {
+        .icon-play {
+          font-size: 5rem;
+        }
+    }
+    &:hover {
+        .txt-video-preview {
+          font-size: 1.3rem;
+        }
+    }
+    &:hover {
+        .txt-video-preview2 {
+          font-size: 3rem;
+        }
+    }
+
+}
+.video-preview{
+    width: 100%;
     height: 100%;
-    background-color: #ba4405;
+
+}
+.txt-video-preview{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-decoration: none;
+    color: white;
+    transition: all .3s ease;
+
+}
+.txt-video-preview2{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    text-decoration: none;
+    color: white;
+    transition: all .3s ease;
+
+}
+
+.icon-play{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    font-size: 3rem;
+    color: white;
+    transition: all .3s ease;
+}
+.hideElement{
+    /* display:block; */
+    display: none;
+}
+.staytune-other-box {
+    margin-top: -20vh;
+    width: 100%; /* Changed from fit-content to 100% to use full container width */
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background-color: peru;
+}
+
+.staytune-left-other-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    background-color: aqua;
+}
+
+.staytune-right-other-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    background-color: green;
+}
+
+
+
 }
