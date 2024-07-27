@@ -29,7 +29,7 @@
   --txt-bold: 700;
 }
 /* ------------------- layout --------------------------- */
-#root{position: relative;}
+#root{position: relative; overflow: hidden;}
 .container-1360 {  max-width: 1360px;}
 .wrapper {
   width: 100%;
@@ -76,6 +76,11 @@ b{font-weight: var(--txt-bold);}
 @media (max-width: 1359.98px) {
   .container-1360 {
     max-width: 1140px;
+  }
+}
+@media ((min-width: 1536px)) {
+  .container-1360 {
+    max-width: 1536px;
   }
 }
 @media (max-width: 1199.98px) {

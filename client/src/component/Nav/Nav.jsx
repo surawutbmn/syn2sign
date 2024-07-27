@@ -59,7 +59,7 @@ export const Nav2 = () => {
       {/* <Helmet>
           <title>{title}</title>
         </Helmet> */}
-      <div className="header-section">
+      <header className="header-section">
         {/* <div className="bg-gd-head"></div> */}
         <nav className="navbar navbar-expand-xl ">
           <div className="pt-3 container container-1360 position-relative">
@@ -177,7 +177,7 @@ export const Nav2 = () => {
             </div>
           </div>
         </nav>
-      </div>
+      </header>
       {/* </HelmetProvider> */}
     </>
   );

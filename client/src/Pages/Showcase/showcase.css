@@ -13,6 +13,8 @@
 .tab {
   padding: 10px 20px;
   cursor: pointer;
+  max-width: 40dvw;
+  flex: 1;
   border-bottom: 4px solid var(--color-grey);
   color: var(--color-grey);
   text-transform: uppercase;
@@ -27,15 +29,18 @@
 .tab-content {
   padding: 20px;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 /* --------------- card project -------------------- */
 .card-prj hr{ margin: -.3rem 0 1rem 0;}
 .card-prj{background-color: var(--color-light); padding: 20px 15px; border-radius: 16px;}
-.card-prj:hover .card-img-bottom {
+.card-prj:hover .card-prj-btimg img{
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
-.card-prj-imgbt{overflow: hidden; border-radius: 2rem;}
+.card-prj-btimg{overflow: hidden; border-radius: 2rem;}
+.card-prj-btimg img{width: 100%;}
 .card-link, .card-link a{
     text-decoration: none;
     color: var(--color-dark);
@@ -53,10 +58,24 @@
 
 /* --------------- card creator -------------------- */
 
-.card-std-overlay {position: absolute; border-radius: 0 0 1rem 1rem; bottom: 0; left: 0; background: rgba(5,186,100,.6); color: white; padding: 5px 10px; width: 100%; box-sizing: border-box;}
+.card-std-overlay {position: absolute; border-radius: 0 0 1rem 1rem; bottom: 0; left: 0; background: rgba(38, 46, 42, 0.6); color: white; padding: 5px 10px; width: 100%; box-sizing: border-box;}
 .card-std-img { position: relative;}
 .card-std-img img {width: 100%; height: auto; display: block; border-radius: 1rem;}
 .card-std-title{ font-weight: var(--txt-sbold); font-size: .9rem;}
 .card-std-txt{ color: var(--color-light); text-align: start;}
 .card-std-cap{ font-size: .7rem; margin-bottom: .2rem;}
 
+.showcase-sec{position: relative;}
+.ele-sch-l{position: absolute; left: -35%; top: -6%; width: 100%; z-index: 0;}
+.ele-sch-r{position: absolute; right: -15%; top: -15%; width: 100%; z-index: 0;}
+.bg-gd-btr{
+    bottom: -20%;
+    right: -10%;
+    width: 100%;
+    z-index: 0;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    background: rgb(255,255,255);
+    background: linear-gradient(140deg, rgba(255,255,255,0) 60%, rgba(5,186,100,1) 100%);
+}

@@ -48,6 +48,7 @@ function App() {
       <Helmet>
         <title>{title}</title>
       </Helmet>
+      <ScrollTop />
       <div className="wrapper">
         <Nav2 />
         <main className="main-content">
@@ -63,7 +64,6 @@ function App() {
             <Route path="/404" element={<Notfound />} />
           </Routes>
         </main>
-        <ScrollTop />
         <Footers />
       </div>
     </HelmetProvider>

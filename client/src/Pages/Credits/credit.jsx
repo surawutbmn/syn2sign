@@ -33,10 +33,10 @@ function Credit() {
     );
   }, []);
   return (
-    <div style={{}}>
+    <>
       <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
       <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="container">
+      <div className="container mx-auto w-100">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
           <div className="mt-3">
@@ -52,7 +52,7 @@ function Credit() {
             </span>
           </div>
           <img
-            src="../../s2s-logo/syn2sign_logo_cl.svg"
+            src="../../s2s-logo/syn2sign_logo_cl.webp"
             alt=""
             style={{ width: "20vw" }}
             className="logo"
@@ -687,7 +687,7 @@ function Credit() {
           </span>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
