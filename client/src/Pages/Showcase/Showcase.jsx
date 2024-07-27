@@ -112,7 +112,55 @@ function Showcase() {
         <div className="tab-content">
           {activeTab === 1 && (
             <div className="row g-4">
-              {updatedProjects.length === 0 && <p>No projects available.</p>}
+              {updatedProjects.length === 0 && (
+                <div className="col-4">
+                  <div className="card-prj">
+                    <Link to={`/showcase/project/`} className="card-link">
+                      <div className="card-prj-head">
+                        <div className="card-prj-icon">
+                          <img
+                            src={`/icon/prj/cpl01-icard.webp`}
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="card-prj-htxt">
+                          <h4 className="card-prj-title">#1 EVAL BALANCE</h4>
+                          <p className="line-clamp-2">
+                            การออกแบบและพัฒนาแอปพลิเคชันประเมินสมรรถภาพทางกาย
+                            เพื่อลดความเสี่ยงในการหกล้ม
+                            และออกกำลังกายเพื่อเสริมสร้างความแข็งแรงของกล้ามเนื้อในผู้สูงอายุ
+                            บนระบบปฏิบัติการไอโอเอส
+                          </p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div className="card-prj-body">
+                        <div className="card-prj-body-img">
+                          <img
+                            src={`/icon/prj/cpl01-p.svg`}
+                            alt=""
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="text-start card-prj-name">
+                          Sync to Creator
+                          <br />
+                          Chanamon Kaewsomnuk (Mook) <br />
+                          Sasikan Thianchunthuek (Ying)
+                        </div>
+                      </div>
+                      <div className="card-prj-btimg">
+                        <img
+                          src={`/icon/prj/cpl01-thumb.webp`}
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              )}
               {updatedProjects.map((project) => (
                 <div className="col-4" key={project.id}>
                   <div className="card-prj">
