@@ -93,9 +93,9 @@ function StayTune() {
             </div>
           </div>
 
-          <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div>
+          {/* <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div> */}
 
-          <div className="staytune-right-box">
+          <div className="staytune-right-box"  style={{paddingLeft:"6rem"}}>
             <div className="logo-box">
               <img src="public/staytune/STY}E_YEET-logo.svg" alt="STY}E_YEET-logo-logo" className="staytune-logo" />
             </div>
@@ -157,9 +157,9 @@ function StayTune() {
             </div>
           </div>
 
-          <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div>
+          {/* <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div> */}
 
-          <div className="staytune-right-box">
+          <div className="staytune-right-box" style={{paddingLeft:"6rem"}}>
             <div className="logo-box">
               <img src="public/staytune/&TIVIRUS-logo.svg" alt="&TIVIRUS-logo-logo" className="staytune-logo" />
             </div>
@@ -211,17 +211,25 @@ function StayTune() {
           </div>
         </div>
 
-        <div className="staytune-other-box">
-          
+        <div className="staytune-other-box d-flex row">
           <h2 className='txt-bold title-exhibitionName-box'>นิทรรศการที่ผ่านมา ปี 2015-2020</h2>
 
-          <div className='staytune-left-other-box'>
-            <p className="txt-body1 txt-grey">Posters</p>
+          <div className="d-flex align-items-start">
+            <div className="col-6 left-content">
+              <img className='mini-poster' src="public/staytune/POSTER2020.png" alt="preview" />
+            </div>
 
+            <div className="col-6 txt-head3 right-content">
+              <span className='txt-dark-outline'>20</span><span className='sub-year'>20</span><br />
+              <img className='other-logo' src="public/staytune/EX;TRACT-logo.svg" alt="preview" /><span>EX;TRACT</span>
+              <p className='txt-body1 d-flex flex-column justify-content-start'>
+                การจัดรวบรวม 31 ผลงานสำเร็จการศึกษา ปีการศึกษา 2020 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 14 มหาวิทยาลัยศิลปากร
+              </p>
+            </div>
           </div>
-          <div className='staytune-right-other-box'>test</div>
-          
         </div>
+
+
         
     
     
