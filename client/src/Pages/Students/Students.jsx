@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Students() {
   const [student, setStudent] = useState(null);
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
+  const { std_id } = useParams();
 
   const Getstudents = async () => {
     try {
-      const std_id = 631310081;
+      // const std_id = 631310081;
       const studentResponse = await axios.get(
         `http://localhost/syn2sign/students/${std_id}`
       );
@@ -64,21 +66,21 @@ function Students() {
           <div className="col">
             <h2 className="text-start">
               Get to know N ํ {student.nickname_en}, <br />
-              Maker of{" "}
+              Maker of {project.name_en}
               <img
                 src={`/icon/prj/${project.icon}`}
                 alt=""
                 style={{ maxWidth: "5vw", width: "100%" }}
                 loading="lazy"
               />{" "}
-              {project.name_en} {project.type}
+              {project.type}
             </h2>
             <h3 className="text-start">{student.qoutes}</h3>
           </div>
           <div className="col">
             <div className="text-start">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={`/profile_img/${student.profile_img}`}
                 alt=""
                 style={{ maxWidth: "30vw", width: "100%", borderRadius: "5%" }}

@@ -1,123 +1,144 @@
-import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Home from "../Home";
-// import Credit from "../../Pages/Credit/credit";
-import Creator from "../Creators/Creator";
-import Showcase from "../../Pages/Showcase/Showcase";
-import StayTune from "../../Pages/StayTune/StayTune";
 import "./nav.css";
+import { useLocation, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-function Navs() {
+export const Nav2 = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
- //test
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const pathname = location.pathname;
     setActiveLink(pathname);
   }, [location]);
+
+  const menuClick = () => {
+      setMenuOpen(!menuOpen);
+      document.body.classList.toggle("menuClick");
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg sticky-top bg-trans p-4">
-        <div className="bg-gd-head"></div>
-        <div className="container px-4">
-          <div className="navbar-brand">
-            <a className="me-3 nav-logo">
-              <Link to="/">
+      <header className="header-section">
+        {/* <div className="bg-gd-head"></div> */}
+        <nav className="navbar navbar-expand-xl ">
+          <div className="pt-3 container container-1360 position-relative">
+            <div className="navbar-brand">
+              <NavLink className="me-3" to="/">
                 <img
-                  src="/public/s2s-logo/syn2sign_logo.svg"
+                  src="/s2s-logo/syn2sign_logo.svg"
                   alt="syn2sign_logo"
                 />
-              </Link>
-            </a>
-            <a
-              className=""
-              href="http://ict.su.ac.th/"
-              target="_blank"
-              rel="noopener noreferrer"
+              </NavLink>
+              <a
+                href="http://ict.su.ac.th/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <picture>
+                  <source
+                    media="(max-width:767.98px)"
+                    srcSet="/s2s-logo/su_logo_sm.svg"
+                    type="image/svg+xml"
+                  />
+                  <source
+                    media="(min-width:767.98px)"
+                    srcSet="/s2s-logo/su_logo.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="/s2s-logo/su_logo.svg"
+                    alt="ict_silpakorn_logo"
+                  />
+                </picture>
+              </a>
+            </div>
+            <div className="btn-menu" onClick={menuClick}>
+              <div className="groupMenu">
+                <span className="pan1"></span> <span className="pan2"></span>
+                <span className="pan3"></span>
+              </div>
+            </div>
+
+            <div
+              className={`navbar-collapse ${menuOpen ? "show" : ""}`}
+              id="navbarText"
             >
-              <picture>
-                <source
-                  media="(max-width:768px)"
-                  srcSet="/public/s2s-logo/su_logo_sm.svg"
-                  type="image/svg+xml"
-                />
-                <source
-                  media="(min-width:768.5px)"
-                  srcSet="/public/s2s-logo/su_logo.svg"
-                  type="image/svg+xml"
-                />
-                <img
-                  src="/public/s2s-logo/su_logo.svg"
-                  alt="ict_silpakorn_logo"
-                />
-              </picture>
-            </a>
+              <ul className="navbar-nav nav-r txt-upper ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <NavLink
+                    to="/"
+                    className={`link-nav ${activeLink === "/" ? "active" : ""}`}
+                    onClick={() => {
+                      setActiveLink("/");
+                      menuClick();
+                    }}
+                  >
+                    SYN2SIGN
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/showcase"
+                    className={`link-nav ${
+                      location.pathname.startsWith("/showcase") ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveLink("/showcase");
+                      menuClick();
+                    }}
+                  >
+                    Showcase
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/exhibition"
+                    className={`link-nav ${
+                      activeLink === "/exhibition" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveLink("/exhibition");
+                      menuClick();
+                    }}
+                  >
+                    exhibition
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/credit"
+                    className={`link-nav ${
+                      activeLink === "/credit" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveLink("/credit");
+                      menuClick();
+                    }}
+                  >
+                    CREDIT
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/stay-tune"
+                    className={`link-nav ${
+                      activeLink === "/stay-tune" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setActiveLink("/stay-tune");
+                      menuClick();
+                    }}
+                  >
+                    STAY TUNE
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="d-flex">
-            <ul className="d-flex nav-r bg-trans txt-upper">
-              <li className="nav-item ">
-                <Link
-                  to="/"
-                  className={`link-nav ${activeLink === "/" ? "active" : ""}`}
-                >
-                  SYN2SIGN
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/showcase"
-                  className={`link-nav ${
-                    activeLink === "/showcase" ? "active" : ""
-                  }`}
-                >
-                  Showcase
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/exhibiton"
-                  className={`link-nav ${
-                    activeLink === "/exhibiton" ? "active" : ""
-                  }`}
-                >
-                  exhibition
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/credit"
-                  className={`link-nav ${
-                    activeLink === "/credit" ? "active" : ""
-                  }`}
-                >
-                  CREDIT
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/stay-tune"
-                  className={`link-nav ${
-                    activeLink === "/stay-tune" ? "active" : ""
-                  }`}
-                >
-                  STAY TUNE
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div className="container mt-3">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/showcase" element={<Showcase />} />
-          <Route path="/exhibiton" element={<Creator />} />
-          {/* <Route path="/credit" element={<Credit />} /> */}
-          <Route path="/stay-tune" element={<StayTune />} />
-        </Routes>
-      </div>
+        </nav>
+      </header>
     </>
   );
 }
 
-export default Navs;
