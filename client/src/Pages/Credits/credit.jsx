@@ -80,7 +80,7 @@ function Credit() {
         <div className="my-5">
           <h2 className="txt-scdhead mb-3">Project Advisory Committee</h2>
           <div
-            className="row justify-content-center"
+            className="row row-cols-1 row-cols-md-3 justify-content-center"
             style={{ fontSize: "1.2em" }}
           >
             <div className="col d-flex justify-content-center advice-con">
@@ -122,6 +122,7 @@ function Credit() {
                 </p>
               </div>
             </div>
+          </div>
             <div className="col-12 text-center mt-5">
               <div className="">
                 <h2 className="txt-scdhead mb-4">
@@ -161,7 +162,6 @@ function Credit() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </div>
       <div className="w-100 su-line">
@@ -391,7 +391,7 @@ function Credit() {
             </div>
           </div>
         </div>
-        <div className="mtop-6">
+        <div className="mt-6">
           <div className="row sponser-con justify-content-center">
             <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
             <div className="col-12 mb-5">
@@ -615,7 +615,7 @@ function Credit() {
               Kantaphod Phumphruek, Kissana Suwannawong and Thitiwat Chormanee
             </p>
           </span>
-          <div className="grid grid-cols-2 ml-30 gap-4">
+          <div className="grid grid-cols-2 ml-20 gap-4">
             <div className="d-flex">
               <p>
                 <strong>LIGHTING & SOUND:</strong> Q Light & Sound

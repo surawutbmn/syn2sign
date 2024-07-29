@@ -11,7 +11,7 @@ function Notfound() {
         <p>
           ติดตามพวกเราได้ที่
           <a
-            className="txt-crl-light"
+            className="txt-cl-light"
             href="https://www.facebook.com/funcslash"
             target="_blank"
             rel="noopener noreferrer"
@@ -20,7 +20,7 @@ function Notfound() {
           </a>
           หรือ
           <a
-            className="txt-crl-light"
+            className="txt-cl-light"
             href="https://ict.su.ac.th/func/"
             target="_blank"
             rel="noopener noreferrer"

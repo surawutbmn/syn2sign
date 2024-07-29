@@ -16,7 +16,7 @@ import Notfound from "./Pages/Notfound/Notfound";
 
 function App() {
   const location = useLocation();
-  const [title, setTitle] = useState("syn2sign");
+  const [title, setTitle] = useState("Syn2sign");
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -24,22 +24,22 @@ function App() {
     // Update the title based on the current route
     switch (pathname) {
       case "/":
-        setTitle("syn2sign senior project exhibition 2024 - Home Page");
+        setTitle("Syn2sign senior project exhibition 2024 - Home Page");
         break;
       case "/showcase":
-        setTitle("Showcase - syn2sign senior project exhibition 2024");
+        setTitle("SHOWCASE LIST - Syn2sign senior project exhibition 2024");
         break;
       case "/exhibition":
-        setTitle("Exhibition - syn2sign senior project exhibition 2024");
+        setTitle("EXHIBITION ARCHIVE - Syn2sign senior project exhibition 2024");
         break;
       case "/credit":
-        setTitle("Credit - syn2sign senior project exhibition 2024");
+        setTitle("CREDIT - Syn2sign senior project exhibition 2024");
         break;
       case "/stay-tune":
-        setTitle("Stay Tune - syn2sign senior project exhibition 2024");
+        setTitle("STAY TUNE - Syn2sign senior project exhibition 2024");
         break;
       default:
-        setTitle("syn2sign senior project exhibition 2024");
+        setTitle("Syn2sign senior project exhibition 2024");
     }
   }, [location]);
 

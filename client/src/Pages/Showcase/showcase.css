@@ -39,7 +39,7 @@
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
-.card-prj-btimg{overflow: hidden; border-radius: 2rem;}
+.card-prj-btimg{overflow: hidden; border-radius: 1rem;}
 .card-prj-btimg img{width: 100%;}
 .card-link, .card-link a{
     text-decoration: none;
@@ -58,13 +58,56 @@
 
 /* --------------- card creator -------------------- */
 
-.card-std-overlay {position: absolute; border-radius: 0 0 1rem 1rem; bottom: 0; left: 0; background: rgba(38, 46, 42, 0.6); color: white; padding: 5px 10px; width: 100%; box-sizing: border-box;}
-.card-std-img { position: relative;}
+.card-std{overflow: hidden; position: relative;}
+.card-std-overlay {transition: all .3s ease; position: absolute; bottom: 0; left: 0; background: rgba(38, 46, 42, 0.6); color: white; height: 25%; width: 100%;}
 .card-std-img img {width: 100%; height: auto; display: block; border-radius: 1rem;}
 .card-std-title{ font-weight: var(--txt-sbold); font-size: .9rem;}
-.card-std-txt{ color: var(--color-light); text-align: start;}
+.card-std-txt{transition: all .3s ease; color: var(--color-light); text-align: start; position: absolute; left: 1rem; bottom: .1rem; z-index: 1;}
 .card-std-cap{ font-size: .7rem; margin-bottom: .2rem;}
+.read-more{position: absolute; top: 20px; font-size: .8rem; color: var(--color-dark); right: -70px; display: flex; 
+    transition: all .3s ease;
+    z-index: 1;
+    align-items: center;
+    white-space: nowrap;
+}
+.rdm-icon{
+    filter: brightness(0) saturate(100%) invert(1%) sepia(12%) saturate(6%) hue-rotate(314deg) brightness(93%) contrast(88%);
+    opacity: .8;
+    transition: all .3s ease;
+}
+.rdm-icon img{
+    width: 1rem;
+}
+.rdm-text {
+    font-size: 1rem;
+    font-weight: var(--txt-bold);
+  color: var(--color-light);
+  margin-left: -100%;
+  opacity: 0;
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+.card-std:hover .rdm-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(72%) saturate(79%) hue-rotate(308deg) brightness(113%) contrast(92%);    
+    opacity: .8;
+    transform: scale(1.1);
+}
+.card-std:hover .rdm-text {
+  margin-left: 10%; 
+  opacity: 1;
+}
+.card-std:hover .read-more {
+   top: 55%; right: 55%;
+   transform: translate(55%, -55%);
+}
+.card-std:hover .card-std-overlay {
+   height: 100%;
+}
+.card-std:hover .card-std-txt {
+   opacity: 0;
+}
 
+
+/* ------------------------------------------------ */
 .showcase-sec{position: relative;}
 .ele-sch-l{position: absolute; left: -35%; top: -6%; width: 100%; z-index: 0;}
 .ele-sch-r{position: absolute; right: -15%; top: -15%; width: 100%; z-index: 0;}
@@ -79,3 +122,4 @@
     background: rgb(255,255,255);
     background: linear-gradient(140deg, rgba(255,255,255,0) 60%, rgba(5,186,100,1) 100%);
 }
+

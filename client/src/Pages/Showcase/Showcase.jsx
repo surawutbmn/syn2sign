@@ -3,6 +3,7 @@ import "./showcase.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 function Showcase() {
   const [activeTab, setActiveTab] = useState(
     parseInt(localStorage.getItem("activeTab")) || 1
@@ -90,7 +91,7 @@ function Showcase() {
                   activeTab === 1 ? "active-icon" : ""
                 }`}
               />
-              8 Project
+              8 Projects
             </div>
           </div>
           <div
@@ -105,7 +106,7 @@ function Showcase() {
                 }`}
                 alt=""
               />
-              8*2 Creator
+              8*2 Creators
             </div>
           </div>
         </div>
@@ -254,25 +255,32 @@ function Showcase() {
                       to={`/showcase/creators/${student.std_id}`}
                       className="card-link"
                     >
+                      <div className="read-more d-flex">
+                        <img
+                          src="/icon/read-more.svg"
+                          alt=""
+                          className="rdm-icon"
+                        />
+                        <div className="rdm-text">READ MORE</div>
+                      </div>
                       <div className="card-std-img">
                         <img
-                          src={`/profile_img/${student.thumb_img}`}
+                          src={`/profile_img/${student.profile_img}`}
                           loading="lazy"
                           alt=""
                         />
-                        <div className="card-std-overlay">
-                          <div className="card-std-txt">
-                            <span className="card-std-title">
-                              {student.name_en} ({student.nickname_en})
-                            </span>
-                            <p className="card-std-cap">
-                              {student.name_th} ({student.nickname_th})
-                              <br />
-                              เจ้าของผลงาน: #{student.project?.id}{" "}
-                              {student.project?.name_en || "Unknown"}
-                            </p>
-                          </div>
+                        <div className="card-std-txt">
+                          <span className="card-std-title">
+                            {student.name_en} ({student.nickname_en})
+                          </span>
+                          <p className="card-std-cap">
+                            {student.name_th} ({student.nickname_th})
+                            <br />
+                            เจ้าของผลงาน: #{student.project?.id}{" "}
+                            {student.project?.name_en || "Unknown"}
+                          </p>
                         </div>
+                        <div className="card-std-overlay"></div>
                       </div>
                     </Link>
                   </div>
