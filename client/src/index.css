@@ -7,8 +7,8 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-light);
+  background-color: var(--color-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,6 +45,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+.mt-6{margin-top: 5rem;}
+.mb-6{margin-bottom: 5rem;}
+.my-6{margin: 5rem 0;}
+.w-70{width: 70%;}
+.w-60{width: 60%;}
+
 /* ------------------- element --------------------------- */
 .ele-head-l{width: 100%; position: absolute; left: -28%; top: -4%; z-index: 0;}
 .ele-head-r{width: 100%; position: absolute; right: -8%; top: 0%; z-index: 0;}
@@ -66,10 +72,14 @@ b{font-weight: var(--txt-bold);}
 .txt-med {  font-weight: var(--txt-med);}
 .txt-bold {  font-weight: var(--txt-bold);}
 .txt-sbold {  font-weight: var(--txt-sbold);}
-.txt-crl-light {  color: var(--color-light);}
+.txt-cl-light {  color: var(--color-light);}
 .txt-dark {  color: var(--color-dark);}
+.txt-grey {  color: var(--color-grey);}
 .txt-prim {  color: var(--color-primary);}
 .txt-second {  color: var(--color-secondary);}
+.link-txt{color: var(--color-light); text-decoration: none;}
+.txt-scu-head{color: var(--color-secondary); font-weight: var(--txt-bold); text-transform: uppercase;}
+.header-wline{border-left: solid .5rem ; padding-left: 1rem;}
 
 .txt-grey{
   color: #B1B1B1

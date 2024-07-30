@@ -1,5 +1,12 @@
 @import url("/src/index.css");
 
-.video-border{
- border-radius: 1rem;
-}
+.project-content-sec{position: relative; z-index: 1;}
+.video-box{border-radius: 1.3rem;}
+.prj-sec-icon{width: 100%; max-width: 10dvw;}
+.icon-img-link{width: 100%; border-radius: 100px; max-width: 8dvw;}
+.active .icon-prj-ovl{ width: 100%; height: 100%; content: ' '; position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7);}
+.active .link-prj-con .prj-check-i{display: block; font-size: 4rem; z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; color: var(--color-secondary);}
+.link-prj-con{position: relative; overflow: hidden; border-radius: 100px;}
+.prj-check-i{display: none;}
+.outlined-text{font-size: 4rem; font-weight: var(--txt-bold); -webkit-text-stroke: .03rem var(--color-grey); color: transparent; opacity: .8;}
+.prj-name-line{width: 30dvw; height: 0; border-top: .2rem solid var(--color-secondary); color: aqua;}

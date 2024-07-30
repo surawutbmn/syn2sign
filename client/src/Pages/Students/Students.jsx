@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { LuMail } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { IoDocument } from "react-icons/io5";
+
 
 function Students() {
   const [student, setStudent] = useState(null);
@@ -41,6 +46,7 @@ function Students() {
         nickname_th: otherStudentsData.nickname_th,
         nickname_en: otherStudentsData.nickname_en,
         profile_img: otherStudentsData.profile_img,
+        thumb_img: otherStudentsData.thumb_img,
         qoutes: otherStudentsData.qoutes,
         email: otherStudentsData.email,
         linkin: otherStudentsData.linkin,
@@ -56,25 +62,39 @@ function Students() {
     Getstudents();
   }, []);
 
+  useEffect(() => {
+    if (student && project) {
+      document.title = `${student.nickname_en} ${student.name_en} / ${project.name_en} - Syn2sign senior project exhibition 2024`;
+    }
+  }, [student, project]);
+
   if (!student) {
     return <div>Loading...</div>;
   }
   return (
     <>
-      <div className="container">
+      <Helmet>
+        <title>
+          {student
+            ? `${student.name_en} - ${project.name_en} - Syn2sign senior project exhibition 2024`
+            : "Loading..."}
+        </title>
+      </Helmet>
+      <div className="container mt-5">
         <div className="row">
           <div className="col">
-            <h2 className="text-start">
-              Get to know N ํ {student.nickname_en}, <br />
-              Maker of {project.name_en}
-              <img
-                src={`/icon/prj/${project.icon}`}
-                alt=""
-                style={{ maxWidth: "5vw", width: "100%" }}
-                loading="lazy"
-              />{" "}
-              {project.type}
+            <hr />
+            <h2 className="text-start txt-scu-head">
+              Get to know {student.nickname_en},
             </h2>
+            Maker of {project.name_en}
+            <img
+              src={`/icon/prj/${project.icon}`}
+              alt=""
+              style={{ maxWidth: "5vw", width: "100%" }}
+              loading="lazy"
+            />{" "}
+            {project.type}
             <h3 className="text-start">{student.qoutes}</h3>
           </div>
           <div className="col">
@@ -83,33 +103,49 @@ function Students() {
                 loading="lazy"
                 src={`/profile_img/${student.profile_img}`}
                 alt=""
-                style={{ maxWidth: "30vw", width: "100%", borderRadius: "5%" }}
+                style={{
+                  maxWidth: "30vw",
+                  width: "100%",
+                  borderRadius: "1.2rem",
+                }}
               />
-              <h3>
+              <h3 className="txt-upper">
                 {student.name_en} ({student.nickname_en})
               </h3>
-              <h3>
+              <h5>
                 {student.name_th}({student.nickname_th})
-              </h3>
+              </h5>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <h1>collaborate</h1>
+            <div
+              className="text-start mb-4 header-wline"
+            >
+              <h3 className="txt-upper">
+                <strong>{student.nickname_en} collaborate</strong>
+              </h3>
+              <span className="txt-grey">
+                ผู้ที่ทำงานร่วมกับ{student.nickname_th}
+              </span>
+            </div>
             <img
               src={`/profile_img/${otherStudents.profile_img}`}
               alt=""
-              style={{ maxWidth: "20vw", width: "100%", borderRadius: "5%" }}
+              style={{
+                maxWidth: "20vw",
+                width: "100%",
+                borderRadius: "1.2rem",
+              }}
               loading="lazy"
             />
-          </div>
-          <div className="col">
             <p>
               ({otherStudents.nickname_en}) {otherStudents.name_en}
               {otherStudents.name_th}({otherStudents.nickname_th})
             </p>
           </div>
+          <div className="col"></div>
         </div>
       </div>
     </>
