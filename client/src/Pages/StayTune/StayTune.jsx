@@ -1,10 +1,13 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from "react-dom";
 
 import "./staytune.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-import { faGlobe, faCirclePlay} from '@fortawesome/free-solid-svg-icons'
-
+import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import CardPastExhibit from "../../component/card/CardPastExhibit";
+import TwoABC from "../../component/card/TwoABC";
+// import {CardMainThree,CardPastExhibit } from "../../component/card/index";
+import CardMainThree from "../../component/card/CardMainThree"
 // const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
 
 // ReactDOM.render(element, document.body)
@@ -12,233 +15,139 @@ import { faGlobe, faCirclePlay} from '@fortawesome/free-solid-svg-icons'
 function StayTune() {
   return (
     <div style={{ height: "fit-content", backgroundColor: "" }}>
-      <h2 className="txt-upper txt-second txt-bold">
+     
+
+      <div className="container mb-5 mt-5">
+      <h2 className="txt-upper txt-second txt-bold mb-5">
         stay tuned at other years' exhibition
       </h2>
 
-      <div className="staytune-main-box" style={{ backgroundColor: "", padding: "15vh" }}>
-        <div className="staytune-sub-box">
-          <div className="staytune-left-box">
-            <p className="staytune-poster-text txt-body1 txt-grey">Poster</p>
-            <img src="public/staytune/dotwishion-poster.png" alt="Transparent" className="staytune-poster" />
-            <div className="staytune-year txt-bold">
-              <div className=" txt-dark-outline">20</div>
-              <div className='sub-year' >23</div>
-            </div>
-          </div>
+        {/* Dotwisihon (2023) */}
+        <CardMainThree
+          poster="public/staytune/dotwishion-poster.png"
+          logo="public/staytune/dotwishion-logo.svg"
+          name="DOTWISH/*ON (2023)"
+          year="23"
+          NameVideo="DOTWISH/*ON"
+          link="https://funcslash.com/dotwishion/"
+          linkVideo=""
+          linkImage=""
+          description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2023 "
+          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
+          description3="มหาวิทยาลัยศิลปากร"
+          line="public/other/line.png"
+        />
+        {/* STY}E:YEET (2022) */}
+        <CardMainThree
+          poster="public/staytune/STY}E_YEET-poster.png"
+          logo="public/staytune/STY}E_YEET-logo.svg"
+          name="STY}E:YEET (2022)"
+          year="22"
+          NameVideo="STY}E:YEET"
+          link="https://funcslash.com/styleyeet/"
+          linkVideo=""
+          linkImage=""
+          description1="เว็บไซต์รวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 "
+          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 "
+          description3="มหาวิทยาลัยศิลปากร"
+        />
+        {/* &TIVIRUS (2021) */}
+        <CardMainThree
+          poster="public/staytune/&TIVIRUS-poster.png"
+          logo="public/staytune/&TIVIRUS-logo.svg"
+          name="&TIVIRUS (2021)"
+          year="21"
+          NameVideo="&TIVIRUS"
+          link=""
+          linkVideo=""
+          linkImage=""
+          description1="การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021"
+          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 "
+          description3="มหาวิทยาลัยศิลปากร"
+        />
 
-          <img src="public/other/line.png" alt="Transparent" className="staytune-image" />
-          
-
-          <div className="staytune-right-box">
-            <div className="logo-box">
-              <img src="public/staytune/dotwishion-logo.svg" alt="dotwishion-logo" className="staytune-logo" />
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <p className="txt-second txt-bold txt-head3">DOTWISH/*ON (2023)</p>
-            </div>
-
-            <div className="title-exhibitionName-box">
-              
-              <div className="link-box">
-               <a className="txt-body3 link-icon" href='https://funcslash.com/dotwishion/' target="_blank"><FontAwesomeIcon icon={faGlobe} size="xl"/> https://funcslash.com/dotwishion/</a>
-              </div>
-              
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <div className='description-box txt-grey txt-body1'>เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา
-              ปีการศึกษา 2023 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟ
-              แอปพลิเคชัน รุ่น 17 มหาวิทยาลัยศิลปากร</div>
-            </div>
-
-            <div className='video-box'>
-              <p className='txt-body1 txt-seniorProjectName txt-bold'>DOTWISH/*ON • Video • View on Youtube</p>
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-              
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div className="staytune-sub-box">
-          <div className="staytune-left-box">
-            <p className="staytune-poster-text txt-body1 txt-grey">Poster</p>
-            <img src="public/staytune/STY}E_YEET-poster.png" alt="Transparent" className="staytune-poster" />
-            <div className="staytune-year txt-bold">
-              <div className=" txt-dark-outline">20</div>
-              <div className='sub-year' >22</div>
-            </div>
-          </div>
-
-          {/* <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div> */}
-
-          <div className="staytune-right-box"  style={{paddingLeft:"6rem"}}>
-            <div className="logo-box">
-              <img src="public/staytune/STY}E_YEET-logo.svg" alt="STY}E_YEET-logo-logo" className="staytune-logo" />
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <p className="txt-second txt-bold txt-head3">STY&#125;E:YEET (2022)</p>
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <div  className="link-box">
-               <a className="txt-body3 link-icon" href='https://funcslash.com/styleyeet/' target="_blank"><FontAwesomeIcon icon={faGlobe} size="xl"/> https://funcslash.com/styleyeet/</a>
-              </div>
-              
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <div className='description-box txt-grey txt-body1'>การจัดรวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 
-              ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 
-              มหาวิทยาลัยศิลปากร</div>
-            </div>
-
-            <div className='video-box'>
-              <p className='txt-body1 txt-seniorProjectName txt-bold'>STY&#125;E:YEET • Video • View on Youtube</p>
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-              
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div className="staytune-sub-box">
-          <div className="staytune-left-box">
-            <p className="staytune-poster-text txt-body1 txt-grey">Poster</p>
-            <img src="public/staytune/&TIVIRUS-poster.png" alt="Transparent" className="staytune-poster" />
-            <div className="staytune-year txt-bold">
-              <div className=" txt-dark-outline">20</div>
-              <div className='sub-year' >21</div>
-            </div>
-          </div>
-
-          {/* <div className='line-box'><img src="public/other/line.png" alt="Transparent" className="staytune-image" /></div> */}
-
-          <div className="staytune-right-box" style={{paddingLeft:"6rem"}}>
-            <div className="logo-box">
-              <img src="public/staytune/&TIVIRUS-logo.svg" alt="&TIVIRUS-logo-logo" className="staytune-logo" />
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <p className="txt-second txt-bold txt-head3">&TIVIRUS (2021)</p>
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <div className="link-box" style={{visibility:"hidden"}}>
-               <a className="txt-body3 link-icon" href='https://funcslash.com/dotwishion/' target="_blank"><FontAwesomeIcon icon={faGlobe} size="xl"/> https://funcslash.com/dotwishion/</a>
-              </div>
-              
-            </div>
-
-            <div className="title-exhibitionName-box">
-              <div className='description-box txt-grey txt-body1'>การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021 
-              ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 
-              มหาวิทยาลัยศิลปากร</div>
-            </div>
-
-            <div className='video-box'>
-              <p className='txt-body1 txt-seniorProjectName txt-bold'>&TIVIRUS • Video • View on Youtube</p>
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-              
-              <div className='tab-video'>
-                
-                <a className='video-bg' href="https://funcslash.com/dotwishion/" target="_blank">
-                  <p className='txt-video-preview txt-body3'>คลิกเพื่อรับชม</p>
-                  <h2 className='txt-video-preview2  txt-bold'>บรรยากาศ</h2>
-                  <img className='video-preview' src="public/staytune/dotwishion-video-preview.png" alt="preview"></img>
-                  <div className="overlay" ></div>
-                  <div className='icon-play'><FontAwesomeIcon icon={faCirclePlay} /></div>
-                </a>
-                
-              </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div className="staytune-other-box d-flex row">
-          <h2 className='txt-bold title-exhibitionName-box'>นิทรรศการที่ผ่านมา ปี 2015-2020</h2>
-
-          <div className="d-flex align-items-start">
-            <div className="col-6 left-content">
-              <img className='mini-poster' src="public/staytune/POSTER2020.png" alt="preview" />
-            </div>
-
-            <div className="col-6 txt-head3 right-content">
-              <span className='txt-dark-outline'>20</span><span className='sub-year'>20</span><br />
-              <img className='other-logo' src="public/staytune/EX;TRACT-logo.svg" alt="preview" /><span>EX;TRACT</span>
-              <p className='txt-body1 d-flex flex-column justify-content-start'>
-                การจัดรวบรวม 31 ผลงานสำเร็จการศึกษา ปีการศึกษา 2020 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 14 มหาวิทยาลัยศิลปากร
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        
-    
-    
-        
 
       </div>
 
-      
+      <div className="container mb-5">
+          <h2 className="txt-bold title-exhibitionName-box">
+            นิทรรศการที่ผ่านมา ปี 2015-2020
+          </h2>
+          <div className="row">
+            <div className="col-12 col-lg-6">
+              <CardPastExhibit
+            
+                poster="/public/staytune/POSTER2020.png"
+                name="EX;TRACT"
+                year="20"
+                description="การจัดรวบรวม 31 ผลงานสำเร็จการศึกษา ปีการศึกษา 2020 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 14 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/EX;TRACT-logo.svg"
+              />
+            </div>
+            <div className="col-12 col-lg-6">
+              {" "}
+              <CardPastExhibit
+                poster="/public/staytune/POSTER2019.png"
+                name="SHORTCUT 13.5"
+                year="19"
+                description="การจัดรวบรวม 35 ผลงานสำเร็จการศึกษา ปีการศึกษา 2019 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 13 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/shortcut-logo-v2 1.svg"
+              />
+            </div>
+            <div className="col-12 col-lg-6">
+              {" "}
+              <CardPastExhibit
+                href="https://funcslash.com/comeraam/"
+                poster="/public/staytune/POSTER2018.png"
+                name="COMERAAM 12.4"
+                year="18"
+                description="เว็บไซต์รวบรวมจัดแสดง 46 ผลงานสำเร็จการศึกษา ปีการศึกษา 2018 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 12 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/COMERAAM 12.4-logo.svg"
+              />
+            </div>
+            <div className="col-12 col-lg-6">
+              {" "}
+              <CardPastExhibit
+               href="https://funcslash.com/ultraline/portfolio/new_index.php"
+                poster="/public/staytune/POSTER2017.png"
+                name="ULTRA-LINE 11.3"
+                year="17"
+                description="เว็บไซต์รวบรวมจัดแสดง 40 ผลงานสำเร็จการศึกษา ปีการศึกษา 2017 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 11 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/ULTRA-LINE 11.3-logo.svg"
+              />
+            </div>
 
+            <div className="col-12 col-lg-6">
+              {" "}
+              <CardPastExhibit
+                href="https://funcslash.com/oathlon/"
+                poster="/public/staytune/POSTER2016.png"
+                name="OATHLON 10.2"
+                year="16"
+                description="เว็บไซต์รวบรวมจัดแสดง 32 ผลงานสำเร็จการศึกษา ปีการศึกษา 2016 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 10 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/OATHLON 10.2-logo.svg"
+              />
+            </div>
+
+            <div className="col-12 col-lg-6">
+              {" "}
+              <CardPastExhibit
+                href="https://funcslash.com/suraround/"
+                poster="/public/staytune/POSTER2015.png"
+                name="SURAROUND 9.1"
+                year="15"
+                description="เว็บไซต์รวบรวมจัดแสดง 43 ผลงานสำเร็จการศึกษา ปีการศึกษา 2015 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 9 มหาวิทยาลัยศิลปากร"
+                logo="/public/staytune/SURAROUND 9.1-logo.svg"
+              />
+            </div>
+
+            <div className="col-12 blank">
+
+              
+              
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

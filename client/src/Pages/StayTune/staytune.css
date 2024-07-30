@@ -1,5 +1,5 @@
 .staytune-main-box {
-    height: 600vh;
+    height: fit-content;
     position: relative;
     /* background-color: #05ba64; */
 }
@@ -46,7 +46,7 @@
     width: 5rem;
     height: 180rem;
     /* opacity: 1; */
-    background-color: blue;
+    /* background-color: blue; */
 }
 .staytune-image {
     position: relative;
@@ -100,7 +100,7 @@
     width: 100%;
     height: fit-content;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* background-color: rebeccapurple; */
 }
 
@@ -227,24 +227,66 @@
     transition: all .3s ease;
 }
 
-/* .staytune-other-box {
+.staytune-other-box {
     width: 100%; 
-    height: 100vh;
-    display: flex;
-    position: relative;
-    background-color: peru;
-    margin-top: -5rem;
-} */
+    height: fit-content;
+    /* display: flex; */
+    /* position: relative; */
+    /* background-color: peru; */
+    /* margin-top: -dvw; */
+}
 
 .mini-poster{
     width: auto;
-    height: 80%;
-    cursor: pointer;
-    justify-content: start;
-    align-items: start;
-    /* background-color: #05ba64; */
+    height: 20dvw;
+    /* padding-left: -20px;  */
+    /* cursor: pointer; */
+    /* justify-content: start; */
+    /* align-items: start; */
+     /* margin-left: -29dvw; */
+    /* background-color: #ba5305; */
 }
 .other-logo{
-    width: 5rem;
+    width: auto;
+    height: 4dvw;
+}
+.left-content{
+    width: auto;
+    height: auto;  
+    position: relative;
+
+    cursor: pointer;
+    background-color: #05ba64;
+}
+.right-content{
+    /* margin-top: -1dvw; */
+
+    /* position: relative; */
+    /* width: 10%;
+    height: 20dvw;
+    margin-left: -70dvh;
+    background-color: #97e7c0; */
+}
+.year{
+    width: fit-content;
     height: fit-content;
+    background-color: rebeccapurple;
+}
+.logoAndName{
+    margin-left: -17dvw;
+}
+.other-description{
+    padding-top: 1.5dvw;
+    text-align: left;
+    margin-left: 4dvw;
+
+}
+.content{
+    width: 100%;
+    height: 20dvw;
+    /* background-color: #ba5305; */
+}
+.blank{
+    width: 100%;
+    height: 242px;   
 }
