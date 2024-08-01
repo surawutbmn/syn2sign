@@ -48,9 +48,9 @@ function Credit() {
       <Container className="mx-auto w-100">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
-          <div className="mt-3">
+          <div className="mt-5">
             <span className="txt-sbold txt-upper">
-              <h3 className="mb-2">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
+              <h3 className="mb-4">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
               Senior Project Exhibition 2024 • FROM 802408 SENIOR PROJECT
               PREPARATION AND 802409 SENIOR PROJECT
               <p>
@@ -67,7 +67,7 @@ function Credit() {
             className="logo"
           />
         </div>
-        <div className="mt-3">
+        <div className="mt-4">
           <h2 className="txt-scdhead mb-4">
             Silpakorn University Administration Committee
           </h2>
@@ -86,8 +86,8 @@ function Credit() {
             </p>
           </span>
         </div>
-        <div className="my-5">
-          <h2 className="txt-scdhead mb-3">Project Advisory Committee</h2>
+        <div className="mt-5">
+          <h2 className="txt-scdhead mb-4">Project Advisory Committee</h2>
           <div
             className="row row-cols-1 row-cols-md-3 justify-content-center"
             style={{ fontSize: "1.2em" }}
@@ -173,7 +173,7 @@ function Credit() {
           </div>
         </div>
       </Container>
-      <div className="w-100 su-line">
+      <div className="w-100 su-line mt-5">
         <div className="container">
           <img
             src="../../s2s-logo/su_logo.svg"
@@ -194,8 +194,8 @@ function Credit() {
             </p>
           </span>
         </div>
-        <div className="my-4">
-          <h2 className="txt-scdhead mb-5">INSI(gn)DER</h2>
+        <div className="mt-4">
+          <h2 className="txt-scdhead mb-4">INSI(gn)DER</h2>
           <div className="grid grid-cols-2 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
@@ -362,7 +362,7 @@ function Credit() {
           </div>
         </div>
         <div className="mt-5">
-          <h2 className="mb-3 txt-scdhead">Thank you for your support</h2>
+          <h2 className="mb-4 txt-scdhead">Thank you for your support</h2>
           <div className="grid grid-cols-2 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
@@ -617,7 +617,7 @@ function Credit() {
           </div>
         </div>
         <div className="my-5">
-          <h2 className="mb-3 txt-scdhead">onsite supporter</h2>
+          <h2 className="mb-4 txt-scdhead">onsite supporter</h2>
           <span>
             <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
             <p>
@@ -659,14 +659,14 @@ function Credit() {
           </div>
         </div>
         <div className="mb-5">
-          <h2 className="mb-3 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
+          <h2 className="mb-4 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
           <p>
             <strong>Project Manager:</strong> Chalida Ingkapattanakul{" "}
           </p>
           <p>
             <strong>Assistant Project Manager:</strong> Panita Lainananukul
           </p>
-          <h2 className="mt-5 mb-3 txt-scdhead">SUPPORTER AND ADVISOR</h2>
+          <h2 className="mt-5 mb-4 txt-scdhead">SUPPORTER AND ADVISOR</h2>
           <p>
             <strong>Project Consultant:</strong> Kowit Meboon
           </p>

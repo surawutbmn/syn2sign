@@ -64,6 +64,13 @@ export const VdoSlide = () => {
       videoSrc: "2fkCoiR49wo",
       instagramLink: "C9BoNYopFRy/",
     },
+    // {
+      
+    //   name: "ภาพบรรยากาศงาน Day 2 ",
+      
+    //   videoSrc: "Kkvge3HhIZc",
+    //   instagramLink: "C9BoNYopFRy/",
+    // },
   ];
 
   return (

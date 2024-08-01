@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@gsap/react": "^2.1.1",
+    "@react-spring/web": "^9.7.4",
     "axios": "^1.6.5",
     "bootstrap": "^5.3.3",
     "gsap": "^3.12.5",
