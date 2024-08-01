@@ -57,7 +57,7 @@ const CardMainThree = (props) => {
               <TabVideoAndImageBox className="col-12">
               <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
               <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
-                <img src="public/staytune/dotwishion-video-preview.png">
+                <img src="/staytune/dotwishion-video-preview.png">
                 </img>
                 
                 <Overlay />
@@ -71,7 +71,7 @@ const CardMainThree = (props) => {
               <TabVideoAndImageBox className="col-12">
               {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
               <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
-                <img src="public/staytune/dotwishion-video-preview.png">
+                <img src="/staytune/dotwishion-video-preview.png">
                 </img>
                 
                 <Overlay />
