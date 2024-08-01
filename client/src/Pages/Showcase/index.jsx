@@ -77,9 +77,9 @@ function Showcase() {
 
   return (
     <>
-      <div className="bg-gd-btr"></div>
+      {/* <div className="bg-gd-btr"></div>
       <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" /> */}
       <Container className="position-relative my-5">
         <div className="tabs">
           <div

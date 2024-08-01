@@ -51,6 +51,9 @@ function App() {
       <ScrollTop />
       <div className="wrapper">
         <Nav2 />
+        <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+        <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+        <div className="bg-gd-btr"></div>
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />

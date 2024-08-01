@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { LuMail } from "react-icons/lu";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { IoDocument } from "react-icons/io5";
-import projectdata from "../../../public/data/Projectdata";
-import studentsdata from "../../../public/data/Studentdata";
+import { FaLinkedinIn, FaReadme } from "react-icons/fa6";
+// import projectdata from "../../../public/data/Projectdata";
+// import studentsdata from "../../../public/data/Studentdata";
+import SectionTitle from "../../component/SectionTitle";
 
 
 
@@ -15,7 +15,11 @@ function Students() {
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
   const { std_id } = useParams();
-
+const handleLinkClick = (event) => {
+  event.preventDefault(); // Prevent the default behavior
+  const url = `/showcase/creators/${otherStudents.std_id}`;
+  window.location.href = url; // Set the window location to reload the page
+};
   const Getstudents = async () => {
     try {
       // const std_id = 631310081;
@@ -44,6 +48,7 @@ function Students() {
       );
       const otherStudentsData = otherStudentsResponse.data;
       setOtherStudents({
+        std_id: otherStudentsData.std_id,
         name_th: otherStudentsData.name_th,
         name_en: otherStudentsData.name_en,
         nickname_th: otherStudentsData.nickname_th,
@@ -108,6 +113,33 @@ function Students() {
               loading="lazy"
             />
             <h3 className="text-start">{student.qoutes}</h3>
+            <h3 className="text-start">contact to {student.nickname_en}</h3>
+            <div className="icon-link-con">
+              <a
+                href={`mailto:${student.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <span className="icon-crl me-2">
+                  <LuMail />
+                </span>
+                <span>{student.email}</span>
+              </a>
+            </div>
+            <div className="icon-link-con">
+              <a
+                href={student.linkin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <span className="icon-crl me-2">
+                  <FaLinkedinIn />
+                </span>
+                <span>{student.name_en}</span>
+              </a>
+            </div>
           </div>
           <div className="">
             <img
@@ -130,16 +162,21 @@ function Students() {
             </div>
           </div>
         </div>
+        <SectionTitle
+          title={`${student.nickname_en}\u2019s INTERVIEWS`}
+          subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+        />
+        <SectionTitle
+          title={`${student.nickname_en}\u2019s role in Syn2sign`}
+          subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+        />
+        <SectionTitle
+          title={`${student.nickname_en} collaborate`}
+          subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
+          style={"header-wline"}
+        />
         <div className="row">
           <div className="col">
-            <div className="text-start mb-4 header-wline">
-              <h3 className="txt-upper">
-                <strong>{student.nickname_en} collaborate</strong>
-              </h3>
-              <span className="txt-grey">
-                ผู้ที่ทำงานร่วมกับ{student.nickname_th}
-              </span>
-            </div>
             <img
               src={`/profile_img/${otherStudents.profile_img}`}
               alt="other creator profile"
@@ -150,12 +187,68 @@ function Students() {
               }}
               loading="lazy"
             />
-            <p>
+            <span className="d-flex flex-column">
               ({otherStudents.nickname_en}) {otherStudents.name_en}
-              {otherStudents.name_th}({otherStudents.nickname_th})
-            </p>
+              <span>
+                {otherStudents.name_th}({otherStudents.nickname_th})
+              </span>
+            </span>
           </div>
-          <div className="col"></div>
+          <div className="col">
+            <div className="">
+              <img
+                src={`/icon/double-qoute.svg`}
+                alt="double qoute"
+                style={{ maxWidth: "5vw", width: "100%" }}
+                loading="lazy"
+              />
+              <span>{otherStudents.qoutes}</span>
+            </div>
+            <hr />
+            <div className="icon-link-con">
+              <a
+                href={`mailto:${otherStudents.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <span className="icon-crl me-2">
+                  <LuMail />
+                </span>
+                <span>{otherStudents.email}</span>
+              </a>
+            </div>
+            <div className="icon-link-con">
+              <a
+                href={otherStudents.linkin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <span className="icon-crl me-2">
+                  <FaLinkedinIn />
+                </span>
+                <span>{otherStudents.name_en}</span>
+              </a>
+            </div>
+            <Link
+              to={`/showcase/creators/${otherStudents.std_id}`}
+              onClick={handleLinkClick}
+              className="txt-link"
+              style={{
+                border: ".1rem solid",
+                padding: ".4rem .8rem",
+                borderRadius: "100px",
+              }}
+            >
+              <span className="txt-upper">
+                <strong>read more</strong>
+              </span>
+              <span className="ms-2">
+                <FaReadme />
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </>

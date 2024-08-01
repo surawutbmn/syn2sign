@@ -5,7 +5,8 @@ import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
-import projectsdata from "/public/data/Projectdata";
+// import projectsdata from "/public/data/Projectdata";
+import Creators from "./Creators/Creator";
 
 
 function Project() {
@@ -15,7 +16,7 @@ function Project() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
-  console.log(projectsdata);
+  // console.log(projectsdata);
   // const prj_id = "cpl01";
   const items = [
     {
@@ -142,13 +143,24 @@ function Project() {
          ...item,
          content: (
            <>
-             <p>{item.content}</p>
              <ul>
                {matchedStudents.length > 0 ? (
                  matchedStudents.map((student) => (
                    <li key={student.id}>
-                     <strong>{student.name_th}</strong> - {student.email}{" "}{student.linkin}
-                     <p>{student.qoutes}</p>
+                     <Link
+                       to={`/showcase/creators/${student.std_id}`}
+                       className="txt-link"
+                     >
+                       <Creators
+                         nameEN={student.name_en}
+                         nicknameEN={student.nickname_en}
+                         nameTH={`${student.name_th} (${student.nickname_th})`}
+                         email={student.email}
+                         linkedin={student.linkin}
+                         qoutes={student.qoutes}
+                         profileImg={`/profile_img/${student.profile_img}`}
+                       />
+                     </Link>
                    </li>
                  ))
                ) : (
@@ -169,10 +181,27 @@ function Project() {
           ? `${project.name_en} ${project.name_th} - Syn2sign senior project exhibition 2024`
           : "Loading..."}
       </Helmet>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="bg-gd-btr"></div>
       <div className="container mt-5">
+        <div>
+          {matchedStudents.length > 0 ? (
+            matchedStudents.map((student) => (
+              <div key={student.id}>
+                  <Creators
+                    stdID={student.std_id}
+                    nameEN={student.name_en}
+                    nicknameEN={student.nickname_en}
+                    nameTH={`${student.name_th} (${student.nickname_th})`}
+                    email={student.email}
+                    linkedin={student.linkin}
+                    qoutes={student.qoutes}
+                    profileImg={`/profile_img/${student.profile_img}`}
+                  />
+              </div>
+            ))
+          ) : (
+            <p>No students found</p>
+          )}
+        </div>
         <div className="project-content-sec">
           <div className="row">
             <div className="col">
