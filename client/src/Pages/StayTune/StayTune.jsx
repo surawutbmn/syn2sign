@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 
-import "./staytune.css";
+// import "./staytune.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
@@ -14,8 +14,10 @@ import CardMainThree from "../../component/card/CardMainThree"
 
 function StayTune() {
   return (
+    
     <div style={{ height: "fit-content", backgroundColor: "" }}>
-     
+     <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+     <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
 
       <div className="container mb-5 mt-5">
       <h2 className="txt-upper txt-second txt-bold mb-5">
@@ -70,7 +72,7 @@ function StayTune() {
       </div>
 
       <div className="container mb-5">
-          <h2 className="txt-bold title-exhibitionName-box">
+          <h2 className="txt-bold title-exhibitionName-box text-start">
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
           <div className="row">

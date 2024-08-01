@@ -144,7 +144,8 @@ const ImageLinkExhibition = styled.a`
 
 const VideoBoxExhibition = styled.div`
   width: 100%;
-  height: 553px;
+  /* height: 51%; */
+  height: 470px;
   border: 2px solid #8e8e8e;
   border-radius: 24px 24px 0 0;
   object-fit: cover;
@@ -152,7 +153,8 @@ const VideoBoxExhibition = styled.div`
 
 const TabVideoAndImageBox = styled.div`
   width: 100%;
-  height: 235px;
+  /* height: 235px; */
+  height: 193px;
   position: relative;
   overflow: hidden;
 
@@ -227,6 +229,6 @@ const LineImage = styled.img`
   width: 3%;
   height: 2250px;
   top: 6%;
-  left: 40%;
+  left: 37%;
   border: none;
 `;

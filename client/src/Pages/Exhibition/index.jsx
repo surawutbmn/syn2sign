@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from "react";
 import "./exhibition.css";
+import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
 import paper_plane from "./img/paper-plane.png";
 import { MdLocationOn } from "react-icons/md";
@@ -10,9 +12,41 @@ import { FaInstagram } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
+import CardAdditional from "../../component/card/CardAdditional";
+import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 // import { FaYoutube } from "react-icons/fa";
 
 function Exhibition() {
+  const [message, setMessage] = useState("");
+  const [score, setScore] = useState(4.61);
+  const props = useSpring({
+    number: score,
+    from: { number: 0 },
+    config: { duration: 1500 },
+  });
+  const fetchMessage = () => {
+    fetch("http://localhost/syn2sign/randomMessage.php")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message) {
+          setMessage(data.message);
+        } else {
+          setMessage("No database connect");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching message:", error);
+        setMessage("No database connect");
+      });
+  };
+
+  useEffect(() => {
+    fetchMessage(); // Fetch message initially
+    const intervalId = setInterval(fetchMessage, 1000); // Fetch message every 5 seconds
+
+    return () => clearInterval(intervalId); // Clear interval on component unmount
+  }, []);
+
   return (
     <>
       <div className="exh-banner exh-banner-bg mt-5">
@@ -51,7 +85,7 @@ function Exhibition() {
                 rel="noopener noreferrer"
                 className="link-txt"
               >
-                <div className="card  text-start">
+                <div className="card text-start">
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title mb-2">
@@ -63,7 +97,12 @@ function Exhibition() {
                       ผลการประเมินความพึงพอใจ จากผู้เข้าชมงาน 150 ท่าน
                     </p>
                     <div className="d-flex justify-content-between">
-                      <div className="card-exh-desc"> 4.61</div>
+                      <div className="card-exh-desc">
+                        {" "}
+                        <animated.div>
+                          {props.number.to((n) => n.toFixed(2))}
+                        </animated.div>
+                      </div>
                       <div className="card-exh-icon d-flex align-items-end">
                         <div className="crl-icon-line"></div>
                         <MdPerson />
@@ -84,14 +123,14 @@ function Exhibition() {
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
-                      <strong>brife report</strong>
+                      <strong>Exhibition brife report</strong>
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ ที่เกี่ยวข้องกับนิทรรศการแสดง
-                      ผลงานสำเร็จการศึกษาของนักศึกษา syn2sign Senior Project
-                      Exhibition 2024
+                      รายงานฉบับย่อ ที่เกี่ยวข้องกับนิทรรศการแสดง<br></br>
+                      ผลงานสำเร็จการศึกษาของนักศึกษา syn2sign <br></br>
+                      Senior Project Exhibition 2024
                     </p>
                     <br className="d-xl-none d-block" />
                     <div className="card-exh-icon text-end">
@@ -117,8 +156,8 @@ function Exhibition() {
                     </h3>
                     <span className="txt-grey">(Senior Project, FIGMA)</span>
                     <p className="card-text mt-4">
-                      หนังสือรวบรวมผลงานจุลนิพนธ์ ของนักศึกษา สาขา
-                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน คณะไอซีที
+                      หนังสือรวบรวมผลงานจุลนิพนธ์ ของนักศึกษา สาขา<br></br>
+                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>คณะไอซีที
                       รุ่นที่ 18 ม.ศิลปากร ปีการศึกษา 2566
                     </p>
                     <br className="d-xxl-block d-none" />
@@ -141,13 +180,13 @@ function Exhibition() {
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
-                      <strong>brife report</strong>
+                      <strong>T-Shirt brife report</strong>
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ
-                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน ชั้นปีที่ 4
+                      รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ<br></br>
+                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>ชั้นปีที่ 4
                       ปีการศึกษา 2566
                     </p>
                     <br />
@@ -169,7 +208,7 @@ function Exhibition() {
           <div className="exh-vdosec-content mt-4">
             <VdoSlide />
           </div>
-          <div className="exh-vdosec-title text-start mt-5">
+          {/* <div className="exh-vdosec-title text-start mt-5">
             <h2>VIDEO Syn2sign</h2>
             <span>ภาพบรรยากาศภายในงาน</span>
           </div>
@@ -209,12 +248,12 @@ function Exhibition() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">
-            <div className="row row-cols-1 row-cols-lg-2 g-4">
-              <div className="col">
+            {/* <div className="row row-cols-1 row-cols-lg-2 g-4"> */}
+              {/* <div className="col">
                 <div className="card-exh-link">
                   <a
                     href="https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=xomeDL8DZmFDNhkO"
@@ -276,8 +315,12 @@ function Exhibition() {
                     </div>
                   </a>
                 </div>
-              </div>
-            </div>
+              </div> */}
+
+              
+            {/* </div> */}
+            {/* <CardAdditional /> */}
+            <PlaylistSlider />
             <div className="exh-knowledge-sec mt-5">
               <Knowslide />
             </div>
@@ -286,12 +329,11 @@ function Exhibition() {
                 <div className="paper-plane">
                   <img src={paper_plane} alt="" loading="lazy" />
                 </div>
-                <h3 className="text-start txt-second">Evaluate exhibition</h3>
+                <h3 className="text-start txt-second mt-3 ms-3">
+                  ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
+                </h3>
                 <div className="txt-bubble-con mt-6">
-                  <span className="txt-bubble">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Iusto,
-                  </span>
+                  <span className="txt-bubble">{message}</span>
                 </div>
               </div>
             </div>

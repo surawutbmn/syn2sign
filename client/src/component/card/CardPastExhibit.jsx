@@ -21,7 +21,7 @@ const CardPastExhibit = (props) => {
               <LogoExhibition  src={props.logo}/>
               <div className='txt-head3 txt-bold'>{props.name}</div>
             </div>
-            <div className='txt-body1 txt-grey'>{props.description}</div>
+            <div className='txt-body2 txt-grey'>{props.description}</div>
 
             
           </div>
