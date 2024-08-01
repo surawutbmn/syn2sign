@@ -3,6 +3,7 @@ import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
 import paper_plane from "./img/paper-plane.png";
+
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
 import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
