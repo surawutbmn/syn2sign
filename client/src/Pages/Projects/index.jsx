@@ -5,6 +5,8 @@ import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
+import projectsdata from "/public/data/Projectdata";
+
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -13,6 +15,7 @@ function Project() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
+  console.log(projectsdata);
   // const prj_id = "cpl01";
   const items = [
     {

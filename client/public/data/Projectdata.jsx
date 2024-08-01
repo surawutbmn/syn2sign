@@ -1,0 +1,148 @@
+const projectsdata = [
+  {
+    id: "1",
+    project_id: "cpl01",
+    name_en: "EVAL BALANCE",
+    name_th: "อีวาล บาลานซ์",
+    fullname_en:
+      "Design and Development of Physical Fitness Evaluation Application to Reduce the Risk of Falling and Exercise to Strengthen Muscles in The Elderly on iOS Platform.",
+    fullname_th:
+      "การออกแบบและพัฒนาแอปพลิเคชันประเมินสมรรถภาพทางกาย เพื่อลดความเสี่ยงในการหกล้ม และออกกำลังกายเพื่อเสริมสร้างความแข็งแรงของกล้ามเนื้อในผู้สูงอายุ บนระบบปฏิบัติการไอโอเอส",
+    type: "Mobile Application",
+    icon: "cpl01.svg",
+    img_thumb: "cpl01-thumb.webp",
+    icon_card: "cpl01-icard.webp",
+    icon_std: "cpl01-p.svg",
+    shreel_link: "_41WQgd5qKw",
+    ceator_1: "Chanamon kewsomnuk (Mook)",
+    ceator_2: "Sasikan Tianchanthuek (Ying)",
+  },
+  {
+    id: "2",
+    project_id: "cpl02",
+    name_en: "WAIWAN",
+    name_th: "ไหว้วาน",
+    fullname_en:
+      "Design and Development Web Application With Line Chatbot System to Provide Services for the Business of Organizing a Sacrificial Offering.",
+    fullname_th:
+      "การออกแบบและพัฒนาแอปพลิเคชันควบคู่กับระบบไลน์แชตบอต เพื่อให้บริการสำหรับธุรกิจร้านจัดของไหว้เจ้า",
+    type: "Line OA Web application",
+    icon: "cpl02.svg",
+    img_thumb: "cpl02-thumb.webp",
+    icon_card: "cpl02-icard.webp",
+    icon_std: "cpl02-p.svg",
+    shreel_link: "OwyQ7eIHmoc",
+    ceator_1: "Panita Lainananukul (Fah)",
+    ceator_2: "Natthanan Vaowkhajon (Pim)",
+  },
+  {
+    id: "3",
+    project_id: "cpl03",
+    name_en: "ARTIST MATCH",
+    name_th: "อาร์ทิสแมทช์",
+    fullname_en:
+      "Design and Development Web Application to Search for Artists and Post Job Advertisements for Organizer.",
+    fullname_th:
+      "การออกแบบและพัฒนาเว็บแอปพลิเคชันเพื่อค้นหาศิลปินและลงประกาศรับสมัครสำหรับผู้จัดงาน",
+    type: "Web application",
+    icon: "cpl03.svg",
+    img_thumb: "cpl03-thumb.webp",
+    icon_card: "cpl03-icard.webp",
+    icon_std: "cpl03-p.svg",
+    shreel_link: "dp_AlUgThnQ",
+    ceator_1: "Chalida Ingkapattanakul (Mhon)",
+    ceator_2: "Panyada Suxruxsa (Pai)",
+  },
+  {
+    id: "4",
+    project_id: "cpl04",
+    name_en: "MORYTECH",
+    name_th: "โมรี่เทค",
+    fullname_en:
+      "Design and Development of Application  to Increase Memory Skills for Adults on iOS Platform.",
+    fullname_th:
+      "การออกแบบและพัฒนาแอปพลิเคชัน เพื่อเพิ่มทักษะความจำสำหรับคนวัยทำงานบนระบบปฎิบัติการไอโอเอส",
+    type: "Mobile Application",
+    icon: "cpl04.svg",
+    img_thumb: "cpl04-thumb.webp",
+    icon_card: "cpl04-icard.webp",
+    icon_std: "cpl04-p.svg",
+    shreel_link: "zPt2Uu3vZ4I",
+    ceator_1: "Chawakorn Jitpathak (Fifa)",
+    ceator_2: "Methasit Sitthametha (Ex)",
+  },
+  {
+    id: "5",
+    project_id: "cpl05",
+    name_en: "FULLFILL",
+    name_th: "ฟูลฟิล",
+    fullname_en:
+      "Web Application Design and Development in Conjunction System to Promote Refill Shops Management in Bangkok.",
+    fullname_th:
+      "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมการบริหาร ร้านรีฟิล ในกรุงเทพมหานคร",
+    type: "Web application",
+    icon: "cpl05.svg",
+    img_thumb: "cpl05-thumb.webp",
+    icon_card: "cpl05-icard.webp",
+    icon_std: "cpl05-p.svg",
+    shreel_link: "wMnxzOlEVPA",
+    ceator_1: "Piyapat Homkrajay (Mild)",
+    ceator_2: "Surawut Binmamud (Not)",
+  },
+  {
+    id: "6",
+    project_id: "cpl06",
+    name_en: "YOUNG & CHIC",
+    name_th: "ยังแอนด์ชิก",
+    fullname_en:
+      "Web Application Design and Development to Promote the Young Thai Designers to Increase the Job Opportunities.",
+    fullname_th:
+      "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมแฟชั่นดีไซน์เนอร์ไทยรุ่นใหม่ในการเพิ่มโอกาสการหางาน",
+    type: "Web application",
+    icon: "cpl06.svg",
+    img_thumb: "cpl06-thumb.webp",
+    icon_card: "cpl06-icard.webp",
+    icon_std: "cpl06-p.svg",
+    shreel_link: "asaKqFdHkRE",
+    ceator_1: "Onranpha Morsamarn (Bam)",
+    ceator_2: "Natthatida Sritulanontha (June)",
+  },
+  {
+    id: "7",
+    project_id: "cpl07",
+    name_en: "Tent Care",
+    name_th: "เท็นท์แคร์",
+    fullname_en:
+      "Designing and Developing a Tool System for the Franchise Operators of the Tent Cleaning Business",
+    fullname_th:
+      "การออกแบบและพัฒนาระบบเครื่องมือสำหรับผู้ประกอบการแฟรนไชส์ธุรกิจทำความสะอาดเต็นท์",
+    type: "Line OA Web application",
+    icon: "cpl07.svg",
+    img_thumb: "cpl07-thumb.webp",
+    icon_card: "cpl07-icard.webp",
+    icon_std: "cpl07-p.svg",
+    shreel_link: "KhAfnkMRctc",
+    ceator_1: "Nattharnunt Zooriyarzazithum (Nurse)",
+    ceator_2: "Supakorn Achcha (Tide)",
+  },
+  {
+    id: "8",
+    project_id: "cpl08",
+    name_en: "TINY THAI",
+    name_th: "ไทนี่ไทย",
+    fullname_en:
+      "Learning Media Game DesignCase Study of Second Grade Children Spelling and Meaning of Thai Words",
+    fullname_th:
+      "การออกแบบเกมสื่อการเรียนรู้ สำหรับเด็กชั้นประถมศึกษาปีที่ 2 กรณีศึกษา ปัญหาด้านการสะกดคำและบอกความหมายของคำกลุ่มสาระภาษาไทย",
+    type: "Game Application",
+    icon: "cpl08.svg",
+    img_thumb: "cpl08-thumb.webp",
+    icon_card: "cpl08-icard.webp",
+    icon_std: "cpl08-p.svg",
+    shreel_link: "2fkCoiR49wo",
+    ceator_1: "Pattawan Srattatam (Pimpatt)",
+    ceator_2: "Pattarawan Srattatam (Pear)",
+  },
+];
+
+export default projectsdata;

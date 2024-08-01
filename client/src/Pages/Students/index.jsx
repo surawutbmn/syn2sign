@@ -5,6 +5,9 @@ import { Helmet } from "react-helmet-async";
 import { LuMail } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoDocument } from "react-icons/io5";
+import projectdata from "../../../public/data/Projectdata";
+import studentsdata from "../../../public/data/Studentdata";
+
 
 
 function Students() {
