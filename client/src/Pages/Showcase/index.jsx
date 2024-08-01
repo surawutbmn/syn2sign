@@ -75,10 +75,10 @@ function Showcase() {
 
   return (
     <>
+      <div className="bg-gd-btr"></div>
+      <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" />
       <Container className="position-relative my-5">
-        <div className="bg-gd-btr"></div>
-        <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
-        <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" />
         <div className="tabs">
           <div
             className={`tab ${activeTab === 1 ? "active" : ""}`}
@@ -87,7 +87,7 @@ function Showcase() {
             <div className="d-flex align-items-center justify-content-center">
               <img
                 src="/icon/prj-tab.svg"
-                alt=""
+                alt="tab icon"
                 className={`me-3 tab-icon ${
                   activeTab === 1 ? "active-icon" : ""
                 }`}
@@ -105,7 +105,7 @@ function Showcase() {
                 className={`me-3 tab-icon ${
                   activeTab === 2 ? "active-icon" : ""
                 }`}
-                alt=""
+                alt="tab icon"
               />
               8*2 Creators
             </div>
@@ -122,7 +122,7 @@ function Showcase() {
                         <div className="card-prj-icon">
                           <img
                             src={`/icon/prj/cpl01-icard.webp`}
-                            alt=""
+                            alt="project icon"
                             loading="lazy"
                           />
                         </div>
@@ -141,7 +141,7 @@ function Showcase() {
                         <div className="card-prj-body-img">
                           <img
                             src={`/icon/prj/cpl01-p.svg`}
-                            alt=""
+                            alt="creator icon"
                             loading="lazy"
                           />
                         </div>
@@ -155,7 +155,7 @@ function Showcase() {
                       <div className="card-prj-btimg">
                         <img
                           src={`/icon/prj/cpl01-thumb.webp`}
-                          alt=""
+                          alt="project thumbnail"
                           loading="lazy"
                         />
                       </div>
@@ -174,7 +174,7 @@ function Showcase() {
                         <div className="card-prj-icon">
                           <img
                             src={`/icon/prj/${project.icon_card}`}
-                            alt=""
+                            alt="project icon"
                             loading="lazy"
                           />
                         </div>
@@ -190,7 +190,7 @@ function Showcase() {
                         <div className="card-prj-body-img">
                           <img
                             src={`/icon/prj/${project.icon_std}`}
-                            alt=""
+                            alt="creator icon"
                             loading="lazy"
                           />
                         </div>
@@ -212,7 +212,7 @@ function Showcase() {
                       <div className="card-prj-btimg">
                         <img
                           src={`/icon/prj/${project.img_thumb}`}
-                          alt=""
+                          alt="project thumbnail"
                           loading="lazy"
                         />
                       </div>
@@ -229,9 +229,9 @@ function Showcase() {
                   <Link to={`/showcase/creators/`} className="card-link">
                     <div className="card-std-img">
                       <img
-                        src={`/profile_img/073-thumb.webp`}
+                        src={`/profile_img/073-profile.webp`}
                         loading="lazy"
-                        alt=""
+                        alt="creator profile"
                       />
                       <div className="card-std-overlay">
                         <div className="card-std-txt">
@@ -259,7 +259,7 @@ function Showcase() {
                       <div className="read-more d-flex">
                         <img
                           src="/icon/read-more.svg"
-                          alt=""
+                          alt="readmore icon"
                           className="rdm-icon"
                         />
                         <div className="rdm-text">READ MORE</div>
@@ -268,7 +268,7 @@ function Showcase() {
                         <img
                           src={`/profile_img/${student.profile_img}`}
                           loading="lazy"
-                          alt=""
+                          alt="creator profile"
                         />
                         <div className="card-std-txt">
                           <span className="card-std-title">

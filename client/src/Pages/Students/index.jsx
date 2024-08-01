@@ -81,34 +81,43 @@ function Students() {
         </title>
       </Helmet>
       <div className="container mt-5">
-        <div className="row">
-          <div className="col">
-            <hr />
-            <h2 className="text-start txt-scu-head">
-              Get to know {student.nickname_en},
-            </h2>
-            Maker of {project.name_en}
+        <div className="d-flex justify-content-between">
+          <div className="text-start">
+            <hr
+              style={{
+                width: "15dvw",
+                border: ".3rem solid var(--color-secondary)",
+                opacity: "1",
+              }}
+            />
+            <h2 className="txt-scu-head">Get to know {student.nickname_en},</h2>
+            <h3>Maker of {project.name_en}</h3>
             <img
               src={`/icon/prj/${project.icon}`}
-              alt=""
+              alt="project icon"
               style={{ maxWidth: "5vw", width: "100%" }}
               loading="lazy"
-            />{" "}
-            {project.type}
+            />
+            <img
+              src={`/icon/double-qoute.svg`}
+              alt="double qoute"
+              style={{ maxWidth: "5vw", width: "100%" }}
+              loading="lazy"
+            />
             <h3 className="text-start">{student.qoutes}</h3>
           </div>
-          <div className="col">
+          <div className="">
+            <img
+              loading="lazy"
+              src={`/profile_img/${student.profile_img}`}
+              alt="creator profile"
+              style={{
+                maxWidth: "35vw",
+                width: "100%",
+                borderRadius: "1.2rem",
+              }}
+            />
             <div className="text-start">
-              <img
-                loading="lazy"
-                src={`/profile_img/${student.profile_img}`}
-                alt=""
-                style={{
-                  maxWidth: "30vw",
-                  width: "100%",
-                  borderRadius: "1.2rem",
-                }}
-              />
               <h3 className="txt-upper">
                 {student.name_en} ({student.nickname_en})
               </h3>
@@ -120,9 +129,7 @@ function Students() {
         </div>
         <div className="row">
           <div className="col">
-            <div
-              className="text-start mb-4 header-wline"
-            >
+            <div className="text-start mb-4 header-wline">
               <h3 className="txt-upper">
                 <strong>{student.nickname_en} collaborate</strong>
               </h3>
@@ -132,7 +139,7 @@ function Students() {
             </div>
             <img
               src={`/profile_img/${otherStudents.profile_img}`}
-              alt=""
+              alt="other creator profile"
               style={{
                 maxWidth: "20vw",
                 width: "100%",

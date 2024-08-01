@@ -39,6 +39,9 @@
 .accordion-title-txt{
     display: flex; flex-direction: column; align-items: flex-start;
 }
+.accordion-title-txt >span{
+    font-size: .9em;
+}
 
 .accordion-titles h3 {
   margin: 0;

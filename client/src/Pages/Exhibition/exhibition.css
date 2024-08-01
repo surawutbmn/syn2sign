@@ -45,28 +45,36 @@
 .prj-vdoslide-nav .swiper-button-prev:hover,
 .prj-vdoslide-nav .swiper-button-next:hover {opacity: 1;} */
 
+.prj-exh-nav .swiper-button-prev,
 .prj-vdoslide-nav .swiper-button-prev,
 .prj-knbslide-nav .swiper-button-prev{opacity: 0; transition: opacity .3s ease; background: rgb(255,255,255);background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(5,186,100,.5) 100%); width: 130px; height: 100%; top: 5%; left: -6%;}
+.prj-exh-nav .swiper-button-next,
 .prj-vdoslide-nav .swiper-button-next,
 .prj-knbslide-nav .swiper-button-next{opacity: 0; transition: opacity .3s ease; background: rgb(255,255,255);background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(5,186,100,.5) 100%); width: 130px; height: 100%; top: 5%; right: -6%;}
+.prj-exh-nav .swiper-button-prev.swiper-button-disabled,.prj-exh-nav .swiper-button-next.swiper-button-disabled,
 .prj-vdoslide-nav .swiper-button-prev.swiper-button-disabled,.prj-vdoslide-nav .swiper-button-next.swiper-button-disabled,
 .prj-knbslide-nav .swiper-button-prev.swiper-button-disabled,.prj-knbslide-nav .swiper-button-next.swiper-button-disabled{opacity: 0;}
+.prj-exh-nav .swiper-button-prev::after,
 .prj-vdoslide-nav .swiper-button-prev::after,
 .prj-knbslide-nav .swiper-button-prev::after{color: var(--color-light); font-size: 3rem; margin-left: -4rem;}
+.prj-exh-nav .swiper-button-next::after,
 .prj-vdoslide-nav .swiper-button-next::after,
 .prj-knbslide-nav .swiper-button-next::after{color: var(--color-light); font-size: 3rem;}
+.prj-exh-nav .swiper-button-prev:hover,
+.prj-exh-nav .swiper-button-next:hover,
 .prj-vdoslide-nav .swiper-button-prev:hover,
 .prj-vdoslide-nav .swiper-button-next:hover,
 .prj-knbslide-nav .swiper-button-prev:hover,
 .prj-knbslide-nav .swiper-button-next:hover{opacity: 1;}
+.swiper-content{position: relative;}
 
 
 
 .paper-plane img{width: 100%;}
-.paper-plane {width: 40dvw; opacity: .8; position: absolute; right: 0; top: -20%; z-index: 1;}
+.paper-plane {width: 36dvw; opacity: .8; position: absolute; right: 0; top: -20%; z-index: 1;}
 /* .exh-feedback-sec{position: relative; margin-top: 5rem;} */
 .feedback-con {
-  position: relative; margin-top: 10rem; padding: 1rem;
+  position: relative; margin-top: 10rem; padding: 3rem;
   width: 100%;  height: 40dvw; 
   background: rgb(255,255,255);background: linear-gradient(150deg, rgba(255,255,255,0) 70%, rgba(5, 186, 100, 0.2) 100%);
   border-radius: 1.3rem; 

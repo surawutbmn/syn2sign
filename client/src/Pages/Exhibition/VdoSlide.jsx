@@ -86,38 +86,32 @@ export const VdoSlide = () => {
       >
         {projectDetails.map((project) => (
           <SwiperSlide key={project.id}>
-            <div className="row row-cols-1">
-              <div className="col">
-                <div className="mx-auto ratio ratio-16x9">
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/${project.videoSrc}`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="video-box"
-                  ></iframe>
-                </div>
+            <div className="d-flex flex-column">
+              <div className="mx-auto ratio ratio-16x9">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${project.videoSrc}`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="video-box"
+                ></iframe>
               </div>
-              <div className="col">
-                <h4 className="text-start txt-sbold mt-3">
-                  {project.name} ({project.name_th})
-                </h4>
-              </div>
-              <div className="col">
-                <div className="insta-link-con">
-                  <a
-                    href={`https://www.instagram.com/reel/${project.instagramLink}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="icon-crl me-2">
-                      <FaInstagram />
-                    </span>
-                    <span>บทสัมภาษณ์กลุ่ม “{project.name}”</span>
-                  </a>
-                </div>
+              <h4 className="text-start txt-sbold mt-3">
+                {project.name} ({project.name_th})
+              </h4>
+              <div className="insta-link-con">
+                <a
+                  href={`https://www.instagram.com/reel/${project.instagramLink}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="icon-crl me-2">
+                    <FaInstagram />
+                  </span>
+                  <span>บทสัมภาษณ์กลุ่ม “{project.name}”</span>
+                </a>
               </div>
             </div>
           </SwiperSlide>

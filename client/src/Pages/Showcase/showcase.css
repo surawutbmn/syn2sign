@@ -107,16 +107,6 @@
 
 /* ------------------------------------------------ */
 .ele-sch-l{position: absolute; left: -35%; top: -6%; width: 100%; z-index: 0;}
-.ele-sch-r{position: absolute; right: -15%; top: -15%; width: 100%; z-index: 0;}
-.bg-gd-btr{
-    bottom: -20%;
-    right: -10%;
-    width: 100%;
-    z-index: 0;
-    height: 100%;
-    position: absolute;
-    pointer-events: none;
-    background: rgb(255,255,255);
-    background: linear-gradient(140deg, rgba(255,255,255,0) 60%, rgba(5,186,100,1) 100%);
-}
+.ele-sch-r{position: absolute; right: -10%; top: -5%; width: 100%; z-index: 0;}
+
 

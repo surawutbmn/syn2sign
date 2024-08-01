@@ -69,13 +69,13 @@ export const Nav2 = () => {
                 <li className="nav-item">
                   <NavLink
                     to="/"
-                    className={`link-nav ${activeLink === "/" ? "active" : ""}`}
+                    className={`link-nav txt-cap ${activeLink === "/" ? "active" : ""}`}
                     onClick={() => {
                       setActiveLink("/");
                       menuClick();
                     }}
                   >
-                    SYN2SIGN
+                    Syn2sign
                   </NavLink>
                 </li>
                 <li className="nav-item">
