@@ -7,7 +7,9 @@ import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
 import { RxFigmaLogo } from "react-icons/rx";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
-// import { VdoExh } from "./VdoExhSlide";
+import CardAdditional from "../../component/card/CardAdditional";
+import PlaylistSlider from "../../component/Slider/PlaylistSlider";
+// import { FaYoutube } from "react-icons/fa";
 
 function Exhibition() {
   return (
@@ -171,7 +173,41 @@ function Exhibition() {
             <span>ภาพบรรยากาศภายในงาน</span>
           </div>
           <div className="exh-vdosec-content mt-4">
-            <VdoExh />
+            <div className="row">
+              <div className="col-4 flex-column">
+                <div className="mx-auto ratio ratio-16x9">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/Kkvge3HhIZc`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="video-box"
+                  ></iframe>
+                </div>
+                <h4 className="text-start txt-sbold mt-3">
+                  ภาพบรรยากาศงาน Day 2{" "}
+                  <span
+                    style={{ fontSize: ".8rem", fontWeight: "var(--txt-med)" }}
+                  >
+                    (June 27, 2024)
+                  </span>
+                </h4>
+                <div className="insta-link-con w-50">
+                  <a
+                    href="https://www.instagram.com/reel/C9wRgcMMBlJ/?utm_source=ig_web_button_share_sheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-crl me-2">
+                      <FaInstagram />
+                    </span>
+                    <span>บทสัมภาษณ์ “ผู้เข้าชมงาน”</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div> */}
         </div>
         <div className="exh-content-sec my-5">
@@ -249,11 +285,11 @@ function Exhibition() {
                 <div className="paper-plane">
                   <img src={paper_plane} alt="paper plane" loading="lazy" />
                 </div>
-                <h3 className="text-start txt-second">
+                <h3 className="text-start txt-second mt-3 ms-3">
                   ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
                 </h3>
                 <div className="txt-bubble-con mt-6">
-                  <span className="txt-bubble">น้องๆ เก่งกันมาก</span>
+                  <span className="txt-bubble">{message}</span>
                 </div>
               </div>
             </div>

@@ -78,43 +78,43 @@ function StayTune() {
             <div className="col-12 col-lg-6">
               <CardPastExhibit
             
-                poster="/staytune/POSTER2020.png"
+                poster="//staytune/POSTER2020.png"
                 name="EX;TRACT"
                 year="20"
                 description="การจัดรวบรวม 31 ผลงานสำเร็จการศึกษา ปีการศึกษา 2020 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 14 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/EX;TRACT-logo.svg"
+                logo="//staytune/EX;TRACT-logo.svg"
               />
             </div>
             <div className="col-12 col-lg-6">
               {" "}
               <CardPastExhibit
-                poster="/staytune/POSTER2019.png"
+                poster="//staytune/POSTER2019.png"
                 name="SHORTCUT 13.5"
                 year="19"
                 description="การจัดรวบรวม 35 ผลงานสำเร็จการศึกษา ปีการศึกษา 2019 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 13 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/shortcut-logo-v2 1.svg"
+                logo="//staytune/shortcut-logo-v2 1.svg"
               />
             </div>
             <div className="col-12 col-lg-6">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/comeraam/"
-                poster="/staytune/POSTER2018.png"
+                poster="//staytune/POSTER2018.png"
                 name="COMERAAM 12.4"
                 year="18"
                 description="เว็บไซต์รวบรวมจัดแสดง 46 ผลงานสำเร็จการศึกษา ปีการศึกษา 2018 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 12 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/COMERAAM 12.4-logo.svg"
+                logo="//staytune/COMERAAM 12.4-logo.svg"
               />
             </div>
             <div className="col-12 col-lg-6">
               {" "}
               <CardPastExhibit
                href="https://funcslash.com/ultraline/portfolio/new_index.php"
-                poster="/staytune/POSTER2017.png"
+                poster="//staytune/POSTER2017.png"
                 name="ULTRA-LINE 11.3"
                 year="17"
                 description="เว็บไซต์รวบรวมจัดแสดง 40 ผลงานสำเร็จการศึกษา ปีการศึกษา 2017 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 11 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/ULTRA-LINE 11.3-logo.svg"
+                logo="//staytune/ULTRA-LINE 11.3-logo.svg"
               />
             </div>
 
@@ -122,11 +122,11 @@ function StayTune() {
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/oathlon/"
-                poster="/staytune/POSTER2016.png"
+                poster="//staytune/POSTER2016.png"
                 name="OATHLON 10.2"
                 year="16"
                 description="เว็บไซต์รวบรวมจัดแสดง 32 ผลงานสำเร็จการศึกษา ปีการศึกษา 2016 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 10 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/OATHLON 10.2-logo.svg"
+                logo="//staytune/OATHLON 10.2-logo.svg"
               />
             </div>
 
@@ -134,11 +134,11 @@ function StayTune() {
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/suraround/"
-                poster="/staytune/POSTER2015.png"
+                poster="//staytune/POSTER2015.png"
                 name="SURAROUND 9.1"
                 year="15"
                 description="เว็บไซต์รวบรวมจัดแสดง 43 ผลงานสำเร็จการศึกษา ปีการศึกษา 2015 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 9 มหาวิทยาลัยศิลปากร"
-                logo="/staytune/SURAROUND 9.1-logo.svg"
+                logo="//staytune/SURAROUND 9.1-logo.svg"
               />
             </div>
 
