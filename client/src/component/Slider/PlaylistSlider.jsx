@@ -13,9 +13,9 @@ export default function PlaylistSlider() {
     position: absolute;
     bottom: 0;
     right: 1%;
-    height: 100%;
+    height: 20%;
     width: 100%;
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     background: linear-gradient(
       140deg,
       rgba(255, 255, 255, 0) 90%,
