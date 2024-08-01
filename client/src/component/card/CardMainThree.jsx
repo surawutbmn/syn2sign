@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import propTypes from "prop-types";
+import { FaGlobe, FaPlayCircle } from "react-icons/fa";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
 const CardMainThree = (props) => {
   // const Line = props.href ? LineImage : 'div';
@@ -11,21 +12,34 @@ const CardMainThree = (props) => {
       <div className="row" style={{ marginBottom: "9rem" }}>
         <div className="col-4">
           {/* L */}
-          <div className="col-12 text-end txt-staytune-big-year txt-bold"  style={{marginTop: "8.5rem",marginLeft:""}}>
+          <div
+            className="col-12 text-end txt-staytune-big-year txt-bold"
+            style={{ marginTop: "8.5rem", marginLeft: "" }}
+          >
             <div className="txt-dark-outline">20</div>
             <div style={{ marginTop: "-2rem" }}>{props.year}</div>
           </div>
-          <div className="col-12 txt-body1 txt-grey text-start" style={{marginRight:"5rem"}}>Poster</div>
+          <div
+            className="col-12 txt-body1 txt-grey text-start"
+            style={{ marginRight: "5rem" }}
+          >
+            Poster
+          </div>
           <div className="col-12 text-end">
             <ThreePosterExhibition src={props.poster} />
           </div>
         </div>
 
-      <div className="col-1">
-        {/* <div className="line"> */}
-        {props.line && <LineImage src={props.line} onError={(e) => e.target.style.display = 'none'} />}
-        {/* </div> */}
-      </div>
+        <div className="col-1">
+          {/* <div className="line"> */}
+          {props.line && (
+            <LineImage
+              src={props.line}
+              onError={(e) => (e.target.style.display = "none")}
+            />
+          )}
+          {/* </div> */}
+        </div>
 
         <div className="col-7 text-start">
           {/* R */}
@@ -38,50 +52,52 @@ const CardMainThree = (props) => {
           <div className="col-12 txt-body1 txt-grey mb-4 mt-4">
             <ThreeLinkExhibition
               className="txt-body3"
-              href= {props.link}
+              href={props.link}
               target="_blank"
             >
-              <FontAwesomeIcon icon={faGlobe} size="xl" />{" "}
+              {/* <FontAwesomeIcon icon={faGlobe} size="xl" />{" "} */}
+              <FaGlobe />
               {props.link}
             </ThreeLinkExhibition>
           </div>
           <div className="col-12 txt-body1 txt-grey mt-1">
-            {props.description1}<br></br>{props.description2}<br></br>{props.description3}
+            {props.description1}
+            <br></br>
+            {props.description2}
+            <br></br>
+            {props.description3}
           </div>
           <VideoBoxExhibition className="col-12 txt-body1 mt-5">
             <div className="col-12 txt-body1 text-start mt-4 mb-4 ms-4">
               {props.NameVideo} • Video • View on Youtube
             </div>
-            <ImageLinkExhibition href= {props.linkVideo} target="_blank">
-            
+            <ImageLinkExhibition href={props.linkVideo} target="_blank">
               <TabVideoAndImageBox className="col-12">
-              <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
-              <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
-                <img src="public/staytune/dotwishion-video-preview.png">
-                </img>
-                
+                <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
+                <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
+                <img src="public/staytune/dotwishion-video-preview.png"></img>
+
                 <Overlay />
                 <IconPlay className="icon-play">
-                    <FontAwesomeIcon icon={faCirclePlay} />
+                  <FaPlayCircle />
+                  {/* <FontAwesomeIcon icon={faCirclePlay} /> */}
                 </IconPlay>
               </TabVideoAndImageBox>
             </ImageLinkExhibition>
 
-            <ImageLinkExhibition href= {props.linkImage} target="_blank">
+            <ImageLinkExhibition href={props.linkImage} target="_blank">
               <TabVideoAndImageBox className="col-12">
-              {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
-              <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
-                <img src="public/staytune/dotwishion-video-preview.png">
-                </img>
-                
+                {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
+                <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
+                <img src="public/staytune/dotwishion-video-preview.png"></img>
+
                 <Overlay />
                 <IconPlay className="icon-play">
-                    <FontAwesomeIcon icon={faCirclePlay} />
+                  <FaPlayCircle />
+
+                  {/* <FontAwesomeIcon icon={faCirclePlay} /> */}
                 </IconPlay>
               </TabVideoAndImageBox>
-
-              
-
             </ImageLinkExhibition>
           </VideoBoxExhibition>
         </div>
@@ -91,17 +107,17 @@ const CardMainThree = (props) => {
 };
 
 CardMainThree.propTypes = {
-  name: PropTypes.string,
-  year: PropTypes.string,
-  poster: PropTypes.string,
-  logo: PropTypes.string,
-  link: PropTypes.string,
-  description1: PropTypes.string,
-  description2: PropTypes.string,
-  description3: PropTypes.string,
-  NameVideo: PropTypes.string,
-  linkVideo: PropTypes.string,
-  linkImage: PropTypes.string,
+  name: propTypes.string,
+  year: propTypes.string,
+  poster: propTypes.string,
+  logo: propTypes.string,
+  link: propTypes.string,
+  description1: propTypes.string,
+  description2: propTypes.string,
+  description3: propTypes.string,
+  NameVideo: propTypes.string,
+  linkVideo: propTypes.string,
+  linkImage: propTypes.string,
 };
 
 export default CardMainThree;

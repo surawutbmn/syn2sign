@@ -7,7 +7,7 @@ import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
 import { RxFigmaLogo } from "react-icons/rx";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
-import { VdoExh } from "./VdoExhSlide";
+// import { VdoExh } from "./VdoExhSlide";
 
 function Exhibition() {
   return (
@@ -166,13 +166,13 @@ function Exhibition() {
           <div className="exh-vdosec-content mt-4">
             <VdoSlide />
           </div>
-          <div className="exh-vdosec-title text-start mt-5">
+          {/* <div className="exh-vdosec-title text-start mt-5">
             <h2>VIDEO Syn2sign</h2>
             <span>ภาพบรรยากาศภายในงาน</span>
           </div>
           <div className="exh-vdosec-content mt-4">
             <VdoExh />
-          </div>
+          </div> */}
         </div>
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">

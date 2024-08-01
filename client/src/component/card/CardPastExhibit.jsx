@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types';
+import propTypes from "prop-types";
 
 const CardPastExhibit = (props) => {
   const Link = props.href ? LinkExhibition : 'div';
@@ -31,14 +31,14 @@ const CardPastExhibit = (props) => {
   )
 }
 
-CardPastExhibit.PropTypes = {
-  href: PropTypes.string,
-  poster: PropTypes.string,
-  year: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  logo: PropTypes.string
-}
+CardPastExhibit.propTypes = {
+  href: propTypes.string,
+  poster: propTypes.string,
+  year: propTypes.string,
+  name: propTypes.string,
+  description: propTypes.string,
+  logo: propTypes.string,
+};
 
 
 export default CardPastExhibit
