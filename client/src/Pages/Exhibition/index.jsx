@@ -3,13 +3,10 @@ import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
 import paper_plane from "./img/paper-plane.png";
-import { MdLocationOn } from "react-icons/md";
+import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-import { MdPerson } from "react-icons/md";
-import { FaFilePdf } from "react-icons/fa6";
+import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
 import { RxFigmaLogo } from "react-icons/rx";
-import { FaInstagram } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
 import CardAdditional from "../../component/card/CardAdditional";
@@ -51,7 +48,7 @@ function Exhibition() {
     <>
       <div className="exh-banner exh-banner-bg mt-5">
         <div className="exh-banner-overlay"></div>
-        <img src={syn_ele} alt="" className="exh-banner-ele" />
+        <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
         <div className="git-link">
           <a
             href="https://syn2sign-test.netlify.app"
@@ -288,7 +285,7 @@ function Exhibition() {
               <div className="col">
                 <div className="card-exh-link">
                   <a
-                    href="https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=xomeDL8DZmFDNhkO"
+                    href="https://www.facebook.com/media/set/?set=a.808621128076703&type=3"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -327,7 +324,7 @@ function Exhibition() {
             <div className="exh-feedback-sec mt-5">
               <div className="feedback-con">
                 <div className="paper-plane">
-                  <img src={paper_plane} alt="" loading="lazy" />
+                  <img src={paper_plane} alt="paper plane" loading="lazy" />
                 </div>
                 <h3 className="text-start txt-second mt-3 ms-3">
                   ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน

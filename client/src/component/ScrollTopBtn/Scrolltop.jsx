@@ -24,7 +24,7 @@ export const ScrollTop = () => {
     <>
       {showScroll && (
         <button onClick={scrollTop} className="scrollTop">
-          <img src="/icon/circle-up.svg" alt="" style={{ width: "1.5em" }} />
+          <img src="/icon/circle-up.svg" alt="scrolll icon" style={{ width: "1.5em" }} />
         </button>
       )}
     </>

@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import styled from "styled-components";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -7,33 +6,6 @@ import exh_photo from "./img/exh-photo.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function KnowledgeSlide() {
-   const Card = styled.div`
-       display: flex;
-       flex-direction: column;
-       overflow: hidden;
-       background-color: var(--color-light);
-       padding: 1rem;
-       border-radius: 1rem;
-       position: relative;
-   `;
-   const Overlay = styled.div`
-       z-index: 0;
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       height: 100%;
-       width: 100%;
-       background: rgb(255, 255, 255);
-       background: linear-gradient(
-         140deg,
-         rgba(255, 255, 255, 0) 90%,
-         rgba(144, 245, 197, 0.8) 100%
-       );
-   `;
-   const TextCon = styled.div`
-       z-index: 1;
-       position: relative;
-   `;
   return (
     <div className="swiper-content">
       <Swiper
@@ -50,15 +22,15 @@ export default function KnowledgeSlide() {
         // }}
       >
         <SwiperSlide>
-          <Card>
+          <div className="card-exh-link">
             <img
               src={exh_photo}
               alt=""
-              style={{ borderRadius: "1rem",}}
+              style={{ borderRadius: "1rem" }}
               className="card-img-top"
             />
-            <Overlay></Overlay>
-            <TextCon>
+            <div className="exh-card-ovl"></div>
+            <div className="card-exh-con">
               <div className="card-body text-start">
                 <h4 className="card-exh-title mt-3">
                   Starting Up • 10 Components for a Digital Platform
@@ -74,8 +46,8 @@ export default function KnowledgeSlide() {
                   SEE MORE <FaArrowRightLong />
                 </span>
               </div>
-            </TextCon>
-          </Card>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="card-exh-link">

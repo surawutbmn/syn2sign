@@ -21,7 +21,7 @@ export const Footers = () => {
   return (
     <>
       <footer id="footer" className="pb-3 position-relative">
-        <div className="bg-gd-foot"></div>
+        {/* <div className="bg-gd-foot"></div> */}
         <Container className="px-4 w-100 d-flex justify-content-between">
           <Row>
             <Col>
@@ -36,7 +36,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={em}
-                      alt=""
+                      alt="emdistrict"
                       style={{ maxWidth: "8em" }}
                     />
                   </a>
@@ -50,7 +50,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={dd}
-                      alt=""
+                      alt="ddproperty"
                       style={{ maxWidth: "8em" }}
                     />
                   </a>
@@ -64,7 +64,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={st}
-                      alt=""
+                      alt="styleyeet"
                       style={{ maxWidth: "2.5em" }}
                     />
                   </a>
@@ -78,7 +78,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={dl}
-                      alt=""
+                      alt="ducklab"
                       style={{ maxWidth: "1.5em" }}
                     />
                   </a>
@@ -93,7 +93,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={meg}
-                      alt=""
+                      alt="merge"
                       style={{ maxWidth: "3em" }}
                     />
                   </a>
@@ -107,7 +107,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={nb}
-                      alt=""
+                      alt="nabladigital"
                       style={{ maxWidth: "3em" }}
                     />
                   </a>
@@ -121,7 +121,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={dm}
-                      alt=""
+                      alt="deemmi"
                       style={{ maxWidth: "1.3em" }}
                     />
                   </a>
@@ -136,7 +136,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={dlo}
-                      alt=""
+                      alt="diloproducts"
                       style={{ maxWidth: "2em" }}
                     />
                   </a>
@@ -151,7 +151,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={ql}
-                      alt=""
+                      alt="Q-Light&Sound"
                       style={{ maxWidth: "1em" }}
                     />
                   </a>
@@ -166,7 +166,7 @@ export const Footers = () => {
                     <img
                       className="foot-logo"
                       src={m7}
-                      alt=""
+                      alt="ApologizeCh"
                       style={{ maxWidth: "1.1em" }}
                     />
                   </a>
@@ -184,7 +184,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={fb} alt="" />
+                    <img className="foot-logo" src={fb} alt="facebook" />
                   </a>
                 </div>
                 <div className="box-logo">
@@ -193,7 +193,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={ig} alt="" />
+                    <img className="foot-logo" src={ig} alt="instragram" />
                   </a>
                 </div>
                 <div className="box-logo">
@@ -202,7 +202,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={tw} alt="" />
+                    <img className="foot-logo" src={tw} alt="x/twitter" />
                   </a>
                 </div>
                 <div className="box-logo">
@@ -211,7 +211,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={yt} alt="" />
+                    <img className="foot-logo" src={yt} alt="youtube" />
                   </a>
                 </div>
                 <div className="box-logo">
@@ -220,7 +220,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={me} alt="" />
+                    <img className="foot-logo" src={me} alt="medium" />
                   </a>
                 </div>
                 <div className="box-logo">
@@ -229,7 +229,7 @@ export const Footers = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img className="foot-logo" src={tk} alt="" />
+                    <img className="foot-logo" src={tk} alt="tiktok" />
                   </a>
                 </div>
               </div>

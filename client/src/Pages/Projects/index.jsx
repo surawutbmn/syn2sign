@@ -4,19 +4,72 @@ import "./project.css";
 import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
-import Accordions from "./acc";
+import Accordions from "./Accordion/Accordion";
+// import projectsdata from "/public/data/Projectdata";
+import Creators from "./Creators/Creator";
 
 
 function Project() {
-  const [project, setProject] = useState({});
+  const [project, setProject] = useState(null);
+  const [students, setStudents] = useState([]);
   const { prj_id } = useParams();
-  // const prj_id = "cpl01";
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
-const items = [
-  { title: "idea concept", content: "Content for section 1" },
-  { title: "Key WORD", content: "Content for section 2" },
-  { title: "MAIN Function", content: "Content for section 3" },
-];
+  // console.log(projectsdata);
+  // const prj_id = "cpl01";
+  const items = [
+    {
+      title: "idea concept",
+      subtitle: "แนวคิดของผลงาน",
+      content: "Content for section 1",
+    },
+    {
+      title: "Key WORD",
+      subtitle: "คำค้นหา / คำสำคัญ ",
+      content: "Content for section 2",
+    },
+    {
+      title: "MAIN Function",
+      subtitle: "ฟังก์ชันหลัก",
+      content: "Content for section 3",
+    },
+    {
+      title: "DEVELOPMENT TOOLs",
+      subtitle: "เครื่องมือในการพัฒนาผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "DESIGN & PRESENTATION TOOLs",
+      subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "Design PROCESS",
+      subtitle: "กระบวนการออกแบบผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "target group",
+      subtitle: "กลุ่มเป้าหมาย",
+      content: "Content for section 3",
+    },
+    {
+      title: "Testing & Feedback",
+      subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
+      content: "Content for section 3",
+    },
+    {
+      title: "video demo",
+      subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "creator",
+      subtitle: "ผู้สร้างผลงาน",
+      content: " ",
+    },
+  ];
   const projectLinks = [
     { id: "cpl01", icon: "/icon/prj/cpl01-sqr.webp", name: "EVAL Balance" },
     { id: "cpl02", icon: "/icon/prj/cpl02-sqr.webp", name: "WAIWAN" },
@@ -28,30 +81,42 @@ const items = [
     { id: "cpl08", icon: "/icon/prj/cpl08-sqr.webp", name: "TINY THAI" },
   ];
 
-  const Getprojects = async () => {
+   const fetchProject = async () => {
+     setLoading(true);
+     try {
+       if (prj_id) {
+         const response = await axios.get(
+           `http://localhost/syn2sign/projects/${prj_id}`
+         );
+         setProject(response.data);
+         setActiveProject(prj_id);
+       } else {
+         setError("Project ID is missing");
+       }
+     } catch (error) {
+       setError("Error fetching project data");
+       console.error(error);
+     } finally {
+       setLoading(false);
+     }
+   };
+
+  const fetchStudents = async () => {
     try {
-      console.log(
-        `Fetching project from URL: http://localhost/syn2sign/projects/${prj_id}`
-      );
-      if (prj_id) {
-        const response = await axios.get(
-          `http://localhost/syn2sign/projects/${prj_id}`
-        );
-        const projectData = response.data;
-        setProject(projectData);
-        setActiveProject(prj_id);
+      const response = await axios.get(`http://localhost/syn2sign/students`);
+      if (Array.isArray(response.data)) {
+        setStudents(response.data);
       } else {
-        console.error("Project ID is missing");
+        console.error("Expected an array but received:", response.data);
       }
     } catch (error) {
-      console.error("Error fetching project data:", error);
+      setError("Error fetching student data");
+      console.error(error);
     }
   };
   useEffect(() => {
-    console.log("Project ID:", prj_id);
-    if (prj_id) {
-      Getprojects();
-    }
+    fetchProject();
+    fetchStudents();
   }, [prj_id]);
 
   useEffect(() => {
@@ -59,6 +124,55 @@ const items = [
       document.title = `${project.name_en} / ${project.fullname_th} - Syn2sign senior project exhibition 2024`;
     }
   }, [project]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!project) return <div>No project data available</div>;
+
+   const getMatchedStudents = () => {
+     return students.filter(
+       (student) => student.project_id === project.project_id
+     );
+   };
+
+   const matchedStudents = getMatchedStudents();
+
+   const itemsWithStudents = items.map((item) => {
+     if (item.title === "creator") {
+       return {
+         ...item,
+         content: (
+           <>
+             <ul>
+               {matchedStudents.length > 0 ? (
+                 matchedStudents.map((student) => (
+                   <li key={student.id}>
+                     <Link
+                       to={`/showcase/creators/${student.std_id}`}
+                       className="txt-link"
+                     >
+                       <Creators
+                         nameEN={student.name_en}
+                         nicknameEN={student.nickname_en}
+                         nameTH={`${student.name_th} (${student.nickname_th})`}
+                         email={student.email}
+                         linkedin={student.linkin}
+                         qoutes={student.qoutes}
+                         profileImg={`/profile_img/${student.profile_img}`}
+                       />
+                     </Link>
+                   </li>
+                 ))
+               ) : (
+                 <p>No students found</p>
+               )}
+             </ul>
+           </>
+         ),
+       };
+     }
+     return item;
+   });
 
   return (
     <>
@@ -68,16 +182,33 @@ const items = [
           : "Loading..."}
       </Helmet>
       <div className="container mt-5">
-        <div className="bg-gd-btr"></div>
-        <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
-        <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" />
+        <div>
+          {matchedStudents.length > 0 ? (
+            matchedStudents.map((student) => (
+              <div key={student.id}>
+                  <Creators
+                    stdID={student.std_id}
+                    nameEN={student.name_en}
+                    nicknameEN={student.nickname_en}
+                    nameTH={`${student.name_th} (${student.nickname_th})`}
+                    email={student.email}
+                    linkedin={student.linkin}
+                    qoutes={student.qoutes}
+                    profileImg={`/profile_img/${student.profile_img}`}
+                  />
+              </div>
+            ))
+          ) : (
+            <p>No students found</p>
+          )}
+        </div>
         <div className="project-content-sec">
           <div className="row">
             <div className="col">
               <div className="d-flex">
                 <img
                   src={`/icon/prj/${project.icon}`}
-                  alt=""
+                  alt="project icon"
                   className="prj-sec-icon"
                 />
                 <div className="text-start mx-4">
@@ -90,7 +221,7 @@ const items = [
                 <h1 className="outlined-text">#{project.id}</h1>
                 <img
                   src={`/icon/prj/${project.icon_std}`}
-                  alt=""
+                  alt="creator icon"
                   className="prj-sec-icon"
                 />
               </div>
@@ -112,8 +243,8 @@ const items = [
               ></iframe>
             </div>
           </div>
-          <Accordions items={items} />
-          <div className="row mt-4">
+          <Accordions items={itemsWithStudents} />
+          <div className="mt-4">
             <div className="col">
               <div className="text-start mb-4 header-wline">
                 <h3 className="txt-upper">
@@ -143,7 +274,7 @@ const items = [
                           <img
                             className="icon-img-link"
                             src={proj.icon}
-                            alt=""
+                            alt={`${proj.name} icon`}
                           />
                         </div>
                         <div className="mt-3 fs-5 txt-upper">

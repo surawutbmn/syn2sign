@@ -35,8 +35,16 @@ function Credit() {
   }, []);
   return (
     <>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      {/* <img
+        src="/icon/ele-head-l.svg"
+        className="ele-head-l"
+        alt="element left"
+      />
+      <img
+        src="/icon/ele-head-r.svg"
+        className="ele-head-r"
+        alt="element right"
+      /> */}
       <Container className="mx-auto w-100">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
@@ -54,7 +62,7 @@ function Credit() {
           </div>
           <img
             src="../../s2s-logo/syn2sign_logo_cl.webp"
-            alt=""
+            alt="syn2sign logo"
             style={{ width: "24vw" }}
             className="logo"
           />
@@ -124,52 +132,52 @@ function Credit() {
               </div>
             </div>
           </div>
-            <div className="col-12 text-center mt-5">
-              <div className="">
-                <h2 className="txt-scdhead mb-4">
-                  Introducing the ICT:SILPAKORN
-                </h2>
-                <p>
-                  <a
-                    href="https://ict.su.ac.th/?page_id=30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "white" }}
-                  >
-                    หลักสูตรเทคโนโลยีดิจิทัลเพื่อธุรกิจ (Digital Technology for
-                    Business),
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="https://ict.su.ac.th/?page_id=32"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "white" }}
-                  >
-                    หลักสูตรเทคโนโลยีดิจิทัลเพื่อการออกแบบ (Digital Technology
-                    for Design),
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="https://ict.su.ac.th/?page_id=34"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "white" }}
-                  >
-                    หลักสูตรนิเทศศาสตร์ (Communication Arts)
-                  </a>
-                </p>
-              </div>
+          <div className="col-12 text-center mt-5">
+            <div className="">
+              <h2 className="txt-scdhead mb-4">
+                Introducing the ICT:SILPAKORN
+              </h2>
+              <p>
+                <a
+                  href="https://ict.su.ac.th/?page_id=30"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white" }}
+                >
+                  หลักสูตรเทคโนโลยีดิจิทัลเพื่อธุรกิจ (Digital Technology for
+                  Business),
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://ict.su.ac.th/?page_id=32"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white" }}
+                >
+                  หลักสูตรเทคโนโลยีดิจิทัลเพื่อการออกแบบ (Digital Technology for
+                  Design),
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://ict.su.ac.th/?page_id=34"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "white" }}
+                >
+                  หลักสูตรนิเทศศาสตร์ (Communication Arts)
+                </a>
+              </p>
             </div>
+          </div>
         </div>
       </Container>
       <div className="w-100 su-line mt-5">
         <div className="container">
           <img
             src="../../s2s-logo/su_logo.svg"
-            alt=""
+            alt="ict slipakorn logo"
             style={{ marginLeft: ".5em" }}
           />
         </div>
@@ -191,7 +199,7 @@ function Credit() {
           <div className="grid grid-cols-2 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={graphic} alt="" />
+                <img src={graphic} alt="graphic icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -212,7 +220,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={sp} alt="" />
+                <img src={sp} alt="sponser icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -232,7 +240,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={web} alt="" />
+                <img src={web} alt="website icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -252,7 +260,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={int} alt="" />
+                <img src={int} alt="interactive icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -273,7 +281,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={pr} alt="" />
+                <img src={pr} alt="public relation icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -296,7 +304,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={knb} alt="" />
+                <img src={knb} alt="knowledge board icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -316,7 +324,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={lo} alt="" />
+                <img src={lo} alt="location icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -335,7 +343,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={led} alt="" />
+                <img src={led} alt="led media icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -358,7 +366,7 @@ function Credit() {
           <div className="grid grid-cols-2 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={thx} alt="" />
+                <img src={thx} alt="thank icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -377,7 +385,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={thx} alt="" />
+                <img src={thx} alt="thank icon" />
               </div>
               <div className="text-start">
                 <span>
@@ -404,7 +412,7 @@ function Credit() {
               >
                 <img
                   src={em}
-                  alt=""
+                  alt="emdistrict logo"
                   loading="lazy"
                   className="spon-logo"
                   style={{ maxHeight: "6rem" }}
@@ -424,7 +432,7 @@ function Credit() {
                 >
                   <img
                     src={dd}
-                    alt=""
+                    alt="ddproperty logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "18rem" }}
@@ -446,7 +454,7 @@ function Credit() {
                 >
                   <img
                     src={st}
-                    alt=""
+                    alt="styleyeet logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "8em" }}
@@ -467,7 +475,7 @@ function Credit() {
                 >
                   <img
                     src={dl}
-                    alt=""
+                    alt="ducklab logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem" }}
@@ -488,7 +496,7 @@ function Credit() {
                 >
                   <img
                     src={meg}
-                    alt=""
+                    alt="merge logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "10rem" }}
@@ -509,7 +517,7 @@ function Credit() {
                 >
                   <img
                     src={nb}
-                    alt=""
+                    alt="nabladigital logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "9rem" }}
@@ -530,7 +538,7 @@ function Credit() {
                 >
                   <img
                     src={dm}
-                    alt=""
+                    alt="deemi logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "4rem" }}
@@ -551,7 +559,7 @@ function Credit() {
                 >
                   <img
                     src={dlo}
-                    alt=""
+                    alt="dilo logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "8rem" }}
@@ -572,7 +580,7 @@ function Credit() {
                 >
                   <img
                     src={ql}
-                    alt=""
+                    alt="qlight logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "4rem" }}
@@ -593,7 +601,7 @@ function Credit() {
                 >
                   <img
                     src={m7}
-                    alt=""
+                    alt="mango7 logo"
                     loading="lazy"
                     className="spon-logo"
                     style={{ maxHeight: "6rem", maxWidth: "4rem" }}

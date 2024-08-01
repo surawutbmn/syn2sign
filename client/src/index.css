@@ -55,7 +55,16 @@ body {
 /* ------------------- element --------------------------- */
 .ele-head-l{width: 100%; position: absolute; left: -28%; top: -4%; z-index: 0;}
 .ele-head-r{width: 100%; position: absolute; right: -8%; top: 0%; z-index: 0;}
-
+.bg-gd-btr{
+    bottom: -20%;
+    width: 100%;
+    z-index: 0;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    background: rgb(255,255,255);
+    background: linear-gradient(140deg, rgba(255,255,255,0) 70%, rgba(5,186,100,1) 100%);
+}
 /* ------------------- text --------------------------- */
 h1{font-size: 2.4em;}
 h2{font-size: 2.2em;}
