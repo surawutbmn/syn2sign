@@ -45,13 +45,13 @@ function Exhibition() {
         <div className="exh-report-sec mb-6">
           <div className="row row-cols-1 row-cols-md-2 g-4">
             <div className="col">
-              <div className="card  text-start">
-                <a
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-txt"
-                >
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-txt"
+              >
+                <div className="card  text-start">
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title mb-2">
@@ -70,17 +70,17 @@ function Exhibition() {
                       </div>
                     </div>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
             <div className="col">
-              <div className="card text-start">
-                <a
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-txt"
-                >
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-txt"
+              >
+                <div className="card text-start">
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
@@ -99,17 +99,17 @@ function Exhibition() {
                       <FaFilePdf />
                     </div>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
             <div className="col">
-              <div className="card text-start">
-                <a
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-txt"
-                >
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-txt"
+              >
+                <div className="card text-start">
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
@@ -127,17 +127,17 @@ function Exhibition() {
                       <RxFigmaLogo />
                     </div>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
             <div className="col">
-              <div className="card text-start">
-                <a
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-txt"
-                >
+              <a
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-txt"
+              >
+                <div className="card text-start">
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
@@ -156,8 +156,8 @@ function Exhibition() {
                       <FaFilePdf />
                     </div>
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -226,22 +226,20 @@ function Exhibition() {
                       <div className="col-4">
                         <div className="exh-img-pl"></div>
                       </div>
-                      <div className="col-8">
-                        <div className="card-body text-start">
-                          <h4 className="card-exh-title">
-                            Youtube playlist • Senior Project Showreel, Academic
-                            Year 2023
-                          </h4>
-                          <p className="card-exh-text">
-                            เราได้จัดทำ Youtube playlist รวบรวมคลิป Showreel
-                            ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566
-                            เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น
-                          </p>
-                          <div className="card-foot">
-                            <span className="btn-icon">
-                              Watch now <FaArrowRightLong />
-                            </span>
-                          </div>
+                      <div className="col-8 d-flex flex-column text-start">
+                        <h4 className="card-exh-title">
+                          Youtube playlist • Senior Project Showreel, Academic
+                          Year 2023
+                        </h4>
+                        <p className="card-exh-text">
+                          เราได้จัดทำ Youtube playlist รวบรวมคลิป Showreel
+                          ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566
+                          เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น
+                        </p>
+                        <div className="card-foot">
+                          <span className="btn-icon">
+                            Watch now <FaArrowRightLong />
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -260,21 +258,19 @@ function Exhibition() {
                       <div className="col-4">
                         <div className="exh-img-ph"></div>
                       </div>
-                      <div className="col-8">
-                        <div className="card-body text-start">
-                          <h4 className="card-exh-title">
-                            Exhibition Onsite Photo #syn2sign
-                          </h4>
-                          <p className="card-exh-text">
-                            รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign
-                            ที่นอกจากการจัด
-                            แสดงโชว์ผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย
-                          </p>
-                          <div className="card-foot">
-                            <span className="btn-icon">
-                              SEE MORE <FaArrowRightLong />
-                            </span>
-                          </div>
+                      <div className="col-8 d-flex flex-column text-start">
+                        <h4 className="card-exh-title">
+                          Exhibition Onsite Photo #syn2sign
+                        </h4>
+                        <p className="card-exh-text">
+                          รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign
+                          ที่นอกจากการจัด
+                          แสดงโชว์ผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย
+                        </p>
+                        <div className="card-foot">
+                          <span className="btn-icon">
+                            SEE MORE <FaArrowRightLong />
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -283,7 +279,7 @@ function Exhibition() {
               </div>
             </div>
             <div className="exh-knowledge-sec mt-5">
-              {/* <Knowslide /> */}
+              <Knowslide />
             </div>
             <div className="exh-feedback-sec mt-5">
               <div className="feedback-con">

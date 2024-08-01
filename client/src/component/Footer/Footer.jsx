@@ -15,15 +15,16 @@ import dm from "./spon-logo/dm.svg";
 import dlo from "./spon-logo/dlo.svg";
 import ql from "./spon-logo/ql.svg";
 import m7 from "./spon-logo/m7.svg";
+import { Col, Container, Row } from "react-bootstrap";
 
 export const Footers = () => {
   return (
     <>
       <footer id="footer" className="pb-3 position-relative">
         <div className="bg-gd-foot"></div>
-        <div className="container px-4 w-100 d-flex justify-content-between">
-          <div className="row">
-            <div className="col">
+        <Container className="px-4 w-100 d-flex justify-content-between">
+          <Row>
+            <Col>
               <h6 className="txt-cap text-start">sponsored by:</h6>
               <div className="d-flex align-items-center foot-l">
                 <div className="box-logo">
@@ -171,10 +172,10 @@ export const Footers = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <h6 className="txt-cap text-start">Follow us:</h6>
               <div className="d-flex align-items-center footer-r">
                 <div className="box-logo">
@@ -232,9 +233,9 @@ export const Footers = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </>
   );

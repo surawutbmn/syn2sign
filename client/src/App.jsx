@@ -6,13 +6,13 @@ import { Nav2 } from "./component/Nav/Nav";
 import { Footers } from "./component/Footer/Footer";
 import { ScrollTop } from "./component/ScrollTopBtn/Scrolltop";
 import Home from "./Pages/Home";
-import Showcase from "./Pages/Showcase/Showcase";
-import Project from "./Pages/Projects/Projects";
-import Students from "./Pages/Students/Students";
-import Exhibition from "./Pages/Exhibition/Exhibition";
-import Credit from "./Pages/Credits/credit"
+import Showcase from "./Pages/Showcase";
+import Project from "./Pages/Projects";
+import Students from "./Pages/Students";
+import Exhibition from "./Pages/Exhibition";
+import Credit from "./Pages/Credits"
 import StayTune from "./Pages/StayTune/StayTune";
-import Notfound from "./Pages/Notfound/Notfound";
+import Notfound from "./Pages/Notfound";
 
 function App() {
   const location = useLocation();

@@ -67,14 +67,20 @@ export const VdoSlide = () => {
   ];
 
   return (
-    <div className="swiper-container">
+    <div className="position-relative">
       <Swiper
         modules={[Navigation]}
         spaceBetween={30}
-        slidesPerView={3}
-        cssMode={true}
-        // loop={true}
-        navigation
+        slidesPerView={1.5}
+        breakpoints={{
+          768: { slidesPerView: 2.5 },
+          1440: { slidesPerView: 2.8 },
+        }}
+        // cssMode={true}
+        navigation={{
+          nextEl: ".prj-vdoslide-nav .swiper-button-next",
+          prevEl: ".prj-vdoslide-nav .swiper-button-prev",
+        }}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
@@ -117,10 +123,10 @@ export const VdoSlide = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <div className="prj-vdoslide-nav">
+      <div className="prj-vdoslide-nav">
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
-      </div> */}
+      </div>
     </div>
   );
 };

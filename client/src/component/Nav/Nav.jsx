@@ -1,6 +1,7 @@
 import "./nav.css";
 import { useLocation, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 export const Nav2 = () => {
   const location = useLocation();
@@ -21,9 +22,9 @@ export const Nav2 = () => {
     <>
       <header className="header-section">
         {/* <div className="bg-gd-head"></div> */}
-        <nav className="navbar navbar-expand-xl ">
-          <div className="pt-3 container container-1360 position-relative">
-            <div className="navbar-brand">
+        <Navbar expand="xl">
+          <Container className="pt-3 position-relative">
+            <Navbar.Brand>
               <NavLink className="me-3" to="/">
                 <img
                   src="/s2s-logo/syn2sign_logo.svg"
@@ -52,7 +53,7 @@ export const Nav2 = () => {
                   />
                 </picture>
               </a>
-            </div>
+            </Navbar.Brand>
             <div className="btn-menu" onClick={menuClick}>
               <div className="groupMenu">
                 <span className="pan1"></span> <span className="pan2"></span>
@@ -60,11 +61,11 @@ export const Nav2 = () => {
               </div>
             </div>
 
-            <div
+            <Navbar.Collapse
               className={`navbar-collapse ${menuOpen ? "show" : ""}`}
               id="navbarText"
             >
-              <ul className="navbar-nav nav-r txt-upper ms-auto mb-2 mb-lg-0">
+              <Nav className="nav-r txt-upper ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <NavLink
                     to="/"
@@ -133,10 +134,10 @@ export const Nav2 = () => {
                     STAY TUNE
                   </NavLink>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       </header>
     </>
   );
