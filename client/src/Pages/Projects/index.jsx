@@ -4,6 +4,7 @@ import "./project.css";
 import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
+import Accordions from "./acc";
 
 
 function Project() {
@@ -11,7 +12,11 @@ function Project() {
   const { prj_id } = useParams();
   // const prj_id = "cpl01";
   const [activeProject, setActiveProject] = useState(null);
-
+const items = [
+  { title: "idea concept", content: "Content for section 1" },
+  { title: "Key WORD", content: "Content for section 2" },
+  { title: "MAIN Function", content: "Content for section 3" },
+];
   const projectLinks = [
     { id: "cpl01", icon: "/icon/prj/cpl01-sqr.webp", name: "EVAL Balance" },
     { id: "cpl02", icon: "/icon/prj/cpl02-sqr.webp", name: "WAIWAN" },
@@ -82,7 +87,7 @@ function Project() {
                   <p>({project.name_th})</p>
                 </div>
                 <hr className="prj-name-line" />
-                <h1 className="outlined-text">#1</h1>
+                <h1 className="outlined-text">#{project.id}</h1>
                 <img
                   src={`/icon/prj/${project.icon_std}`}
                   alt=""
@@ -107,6 +112,7 @@ function Project() {
               ></iframe>
             </div>
           </div>
+          <Accordions items={items} />
           <div className="row mt-4">
             <div className="col">
               <div className="text-start mb-4 header-wline">

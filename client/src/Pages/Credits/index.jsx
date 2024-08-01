@@ -21,6 +21,7 @@ import gsap, { Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
 import "./credit.css";
+import { Container } from "react-bootstrap";
 
 function Credit() {
   gsap.registerPlugin(ScrollTrigger);
@@ -36,7 +37,7 @@ function Credit() {
     <>
       <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
       <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="container mx-auto w-100">
+      <Container className="mx-auto w-100">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
           <div className="mt-3">
@@ -54,7 +55,7 @@ function Credit() {
           <img
             src="../../s2s-logo/syn2sign_logo_cl.webp"
             alt=""
-            style={{ width: "20vw" }}
+            style={{ width: "24vw" }}
             className="logo"
           />
         </div>
@@ -163,7 +164,7 @@ function Credit() {
               </div>
             </div>
         </div>
-      </div>
+      </Container>
       <div className="w-100 su-line">
         <div className="container">
           <img
@@ -173,7 +174,7 @@ function Credit() {
           />
         </div>
       </div>
-      <div className="container mt-5">
+      <Container className="mt-5">
         <div className="mb-5">
           <h2 className="mb-3 txt-scdhead">syn2sign exhibition venue</h2>
           <span>
@@ -686,7 +687,7 @@ function Credit() {
             UNIVERSITY
           </span>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

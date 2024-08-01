@@ -10,9 +10,12 @@
 
 }
 .wrapper{
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
+  display: flex;
+  flex-direction: column;
 }
+.main-content{flex-grow: 1;}
 
 .bg-trans {
   background-color: transparent;

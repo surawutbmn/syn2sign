@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./showcase.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Col, Container, Row } from "react-bootstrap";
 
 
 function Showcase() {
@@ -74,7 +75,7 @@ function Showcase() {
 
   return (
     <>
-      <div className="container showcase-sec my-5">
+      <Container className="position-relative my-5">
         <div className="bg-gd-btr"></div>
         <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
         <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" />
@@ -112,9 +113,9 @@ function Showcase() {
         </div>
         <div className="tab-content">
           {activeTab === 1 && (
-            <div className="row g-4">
+            <Row xs={2} xl={3} className="g-4">
               {updatedProjects.length === 0 && (
-                <div className="col-4">
+                <Col>
                   <div className="card-prj">
                     <Link to={`/showcase/projects/`} className="card-link">
                       <div className="card-prj-head">
@@ -160,10 +161,10 @@ function Showcase() {
                       </div>
                     </Link>
                   </div>
-                </div>
+                </Col>
               )}
               {updatedProjects.map((project) => (
-                <div className="col-4" key={project.id}>
+                <Col key={project.id}>
                   <div className="card-prj">
                     <Link
                       to={`/showcase/projects/${project.project_id}`}
@@ -217,14 +218,14 @@ function Showcase() {
                       </div>
                     </Link>
                   </div>
-                </div>
+                </Col>
               ))}
-            </div>
+            </Row>
           )}
           {activeTab === 2 && (
-            <div className="row g-4">
+            <Row xs={3} xl={4} className="g-4">
               {updatedStudents.length === 0 && (
-                <div className="col-3">
+                <Col className="col-3">
                   <Link to={`/showcase/creators/`} className="card-link">
                     <div className="card-std-img">
                       <img
@@ -246,10 +247,10 @@ function Showcase() {
                       </div>
                     </div>
                   </Link>
-                </div>
+                </Col>
               )}
               {updatedStudents.map((student) => (
-                <div className="col-3" key={student.id}>
+                <Col key={student.id}>
                   <div className="card-std">
                     <Link
                       to={`/showcase/creators/${student.std_id}`}
@@ -284,12 +285,12 @@ function Showcase() {
                       </div>
                     </Link>
                   </div>
-                </div>
+                </Col>
               ))}
-            </div>
+            </Row>
           )}
         </div>
-      </div>
+      </Container>
     </>
   );
 }
