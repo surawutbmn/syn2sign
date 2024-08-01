@@ -79,6 +79,7 @@ background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%
     }
     .menuClick .navbar-collapse {height: calc(100vh - 48px);}
     .link-nav{font-size: 1.2em;}
+    .link-nav:hover,
     .link-nav.active{background-color: transparent; color: var(--color-secondary);}
     .nav-r li{margin-right: 0; margin-bottom: 8px;}
     .nav-r li.link-nav{margin: 0; display: flex; justify-self: center; margin-bottom: 8px;}
