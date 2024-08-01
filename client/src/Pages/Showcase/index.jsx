@@ -225,14 +225,16 @@ function Showcase() {
           {activeTab === 2 && (
             <Row xs={3} xl={4} className="g-4">
               {updatedStudents.length === 0 && (
-                <Col className="col-3">
+                <Col xs={3}>
+                  <div className="card-std">
+
                   <Link to={`/showcase/creators/`} className="card-link">
                     <div className="card-std-img">
                       <img
                         src={`/profile_img/073-profile.webp`}
                         loading="lazy"
                         alt="creator profile"
-                      />
+                        />
                       <div className="card-std-overlay">
                         <div className="card-std-txt">
                           <span className="card-std-title">
@@ -247,6 +249,7 @@ function Showcase() {
                       </div>
                     </div>
                   </Link>
+                        </div>
                 </Col>
               )}
               {updatedStudents.map((student) => (
