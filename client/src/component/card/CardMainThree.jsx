@@ -73,10 +73,11 @@ const CardMainThree = (props) => {
             </div>
             <ImageLinkExhibition href={props.linkVideo} target="_blank">
               <TabVideoAndImageBox className="col-12">
-                <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
-                <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
-                <img src="/staytune/dotwishion-video-preview.png"></img>
-
+              <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
+              <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
+                <img src="/staytune/dotwishion-video-preview.png">
+                </img>
+                
                 <Overlay />
                 <IconPlay className="icon-play">
                   <FaPlayCircle />
@@ -87,10 +88,11 @@ const CardMainThree = (props) => {
 
             <ImageLinkExhibition href={props.linkImage} target="_blank">
               <TabVideoAndImageBox className="col-12">
-                {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
-                <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
-                <img src="/staytune/dotwishion-video-preview.png"></img>
-
+              {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
+              <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
+                <img src="/staytune/dotwishion-video-preview.png">
+                </img>
+                
                 <Overlay />
                 <IconPlay className="icon-play">
                   <FaPlayCircle />
