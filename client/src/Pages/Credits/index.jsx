@@ -19,13 +19,13 @@ import lo from "./img/icon/location.svg";
 import led from "./img/icon/led.svg";
 import gsap, { Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import "./credit.css";
 import { Container } from "react-bootstrap";
 
 function Credit() {
-  gsap.registerPlugin(ScrollTrigger);
-  useLayoutEffect(() => {
+  // gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
     gsap.fromTo(
       ".logo",
       2,

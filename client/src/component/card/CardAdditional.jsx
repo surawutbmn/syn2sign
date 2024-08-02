@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import propTypes from "prop-types";
 import { FaArrowRightLong } from "react-icons/fa6";
 import WatchnowButton from "../Button/WatchnowButton";
 const CardAdditional = (props) => {
