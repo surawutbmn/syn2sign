@@ -70,7 +70,7 @@ function Exhibition() {
               M FLOOR, EMSPHERE
             </strong>
           </h5>
-          <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 1ล้านคน persons</p>
+          <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
         </div>
       </div>
       <div className="container my-6">
