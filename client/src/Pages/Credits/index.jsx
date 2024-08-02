@@ -35,7 +35,7 @@ function Credit() {
   }, []);
   return (
     <>
-      {/* <img
+      <img
         src="/icon/ele-head-l.svg"
         className="ele-head-l"
         alt="element left"
@@ -44,8 +44,10 @@ function Credit() {
         src="/icon/ele-head-r.svg"
         className="ele-head-r"
         alt="element right"
-      /> */}
-      <Container className="mx-auto w-100">
+      />
+      <div className="bg-gd-btr"></div>
+
+      <Container className="mx-auto w-100 position-relative">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
           <div className="mt-5">

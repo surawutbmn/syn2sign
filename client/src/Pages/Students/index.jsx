@@ -88,6 +88,10 @@ const handleLinkClick = (event) => {
             : "Loading..."}
         </title>
       </Helmet>
+      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <div className="bg-gd-btr"></div>
+
       <div className="container mt-5">
         <div className="d-flex justify-content-between">
           <div className="text-start">

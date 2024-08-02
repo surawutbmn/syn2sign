@@ -47,6 +47,8 @@ function Exhibition() {
 
   return (
     <>
+      <div className="bg-gd-btr"></div>
+
       <div className="exh-banner exh-banner-bg mt-5">
         <div className="exh-banner-overlay"></div>
         <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
@@ -155,8 +157,8 @@ function Exhibition() {
                     <span className="txt-grey">(Senior Project, FIGMA)</span>
                     <p className="card-text mt-4">
                       หนังสือรวบรวมผลงานจุลนิพนธ์ ของนักศึกษา สาขา<br></br>
-                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>คณะไอซีที
-                      รุ่นที่ 18 ม.ศิลปากร ปีการศึกษา 2566
+                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>
+                      คณะไอซีที รุ่นที่ 18 ม.ศิลปากร ปีการศึกษา 2566
                     </p>
                     <br className="d-xxl-block d-none" />
                     <div className="card-exh-icon text-end">
@@ -184,8 +186,8 @@ function Exhibition() {
 
                     <p className="card-text mt-4">
                       รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ<br></br>
-                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>ชั้นปีที่ 4
-                      ปีการศึกษา 2566
+                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>
+                      ชั้นปีที่ 4 ปีการศึกษา 2566
                     </p>
                     <br />
                     <div className="card-exh-icon text-end">
@@ -251,7 +253,7 @@ function Exhibition() {
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">
             {/* <div className="row row-cols-1 row-cols-lg-2 g-4"> */}
-              {/* <div className="col">
+            {/* <div className="col">
                 <div className="card-exh-link">
                   <a
                     href="https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=xomeDL8DZmFDNhkO"
@@ -315,7 +317,6 @@ function Exhibition() {
                 </div>
               </div> */}
 
-              
             {/* </div> */}
             {/* <CardAdditional /> */}
             <PlaylistSlider />

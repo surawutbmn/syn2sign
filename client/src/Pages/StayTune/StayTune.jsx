@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 // import { FaGlobe, FaCirclePlay, FaUserSecret } from "react-icons/fa";
 
 import CardPastExhibit from "../../component/card/CardPastExhibit";
-import TwoABC from "../../component/card/TwoABC";
+// import TwoABC from "../../component/card/TwoABC";
 // import {CardMainThree,CardPastExhibit } from "../../component/card/index";
 import CardMainThree from "../../component/card/CardMainThree"
 // const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
@@ -16,68 +16,69 @@ import CardMainThree from "../../component/card/CardMainThree"
 
 function StayTune() {
   return (
-    
-    <div style={{ height: "fit-content", backgroundColor: "" }}>
-      <div className="container mb-5 mt-5">
-      <h2 className="txt-upper txt-second txt-bold mb-5">
-        stay tuned at other years$rsqou; exhibition
-      </h2>
+    <>
+      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <div className="bg-gd-btr"></div>
 
-        {/* Dotwisihon (2023) */}
-        <CardMainThree
-          poster="/staytune/dotwishion-poster.png"
-          logo="/staytune/dotwishion-logo.svg"
-          name="DOTWISH/*ON (2023)"
-          year="23"
-          NameVideo="DOTWISH/*ON"
-          link="https://funcslash.com/dotwishion/"
-          linkVideo=""
-          linkImage=""
-          description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2023 "
-          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
-          description3="มหาวิทยาลัยศิลปากร"
-          line="/other/line.png"
-        />
-        {/* STY}E:YEET (2022) */}
-        <CardMainThree
-          poster="/staytune/STY}E_YEET-poster.png"
-          logo="/staytune/STY}E_YEET-logo.svg"
-          name="STY}E:YEET (2022)"
-          year="22"
-          NameVideo="STY}E:YEET"
-          link="https://funcslash.com/styleyeet/"
-          linkVideo=""
-          linkImage=""
-          description1="เว็บไซต์รวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 "
-          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 "
-          description3="มหาวิทยาลัยศิลปากร"
-        />
-        {/* &TIVIRUS (2021) */}
-        <CardMainThree
-          poster="/staytune/&TIVIRUS-poster.png"
-          logo="/staytune/&TIVIRUS-logo.svg"
-          name="&TIVIRUS (2021)"
-          year="21"
-          NameVideo="&TIVIRUS"
-          link=""
-          linkVideo=""
-          linkImage=""
-          description1="การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021"
-          description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 "
-          description3="มหาวิทยาลัยศิลปากร"
-        />
+      <div style={{ height: "fit-content", backgroundColor: "" }}>
+        <div className="container mb-5 mt-5 position-relative">
+          <h2 className="txt-upper txt-second txt-bold mb-5">
+            stay tuned at other year&rsquo;s exhibition
+          </h2>
 
+          {/* Dotwisihon (2023) */}
+          <CardMainThree
+            poster="/staytune/dotwishion-poster.png"
+            logo="/staytune/dotwishion-logo.svg"
+            name="DOTWISH/*ON (2023)"
+            year="23"
+            NameVideo="DOTWISH/*ON"
+            link="https://funcslash.com/dotwishion/"
+            linkVideo=""
+            linkImage=""
+            description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2023 "
+            description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
+            description3="มหาวิทยาลัยศิลปากร"
+            line="/other/line.png"
+          />
+          {/* STY}E:YEET (2022) */}
+          <CardMainThree
+            poster="/staytune/STY}E_YEET-poster.png"
+            logo="/staytune/STY}E_YEET-logo.svg"
+            name="STY}E:YEET (2022)"
+            year="22"
+            NameVideo="STY}E:YEET"
+            link="https://funcslash.com/styleyeet/"
+            linkVideo=""
+            linkImage=""
+            description1="เว็บไซต์รวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 "
+            description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 "
+            description3="มหาวิทยาลัยศิลปากร"
+          />
+          {/* &TIVIRUS (2021) */}
+          <CardMainThree
+            poster="/staytune/&TIVIRUS-poster.png"
+            logo="/staytune/&TIVIRUS-logo.svg"
+            name="&TIVIRUS (2021)"
+            year="21"
+            NameVideo="&TIVIRUS"
+            link="https://www.youtube.com/playlist?list=PLiCmIB88gkWSOhh-DCS-kF6LqRvJS5Aay"
+            linkVideo=""
+            linkImage=""
+            description1="การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021"
+            description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 "
+            description3="มหาวิทยาลัยศิลปากร"
+          />
+        </div>
 
-      </div>
-
-      <div className="container mb-5">
+        <div className="container mb-5">
           <h2 className="txt-bold title-exhibitionName-box text-start">
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
           <div className="row">
             <div className="col-12 col-lg-6">
               <CardPastExhibit
-            
                 poster="/staytune/POSTER2020.png"
                 name="EX;TRACT"
                 year="20"
@@ -109,7 +110,7 @@ function StayTune() {
             <div className="col-12 col-lg-6">
               {" "}
               <CardPastExhibit
-               href="https://funcslash.com/ultraline/portfolio/new_index.php"
+                href="https://funcslash.com/ultraline/portfolio/new_index.php"
                 poster="/staytune/POSTER2017.png"
                 name="ULTRA-LINE 11.3"
                 year="17"
@@ -142,14 +143,11 @@ function StayTune() {
               />
             </div>
 
-            <div className="col-12 blank">
-
-              
-              
-            </div>
+            <div className="col-12 blank"></div>
           </div>
         </div>
-    </div>
+      </div>
+    </>
   );
 }
 //push

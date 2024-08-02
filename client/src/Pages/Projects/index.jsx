@@ -181,21 +181,25 @@ function Project() {
           ? `${project.name_en} ${project.name_th} - Syn2sign senior project exhibition 2024`
           : "Loading..."}
       </Helmet>
+      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <div className="bg-gd-btr"></div>
+
       <div className="container mt-5">
         <div>
           {matchedStudents.length > 0 ? (
             matchedStudents.map((student) => (
               <div key={student.id}>
-                  <Creators
-                    stdID={student.std_id}
-                    nameEN={student.name_en}
-                    nicknameEN={student.nickname_en}
-                    nameTH={`${student.name_th} (${student.nickname_th})`}
-                    email={student.email}
-                    linkedin={student.linkin}
-                    qoutes={student.qoutes}
-                    profileImg={`/profile_img/${student.profile_img}`}
-                  />
+                <Creators
+                  stdID={student.std_id}
+                  nameEN={student.name_en}
+                  nicknameEN={student.nickname_en}
+                  nameTH={`${student.name_th} (${student.nickname_th})`}
+                  email={student.email}
+                  linkedin={student.linkin}
+                  qoutes={student.qoutes}
+                  profileImg={`/profile_img/${student.profile_img}`}
+                />
               </div>
             ))
           ) : (

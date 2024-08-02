@@ -77,9 +77,10 @@ function Showcase() {
 
   return (
     <>
-      {/* <div className="bg-gd-btr"></div>
-      <img src="/icon/ele-head-l.svg" className="ele-sch-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-sch-r" alt="" /> */}
+      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
+      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <div className="bg-gd-btr"></div>
+
       <Container className="position-relative my-5">
         <div className="tabs">
           <div
@@ -233,7 +234,10 @@ function Showcase() {
                 studentsdata.map((std) => (
                   <Col xs={3} key={std.id}>
                     <div className="card-std">
-                      <Link to={`/showcase/creators/${std.std_id}`} className="card-link">
+                      <Link
+                        to={`/showcase/creators/${std.std_id}`}
+                        className="card-link"
+                      >
                         <div className="read-more d-flex">
                           <img
                             src="/icon/read-more.svg"
