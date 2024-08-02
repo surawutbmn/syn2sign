@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
-// import projectsdata from "/public/data/Projectdata";
+import projectsdata from "/public/data/Projectdata";
 import Creators from "./Creators/Creator";
 
 
@@ -15,9 +15,12 @@ function Project() {
   const { prj_id } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeProject, setActiveProject] = useState(null);
+  const [activeProject, setActiveProject] = useState(
+    localStorage.getItem("activeProject") || null
+  );
   // console.log(projectsdata);
   // const prj_id = "cpl01";
+  
   const items = [
     {
       title: "idea concept",
@@ -70,16 +73,6 @@ function Project() {
       content: " ",
     },
   ];
-  const projectLinks = [
-    { id: "cpl01", icon: "/icon/prj/cpl01-sqr.webp", name: "EVAL Balance" },
-    { id: "cpl02", icon: "/icon/prj/cpl02-sqr.webp", name: "WAIWAN" },
-    { id: "cpl03", icon: "/icon/prj/cpl03-sqr.webp", name: "ARTIST MATCH" },
-    { id: "cpl04", icon: "/icon/prj/cpl04-sqr.webp", name: "MORYTECH" },
-    { id: "cpl05", icon: "/icon/prj/cpl05-sqr.webp", name: "FULLFILL" },
-    { id: "cpl06", icon: "/icon/prj/cpl06-sqr.webp", name: "YOUNG & CHIC" },
-    { id: "cpl07", icon: "/icon/prj/cpl07-sqr.webp", name: "Tent Care" },
-    { id: "cpl08", icon: "/icon/prj/cpl08-sqr.webp", name: "TINY THAI" },
-  ];
 
    const fetchProject = async () => {
      setLoading(true);
@@ -90,6 +83,7 @@ function Project() {
          );
          setProject(response.data);
          setActiveProject(prj_id);
+         localStorage.setItem("activeProject", prj_id);
        } else {
          setError("Project ID is missing");
        }
@@ -257,19 +251,22 @@ function Project() {
                 <span className="txt-grey">ผลงานอื่นๆ</span>
               </div>
               <div className="d-flex justify-content-around text-center mb-6">
-                {projectLinks.map((proj) => (
+                {projectsdata.map((proj) => (
                   <div
-                    key={proj.id}
+                    key={proj.project_id}
                     className={`list-group-item ${
-                      activeProject === proj.id ? "active" : ""
+                      activeProject === proj.project_id ? "active" : ""
                     }`}
                   >
                     <Link
-                      to={`/showcase/projects/${proj.id}`}
-                      onClick={() => setActiveProject(proj.id)}
+                      to={`/showcase/projects/${proj.project_id}`}
+                      onClick={() => {
+                        setActiveProject(proj.project_id);
+                        localStorage.setItem("activeProject", proj.project_id);
+                      }}
                       className="link-txt"
                     >
-                      <div className="d-flex flex-column">
+                      <div className="d-flex flex-column align-items-center">
                         <div className="link-prj-con">
                           <div className="prj-check-i">
                             <BsCheckLg />
@@ -277,12 +274,12 @@ function Project() {
                           <div className="icon-prj-ovl"></div>
                           <img
                             className="icon-img-link"
-                            src={proj.icon}
-                            alt={`${proj.name} icon`}
+                            src={`/icon/prj/${proj.icon_sqr}`}
+                            alt={`${proj.name_en} icon`}
                           />
                         </div>
                         <div className="mt-3 fs-5 txt-upper">
-                          <span>{proj.name}</span>
+                          <span>{proj.name_en}</span>
                         </div>
                       </div>
                     </Link>

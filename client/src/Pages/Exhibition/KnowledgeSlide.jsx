@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 import exh_photo from "./img/exh-photo.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-export default function KnowledgeSlide() {
+function KnowledgeSlide() {
   return (
     <div className="swiper-content">
       <Swiper
@@ -114,3 +114,4 @@ export default function KnowledgeSlide() {
   );
 
 }
+export default KnowledgeSlide;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Accordion.css";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+import SectionTitle from "../../../component/SectionTitle";
 
 interface AccordionItemProps {
   title: string;
@@ -19,15 +20,16 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 }) => (
   <div className="accordion-items">
     <div className="accordion-titles" onClick={onClick}>
-      <span className="accordion-icon">
+      <span className="accordion-icon me-2">
         {isOpen ? <IoIosArrowDown /> : <IoIosArrowForward />}
       </span>
-      <div className="accordion-title-txt ms-2">
+      <SectionTitle title={title} subtitle={subtitle}/>
+      {/* <div className="accordion-title-txt ms-2">
         <h5>
           <strong>{title}</strong>
         </h5>
         <span>{subtitle}</span>
-      </div>
+      </div> */}
     </div>
     {isOpen && <div className="accordion-contents" >{content}</div>}
   </div>
