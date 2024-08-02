@@ -56,7 +56,7 @@ const CardMainThree = (props) => {
               target="_blank"
             >
               {/* <FontAwesomeIcon icon={faGlobe} size="xl" />{" "} */}
-              <FaGlobe />
+              <FaGlobe size="1.3em" className="me-2" />
               {props.link}
             </ThreeLinkExhibition>
           </div>

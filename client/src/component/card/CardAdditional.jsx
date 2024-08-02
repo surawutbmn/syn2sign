@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +10,7 @@ const CardAdditional = (props) => {
     <div>
       <CardBox className="row txt-grey">
         <div className="col-4">
-            <ImagePreview src="src\Pages\Exhibition\img\20240614-facebook-profile.png"/>
+            <ImagePreview src="src\Pages\Exhibition\img\fb-profile.png"/>
         </div>
         <div className="col-8 position-relative">
             <div className="txt-head2 txt-second text-start mt-4">Youtube playlist • Senior Project Showreel, Academic Year 2023</div>
