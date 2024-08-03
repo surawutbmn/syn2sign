@@ -12,6 +12,7 @@ export default function PlaylistSlider() {
         <div className="swiper-button-next"></div>
       </div>
       <Swiper
+        style={{ overflow: "visible" }}
         modules={[Navigation]}
         slidesPerView={1.1}
         navigation={{

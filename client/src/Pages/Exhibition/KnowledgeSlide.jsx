@@ -1,17 +1,23 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import exh_photo from "./img/exh-photo.webp";
-import ArrowButton from "../../component/Button/ArrowButton";
 import CardKnowledge from "../../component/card/CardKnowledge";
 
 function KnowledgeSlide() {
   return (
     <div className="swiper-content">
       <Swiper
-        modules={[Navigation]}
+        style={{ overflow: "visible" }}
+        modules={[Navigation, Autoplay]}
         slidesPerView={1.8}
+        loop={true}
+        freeMode={true}
+        autoplay={{
+          delay: 3200,
+          disableOnInteraction: false, // Continue autoplay after user interactions
+        }}
         breakpoints={{
           768: { slidesPerView: 2.5 },
           1440: { slidesPerView: 2.2 },
@@ -23,13 +29,13 @@ function KnowledgeSlide() {
         }}
       >
         <SwiperSlide>
-          <CardKnowledge/>
+          <CardKnowledge />
         </SwiperSlide>
         <SwiperSlide>
-          <CardKnowledge/>
+          <CardKnowledge />
         </SwiperSlide>
         <SwiperSlide>
-          <CardKnowledge/>
+          <CardKnowledge />
         </SwiperSlide>
       </Swiper>
       <div className="prj-knbslide-nav">
