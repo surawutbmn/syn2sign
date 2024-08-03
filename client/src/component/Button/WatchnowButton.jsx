@@ -1,8 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
 const WatchnowButton = (props) => {
   // const Line = props.href ? LineImage : 'div';

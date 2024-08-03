@@ -2,6 +2,7 @@ import React from "react";
 import { LuMail } from "react-icons/lu";
 import { FaLinkedinIn, FaReadme } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { Col, Row } from "react-bootstrap";
 
 interface CreatorsProps {
   stdID: number;
@@ -25,14 +26,14 @@ const Creators: React.FC<CreatorsProps> = ({
   profileImg,
 }) => {
   return (
-    <div className="row">
-      <div className="col">
+    <Row>
+      <Col>
         <img src={profileImg} alt="" style={{width:"100%", maxWidth:"20dvw"}}/>
         <span>({nicknameEN})</span>
         <span>{nameEN}</span>
         <span>{nameTH}</span>
-      </div>
-      <div className="col">
+      </Col>
+      <Col className="text-start">
         <div>
           <img
             src={`/icon/double-qoute.svg`}
@@ -85,8 +86,8 @@ const Creators: React.FC<CreatorsProps> = ({
             <FaReadme />
           </span>
         </Link>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 

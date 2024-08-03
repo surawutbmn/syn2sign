@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
-import { FaArrowRightLong } from "react-icons/fa6";
 import WatchnowButton from "../Button/WatchnowButton";
 const CardAdditional = (props) => {
   // const Line = props.href ? LineImage : 'div';

@@ -18,8 +18,8 @@ import knb from "./img/icon/knowboard.svg";
 import lo from "./img/icon/location.svg";
 import led from "./img/icon/led.svg";
 import gsap, { Power1 } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useLayoutEffect } from "react";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 import "./credit.css";
 import { Container } from "react-bootstrap";
 

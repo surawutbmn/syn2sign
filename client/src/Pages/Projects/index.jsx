@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
 import Creators from "./Creators/Creator";
+import { Container } from "react-bootstrap";
 
 
 function Project() {
@@ -179,7 +180,7 @@ function Project() {
       <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
       <div className="bg-gd-btr"></div>
 
-      <div className="container mt-5">
+      <Container className="mt-5 position-relative">
         <div>
           {matchedStudents.length > 0 ? (
             matchedStudents.map((student) => (
@@ -289,7 +290,7 @@ function Project() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }
