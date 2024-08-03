@@ -20,34 +20,17 @@ export default function PlaylistSlider() {
       >
         <SwiperSlide>
           <CardAdditional></CardAdditional>
-          <Overlay></Overlay>
         </SwiperSlide>
 
         <SwiperSlide>
           <CardAdditional></CardAdditional>
-          <Overlay></Overlay>
         </SwiperSlide>
 
         <SwiperSlide>
           <CardAdditional></CardAdditional>
-          <Overlay></Overlay>
         </SwiperSlide>
 
       </Swiper>
     </div>
   );
 }
-const Overlay = styled.div`
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  right: 1%;
-  height: 20%;
-  width: 100%;
-  /* background: rgb(255, 255, 255); */
-  background: linear-gradient(
-    140deg,
-    rgba(255, 255, 255, 0) 90%,
-    rgba(144, 245, 197, 0.8) 100%
-  );
-`;

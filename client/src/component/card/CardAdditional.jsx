@@ -5,22 +5,22 @@ const CardAdditional = (props) => {
   // const Line = props.href ? LineImage : 'div';
   return (
     <div>
-      <CardBox className="row txt-grey">
+      <CardBox>
+        <Overlay></Overlay>
         <div className="col-4">
           <ImagePreview src="/s2s-logo/fb-profile.png" />
         </div>
-        <div className="col-8 position-relative">
-          <div className="txt-head2 txt-second text-start mt-4">
+        <BoxContent>
+          <div className="txt-head2 txt-second text-start">
             Youtube playlist • Senior Project Showreel, Academic Year 2023
           </div>
-          <div className="txt-body1 text-start mt-3 txt-dark">
+          <BoxText className="txt-body1 text-start mt-3 txt-dark">
             เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน{" "}
-            <br></br>จุลนิพนธ์ ประจำปีการศึกษา 2566
+            <br />จุลนิพนธ์ ประจำปีการศึกษา 2566
             เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น
-          </div>
-
+          </BoxText>
           <WatchnowButton />
-        </div>
+        </BoxContent>
       </CardBox>
     </div>
   );
@@ -37,6 +37,19 @@ width: 100%;
   /* height: 250px; */
   background: white;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+`;
+const BoxContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  position: relative;
+`;
+const BoxText = styled.div`
+  flex-grow: 1;
 `;
 
 const ImagePreview = styled.img`
@@ -48,3 +61,17 @@ margin-left: calc(-1 * var(--bs-gutter-x)* .5);
 padding: 30px;
 `;
 
+const Overlay = styled.div`
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  width: 100%;
+  /* background: rgb(255, 255, 255); */
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0) 90%,
+    rgba(144, 245, 197, 0.8) 100%
+  );
+`;
