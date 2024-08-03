@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 
-// import "./staytune.css";
+import "./staytuneCustome.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 // import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
@@ -19,7 +19,7 @@ function StayTune() {
     <>
       <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
       <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="bg-gd-btr"></div>
+      {/* <div className="bg-gd-btr"></div> */}
 
       <div style={{ height: "fit-content", backgroundColor: "" }}>
         <div className="container mb-5 mt-5 position-relative">
@@ -77,7 +77,7 @@ function StayTune() {
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
           <div className="row">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 mt-5">
               <CardPastExhibit
                 poster="/staytune/POSTER2020.png"
                 name="EX;TRACT"
@@ -86,7 +86,7 @@ function StayTune() {
                 logo="/staytune/EX;TRACT-logo.svg"
               />
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6  mt-5">
               {" "}
               <CardPastExhibit
                 poster="/staytune/POSTER2019.png"
@@ -96,7 +96,7 @@ function StayTune() {
                 logo="/staytune/shortcut-logo-v2 1.svg"
               />
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 hover-card-overlay mt-5">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/comeraam/"
@@ -107,7 +107,7 @@ function StayTune() {
                 logo="/staytune/COMERAAM 12.4-logo.svg"
               />
             </div>
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 hover-card-overlay mt-5">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/ultraline/portfolio/new_index.php"
@@ -119,7 +119,7 @@ function StayTune() {
               />
             </div>
 
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 hover-card-overlay mt-5">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/oathlon/"
@@ -131,7 +131,7 @@ function StayTune() {
               />
             </div>
 
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 hover-card-overlay mt-5">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/suraround/"
@@ -143,7 +143,7 @@ function StayTune() {
               />
             </div>
 
-            <div className="col-12 blank"></div>
+            {/* <div className="col-12 blank"></div> */}
           </div>
         </div>
       </div>

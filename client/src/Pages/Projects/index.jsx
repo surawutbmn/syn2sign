@@ -279,7 +279,7 @@ function Project() {
                             alt={`${proj.name_en} icon`}
                           />
                         </div>
-                        <div className="mt-3 fs-5 txt-upper">
+                        <div className="mt-3 fs-5 txt-upper" style={{ width: "140px"}}>
                           <span>{proj.name_en}</span>
                         </div>
                       </div>
