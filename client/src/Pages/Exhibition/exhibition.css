@@ -45,21 +45,28 @@
 .prj-vdoslide-nav .swiper-button-prev:hover,
 .prj-vdoslide-nav .swiper-button-next:hover {opacity: 1;} */
 
+.prj-pl-nav .swiper-button-prev,
 .prj-exh-nav .swiper-button-prev,
 .prj-vdoslide-nav .swiper-button-prev,
 .prj-knbslide-nav .swiper-button-prev{opacity: 0; transition: opacity .3s ease; background: rgb(255,255,255);background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(5,186,100,.5) 100%); width: 130px; height: 100%; top: 5%; left: -6%;}
+.prj-pl-nav .swiper-button-next,
 .prj-exh-nav .swiper-button-next,
 .prj-vdoslide-nav .swiper-button-next,
 .prj-knbslide-nav .swiper-button-next{opacity: 0; transition: opacity .3s ease; background: rgb(255,255,255);background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(5,186,100,.5) 100%); width: 130px; height: 100%; top: 5%; right: -6%;}
+.prj-pl-nav .swiper-button-prev.swiper-button-disabled,.prj-pl-nav .swiper-button-next.swiper-button-disabled,
 .prj-exh-nav .swiper-button-prev.swiper-button-disabled,.prj-exh-nav .swiper-button-next.swiper-button-disabled,
 .prj-vdoslide-nav .swiper-button-prev.swiper-button-disabled,.prj-vdoslide-nav .swiper-button-next.swiper-button-disabled,
 .prj-knbslide-nav .swiper-button-prev.swiper-button-disabled,.prj-knbslide-nav .swiper-button-next.swiper-button-disabled{opacity: 0;}
+.prj-pl-nav .swiper-button-prev::after,
 .prj-exh-nav .swiper-button-prev::after,
 .prj-vdoslide-nav .swiper-button-prev::after,
 .prj-knbslide-nav .swiper-button-prev::after{color: var(--color-light); font-size: 3rem; margin-left: -4rem;}
+.prj-pl-nav .swiper-button-next::after,
 .prj-exh-nav .swiper-button-next::after,
 .prj-vdoslide-nav .swiper-button-next::after,
 .prj-knbslide-nav .swiper-button-next::after{color: var(--color-light); font-size: 3rem;}
+.prj-pl-nav .swiper-button-prev:hover,
+.prj-pl-nav .swiper-button-next:hover,
 .prj-exh-nav .swiper-button-prev:hover,
 .prj-exh-nav .swiper-button-next:hover,
 .prj-vdoslide-nav .swiper-button-prev:hover,
