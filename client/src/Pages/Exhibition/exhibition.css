@@ -99,7 +99,7 @@
   -webkit-mask-composite: xor;
           mask-composite: exclude; 
 }
-/* .txt-bubble{
+.txt-bubble{
     position: relative;
     background: rgb(255,255,255);background: linear-gradient(150deg, rgba(255,255,255,0) 60%, rgba(5, 186, 100, 0.2) 100%);
     padding: .5rem 1rem; border-radius: 20rem; font-size: 1em;
@@ -113,31 +113,7 @@
           mask-composite: exclude; 
 
     }
-} */
- .txt-bubble {
-    position: relative;
-    background: rgb(255,255,255);
-    background: linear-gradient(150deg, rgba(255,255,255,0) 60%, rgba(5, 186, 100, 0.2) 100%);
-    padding: .5rem 1rem;
-    border-radius: 20rem;
-    /* font-size: 1em; */
-    width: 300px; /* Set your desired width */
-    /* height: 50px;  */
-    margin-top: 40px;
 }
-
-.txt-bubble::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 20rem;
-    padding: .1rem;
-    background: linear-gradient(130deg, rgba(5, 186, 100, .8) 0%, rgba(255,255,255,0) 50%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-}
-
 
 
 @media (max-width: 1359.98px) {
