@@ -8,6 +8,8 @@ import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
 import Creators from "./Creators/Creator";
 import { Container } from "react-bootstrap";
+import SectionTitle from "../../component/SectionTitle";
+import studentsdata from "../../../public/data/Studentdata";
 
 
 function Project() {
@@ -78,15 +80,15 @@ function Project() {
    const fetchProject = async () => {
      setLoading(true);
      try {
-       if (prj_id) {
-         const response = await axios.get(
-           `http://localhost/syn2sign/projects/${prj_id}`
-         );
-         setProject(response.data);
+       const projectData = projectsdata.find(
+         (proj) => proj.project_id === prj_id
+       );
+       if (projectData) {
+         setProject(projectData);
          setActiveProject(prj_id);
          localStorage.setItem("activeProject", prj_id);
        } else {
-         setError("Project ID is missing");
+         setError("Project not found");
        }
      } catch (error) {
        setError("Error fetching project data");
@@ -95,6 +97,7 @@ function Project() {
        setLoading(false);
      }
    };
+
 
   const fetchStudents = async () => {
     try {
@@ -105,10 +108,11 @@ function Project() {
         console.error("Expected an array but received:", response.data);
       }
     } catch (error) {
-      setError("Error fetching student data");
-      console.error(error);
+      console.error("Error fetching student data", error);
+      setStudents(studentsdata);
     }
   };
+  
   useEffect(() => {
     fetchProject();
     fetchStudents();
@@ -124,13 +128,14 @@ function Project() {
   if (error) return <div>Error: {error}</div>;
   if (!project) return <div>No project data available</div>;
 
-   const getMatchedStudents = () => {
-     return students.filter(
-       (student) => student.project_id === project.project_id
-     );
-   };
-
-   const matchedStudents = getMatchedStudents();
+    const getMatchedStudents = () => {
+      return students.filter(
+        (student) => student.project_id === project.project_id
+      );
+    };
+    
+    const matchedStudents = getMatchedStudents();
+    console.log(students);
 
    const itemsWithStudents = items.map((item) => {
      if (item.title === "creator") {
@@ -245,12 +250,11 @@ function Project() {
           <Accordions items={itemsWithStudents} />
           <div className="mt-4">
             <div className="col">
-              <div className="text-start mb-4 header-wline">
-                <h3 className="txt-upper">
-                  <strong>Other Projects</strong>
-                </h3>
-                <span className="txt-grey">ผลงานอื่นๆ</span>
-              </div>
+              <SectionTitle
+                title="Other Projects"
+                subtitle="ผลงานอื่นๆ"
+                className="header-wline"
+              />
               <div className="d-flex justify-content-around text-center mb-6">
                 {projectsdata.map((proj) => (
                   <div
