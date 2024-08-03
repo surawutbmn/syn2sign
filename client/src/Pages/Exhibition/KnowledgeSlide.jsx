@@ -16,10 +16,10 @@ function KnowledgeSlide() {
           1440: { slidesPerView: 2.2 },
         }}
         spaceBetween={20}
-        // navigation={{
-        //   nextEl: ".prj-knbslide-nav .swiper-button-next",
-        //   prevEl: ".prj-knbslide-nav .swiper-button-prev",
-        // }}
+        navigation={{
+          nextEl: ".prj-knbslide-nav .swiper-button-next",
+          prevEl: ".prj-knbslide-nav .swiper-button-prev",
+        }}
       >
         <SwiperSlide>
           <div className="card-exh-link">
@@ -106,10 +106,10 @@ function KnowledgeSlide() {
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="prj-knbslide-nav">
+      <div className="prj-knbslide-nav">
         <div className="swiper-button-prev"></div>
         <div className="swiper-button-next"></div>
-      </div> */}
+      </div>
     </div>
   );
 
