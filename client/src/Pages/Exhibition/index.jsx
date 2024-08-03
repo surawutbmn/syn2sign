@@ -15,35 +15,47 @@ import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 // import { FaYoutube } from "react-icons/fa";
 
 function Exhibition() {
-  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [displayMessages, setDisplayMessages] = useState([]);
   const [score, setScore] = useState(4.61);
   const props = useSpring({
     number: score,
     from: { number: 0 },
     config: { duration: 1500 },
   });
+
   const fetchMessage = () => {
     fetch("http://localhost/syn2sign/randomMessage.php")
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
-          setMessage(data.message);
+          setMessages((prevMessages) => {
+            const newMessages = [...prevMessages, data.message];
+            return Array.from(new Set(newMessages)); // Ensure unique messages
+          });
         } else {
-          setMessage("No database connect");
+          console.error("No message in response:", data);
         }
       })
       .catch((error) => {
         console.error("Error fetching message:", error);
-        setMessage("No database connect");
       });
   };
 
   useEffect(() => {
     fetchMessage(); // Fetch message initially
-    const intervalId = setInterval(fetchMessage, 1000); // Fetch message every 5 seconds
+    const intervalId = setInterval(fetchMessage, 5000); // Fetch message every 5 seconds
 
     return () => clearInterval(intervalId); // Clear interval on component unmount
   }, []);
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      // Pick 9 random unique messages to display
+      const shuffledMessages = messages.sort(() => 0.5 - Math.random());
+      setDisplayMessages(shuffledMessages.slice(0, 9));
+    }
+  }, [messages]);
 
   return (
     <>
@@ -331,8 +343,43 @@ function Exhibition() {
                 <h3 className="text-start txt-second mt-3 ms-3">
                   ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
                 </h3>
-                <div className="txt-bubble-con mt-6">
-                  <span className="txt-bubble">{message}</span>
+
+                <div className="text-center txt-bubble-con">
+                  <div className="mt-6">
+                    {displayMessages.slice(0, 3).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    {displayMessages.slice(3, 6).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    {displayMessages.slice(6, 9).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* <div className="mt-6">
+                    <span className="txt-bubble me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                  </div>
+
+                  <div className="mt-6">
+                    <span className="txt-bubble me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                  </div> */}
                 </div>
               </div>
             </div>

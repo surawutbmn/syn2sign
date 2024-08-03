@@ -5,8 +5,8 @@ import propTypes from "prop-types";
 const CardPastExhibit = (props) => {
   const Link = props.href ? LinkExhibition : "div";
   return (
-    <Link href={props.href || "#"} target="_blank">
-      <div className="row mt-5" >
+    <Link className="" href={props.href || "#"} target="_blank">
+      <div className="row" >
         <div className="col-4">
           <PosterExhibition src={props.poster} />
         </div>
