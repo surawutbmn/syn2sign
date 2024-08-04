@@ -10,6 +10,7 @@ import CardPastExhibit from "../../component/card/CardPastExhibit";
 // import TwoABC from "../../component/card/TwoABC";
 // import {CardMainThree,CardPastExhibit } from "../../component/card/index";
 import CardMainThree from "../../component/card/CardMainThree"
+import { Col, Row } from "react-bootstrap";
 // const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
 
 // ReactDOM.render(element, document.body)
@@ -22,7 +23,7 @@ function StayTune() {
       <div className="bg-gd-btr"></div>
 
       <div style={{ height: "fit-content", backgroundColor: "" }}>
-        <div className="container mb-5 mt-5 position-relative">
+        <div className="container my-5 position-relative">
           <h2 className="txt-upper txt-second txt-bold mb-5">
             stay tuned at other year&rsquo;s exhibition
           </h2>
@@ -76,8 +77,8 @@ function StayTune() {
           <h2 className="txt-bold title-exhibitionName-box text-start">
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
-          <div className="row">
-            <div className="col-12 col-lg-6">
+          <Row xs={1} lg={2} className="g-5 mt-1">
+            <Col className="hover-card-overlay ">
               <CardPastExhibit
                 poster="/staytune/POSTER2020.png"
                 name="EX;TRACT"
@@ -85,8 +86,8 @@ function StayTune() {
                 description="การจัดรวบรวม 31 ผลงานสำเร็จการศึกษา ปีการศึกษา 2020 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 14 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/EX;TRACT-logo.svg"
               />
-            </div>
-            <div className="col-12 col-lg-6">
+            </Col>
+            <Col className="hover-card-overlay ">
               {" "}
               <CardPastExhibit
                 poster="/staytune/POSTER2019.png"
@@ -95,8 +96,8 @@ function StayTune() {
                 description="การจัดรวบรวม 35 ผลงานสำเร็จการศึกษา ปีการศึกษา 2019 ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 13 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/shortcut-logo-v2 1.svg"
               />
-            </div>
-            <div className="col-12 col-lg-6">
+            </Col>
+            <Col className="hover-card-overlay">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/comeraam/"
@@ -106,8 +107,8 @@ function StayTune() {
                 description="เว็บไซต์รวบรวมจัดแสดง 46 ผลงานสำเร็จการศึกษา ปีการศึกษา 2018 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 12 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/COMERAAM 12.4-logo.svg"
               />
-            </div>
-            <div className="col-12 col-lg-6">
+            </Col>
+            <Col className="hover-card-overlay">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/ultraline/portfolio/new_index.php"
@@ -117,9 +118,9 @@ function StayTune() {
                 description="เว็บไซต์รวบรวมจัดแสดง 40 ผลงานสำเร็จการศึกษา ปีการศึกษา 2017 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 11 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/ULTRA-LINE 11.3-logo.svg"
               />
-            </div>
+            </Col>
 
-            <div className="col-12 col-lg-6">
+            <Col className="hover-card-overlay">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/oathlon/"
@@ -129,9 +130,9 @@ function StayTune() {
                 description="เว็บไซต์รวบรวมจัดแสดง 32 ผลงานสำเร็จการศึกษา ปีการศึกษา 2016 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 10 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/OATHLON 10.2-logo.svg"
               />
-            </div>
+            </Col>
 
-            <div className="col-12 col-lg-6">
+            <Col className="hover-card-overlay">
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/suraround/"
@@ -141,10 +142,10 @@ function StayTune() {
                 description="เว็บไซต์รวบรวมจัดแสดง 43 ผลงานสำเร็จการศึกษา ปีการศึกษา 2015 ของนักศึกษาวิชาเอกอินเทอร์ แอคทีฟแอปพลิเคชัน รุ่น 9 มหาวิทยาลัยศิลปากร"
                 logo="/staytune/SURAROUND 9.1-logo.svg"
               />
-            </div>
+            </Col>
 
-            <div className="col-12 blank"></div>
-          </div>
+            {/* <div className="col-12 blank"></div> */}
+          </Row>
         </div>
       </div>
     </>
