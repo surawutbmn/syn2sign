@@ -77,7 +77,7 @@ function StayTune() {
           <h2 className="txt-bold title-exhibitionName-box text-start">
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
-          <Row xs={1} lg={2} className="g-5 mt-1">
+          <Row xs={1} lg={2} className="gx-5 gy-4 mt-1">
             <Col>
               <CardPastExhibit
                 poster="/staytune/POSTER2020.png"
