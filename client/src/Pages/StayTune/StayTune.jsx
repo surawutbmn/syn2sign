@@ -78,7 +78,7 @@ function StayTune() {
             นิทรรศการที่ผ่านมา ปี 2015-2020
           </h2>
           <Row xs={1} lg={2} className="g-5 mt-1">
-            <Col className="hover-card-overlay ">
+            <Col>
               <CardPastExhibit
                 poster="/staytune/POSTER2020.png"
                 name="EX;TRACT"
@@ -87,7 +87,7 @@ function StayTune() {
                 logo="/staytune/EX;TRACT-logo.svg"
               />
             </Col>
-            <Col className="hover-card-overlay ">
+            <Col>
               {" "}
               <CardPastExhibit
                 poster="/staytune/POSTER2019.png"
@@ -97,7 +97,7 @@ function StayTune() {
                 logo="/staytune/shortcut-logo-v2 1.svg"
               />
             </Col>
-            <Col className="hover-card-overlay">
+            <Col>
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/comeraam/"
@@ -108,7 +108,7 @@ function StayTune() {
                 logo="/staytune/COMERAAM 12.4-logo.svg"
               />
             </Col>
-            <Col className="hover-card-overlay">
+            <Col>
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/ultraline/portfolio/new_index.php"
@@ -120,7 +120,7 @@ function StayTune() {
               />
             </Col>
 
-            <Col className="hover-card-overlay">
+            <Col>
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/oathlon/"
@@ -132,7 +132,7 @@ function StayTune() {
               />
             </Col>
 
-            <Col className="hover-card-overlay">
+            <Col>
               {" "}
               <CardPastExhibit
                 href="https://funcslash.com/suraround/"
