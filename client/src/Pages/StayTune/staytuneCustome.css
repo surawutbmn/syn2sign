@@ -1,13 +1,28 @@
 .hover-card-overlay
 {
-    border-radius: 10px;  
-    padding: 10px;
+    position: relative;
+    border-radius: 10px; 
+    padding: 20px 10px;
     transition: all 0.3s ease;
 }
 
 
+.hover-card-overlay::before{    
+    content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px; 
+  padding: .1rem; 
+  background:linear-gradient(120deg, rgba(5, 186, 100, .8) 0%, rgba(255,255,255,0) 60%); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; }
+
+
 .hover-card-overlay:hover{
-    background: linear-gradient(130deg, rgba(5, 186, 100, .8) 0%, rgba(255,255,255,0) 70%);
+    background:linear-gradient(120deg, rgba(5, 186, 100, .8) 0%, rgba(255,255,255,0) 60%,rgba(5, 186, 100, 0.1) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     border: linear-gradient(130deg, rgba(5, 186, 100, .8) 0%, rgba(255,255,255,0) 50%);
 }
