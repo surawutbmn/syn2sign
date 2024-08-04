@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
@@ -6,18 +6,17 @@ import paper_plane from "./img/paper-plane.png";
 
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
+import { FaFilePdf } from "react-icons/fa6";
 import { RxFigmaLogo } from "react-icons/rx";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
-import CardAdditional from "../../component/card/CardAdditional";
 import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 // import { FaYoutube } from "react-icons/fa";
 
 function Exhibition() {
   const [messages, setMessages] = useState([]);
   const [displayMessages, setDisplayMessages] = useState([]);
-  const [score, setScore] = useState(4.61);
+  const [score] = useState(4.61);
   const props = useSpring({
     number: score,
     from: { number: 0 },
@@ -217,50 +216,7 @@ function Exhibition() {
             <h2>VIDEO Syn2sign</h2>
             <span>ความรู้สึกหลังการจัดงานนิทรรศการ</span>
           </div>
-          <div className="exh-vdosec-content mt-4">
             <VdoSlide />
-          </div>
-          {/* <div className="exh-vdosec-title text-start mt-5">
-            <h2>VIDEO Syn2sign</h2>
-            <span>ภาพบรรยากาศภายในงาน</span>
-          </div>
-          <div className="exh-vdosec-content mt-4">
-            <div className="row">
-              <div className="col-4 flex-column">
-                <div className="mx-auto ratio ratio-16x9">
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/Kkvge3HhIZc`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="video-box"
-                  ></iframe>
-                </div>
-                <h4 className="text-start txt-sbold mt-3">
-                  ภาพบรรยากาศงาน Day 2{" "}
-                  <span
-                    style={{ fontSize: ".8rem", fontWeight: "var(--txt-med)" }}
-                  >
-                    (June 27, 2024)
-                  </span>
-                </h4>
-                <div className="insta-link-con w-50">
-                  <a
-                    href="https://www.instagram.com/reel/C9wRgcMMBlJ/?utm_source=ig_web_button_share_sheet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="icon-crl me-2">
-                      <FaInstagram />
-                    </span>
-                    <span>บทสัมภาษณ์ “ผู้เข้าชมงาน”</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">
@@ -330,11 +286,8 @@ function Exhibition() {
               </div> */}
 
             {/* </div> */}
-            {/* <CardAdditional /> */}
             <PlaylistSlider />
-            <div className="exh-knowledge-sec mt-5">
               <Knowslide />
-            </div>
             <div className="exh-feedback-sec mt-5">
               <div className="feedback-con">
                 <div className="paper-plane">

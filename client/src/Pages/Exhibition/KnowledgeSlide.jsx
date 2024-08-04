@@ -2,12 +2,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-import exh_photo from "./img/exh-photo.webp";
 import CardKnowledge from "../../component/card/CardKnowledge";
 
 function KnowledgeSlide() {
   return (
-    <div className="swiper-content">
+    <div className="swiper-content mt-5">
       <Swiper
         style={{ overflow: "visible" }}
         modules={[Navigation, Autoplay]}

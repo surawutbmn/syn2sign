@@ -10,6 +10,7 @@ import Creators from "./Creators/Creator";
 import { Container } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
+import PageElement from "../../component/Element/PageElement";
 
 
 function Project() {
@@ -181,9 +182,7 @@ function Project() {
           ? `${project.name_en} ${project.name_th} - Syn2sign senior project exhibition 2024`
           : "Loading..."}
       </Helmet>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="bg-gd-btr"></div>
+      <PageElement/>
 
       <Container className="mt-5 position-relative">
         <div>

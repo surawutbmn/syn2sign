@@ -7,6 +7,7 @@ import { FaLinkedinIn, FaReadme } from "react-icons/fa6";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
 import SectionTitle from "../../component/SectionTitle";
+import PageElement from "../../component/Element/PageElement";
 
 function Students() {
   const [student, setStudent] = useState(null);
@@ -15,7 +16,7 @@ function Students() {
   const { std_id } = useParams();
 
   const handleLinkClick = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     const url = `/showcase/creators/${otherStudents.std_id}`;
     window.location.href = url;
   };
@@ -26,9 +27,7 @@ function Students() {
     );
   };
   const findStudentById = (std_id) => {
-    return (
-      studentsdata.find((student) => student.std_id === std_id) || null
-    );
+    return studentsdata.find((student) => student.std_id === std_id) || null;
   };
   const findOtherStudentsByProjectId = (project_id, std_id) => {
     return studentsdata.filter(
@@ -36,8 +35,7 @@ function Students() {
         student.std_id !== std_id && student.project_id === project_id
     );
   };
-  
-  
+
   const fetchStudentData = async (std_id) => {
     try {
       const response = await axios.get(
@@ -61,10 +59,10 @@ function Students() {
       return response.data;
     } catch (error) {
       console.error("Error fetching student data:", error);
-       const localProject= findProjectById(project_id);
-       if (localProject) {
+      const localProject = findProjectById(project_id);
+      if (localProject) {
         return localProject;
-       }
+      }
     }
   };
 
@@ -76,16 +74,13 @@ function Students() {
       return response.data;
     } catch (error) {
       console.error("Error fetching other sudent data:", error);
-      const localOtherStudent = findOtherStudentsByProjectId(
-        project_id,
-        std_id
-      );
+      const localOtherStudent = findOtherStudentsByProjectId( project_id, std_id);
       if (localOtherStudent) {
         return localOtherStudent;
       }
     }
   };
-  
+
   const Getstudents = async () => {
     try {
       // const std_id = 631310081;
@@ -94,26 +89,23 @@ function Students() {
 
       const project_id = studentData.project_id;
 
-      const otherStudentsData = await fetchOtherStudentsData(project_id, std_id);
-      console.log("Fetched other students data:", otherStudentsData);
-      setOtherStudents(otherStudentsData);
-      
+      const otherStudentsData = await fetchOtherStudentsData( project_id, std_id);
+      const dataToUse = otherStudentsData.length > 0 ? otherStudentsData : findOtherStudentsByProjectId(project_id, std_id);
+      setOtherStudents(dataToUse);
+      // console.log("Data to use for other students:", dataToUse);
+
       const projectData = await fetchProjectData(project_id);
       setProject(projectData);
-
-     
-      
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
-  
 
   useEffect(() => {
     Getstudents();
   }, []);
-  
-  console.log(otherStudents);
+
+  // console.log(otherStudents);
   useEffect(() => {
     if (student && project) {
       document.title = `${student.nickname_en} ${student.name_en} / ${project.name_en} - Syn2sign senior project exhibition 2024`;
@@ -132,9 +124,7 @@ function Students() {
             : "Loading..."}
         </title>
       </Helmet>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="bg-gd-btr"></div>
+      <PageElement />
 
       <div className="container mt-5 position-relative">
         <div className="d-flex justify-content-between">
@@ -224,81 +214,81 @@ function Students() {
           className={"header-wline"}
         />
         <div className="row">
-          {otherStudents.map((student) => (
-            <div key={student.std_id} className="col">
-              <img
-                src={`/profile_img/${student.profile_img}`}
-                alt="other creator profile"
-                style={{
-                  maxWidth: "20vw",
-                  width: "100%",
-                  borderRadius: "1.2rem",
-                }}
-                loading="lazy"
-              />
-              <span className="d-flex flex-column">
-                ({student.nickname_en}) {student.name_en}
-                <span>
-                  {student.name_th}({student.nickname_th})
-                </span>
-              </span>
-            </div>
-          ))}
-          {otherStudents.map((student) => (
-            <div key={student.std_id} className="col">
-              <div className="">
+          {otherStudents.map((student, index) => (
+            <div className="row" key={index}>
+              <div className="col">
                 <img
-                  src={`/icon/double-qoute.svg`}
-                  alt="double qoute"
-                  style={{ maxWidth: "5vw", width: "100%" }}
+                  src={`/profile_img/${student.profile_img}`}
+                  alt="other creator profile"
+                  style={{
+                    maxWidth: "20vw",
+                    width: "100%",
+                    borderRadius: "1.2rem",
+                  }}
                   loading="lazy"
                 />
-                <span>{student.qoutes}</span>
-              </div>
-              <hr />
-              <div className="icon-link-con">
-                <a
-                  href={`mailto:${student.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <span className="icon-crl me-2">
-                    <LuMail />
+                <span className="d-flex flex-column">
+                  ({student.nickname_en}) {student.name_en}
+                  <span>
+                    {student.name_th}({student.nickname_th})
                   </span>
-                  <span>{student.email}</span>
-                </a>
+                </span>
               </div>
-              <div className="icon-link-con">
-                <a
-                  href={student.linkin}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <div className="col">
+                <div>
+                  <img
+                    src={`/icon/double-qoute.svg`}
+                    alt="double qoute"
+                    style={{ maxWidth: "5vw", width: "100%" }}
+                    loading="lazy"
+                  />
+                  <span>{student.qoutes}</span>
+                </div>
+                <hr />
+                <div className="icon-link-con">
+                  <a
+                    href={`mailto:${student.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="txt-link"
+                  >
+                    <span className="icon-crl me-2">
+                      <LuMail />
+                    </span>
+                    <span>{student.email}</span>
+                  </a>
+                </div>
+                <div className="icon-link-con">
+                  <a
+                    href={student.linkin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="txt-link"
+                  >
+                    <span className="icon-crl me-2">
+                      <FaLinkedinIn />
+                    </span>
+                    <span>{student.name_en}</span>
+                  </a>
+                </div>
+                <Link
+                  to={`/showcase/creators/${student.std_id}`}
+                  onClick={handleLinkClick}
                   className="txt-link"
+                  style={{
+                    border: ".1rem solid",
+                    padding: ".4rem .8rem",
+                    borderRadius: "100px",
+                  }}
                 >
-                  <span className="icon-crl me-2">
-                    <FaLinkedinIn />
+                  <span className="txt-upper">
+                    <strong>read more</strong>
                   </span>
-                  <span>{student.name_en}</span>
-                </a>
+                  <span className="ms-2">
+                    <FaReadme />
+                  </span>
+                </Link>
               </div>
-              <Link
-                to={`/showcase/creators/${student.std_id}`}
-                onClick={handleLinkClick}
-                className="txt-link"
-                style={{
-                  border: ".1rem solid",
-                  padding: ".4rem .8rem",
-                  borderRadius: "100px",
-                }}
-              >
-                <span className="txt-upper">
-                  <strong>read more</strong>
-                </span>
-                <span className="ms-2">
-                  <FaReadme />
-                </span>
-              </Link>
             </div>
           ))}
         </div>
