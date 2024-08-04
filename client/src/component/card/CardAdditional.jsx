@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
-import WatchnowButton from "../Button/WatchnowButton";
+import ArrowButton from "../Button/ArrowButton";
 const CardAdditional = (props) => {
   // const Line = props.href ? LineImage : 'div';
   return (
@@ -8,27 +8,41 @@ const CardAdditional = (props) => {
       <CardBox>
         <Overlay></Overlay>
         <div className="col-4">
-          <ImagePreview src="/s2s-logo/fb-profile.png" />
+          <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
         </div>
         <BoxContent>
           <div className="txt-head2 txt-second text-start">
-            Youtube playlist • Senior Project Showreel, Academic Year 2023
+            {props.title ||
+              "Youtube playlist • Senior Project Showreel, Academic Year 2023"}
           </div>
-          <BoxText className="txt-body1 text-start mt-3 txt-dark">
-            เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน{" "}
-            <br />จุลนิพนธ์ ประจำปีการศึกษา 2566
-            เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น
-          </BoxText>
-          <WatchnowButton />
+          <BoxText
+            className="txt-body1 text-start mt-3 txt-dark"
+            dangerouslySetInnerHTML={{
+              __html:
+                props.desc ||
+                `เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน<br />จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`,
+            }}
+          />
+          <ArrowButton
+            text={`Watch now`}
+            link={props.link}
+            style={`txt-head4`}
+          />
         </BoxContent>
       </CardBox>
     </div>
   );
 };
 
-
-
+CardAdditional.propTypes = {
+  img: propTypes.string,
+  title: propTypes.string,
+  desc: propTypes.string,
+  style: propTypes.string,
+  link: propTypes.string,
+};
 export default CardAdditional;
+
 
 const CardBox = styled.div`
 width: 100%;

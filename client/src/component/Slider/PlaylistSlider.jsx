@@ -1,9 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import styled from "styled-components";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { FaArrowRightLong } from "react-icons/fa6";
 import CardAdditional from "../card/CardAdditional";
 
 export default function PlaylistSlider() {
@@ -14,6 +12,7 @@ export default function PlaylistSlider() {
         <div className="swiper-button-next"></div>
       </div>
       <Swiper
+        style={{ overflow: "visible" }}
         modules={[Navigation]}
         slidesPerView={1.1}
         navigation={{
@@ -27,15 +26,30 @@ export default function PlaylistSlider() {
         spaceBetween={20}
       >
         <SwiperSlide>
-          <CardAdditional></CardAdditional>
+          <CardAdditional
+            link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
+            title={`Youtube playlist • Senior Project Showreel, Academic Year 2023`}
+            desc={`เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน<br />จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`}
+            img={``}
+          />
         </SwiperSlide>
 
         <SwiperSlide>
-          <CardAdditional></CardAdditional>
+          <CardAdditional
+            link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
+            title={`Exhibition Onsite Photo #syn2sign`}
+            desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ที่นอกจาก<br/>การจัดแสดงผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
+            img={``}
+          />
         </SwiperSlide>
 
         <SwiperSlide>
-          <CardAdditional></CardAdditional>
+          <CardAdditional
+            link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
+            title={``}
+            desc={``}
+            img={``}
+          />
         </SwiperSlide>
       </Swiper>
     </div>

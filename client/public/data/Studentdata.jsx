@@ -13,7 +13,7 @@ const studentsdata = [
     email: "chanamonn.kaew@gmail.com",
     linkin: "http://linkedin.com/in/chanamon-kaewsomnuk-33466728a",
     resume_filename: "-",
-    project_id: "1",
+    project_id: "cpl01",
     project_name: "EVAL BALANCE",
   },
   {
@@ -29,7 +29,7 @@ const studentsdata = [
     email: "chalida.ingka@gmail.com",
     linkin: "https://th.linkedin.com/in/chalida-ingkapattanakul-46ab80292",
     resume_filename: "-",
-    project_id: "3",
+    project_id: "cpl03",
     project_name: "ARTIST MATCH",
   },
   {
@@ -45,7 +45,7 @@ const studentsdata = [
     email: "fahpanita86@gmail.com",
     linkin: "www.linkedin.com/in/panita-lainananukul-654697292",
     resume_filename: "-",
-    project_id: "2",
+    project_id: "cpl02",
     project_name: "WAIWAN",
   },
   {
@@ -62,7 +62,7 @@ const studentsdata = [
     email: "piyapat.phk@gmail.com",
     linkin: "http://linkedin.com/in/piyapat-phk-9b35a3314",
     resume_filename: "-",
-    project_id: "5",
+    project_id: "cpl05",
     project_name: "FULLFILL",
   },
   {
@@ -79,7 +79,7 @@ const studentsdata = [
     email: "Yayingssk@gmail.com",
     linkin: "https://www.linkedin.com/in/sasikan-tianchanthuek-4285b1314/",
     resume_filename: "-",
-    project_id: "1",
+    project_id: "cpl01",
     project_name: "EVAL BALANCE",
   },
   {
@@ -95,7 +95,7 @@ const studentsdata = [
     email: "surawut.bmn@gmail.com",
     linkin: "http://linkedin.com/in/surawut-binmamud",
     resume_filename: "-",
-    project_id: "5",
+    project_id: "cpl05",
     project_name: "FULLFILL",
   },
   {
@@ -112,7 +112,7 @@ const studentsdata = [
     email: "natthanan.vao@gmail.com",
     linkin: "linkedin.com/in/natthanan-vaowkhajon-676483260",
     resume_filename: "-",
-    project_id: "2",
+    project_id: "cpl02",
     project_name: "WAIWAN",
   },
   {
@@ -129,7 +129,7 @@ const studentsdata = [
     email: "jitpathak.c@gmail.com ",
     linkin: "https://th.linkedin.com/in/chawakorn-jitpathak-400089293",
     resume_filename: "-",
-    project_id: "4",
+    project_id: "cpl04",
     project_name: "MORYTECH",
   },
   {
@@ -147,7 +147,7 @@ const studentsdata = [
     linkin:
       "https://www.linkedin.com/in/nattharnunt-zooriyarzazithum-b52a95292/",
     resume_filename: "-",
-    project_id: "7",
+    project_id: "cpl07",
     project_name: "Tent Care",
   },
   {
@@ -163,7 +163,7 @@ const studentsdata = [
     email: "ppanyadapai@gmail.com",
     linkin: "https://www.linkedin.com/in/panyada-suxruxsa-2bb031264/",
     resume_filename: "-",
-    project_id: "3",
+    project_id: "cpl03",
     project_name: "ARTIST MATCH",
   },
   {
@@ -180,7 +180,7 @@ const studentsdata = [
     email: "srattatampattawan@gmail.com",
     linkin: "www.linkedin.com/in/pattawan-srattatam-92686b292",
     resume_filename: "-",
-    project_id: "8",
+    project_id: "cpl08",
     project_name: "TINY THAI",
   },
   {
@@ -197,7 +197,7 @@ const studentsdata = [
     email: "srattatampattarawan@gmail.com",
     linkin: "https://www.linkedin.com/in/pattarawan-srattatam-8279a0314/",
     resume_filename: "-",
-    project_id: "8",
+    project_id: "cpl08",
     project_name: "TINY THAI",
   },
   {
@@ -214,7 +214,7 @@ const studentsdata = [
     email: "sitthametha.m@gmail.com",
     linkin: "linkedin.com/in/methasit-sitthametha-b83b76292",
     resume_filename: "-",
-    project_id: "4",
+    project_id: "cpl04",
     project_name: "MORYTECH",
   },
   {
@@ -230,7 +230,7 @@ const studentsdata = [
     email: "achasupakorn.t@gmail.com",
     linkin: "https://www.linkedin.com/in/supakorn-achcha/",
     resume_filename: "-",
-    project_id: "7",
+    project_id: "cpl07",
     project_name: "Tent Care",
   },
   {
@@ -247,7 +247,7 @@ const studentsdata = [
     email: "bamonran@gmail.com",
     linkin: "https://www.linkedin.com/in/onranpha-morsamarn-110a97292/",
     resume_filename: "-",
-    project_id: "6",
+    project_id: "cpl06",
     project_name: "YOUNG & CHIC",
   },
   {
@@ -264,7 +264,7 @@ const studentsdata = [
     email: "natjune2002@gmail.com",
     linkin: "https://www.linkedin.com/in/natthatida-sritulanontha-a85604275/",
     resume_filename: "-",
-    project_id: "6",
+    project_id: "cpl06",
     project_name: "YOUNG & CHIC",
   },
 ];

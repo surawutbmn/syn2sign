@@ -3,11 +3,13 @@ import React from "react";
 interface SectionTitleProps {
   title: string;
   subtitle: string;
+  className: string;
 }
 
-const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle }) => {
+const SectionTitle: React.FC<SectionTitleProps> = ({ title, className, subtitle }) => {
+  const classname = `text-start mb-4 ${className}`;
   return (
-    <div className="text-start mb-4">
+    <div className={classname}>
       <h3 className="txt-upper">
         <strong>{title}</strong>
       </h3>

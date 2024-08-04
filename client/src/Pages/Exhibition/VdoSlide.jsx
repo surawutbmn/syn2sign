@@ -1,4 +1,4 @@
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -64,29 +64,28 @@ export const VdoSlide = () => {
       videoSrc: "2fkCoiR49wo",
       instagramLink: "C9BoNYopFRy/",
     },
-    // {
-      
-    //   name: "ภาพบรรยากาศงาน Day 2 ",
-      
-    //   videoSrc: "Kkvge3HhIZc",
-    //   instagramLink: "C9BoNYopFRy/",
-    // },
   ];
 
   return (
     <div className="position-relative">
       <Swiper
-        modules={[Navigation]}
+        style={{ overflow: "visible" }}
+        modules={[Navigation, Autoplay]}
         spaceBetween={30}
         slidesPerView={1.5}
         breakpoints={{
-          768: { slidesPerView: 2.5 },
-          1440: { slidesPerView: 2.8 },
+          768: { slidesPerView: 2 },
+          1440: { slidesPerView: 2 },
         }}
         // cssMode={true}
         navigation={{
           nextEl: ".prj-vdoslide-nav .swiper-button-next",
           prevEl: ".prj-vdoslide-nav .swiper-button-prev",
+        }}
+        loop={true}
+        autoplay={{
+          delay: 3200,
+          disableOnInteraction: false, // Continue autoplay after user interactions
         }}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}

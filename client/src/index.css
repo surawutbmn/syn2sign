@@ -96,7 +96,7 @@ b{font-weight: var(--txt-bold);}
 }
 
 .txt-head1{
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: var(--txt-bold);
 }
 .txt-head2{
@@ -107,6 +107,8 @@ b{font-weight: var(--txt-bold);}
   font-size: 1.5rem;
   font-weight: var(--txt-sbold);
 }
+.txt-head4{font-size: 1.4rem; font-weight: var(--txt-bold);}
+.txt-head5{font-size: 1.2rem; font-weight: var(--txt-bold);}
 .txt-body1{
   font-size: 1.375rem;
 }

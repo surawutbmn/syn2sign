@@ -1,16 +1,23 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import exh_photo from "./img/exh-photo.webp";
-import { FaArrowRightLong } from "react-icons/fa6";
+import CardKnowledge from "../../component/card/CardKnowledge";
 
 function KnowledgeSlide() {
   return (
     <div className="swiper-content">
       <Swiper
-        modules={[Navigation]}
+        style={{ overflow: "visible" }}
+        modules={[Navigation, Autoplay]}
         slidesPerView={1.8}
+        loop={true}
+        freeMode={true}
+        autoplay={{
+          delay: 3200,
+          disableOnInteraction: false, // Continue autoplay after user interactions
+        }}
         breakpoints={{
           768: { slidesPerView: 2.5 },
           1440: { slidesPerView: 2.2 },
@@ -22,88 +29,13 @@ function KnowledgeSlide() {
         }}
       >
         <SwiperSlide>
-          <div className="card-exh-link">
-            <img
-              src={exh_photo}
-              alt=""
-              style={{ borderRadius: "1rem" }}
-              className="card-img-top"
-            />
-            <div className="exh-card-ovl"></div>
-            <div className="card-exh-con">
-              <div className="card-body text-start">
-                <h4 className="card-exh-title mt-3">
-                  Starting Up • 10 Components for a Digital Platform
-                </h4>
-                <p className="card-exh-text mb-5">
-                  นิทรรศการความรู้ “10 ชุดประกอบสร้างดิจิทัลแพลตฟอร์ม” ที่รวบรวม
-                  องค์ความรู้ทั้งในมุมมองด้านการออกแบบร่วมกับด้านพัฒนาโค้ดดิ้ง
-                  พร้อมทั้งกรณีศึกษาที่เป็นประโยชน์อีกมากมาย
-                </p>
-              </div>
-              <div className="btn-icon">
-                <span>
-                  SEE MORE <FaArrowRightLong />
-                </span>
-              </div>
-            </div>
-          </div>
+          <CardKnowledge />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card-exh-link">
-            <img
-              src={exh_photo}
-              alt=""
-              style={{ borderRadius: "1rem" }}
-              className="card-img-top"
-            />
-            <div className="exh-card-ovl"></div>
-            <div className="card-exh-con">
-              <div className="card-body text-start">
-                <h4 className="card-exh-title mt-3">
-                  Starting Up • 10 Components for a Digital Platform
-                </h4>
-                <p className="card-exh-text mb-5">
-                  นิทรรศการความรู้ “10 ชุดประกอบสร้างดิจิทัลแพลตฟอร์ม” ที่รวบรวม
-                  องค์ความรู้ทั้งในมุมมองด้านการออกแบบร่วมกับด้านพัฒนาโค้ดดิ้ง
-                  พร้อมทั้งกรณีศึกษาที่เป็นประโยชน์อีกมากมาย
-                </p>
-              </div>
-              <div className="btn-icon">
-                <span>
-                  SEE MORE <FaArrowRightLong />
-                </span>
-              </div>
-            </div>
-          </div>
+          <CardKnowledge />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="card-exh-link">
-            <img
-              src={exh_photo}
-              alt=""
-              style={{ borderRadius: "1rem" }}
-              className="card-img-top"
-            />
-            <div className="exh-card-ovl"></div>
-            <div className="card-exh-con">
-              <div className="card-body text-start">
-                <h4 className="card-exh-title mt-3">
-                  Starting Up • 10 Components for a Digital Platform
-                </h4>
-                <p className="card-exh-text mb-5">
-                  นิทรรศการความรู้ “10 ชุดประกอบสร้างดิจิทัลแพลตฟอร์ม” ที่รวบรวม
-                  องค์ความรู้ทั้งในมุมมองด้านการออกแบบร่วมกับด้านพัฒนาโค้ดดิ้ง
-                  พร้อมทั้งกรณีศึกษาที่เป็นประโยชน์อีกมากมาย
-                </p>
-              </div>
-              <div className="btn-icon">
-                <span>
-                  SEE MORE <FaArrowRightLong />
-                </span>
-              </div>
-            </div>
-          </div>
+          <CardKnowledge />
         </SwiperSlide>
       </Swiper>
       <div className="prj-knbslide-nav">
