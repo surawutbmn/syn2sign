@@ -3,7 +3,7 @@ import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
 import paper_plane from "./img/paper-plane.png";
-
+import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
 import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
@@ -24,37 +24,26 @@ function Exhibition() {
     config: { duration: 1500 },
   });
 
-  const fetchMessage = () => {
-    fetch("http://localhost/syn2sign/randomMessage.php")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.message) {
-          setMessages((prevMessages) => {
-            const newMessages = [...prevMessages, data.message];
-            return Array.from(new Set(newMessages)); // Ensure unique messages
-          });
-        } else {
-          console.error("No message in response:", data);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching message:", error);
-      });
-  };
 
   useEffect(() => {
-    fetchMessage(); // Fetch message initially
-    const intervalId = setInterval(fetchMessage, 5000); // Fetch message every 5 seconds
+    const initialMessages = messagesData[2].data.map(item => item.message);
+    setMessages(initialMessages);
+  }, []);
+  
+
+  useEffect(() => {
+    const shuffleMessages = () => {
+      if (messages.length > 0) {
+        const shuffledMessages = messages.sort(() => 0.5 - Math.random());
+        setDisplayMessages(shuffledMessages.slice(0, 9));
+      }
+    };
+
+    shuffleMessages(); // Initial shuffle
+
+    const intervalId = setInterval(shuffleMessages, 5000); // Shuffle every 5 seconds
 
     return () => clearInterval(intervalId); // Clear interval on component unmount
-  }, []);
-
-  useEffect(() => {
-    if (messages.length > 0) {
-      // Pick 9 random unique messages to display
-      const shuffledMessages = messages.sort(() => 0.5 - Math.random());
-      setDisplayMessages(shuffledMessages.slice(0, 9));
-    }
   }, [messages]);
 
   return (
