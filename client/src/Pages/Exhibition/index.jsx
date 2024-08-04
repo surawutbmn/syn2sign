@@ -59,7 +59,7 @@ function Exhibition() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo
+            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo 
           </a>
         </div>
         <div className="exh-banner-content exh-txt-shadow">
