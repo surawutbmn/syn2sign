@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import propTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";

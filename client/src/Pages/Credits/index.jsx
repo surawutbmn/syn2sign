@@ -22,12 +22,13 @@ import gsap, { Power1 } from "gsap";
 import { useEffect } from "react";
 import "./credit.css";
 import { Container } from "react-bootstrap";
+import PageElement from "../../component/Element/PageElement";
 
 function Credit() {
   // gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.fromTo(
-      ".logo",
+      ".s2s-logo",
       2,
       { y: 0 },
       { y: -10, ease: Power1.easeInOut, repeat: -1, yoyo: true, delay: 0.4 }
@@ -35,18 +36,7 @@ function Credit() {
   }, []);
   return (
     <>
-      <img
-        src="/icon/ele-head-l.svg"
-        className="ele-head-l"
-        alt="element left"
-      />
-      <img
-        src="/icon/ele-head-r.svg"
-        className="ele-head-r"
-        alt="element right"
-      />
-      <div className="bg-gd-btr"></div>
-
+      <PageElement />
       <Container className="mx-auto w-100 position-relative">
         <div className="text-center mt-5">
           <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
@@ -65,8 +55,7 @@ function Credit() {
           <img
             src="../../s2s-logo/syn2sign_logo_cl.webp"
             alt="syn2sign logo"
-            style={{ width: "24vw" }}
-            className="logo"
+            className="s2s-logo"
           />
         </div>
         <div className="mt-4">
@@ -94,7 +83,7 @@ function Credit() {
             className="row row-cols-1 row-cols-md-3 justify-content-center"
             style={{ fontSize: "1.2em" }}
           >
-            <div className="col d-flex justify-content-center advice-con">
+            <div className="col d-flex advice-con">
               <div className="text-start">
                 <span>
                   <strong>ADVISORS GROUP 1</strong>
@@ -107,7 +96,7 @@ function Credit() {
                 </p>
               </div>
             </div>
-            <div className="col d-flex justify-content-center advice-con">
+            <div className="col d-flex advice-con">
               <div className="text-start">
                 <span>
                   <strong>ADVISORS GROUP 2</strong>
@@ -120,14 +109,14 @@ function Credit() {
                 </p>
               </div>
             </div>
-            <div className="col d-flex justify-content-center advice-con">
+            <div className="col d-flex advice-con">
               <div className="text-start">
                 <span>
                   <strong>ADVISORS GROUP 3</strong>
                 </span>
                 <p>
                   Kachornpon Hiranchotepaisan (Chairman) <br />
-                  Kalumpahaiti <br />
+                  Kanpat Kalumpahaiti <br />
                   Chuladid Suntitoranee <br />
                   Pasupong Prasertroongrueng
                 </p>
@@ -198,7 +187,7 @@ function Credit() {
         </div>
         <div className="mt-4">
           <h2 className="txt-scdhead mb-4">INSI(gn)DER</h2>
-          <div className="grid grid-cols-2 ml-20 gap-4">
+          <div className="grid grid-cols-2 grid-cols-md-1 ml-20 team-credit gap-4">
             <div className="d-flex">
               <div className="ele-icon">
                 <img src={graphic} alt="graphic icon" />
@@ -365,7 +354,7 @@ function Credit() {
         </div>
         <div className="mt-5">
           <h2 className="mb-4 txt-scdhead">Thank you for your support</h2>
-          <div className="grid grid-cols-2 ml-20 gap-4">
+          <div className="grid grid-cols-2 grid-cols-md-1 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
                 <img src={thx} alt="thank icon" />
@@ -392,7 +381,10 @@ function Credit() {
               <div className="text-start">
                 <span>
                   <h5 className="txt-upper">
-                    <strong>EQUIPMENTs, FOODs AND OTHER</strong>
+                    <strong>
+                      EQUIPMENTs, FOODs <br className="d-block d-md-none" /> AND
+                      OTHER
+                    </strong>
                   </h5>
                 </span>
                 <p>
@@ -623,39 +615,50 @@ function Credit() {
           <span>
             <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
             <p>
-              Kantaphod Phumphruek, Kissana Suwannawong and Thitiwat Chormanee
+              Kantaphod Phumphruek, <br className="d-block d-md-none" />
+              Kissana Suwannawong and Thitiwat Chormanee
             </p>
           </span>
-          <div className="grid grid-cols-2 ml-20 gap-4">
+          <div className="grid grid-cols-2 grid-cols-md-1 ml-20 onsite-thx gap-4">
             <div className="d-flex">
               <p>
-                <strong>LIGHTING & SOUND:</strong> Q Light & Sound
+                <strong>LIGHTING & SOUND:</strong>{" "}
+                <br className="d-block d-md-none" />Q Light & Sound
               </p>
             </div>
             <div className="d-flex">
               <p>
-                <strong>CARPET INSTALLATION:</strong> DILO PRODUCTS
+                <strong>CARPET INSTALLATION:</strong>{" "}
+                <br className="d-block d-md-none" />
+                DILO PRODUCTS
               </p>
             </div>
             <div className="d-flex">
               <p>
-                <strong>MEDIA PRINTING:</strong> IMP factory
+                <strong>MEDIA PRINTING:</strong>{" "}
+                <br className="d-block d-md-none" />
+                IMP factory
               </p>
             </div>
             <div className="d-flex">
               <p>
-                <strong>Board service provider:</strong> Thumnaksilp Advertising
+                <strong>Board service provider:</strong>{" "}
+                <br className="d-block d-md-none" />
+                Thumnaksilp Advertising
               </p>
             </div>
             <div className="d-flex">
               <p>
-                <strong>T-SHIRT SUPPLIER:</strong> INDYt-shirt
+                <strong>T-SHIRT SUPPLIER:</strong>{" "}
+                <br className="d-block d-md-none" />
+                INDYt-shirt
               </p>
             </div>
             <div className="d-flex">
               <p>
-                <strong>EQUIPMENT TRANSPORT PROVIDER:</strong> Bualoi
-                Roongrueangsub Transport
+                <strong>EQUIPMENT TRANSPORT PROVIDER:</strong>
+                <br className="d-block d-md-none" /> Bualoi Roongrueangsub
+                Transport
               </p>
             </div>
           </div>

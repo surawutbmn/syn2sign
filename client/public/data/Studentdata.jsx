@@ -3,8 +3,8 @@ const studentsdata = [
     id: "1",
     std_id: "073",
     name_th: "ชนมน แก้วสมนึก",
-    name_en: "Chanamon kewsomnuk",
     nickname_th: "มุก",
+    name_en: "Chanamon kewsomnuk",
     nickname_en: "Mook",
     profile_img: "073-profile.webp",
     thumb_img: "073-thumb.webp",
@@ -15,13 +15,31 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl01",
     project_name: "EVAL BALANCE",
+    project:
+      {
+        id: "1",
+        project_id: "cpl01",
+        name_en: "EVAL BALANCE",
+        name_th: "อีวาล บาลานซ์",
+        fullname_en:
+          "Design and Development of Physical Fitness Evaluation Application to Reduce the Risk of Falling and Exercise to Strengthen Muscles in The Elderly on iOS Platform.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชันประเมินสมรรถภาพทางกาย เพื่อลดความเสี่ยงในการหกล้ม และออกกำลังกายเพื่อเสริมสร้างความแข็งแรงของกล้ามเนื้อในผู้สูงอายุ บนระบบปฏิบัติการไอโอเอส",
+        type: "Mobile Application",
+        icon: "cpl01.svg",
+        icon_std: "cpl01-p.svg",
+        icon_sqr: "cpl01-sqr.webp",
+        img_thumb: "cpl01-thumb.webp",
+        icon_card: "cpl01-icard.webp",
+        shreel_link: "_41WQgd5qKw",
+      },
   },
   {
     id: "2",
     std_id: "074",
     name_th: "ชลิดา อิงคพัฒนากุล",
-    name_en: "Chalida Ingkapattanakul",
     nickname_th: "หม่อน",
+    name_en: "Chalida Ingkapattanakul",
     nickname_en: "Mhon",
     profile_img: "074-profile.webp",
     thumb_img: "074-thumb.webp",
@@ -31,14 +49,32 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl03",
     project_name: "ARTIST MATCH",
+    project:
+      {
+        id: "3",
+        project_id: "cpl03",
+        name_en: "ARTIST MATCH",
+        name_th: "อาร์ทิสแมทช์",
+        fullname_en:
+          "Design and Development Web Application to Search for Artists and Post Job Advertisements for Organizer.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชันเพื่อค้นหาศิลปินและลงประกาศรับสมัครสำหรับผู้จัดงาน",
+        type: "Web application",
+        icon: "cpl03.svg",
+        img_thumb: "cpl03-thumb.webp",
+        icon_card: "cpl03-icard.webp",
+        icon_std: "cpl03-p.svg",
+        icon_sqr: "cpl03-sqr.webp",
+        shreel_link: "dp_AlUgThnQ",
+      },
   },
   {
     id: "3",
     std_id: "075",
     name_th: "ปนิตา ไหลนานานุกูล",
     name_en: "Panita Lainananukul",
-    nickname_th: "ฟ้า",
     nickname_en: "Fah",
+    nickname_th: "ฟ้า",
     profile_img: "075-profile.webp",
     thumb_img: "075-thumb.webp",
     qoutes: "ทำให้สมบูรณ์ที่สุด ภายใต้ข้อจำกัดที่มี",
@@ -47,6 +83,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl02",
     project_name: "WAIWAN",
+    project: 
+      {
+        id: "2",
+        project_id: "cpl02",
+        name_en: "WAIWAN",
+        name_th: "ไหว้วาน",
+        fullname_en:
+          "Design and Development Web Application With Line Chatbot System to Provide Services for the Business of Organizing a Sacrificial Offering.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชันควบคู่กับระบบไลน์แชตบอต เพื่อให้บริการสำหรับธุรกิจร้านจัดของไหว้เจ้า",
+        type: "Line OA Web application",
+        icon: "cpl02.svg",
+        img_thumb: "cpl02-thumb.webp",
+        icon_card: "cpl02-icard.webp",
+        icon_std: "cpl02-p.svg",
+        icon_sqr: "cpl02-sqr.webp",
+        shreel_link: "OwyQ7eIHmoc",
+      },
+
   },
   {
     id: "4",
@@ -64,13 +119,32 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl05",
     project_name: "FULLFILL",
+    project: 
+      {
+        id: "5",
+        project_id: "cpl05",
+        name_en: "FULLFILL",
+        name_th: "ฟูลฟิล",
+        fullname_en:
+          "Web Application Design and Development in Conjunction System to Promote Refill Shops Management in Bangkok.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมการบริหาร ร้านรีฟิล ในกรุงเทพมหานคร",
+        type: "Web application",
+        icon: "cpl05.svg",
+        img_thumb: "cpl05-thumb.webp",
+        icon_card: "cpl05-icard.webp",
+        icon_sqr: "cpl05-sqr.webp",
+        icon_std: "cpl05-p.svg",
+        shreel_link: "wMnxzOlEVPA",
+      },
+
   },
   {
     id: "5",
     std_id: "078",
     name_th: "ศศิกานต์ เตียนจันทึก",
-    name_en: "Sasikan Tianchanthuek",
     nickname_th: "หญิง",
+    name_en: "Sasikan Tianchanthuek",
     nickname_en: "Ying",
     profile_img: "078-profile.webp",
     thumb_img: "078-thumb.webp",
@@ -81,6 +155,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl01",
     project_name: "EVAL BALANCE",
+    project: 
+      {
+        id: "1",
+        project_id: "cpl01",
+        name_en: "EVAL BALANCE",
+        name_th: "อีวาล บาลานซ์",
+        fullname_en:
+          "Design and Development of Physical Fitness Evaluation Application to Reduce the Risk of Falling and Exercise to Strengthen Muscles in The Elderly on iOS Platform.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชันประเมินสมรรถภาพทางกาย เพื่อลดความเสี่ยงในการหกล้ม และออกกำลังกายเพื่อเสริมสร้างความแข็งแรงของกล้ามเนื้อในผู้สูงอายุ บนระบบปฏิบัติการไอโอเอส",
+        type: "Mobile Application",
+        icon: "cpl01.svg",
+        icon_std: "cpl01-p.svg",
+        icon_sqr: "cpl01-sqr.webp",
+        img_thumb: "cpl01-thumb.webp",
+        icon_card: "cpl01-icard.webp",
+        shreel_link: "_41WQgd5qKw",
+      },
+
   },
   {
     id: "6",
@@ -97,14 +190,33 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl05",
     project_name: "FULLFILL",
+    project: 
+      {
+        id: "5",
+        project_id: "cpl05",
+        name_en: "FULLFILL",
+        name_th: "ฟูลฟิล",
+        fullname_en:
+          "Web Application Design and Development in Conjunction System to Promote Refill Shops Management in Bangkok.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมการบริหาร ร้านรีฟิล ในกรุงเทพมหานคร",
+        type: "Web application",
+        icon: "cpl05.svg",
+        img_thumb: "cpl05-thumb.webp",
+        icon_card: "cpl05-icard.webp",
+        icon_sqr: "cpl05-sqr.webp",
+        icon_std: "cpl05-p.svg",
+        shreel_link: "wMnxzOlEVPA",
+      },
+
   },
   {
     id: "7",
     std_id: "152",
     name_th: "ณัฐนันท์ เหว่าขจร",
     name_en: "Natthanan Vaowkhajon",
-    nickname_th: "พิม",
     nickname_en: "Pim",
+    nickname_th: "พิม",
     profile_img: "152-profile.webp",
     thumb_img: "152-thumb.webp",
     qoutes:
@@ -114,6 +226,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl02",
     project_name: "WAIWAN",
+    project: 
+      {
+        id: "2",
+        project_id: "cpl02",
+        name_en: "WAIWAN",
+        name_th: "ไหว้วาน",
+        fullname_en:
+          "Design and Development Web Application With Line Chatbot System to Provide Services for the Business of Organizing a Sacrificial Offering.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชันควบคู่กับระบบไลน์แชตบอต เพื่อให้บริการสำหรับธุรกิจร้านจัดของไหว้เจ้า",
+        type: "Line OA Web application",
+        icon: "cpl02.svg",
+        img_thumb: "cpl02-thumb.webp",
+        icon_card: "cpl02-icard.webp",
+        icon_std: "cpl02-p.svg",
+        icon_sqr: "cpl02-sqr.webp",
+        shreel_link: "OwyQ7eIHmoc",
+      },
+
   },
   {
     id: "8",
@@ -131,6 +262,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl04",
     project_name: "MORYTECH",
+    project: 
+      {
+        id: "4",
+        project_id: "cpl04",
+        name_en: "MORYTECH",
+        name_th: "โมรี่เทค",
+        fullname_en:
+          "Design and Development of Application  to Increase Memory Skills for Adults on iOS Platform.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชัน เพื่อเพิ่มทักษะความจำสำหรับคนวัยทำงานบนระบบปฎิบัติการไอโอเอส",
+        type: "Mobile Application",
+        icon: "cpl04.svg",
+        img_thumb: "cpl04-thumb.webp",
+        icon_card: "cpl04-icard.webp",
+        icon_sqr: "cpl04-sqr.webp",
+        icon_std: "cpl04-p.svg",
+        shreel_link: "zPt2Uu3vZ4I",
+      },
+
   },
   {
     id: "9",
@@ -149,14 +299,33 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl07",
     project_name: "Tent Care",
+    project: 
+      {
+        id: "7",
+        project_id: "cpl07",
+        name_en: "Tent Care",
+        name_th: "เท็นท์แคร์",
+        fullname_en:
+          "Designing and Developing a Tool System for the Franchise Operators of the Tent Cleaning Business",
+        fullname_th:
+          "การออกแบบและพัฒนาระบบเครื่องมือสำหรับผู้ประกอบการแฟรนไชส์ธุรกิจทำความสะอาดเต็นท์",
+        type: "Line OA Web application",
+        icon: "cpl07.svg",
+        img_thumb: "cpl07-thumb.webp",
+        icon_card: "cpl07-icard.webp",
+        icon_std: "cpl07-p.svg",
+        icon_sqr: "cpl07-sqr.webp",
+        shreel_link: "KhAfnkMRctc",
+      },
+
   },
   {
     id: "10",
     std_id: "273",
     name_th: "ปัญญดา สุขรักษา",
     name_en: "Panyada Suxruxsa",
-    nickname_th: "ปาย",
     nickname_en: "Pai",
+    nickname_th: "ปาย",
     profile_img: "273-profile.webp",
     thumb_img: "273-thumb.webp",
     qoutes: "ทำทุกวัน เหนื่อยทุกวันค่ะ",
@@ -165,6 +334,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl03",
     project_name: "ARTIST MATCH",
+    project: 
+      {
+        id: "3",
+        project_id: "cpl03",
+        name_en: "ARTIST MATCH",
+        name_th: "อาร์ทิสแมทช์",
+        fullname_en:
+          "Design and Development Web Application to Search for Artists and Post Job Advertisements for Organizer.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชันเพื่อค้นหาศิลปินและลงประกาศรับสมัครสำหรับผู้จัดงาน",
+        type: "Web application",
+        icon: "cpl03.svg",
+        img_thumb: "cpl03-thumb.webp",
+        icon_card: "cpl03-icard.webp",
+        icon_std: "cpl03-p.svg",
+        icon_sqr: "cpl03-sqr.webp",
+        shreel_link: "dp_AlUgThnQ",
+      },
+
   },
   {
     id: "11",
@@ -182,6 +370,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl08",
     project_name: "TINY THAI",
+    project: 
+      {
+        id: "8",
+        project_id: "cpl08",
+        name_en: "TINY THAI",
+        name_th: "ไทนี่ไทย",
+        fullname_en:
+          "Learning Media Game DesignCase Study of Second Grade Children Spelling and Meaning of Thai Words",
+        fullname_th:
+          "การออกแบบเกมสื่อการเรียนรู้ สำหรับเด็กชั้นประถมศึกษาปีที่ 2 กรณีศึกษา ปัญหาด้านการสะกดคำและบอกความหมายของคำกลุ่มสาระภาษาไทย",
+        type: "Game Application",
+        icon: "cpl08.svg",
+        img_thumb: "cpl08-thumb.webp",
+        icon_card: "cpl08-icard.webp",
+        icon_std: "cpl08-p.svg",
+        icon_sqr: "cpl08-sqr.webp",
+        shreel_link: "2fkCoiR49wo",
+      },
+
   },
   {
     id: "12",
@@ -199,6 +406,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl08",
     project_name: "TINY THAI",
+    project: 
+      {
+        id: "8",
+        project_id: "cpl08",
+        name_en: "TINY THAI",
+        name_th: "ไทนี่ไทย",
+        fullname_en:
+          "Learning Media Game DesignCase Study of Second Grade Children Spelling and Meaning of Thai Words",
+        fullname_th:
+          "การออกแบบเกมสื่อการเรียนรู้ สำหรับเด็กชั้นประถมศึกษาปีที่ 2 กรณีศึกษา ปัญหาด้านการสะกดคำและบอกความหมายของคำกลุ่มสาระภาษาไทย",
+        type: "Game Application",
+        icon: "cpl08.svg",
+        img_thumb: "cpl08-thumb.webp",
+        icon_card: "cpl08-icard.webp",
+        icon_std: "cpl08-p.svg",
+        icon_sqr: "cpl08-sqr.webp",
+        shreel_link: "2fkCoiR49wo",
+      },
+
   },
   {
     id: "13",
@@ -216,6 +442,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl04",
     project_name: "MORYTECH",
+    project: 
+      {
+        id: "4",
+        project_id: "cpl04",
+        name_en: "MORYTECH",
+        name_th: "โมรี่เทค",
+        fullname_en:
+          "Design and Development of Application  to Increase Memory Skills for Adults on iOS Platform.",
+        fullname_th:
+          "การออกแบบและพัฒนาแอปพลิเคชัน เพื่อเพิ่มทักษะความจำสำหรับคนวัยทำงานบนระบบปฎิบัติการไอโอเอส",
+        type: "Mobile Application",
+        icon: "cpl04.svg",
+        img_thumb: "cpl04-thumb.webp",
+        icon_card: "cpl04-icard.webp",
+        icon_sqr: "cpl04-sqr.webp",
+        icon_std: "cpl04-p.svg",
+        shreel_link: "zPt2Uu3vZ4I",
+      },
+
   },
   {
     id: "14",
@@ -232,6 +477,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl07",
     project_name: "Tent Care",
+    project: 
+      {
+        id: "7",
+        project_id: "cpl07",
+        name_en: "Tent Care",
+        name_th: "เท็นท์แคร์",
+        fullname_en:
+          "Designing and Developing a Tool System for the Franchise Operators of the Tent Cleaning Business",
+        fullname_th:
+          "การออกแบบและพัฒนาระบบเครื่องมือสำหรับผู้ประกอบการแฟรนไชส์ธุรกิจทำความสะอาดเต็นท์",
+        type: "Line OA Web application",
+        icon: "cpl07.svg",
+        img_thumb: "cpl07-thumb.webp",
+        icon_card: "cpl07-icard.webp",
+        icon_std: "cpl07-p.svg",
+        icon_sqr: "cpl07-sqr.webp",
+        shreel_link: "KhAfnkMRctc",
+      },
+
   },
   {
     id: "15",
@@ -249,6 +513,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl06",
     project_name: "YOUNG & CHIC",
+    project: 
+      {
+        id: "6",
+        project_id: "cpl06",
+        name_en: "YOUNG & CHIC",
+        name_th: "ยังแอนด์ชิก",
+        fullname_en:
+          "Web Application Design and Development to Promote the Young Thai Designers to Increase the Job Opportunities.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมแฟชั่นดีไซน์เนอร์ไทยรุ่นใหม่ในการเพิ่มโอกาสการหางาน",
+        type: "Web application",
+        icon: "cpl06.svg",
+        img_thumb: "cpl06-thumb.webp",
+        icon_card: "cpl06-icard.webp",
+        icon_std: "cpl06-p.svg",
+        icon_sqr: "cpl06-sqr.webp",
+        shreel_link: "asaKqFdHkRE",
+      },
+
   },
   {
     id: "16",
@@ -266,6 +549,25 @@ const studentsdata = [
     resume_filename: "-",
     project_id: "cpl06",
     project_name: "YOUNG & CHIC",
+    project: 
+      {
+        id: "6",
+        project_id: "cpl06",
+        name_en: "YOUNG & CHIC",
+        name_th: "ยังแอนด์ชิก",
+        fullname_en:
+          "Web Application Design and Development to Promote the Young Thai Designers to Increase the Job Opportunities.",
+        fullname_th:
+          "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมแฟชั่นดีไซน์เนอร์ไทยรุ่นใหม่ในการเพิ่มโอกาสการหางาน",
+        type: "Web application",
+        icon: "cpl06.svg",
+        img_thumb: "cpl06-thumb.webp",
+        icon_card: "cpl06-icard.webp",
+        icon_std: "cpl06-p.svg",
+        icon_sqr: "cpl06-sqr.webp",
+        shreel_link: "asaKqFdHkRE",
+      },
+
   },
 ];
 export default studentsdata;

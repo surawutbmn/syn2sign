@@ -1,6 +1,4 @@
-import ReactDOM from "react-dom";
-
-// import "./staytune.css";
+import "./staytuneCustome.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 // import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +18,6 @@ function StayTune() {
     <>
       <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
       <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
-      <div className="bg-gd-btr"></div>
 
       <div style={{ height: "fit-content", backgroundColor: "" }}>
         <div className="container my-5 position-relative">

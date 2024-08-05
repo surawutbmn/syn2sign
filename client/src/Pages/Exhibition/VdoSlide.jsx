@@ -67,7 +67,7 @@ export const VdoSlide = () => {
   ];
 
   return (
-    <div className="position-relative">
+    <div className="position-relative mt-4">
       <Swiper
         style={{ overflow: "visible" }}
         modules={[Navigation, Autoplay]}
