@@ -286,7 +286,7 @@ function Exhibition() {
                   ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
                 </h3>
                 <div className="txt-bubble-con mt-6">
-                  <span className="txt-bubble">{message}</span>
+                  {/* <span className="txt-bubble">{message}</span> */}
                 </div>
               </div>
             </div>

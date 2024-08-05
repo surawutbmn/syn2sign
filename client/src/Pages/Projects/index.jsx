@@ -11,6 +11,9 @@ import { Container } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
+import CardSocialApprovedProject from "../../component/card/CardSocialApprovedProject";
+import CardThreePictureProject from "../../component/card/CardThreePictureProject";
+import LinkButton from "../../component/Button/LinkButton";
 
 
 function Project() {
@@ -185,7 +188,9 @@ function Project() {
       <PageElement/>
 
       <Container className="mt-5 position-relative">
-        <div>
+
+        {/* Creator */}
+        {/* <div>
           {matchedStudents.length > 0 ? (
             matchedStudents.map((student) => (
               <div key={student.id}>
@@ -204,7 +209,8 @@ function Project() {
           ) : (
             <p>No students found</p>
           )}
-        </div>
+        </div> */}
+        
         <div className="project-content-sec">
           <div className="row">
             <div className="col">
@@ -227,13 +233,21 @@ function Project() {
                   alt="creator icon"
                   className="prj-sec-icon"
                 />
+                
               </div>
-              <div className="d-flex flex-column">
-                <span>
+              <div className="d-flex flex-column text-start mb-3 txt-bodt1" style={{width: "75%"}}>
+                <span >
                   <p>{project.fullname_th}</p>
                 </span>
               </div>
+              <div className="text-start txt-grey mb-1">Social Approved</div>
+
+              <CardSocialApprovedProject className="mb-4" />
+              <CardThreePictureProject/>
+              
             </div>
+
+            
             <div className="mx-auto ratio ratio-16x9">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
@@ -244,9 +258,13 @@ function Project() {
                 allowFullScreen
                 className="video-box"
               ></iframe>
+              
             </div>
+            
           </div>
+          <LinkButton className="mt-4"/>
           <Accordions items={itemsWithStudents} />
+          
           <div className="mt-4">
             <div className="col">
               <SectionTitle
