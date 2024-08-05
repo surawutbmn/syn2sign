@@ -1,49 +1,50 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
 import paper_plane from "./img/paper-plane.png";
-
+import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-import { FaFilePdf } from "react-icons/fa6";
+import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
 import { RxFigmaLogo } from "react-icons/rx";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
+import CardAdditional from "../../component/card/CardAdditional";
 import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 // import { FaYoutube } from "react-icons/fa";
 
 function Exhibition() {
   const [messages, setMessages] = useState([]);
   const [displayMessages, setDisplayMessages] = useState([]);
-  const [score] = useState(4.61);
+  const [score, setScore] = useState(4.61);
   const props = useSpring({
     number: score,
     from: { number: 0 },
     config: { duration: 1500 },
   });
-  const fetchMessage = () => {
-    fetch("http://localhost/syn2sign/randomMessage.php")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.message) {
-          setMessage(data.message);
-        } else {
-          setMessage("No database connect");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching message:", error);
-        setMessage("No database connect");
-      });
-  };
+
 
   useEffect(() => {
-    fetchMessage(); // Fetch message initially
-    const intervalId = setInterval(fetchMessage, 1000); // Fetch message every 5 seconds
+    const initialMessages = messagesData[2].data.map(item => item.message);
+    setMessages(initialMessages);
+  }, []);
+  
+
+  useEffect(() => {
+    const shuffleMessages = () => {
+      if (messages.length > 0) {
+        const shuffledMessages = messages.sort(() => 0.5 - Math.random());
+        setDisplayMessages(shuffledMessages.slice(0, 9));
+      }
+    };
+
+    shuffleMessages(); // Initial shuffle
+
+    const intervalId = setInterval(shuffleMessages, 5000); // Shuffle every 5 seconds
 
     return () => clearInterval(intervalId); // Clear interval on component unmount
-  }, []);
+  }, [messages]);
 
   return (
     <>
@@ -58,7 +59,7 @@ function Exhibition() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo
+            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo 
           </a>
         </div>
         <div className="exh-banner-content exh-txt-shadow">
@@ -205,7 +206,50 @@ function Exhibition() {
             <h2>VIDEO Syn2sign</h2>
             <span>ความรู้สึกหลังการจัดงานนิทรรศการ</span>
           </div>
+          <div className="exh-vdosec-content mt-4">
             <VdoSlide />
+          </div>
+          {/* <div className="exh-vdosec-title text-start mt-5">
+            <h2>VIDEO Syn2sign</h2>
+            <span>ภาพบรรยากาศภายในงาน</span>
+          </div>
+          <div className="exh-vdosec-content mt-4">
+            <div className="row">
+              <div className="col-4 flex-column">
+                <div className="mx-auto ratio ratio-16x9">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/Kkvge3HhIZc`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="video-box"
+                  ></iframe>
+                </div>
+                <h4 className="text-start txt-sbold mt-3">
+                  ภาพบรรยากาศงาน Day 2{" "}
+                  <span
+                    style={{ fontSize: ".8rem", fontWeight: "var(--txt-med)" }}
+                  >
+                    (June 27, 2024)
+                  </span>
+                </h4>
+                <div className="insta-link-con w-50">
+                  <a
+                    href="https://www.instagram.com/reel/C9wRgcMMBlJ/?utm_source=ig_web_button_share_sheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon-crl me-2">
+                      <FaInstagram />
+                    </span>
+                    <span>บทสัมภาษณ์ “ผู้เข้าชมงาน”</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> */}
         </div>
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">
@@ -275,8 +319,11 @@ function Exhibition() {
               </div> */}
 
             {/* </div> */}
+            {/* <CardAdditional /> */}
             <PlaylistSlider />
+            <div className="exh-knowledge-sec mt-5">
               <Knowslide />
+            </div>
             <div className="exh-feedback-sec mt-5">
               <div className="feedback-con">
                 <div className="paper-plane">
@@ -285,8 +332,43 @@ function Exhibition() {
                 <h3 className="text-start txt-second mt-3 ms-3">
                   ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
                 </h3>
-                <div className="txt-bubble-con mt-6">
-                  {/* <span className="txt-bubble">{message}</span> */}
+
+                <div className="text-center txt-bubble-con">
+                  <div className="mt-6">
+                    {displayMessages.slice(0, 3).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    {displayMessages.slice(3, 6).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    {displayMessages.slice(6, 9).map((message, index) => (
+                      <span key={index} className="txt-bubble me-5">
+                        {message}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* <div className="mt-6">
+                    <span className="txt-bubble me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                  </div>
+
+                  <div className="mt-6">
+                    <span className="txt-bubble me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                    <span className="txt-bubble  me-5">{message}</span>
+                  </div> */}
                 </div>
               </div>
             </div>
