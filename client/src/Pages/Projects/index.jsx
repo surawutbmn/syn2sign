@@ -14,6 +14,8 @@ import PageElement from "../../component/Element/PageElement";
 import CardSocialApprovedProject from "../../component/card/CardSocialApprovedProject";
 import CardThreePictureProject from "../../component/card/CardThreePictureProject";
 import LinkButton from "../../component/Button/LinkButton";
+import CardIdeaConcept from "../../component/card/CardIdeaConcept";
+import CardKeyword from "../../component/card/CardKeyword";
 
 
 function Project() {
@@ -32,12 +34,12 @@ function Project() {
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: "Content for section 1",
+      content: <CardIdeaConcept/>,
     },
     {
       title: "Key WORD",
       subtitle: "คำค้นหา / คำสำคัญ ",
-      content: "Content for section 2",
+      content: <CardKeyword/>,
     },
     {
       title: "MAIN Function",
@@ -235,7 +237,7 @@ function Project() {
                 />
                 
               </div>
-              <div className="d-flex flex-column text-start mb-3 txt-bodt1" style={{width: "75%"}}>
+              <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3" style={{width: "75%"}}>
                 <span >
                   <p>{project.fullname_th}</p>
                 </span>
@@ -285,6 +287,7 @@ function Project() {
                       onClick={() => {
                         setActiveProject(proj.project_id);
                         localStorage.setItem("activeProject", proj.project_id);
+                        window.scrollTo(0, 0);
                       }}
                       className="link-txt"
                     >
