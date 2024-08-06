@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BiSolidCommentDetail } from "react-icons/bi";
-
+//
 const CardSocialApprovedProject = () => {
   return (
     <FullWidthContainer>
