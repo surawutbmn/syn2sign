@@ -17,7 +17,6 @@ import LinkButton from "../../component/Button/LinkButton";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
 
-
 function Project() {
   const [project, setProject] = useState(null);
   const [students, setStudents] = useState([]);
@@ -29,17 +28,17 @@ function Project() {
   );
   // console.log(projectsdata);
   // const prj_id = "cpl01";
-  
+
   const items = [
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept/>,
+      content: <CardIdeaConcept />,
     },
     {
       title: "Key WORD",
       subtitle: "คำค้นหา / คำสำคัญ ",
-      content: <CardKeyword/>,
+      content: <CardKeyword />,
     },
     {
       title: "MAIN Function",
@@ -83,27 +82,26 @@ function Project() {
     },
   ];
 
-   const fetchProject = async () => {
-     setLoading(true);
-     try {
-       const projectData = projectsdata.find(
-         (proj) => proj.project_id === prj_id
-       );
-       if (projectData) {
-         setProject(projectData);
-         setActiveProject(prj_id);
-         localStorage.setItem("activeProject", prj_id);
-       } else {
-         setError("Project not found");
-       }
-     } catch (error) {
-       setError("Error fetching project data");
-       console.error(error);
-     } finally {
-       setLoading(false);
-     }
-   };
-
+  const fetchProject = async () => {
+    setLoading(true);
+    try {
+      const projectData = projectsdata.find(
+        (proj) => proj.project_id === prj_id
+      );
+      if (projectData) {
+        setProject(projectData);
+        setActiveProject(prj_id);
+        localStorage.setItem("activeProject", prj_id);
+      } else {
+        setError("Project not found");
+      }
+    } catch (error) {
+      setError("Error fetching project data");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const fetchStudents = async () => {
     try {
@@ -118,7 +116,7 @@ function Project() {
       setStudents(studentsdata);
     }
   };
-  
+
   useEffect(() => {
     fetchProject();
     fetchStudents();
@@ -134,51 +132,51 @@ function Project() {
   if (error) return <div>Error: {error}</div>;
   if (!project) return <div>No project data available</div>;
 
-    const getMatchedStudents = () => {
-      return students.filter(
-        (student) => student.project_id === project.project_id
-      );
-    };
-    
-    const matchedStudents = getMatchedStudents();
-    console.log(students);
+  const getMatchedStudents = () => {
+    return students.filter(
+      (student) => student.project_id === project.project_id
+    );
+  };
 
-   const itemsWithStudents = items.map((item) => {
-     if (item.title === "creator") {
-       return {
-         ...item,
-         content: (
-           <>
-             <ul>
-               {matchedStudents.length > 0 ? (
-                 matchedStudents.map((student) => (
-                   <li key={student.id}>
-                     <Link
-                       to={`/showcase/creators/${student.std_id}`}
-                       className="txt-link"
-                     >
-                       <Creators
-                         nameEN={student.name_en}
-                         nicknameEN={student.nickname_en}
-                         nameTH={`${student.name_th} (${student.nickname_th})`}
-                         email={student.email}
-                         linkedin={student.linkin}
-                         qoutes={student.qoutes}
-                         profileImg={`/profile_img/${student.profile_img}`}
-                       />
-                     </Link>
-                   </li>
-                 ))
-               ) : (
-                 <p>No students found</p>
-               )}
-             </ul>
-           </>
-         ),
-       };
-     }
-     return item;
-   });
+  const matchedStudents = getMatchedStudents();
+  console.log(students);
+
+  const itemsWithStudents = items.map((item) => {
+    if (item.title === "creator") {
+      return {
+        ...item,
+        content: (
+          <>
+            <ul>
+              {matchedStudents.length > 0 ? (
+                matchedStudents.map((student) => (
+                  <li key={student.id}>
+                    <Link
+                      to={`/showcase/creators/${student.std_id}`}
+                      className="txt-link"
+                    >
+                      <Creators
+                        nameEN={student.name_en}
+                        nicknameEN={student.nickname_en}
+                        nameTH={`${student.name_th} (${student.nickname_th})`}
+                        email={student.email}
+                        linkedin={student.linkin}
+                        qoutes={student.qoutes}
+                        profileImg={`/profile_img/${student.profile_img}`}
+                      />
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <p>No students found</p>
+              )}
+            </ul>
+          </>
+        ),
+      };
+    }
+    return item;
+  });
 
   return (
     <>
@@ -187,10 +185,9 @@ function Project() {
           ? `${project.name_en} ${project.name_th} - Syn2sign senior project exhibition 2024`
           : "Loading..."}
       </Helmet>
-      <PageElement/>
+      <PageElement />
 
       <Container className="mt-5 position-relative">
-
         {/* Creator */}
         {/* <div>
           {matchedStudents.length > 0 ? (
@@ -212,7 +209,7 @@ function Project() {
             <p>No students found</p>
           )}
         </div> */}
-        
+
         <div className="project-content-sec">
           <div className="row">
             <div className="col">
@@ -235,21 +232,21 @@ function Project() {
                   alt="creator icon"
                   className="prj-sec-icon"
                 />
-                
               </div>
-              <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3" style={{width: "75%"}}>
-                <span >
+              <div
+                className="d-flex flex-column text-start mb-3 txt-body1 mt-3"
+                style={{ width: "75%" }}
+              >
+                <span>
                   <p>{project.fullname_th}</p>
                 </span>
               </div>
               <div className="text-start txt-grey mb-1">Social Approved</div>
 
               <CardSocialApprovedProject className="mb-4" />
-              <CardThreePictureProject/>
-              
+              <CardThreePictureProject />
             </div>
 
-            
             <div className="mx-auto ratio ratio-16x9">
               <iframe
                 src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
@@ -260,13 +257,11 @@ function Project() {
                 allowFullScreen
                 className="video-box"
               ></iframe>
-              
             </div>
-            
           </div>
-          <LinkButton className="mt-4"/>
+          <LinkButton className="mt-4" />
           <Accordions items={itemsWithStudents} />
-          
+
           <div className="mt-4">
             <div className="col">
               <SectionTitle
@@ -284,14 +279,18 @@ function Project() {
                   >
                     <Link
                       to={`/showcase/projects/${proj.project_id}`}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent default behavior of Link
                         setActiveProject(proj.project_id);
                         localStorage.setItem("activeProject", proj.project_id);
-                        window.scrollTo(0, 0);
+                        window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
                       }}
                       className="link-txt"
                     >
-                      <div className="d-flex flex-column align-items-center">
+                      <div
+                        className="d-flex flex-column align-items-center"
+                        style={{ width: "140px" }}
+                      >
                         <div className="link-prj-con">
                           <div className="prj-check-i">
                             <BsCheckLg />
