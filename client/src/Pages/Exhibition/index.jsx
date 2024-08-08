@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
 import syn_ele from "./img/s2s-ele.svg";
@@ -6,11 +6,11 @@ import paper_plane from "./img/paper-plane.png";
 import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
-import { FaFilePdf, FaArrowRightLong } from "react-icons/fa6";
-import { RxFigmaLogo } from "react-icons/rx";
+import { FaFilePdf } from "react-icons/fa6";
+import { RxFigmaLogo, RxArrowTopRight } from "react-icons/rx";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
-import CardAdditional from "../../component/card/CardAdditional";
+// import CardAdditional from "../../component/card/CardAdditional";
 import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 // import { FaYoutube } from "react-icons/fa";
 //
@@ -59,7 +59,7 @@ function Exhibition() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo 
+            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo
           </a>
         </div>
         <div className="exh-banner-content exh-txt-shadow">
@@ -125,6 +125,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>Exhibition brife report</strong>
+                      <RxArrowTopRight />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
@@ -154,6 +155,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>entry booklet</strong>
+                      <RxArrowTopRight />
                     </h3>
                     <span className="txt-grey">(Senior Project, FIGMA)</span>
                     <p className="card-text mt-4">
@@ -182,6 +184,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>T-Shirt brife report</strong>
+                      <RxArrowTopRight />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
