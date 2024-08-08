@@ -155,12 +155,7 @@ function Project() {
     {
       title: "Testing & Feedback",
       subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: "Content for section 3",
-    },
-    {
-      title: "video demo",
-      subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
-      content: "Content for section 3",
+      content: <CardFeedback/>,
     },
     {
       title: "creator",
