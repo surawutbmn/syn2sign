@@ -16,6 +16,13 @@ import CardThreePictureProject from "../../component/card/CardThreePictureProjec
 import LinkButton from "../../component/Button/LinkButton";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
+import CardMainFunction from "../../component/card/CardMainFunction";
+import CardToolDevelopment from "../../component/card/CardToolDevelopment";
+import CardToolPresentation from "../../component/card/CardToolDesignPresentation";
+import CardToolDesignPresentation from "../../component/card/CardToolDesignPresentation";
+import CardDesignProcess from "../../component/card/CardDesignProcess";
+import CardTargetGroup from "../../component/card/CardTargetGroup";
+import CardFeedback from "../../component/card/CardFeedback";
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -43,37 +50,32 @@ function Project() {
     {
       title: "MAIN Function",
       subtitle: "ฟังก์ชันหลัก",
-      content: "Content for section 3",
+      content: <CardMainFunction/>,
     },
     {
       title: "DEVELOPMENT TOOLs",
       subtitle: "เครื่องมือในการพัฒนาผลงาน",
-      content: "Content for section 3",
+      content: <CardToolDevelopment />,
     },
     {
       title: "DESIGN & PRESENTATION TOOLs",
       subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
-      content: "Content for section 3",
+      content: <CardToolDesignPresentation/>,
     },
     {
       title: "Design PROCESS",
       subtitle: "กระบวนการออกแบบผลงาน",
-      content: "Content for section 3",
+      content: <CardDesignProcess/>,
     },
     {
       title: "target group",
       subtitle: "กลุ่มเป้าหมาย",
-      content: "Content for section 3",
+      content: <CardTargetGroup/>,
     },
     {
       title: "Testing & Feedback",
       subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: "Content for section 3",
-    },
-    {
-      title: "video demo",
-      subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
-      content: "Content for section 3",
+      content: <CardFeedback/>,
     },
     {
       title: "creator",

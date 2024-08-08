@@ -654,7 +654,7 @@ function Credit() {
                 INDYt-shirt
               </p>
             </div>
-            <div className="d-flex">
+            <div className="d-flex text-start">
               <p>
                 <strong>EQUIPMENT TRANSPORT PROVIDER:</strong>
                 <br className="d-block d-md-none" /> Bualoi Roongrueangsub

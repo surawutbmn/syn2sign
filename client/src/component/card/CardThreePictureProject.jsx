@@ -6,15 +6,15 @@ const CardThreePictureProject = () => {
     <div className="d-flex row mt-5 mb-5">
       {/* <div className="col-12"> */}
       <CardBox className="col-4">
-        <CardImage src="/showcase/threeTop/desktop-cpl-1.png"></CardImage>
+        <CardImage src="/showcase/Project/cpl01/preview-cpl01-1.png"></CardImage>
       </CardBox>
       <CardBox className="col-4">
         {" "}
-        <CardImage src="/showcase/threeTop/desktop-cpl-2.png"></CardImage>
+        <CardImage src="/showcase/Project/cpl01/preview-cpl01-2.png"></CardImage>
       </CardBox>
       <CardBox className="col-4">
         {" "}
-        <CardImage src="/showcase/threeTop/desktop-cpl-3.png"></CardImage>
+        <CardImage src="/showcase/Project/cpl01/preview-cpl01-3.png"></CardImage>
       </CardBox>
       {/* </div> */}
     </div>
