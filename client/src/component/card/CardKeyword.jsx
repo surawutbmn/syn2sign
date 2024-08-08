@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 
 // Import all possible JSON files statically
-import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
+import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project_full.json';
 import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
 // Add more imports as needed
 
