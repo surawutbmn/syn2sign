@@ -70,6 +70,12 @@ function Students() {
       console.error("Error fetching student data:", error);
       const localStudent = findStudentById(std_id);
       if (localStudent) {
+        if (localStudent.roles) {
+          setRole(localStudent.roles); // Directly set the roles if available
+        }
+        if (localStudent.question) {
+          setQuestions(localStudent.question); // Directly set the roles if available
+        }
         return localStudent; // Return local data if the API call fails
       }
     }
@@ -138,6 +144,7 @@ function Students() {
   useEffect(() => {
     GetData();
   }, [std_id]);
+  
   const handleStudentClick = (studentId) => {
     navigate(`/showcase/creators/${studentId}`);
     window.scrollTo(0, 0); // Scroll to top after navigation
@@ -220,7 +227,7 @@ function Students() {
           <div className="">
             <img
               loading="lazy"
-              src={`/creator_img/${student.profile_img}`}
+              src={`/creator_img/profile/${student.profile_img}`}
               alt="creator profile"
               style={{
                 maxWidth: "35vw",

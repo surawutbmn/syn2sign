@@ -17,7 +17,7 @@ const StudentCard = ({ student }) => (
         </ReadMore>
         <div className="card-std-img">
           <ImgCreator
-            src={`/creator_img/${student.profile_img}`}
+            src={`/creator_img/profile/${student.profile_img}`}
             loading="lazy"
             alt="creator profile"
           />

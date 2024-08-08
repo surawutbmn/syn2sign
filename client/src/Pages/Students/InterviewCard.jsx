@@ -9,7 +9,7 @@ function InterviewCard(props) {
       <Overlay />
       <Row className="justify-content-around position-relative">
         <Col xs={6}>
-          <PreviewImg src={`/creator_img/${props.img}`} alt="interview image" />
+          <PreviewImg src={`/creator_img/interview/${props.img}`} alt="interview image" />
         </Col>
         <Col xs={5} className="d-flex flex-column">
           <CardText>

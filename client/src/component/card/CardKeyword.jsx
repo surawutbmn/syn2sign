@@ -14,13 +14,13 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardKeyword = ({ keyword }) => {
+const CardKeyword = (props) => {
   const [data, setData] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
     // Select the appropriate data based on the keyword prop
-    const selectedData = dataMapping[keyword] || [];
+    const selectedData = dataMapping[props.proj_id] || [];
 
     if (selectedData.length > 0) {
       // Extract the data array from the JSON file
@@ -30,7 +30,7 @@ const CardKeyword = ({ keyword }) => {
       setData(tableData);
       setActiveButton(tableData[0].id); // Set default active button
     }
-  }, [keyword]);
+  }, [props.proj_id]);
 
   // useEffect(() => {
   //   // Extract part of the URL to determine which data to use
@@ -89,7 +89,7 @@ const CardKeyword = ({ keyword }) => {
 };
 
 CardKeyword.propTypes = {
-  keyword: PropTypes.string.isRequired,
+  proj_id: PropTypes.string.isRequired,
 };
 
 export default CardKeyword;

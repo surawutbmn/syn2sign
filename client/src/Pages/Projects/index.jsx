@@ -120,12 +120,12 @@ function Project() {
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept />,
+      content: <CardIdeaConcept proj_id={prj_id}/>,
     },
     {
       title: "Key WORD",
       subtitle: "คำค้นหา / คำสำคัญ ",
-      content: <CardKeyword keyword={prj_id} />,
+      content: <CardKeyword proj_id={prj_id} />,
     },
     {
       title: "MAIN Function",
