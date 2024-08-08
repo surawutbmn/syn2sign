@@ -182,7 +182,7 @@ function Students() {
           <div className="">
             <img
               loading="lazy"
-              src={`/profile_img/${student.profile_img}`}
+              src={`/creator_img/${student.profile_img}`}
               alt="creator profile"
               style={{
                 maxWidth: "35vw",
@@ -218,7 +218,7 @@ function Students() {
             <div className="row" key={index}>
               <div className="col">
                 <img
-                  src={`/profile_img/${student.profile_img}`}
+                  src={`/creator_img/${student.profile_img}`}
                   alt="other creator profile"
                   style={{
                     maxWidth: "20vw",

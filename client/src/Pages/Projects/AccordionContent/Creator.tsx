@@ -6,9 +6,7 @@ import { Col, Row } from "react-bootstrap";
 
 interface CreatorsProps {
   stdID: number;
-  nameTH: string;
   nameEN: string;
-  nicknameEN: string;
   email: string;
   linkedin: string;
   qoutes: string;
@@ -17,24 +15,20 @@ interface CreatorsProps {
 
 const Creators: React.FC<CreatorsProps> = ({
   stdID,
-  nameTH,
   nameEN,
-  nicknameEN,
   email,
   linkedin,
   qoutes,
   profileImg,
 }) => {
   return (
-    <Row>
+    <Row className="align-items-center">
       <Col>
-        <img src={profileImg} alt="" style={{width:"100%", maxWidth:"20dvw"}}/>
-        <span>({nicknameEN})</span>
-        <span>{nameEN}</span>
-        <span>{nameTH}</span>
+        <img src={profileImg} alt="" style={{ width:"100%", maxWidth:"25dvw",}}/>
       </Col>
-      <Col className="text-start">
-        <div>
+      <Col xs={7} className="text-start">
+        <div className="" style={{padding:"1rem", border:"solid", borderRadius:"1rem"}}>
+          <div>
           <img
             src={`/icon/double-qoute.svg`}
             alt="double quote"
@@ -75,7 +69,7 @@ const Creators: React.FC<CreatorsProps> = ({
           className="txt-link"
           style={{
             border: ".1rem solid",
-            padding: ".rem .8rem",
+            padding: ".4rem .8rem",
             borderRadius: "100px",
           }}
         >
@@ -86,6 +80,7 @@ const Creators: React.FC<CreatorsProps> = ({
             <FaReadme />
           </span>
         </Link>
+        </div>
       </Col>
     </Row>
   );

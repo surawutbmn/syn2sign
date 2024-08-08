@@ -6,13 +6,13 @@ import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
-import Creators from "./Creators/Creator";
+import Creators from "./AccordionContent/Creator";
 import { Container } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
-import CardSocialApprovedProject from "../../component/card/CardSocialApprovedProject";
-import CardThreePictureProject from "../../component/card/CardThreePictureProject";
+import SocialApproved from "./AccordionContent/SocialApproved"
+import CardThreePictureProject from "./AccordionContent/TopPicture";
 import LinkButton from "../../component/Button/LinkButton";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
@@ -31,7 +31,6 @@ function Project() {
   // console.log(projectsdata);
   // const prj_id = "cpl01";
 
-  
   const findProjectById = (project_id) => {
     return (
       projectsdata.find((project) => project.project_id === project_id) || null
@@ -61,6 +60,8 @@ function Project() {
       const localProject = findProjectById(project_id);
       if (localProject) {
         setProject(localProject);
+        const keyword = localProject.keyword;
+        setKeywords(keyword);
 
         setActiveProject(project_id);
         localStorage.setItem("activeProject", project_id);
@@ -108,58 +109,53 @@ function Project() {
 
   const matchedStudents = getMatchedStudents();
   // console.log(students);
-const items = [
-  {
-    title: "idea concept",
-    subtitle: "แนวคิดของผลงาน",
-    content: <CardIdeaConcept />,
-  },
-  {
-    title: "Key WORD",
-    subtitle: "คำค้นหา / คำสำคัญ ",
-    content: <CardKeyword keyword={prj_id} />,
-  },
-  {
-    title: "MAIN Function",
-    subtitle: "ฟังก์ชันหลัก",
-    content: "Content for section 3",
-  },
-  {
-    title: "DEVELOPMENT TOOLs",
-    subtitle: "เครื่องมือในการพัฒนาผลงาน",
-    content: "Content for section 3",
-  },
-  {
-    title: "DESIGN & PRESENTATION TOOLs",
-    subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
-    content: "Content for section 3",
-  },
-  {
-    title: "Design PROCESS",
-    subtitle: "กระบวนการออกแบบผลงาน",
-    content: "Content for section 3",
-  },
-  {
-    title: "target group",
-    subtitle: "กลุ่มเป้าหมาย",
-    content: "Content for section 3",
-  },
-  {
-    title: "Testing & Feedback",
-    subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-    content: "Content for section 3",
-  },
-  {
-    title: "video demo",
-    subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
-    content: "Content for section 3",
-  },
-  {
-    title: "creator",
-    subtitle: "ผู้สร้างผลงาน",
-    content: " ",
-  },
-];
+  const items = [
+    {
+      title: "idea concept",
+      subtitle: "แนวคิดของผลงาน",
+      content: <CardIdeaConcept />,
+    },
+    {
+      title: "Key WORD",
+      subtitle: "คำค้นหา / คำสำคัญ ",
+      content: <CardKeyword keyword={prj_id} />,
+    },
+    {
+      title: "MAIN Function",
+      subtitle: "ฟังก์ชันหลัก",
+      content: "Content for section 3",
+    },
+    {
+      title: "DEVELOPMENT TOOLs",
+      subtitle: "เครื่องมือในการพัฒนาผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "DESIGN & PRESENTATION TOOLs",
+      subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "Design PROCESS",
+      subtitle: "กระบวนการออกแบบผลงาน",
+      content: "Content for section 3",
+    },
+    {
+      title: "target group",
+      subtitle: "กลุ่มเป้าหมาย",
+      content: "Content for section 3",
+    },
+    {
+      title: "Testing & Feedback",
+      subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
+      content: "Content for section 3",
+    },
+    {
+      title: "creator",
+      subtitle: "ผู้สร้างผลงาน",
+      content: " ",
+    },
+  ];
   const itemsWithStudents = items.map((item) => {
     if (item.title === "creator") {
       return {
@@ -170,16 +166,13 @@ const items = [
               {matchedStudents.length > 0 ? (
                 matchedStudents.map((student) => (
                   <li key={student.id}>
-                    <div
-                    >
+                    <div>
                       <Creators
                         nameEN={student.name_en}
-                        nicknameEN={student.nickname_en}
-                        nameTH={`${student.name_th} (${student.nickname_th})`}
                         email={student.email}
                         linkedin={student.linkin}
                         qoutes={student.qoutes}
-                        profileImg={`/profile_img/${student.profile_img}`}
+                        profileImg={`/creator_img/078-card.png`}
                         stdID={student.std_id}
                       />
                     </div>
@@ -204,141 +197,102 @@ const items = [
           : "Loading..."}
       </Helmet>
       <PageElement />
-
       <Container className="mt-5 position-relative">
-        {/* Creator */}
-        {/* <div>
-          {matchedStudents.length > 0 ? (
-            matchedStudents.map((student) => (
-              <div key={student.id}>
-                <Creators
-                  stdID={student.std_id}
-                  nameEN={student.name_en}
-                  nicknameEN={student.nickname_en}
-                  nameTH={`${student.name_th} (${student.nickname_th})`}
-                  email={student.email}
-                  linkedin={student.linkin}
-                  qoutes={student.qoutes}
-                  profileImg={`/profile_img/${student.profile_img}`}
-                />
-              </div>
-            ))
-          ) : (
-            <p>No students found</p>
-          )}
-        </div> */}
-        <div>
-          {keywords.length > 0 ? (
-            keywords.map((keyword) => (
-              <div key={keyword.id}>
-                {keyword.keyword} <p>{keyword.description}</p>
-              </div>
-            ))
-          ) : (
-            <p>No keywords found</p>
-          )}
-        </div>
-
-        <div className="project-content-sec">
-          <div className="row">
-            <div className="col">
-              <div className="d-flex">
-                <img
-                  src={`/icon/prj/${project.icon}`}
-                  alt="project icon"
-                  className="prj-sec-icon"
-                />
-                <div className="text-start mx-4">
-                  <h1 className="txt-scu-head ">
-                    <strong>{project.name_en}</strong>
-                  </h1>
-                  <p>({project.name_th})</p>
-                </div>
-                <hr className="prj-name-line" />
-                <h1 className="outlined-text">#{project.id}</h1>
-                <img
-                  src={`/icon/prj/${project.icon_std}`}
-                  alt="creator icon"
-                  className="prj-sec-icon"
-                />
-              </div>
-              <div
-                className="d-flex flex-column text-start mb-3 txt-body1 mt-3"
-                style={{ width: "75%" }}
-              >
-                <span>
-                  <p>{project.fullname_th}</p>
-                </span>
-              </div>
-              <div className="text-start txt-grey mb-1">Social Approved</div>
-
-              <CardSocialApprovedProject className="mb-4" />
-              <CardThreePictureProject />
-            </div>
-
-            <div className="mx-auto ratio ratio-16x9">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="video-box"
-              ></iframe>
-            </div>
+        <div className="d-flex justify-content-around">
+          <img
+            src={`/icon/prj/${project.icon}`}
+            alt="project icon"
+            className="prj-sec-icon"
+          />
+          <div className="text-start mx-3">
+            <h1 className="txt-scu-head ">
+              <strong>{project.name_en}</strong>
+            </h1>
+            <p>({project.name_th})</p>
           </div>
-          <LinkButton className="mt-4" />
-          <Accordions items={itemsWithStudents} />
+          <hr className="prj-name-line" />
+          <h1 className="outlined-text mx-3">#{project.id}</h1>
+          <img
+            src={`/icon/prj/${project.icon_std}`}
+            alt="creator icon"
+            className="prj-sec-icon"
+          />
+        </div>
+        <div
+          className="d-flex flex-column text-start mb-3 txt-body1 mt-3"
+          style={{ width: "75%" }}
+        >
+          <span>
+            <p>{project.fullname_th}</p>
+          </span>
+        </div>
+        <div className="text-start txt-grey mb-1">Social Approved</div>
+      </Container>
 
-          <div className="mt-4">
-            <div className="col">
-              <SectionTitle
-                title="Other Projects"
-                subtitle="ผลงานอื่นๆ"
-                className="header-wline"
-              />
-              <div className="d-flex justify-content-around text-center mb-6">
-                {projectsdata.map((proj) => (
-                  <div
-                    key={proj.project_id}
-                    className={`list-group-item ${
-                      activeProject === proj.project_id ? "active" : ""
-                    }`}
+      <SocialApproved className="mb-4" />
+      <Container>
+        <CardThreePictureProject />
+        <div className="mx-auto ratio ratio-16x9">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="video-box"
+          ></iframe>
+        </div>
+        <LinkButton className="mt-4" />
+        <Accordions items={itemsWithStudents} />
+
+        <div className="mt-4">
+          <div className="col">
+            <SectionTitle
+              title="Other Projects"
+              subtitle="ผลงานอื่นๆ"
+              className="header-wline"
+            />
+            <div className="d-flex justify-content-around text-center mb-6">
+              {projectsdata.map((proj) => (
+                <div
+                  key={proj.project_id}
+                  className={`list-group-item ${
+                    activeProject === proj.project_id ? "active" : ""
+                  }`}
+                >
+                  <Link
+                    to={`/showcase/projects/${proj.project_id}`}
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent default behavior of Link
+                      setActiveProject(proj.project_id);
+                      localStorage.setItem("activeProject", proj.project_id);
+                      window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
+                    }}
+                    className="link-txt"
                   >
-                    <Link
-                      to={`/showcase/projects/${proj.project_id}`}
-                      onClick={(e) => {
-                        e.preventDefault(); // Prevent default behavior of Link
-                        setActiveProject(proj.project_id);
-                        localStorage.setItem("activeProject", proj.project_id);
-                        window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
-                      }}
-                      className="link-txt"
+                    <div
+                      className="d-flex flex-column align-items-center"
+                      style={{ width: "140px" }}
                     >
-                      <div
-                        className="d-flex flex-column align-items-center"
-                        style={{ width: "140px" }}
-                      >
-                        <div className="link-prj-con">
-                          <div className="prj-check-i">
-                            <BsCheckLg />
-                          </div>
-                          <div className="icon-prj-ovl"></div>
-                          <img
-                            className="icon-img-link"
-                            src={`/icon/prj/${proj.icon_sqr}`}
-                            alt={`${proj.name_en} icon`}
-                          />
+                      <div className="link-prj-con">
+                        <div className="prj-check-i">
+                          <BsCheckLg />
                         </div>
-                        <div className="mt-3 fs-5 txt-upper">
-                          <span>{proj.name_en}</span>
-                        </div>
+                        <div className="icon-prj-ovl"></div>
+                        <img
+                          className="icon-img-link"
+                          src={`/icon/prj/${proj.icon_sqr}`}
+                          alt={`${proj.name_en} icon`}
+                        />
                       </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
+                      <div className="mt-3 fs-5 txt-upper">
+                        <span>{proj.name_en}</span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
