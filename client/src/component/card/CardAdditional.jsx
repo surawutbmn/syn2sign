@@ -45,7 +45,7 @@ export default CardAdditional;
 
 
 const CardBox = styled.div`
-width: 100%;
+  width: 100%;
   /* width: 1130px; */
   height: auto;
   /* height: 250px; */
@@ -55,6 +55,11 @@ width: 100%;
   position: relative;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+  &:hover button {
+    color: var(--color-secondary);
+    border: solid 0.05rem var(--color-secondary);
+  }
 `;
 const BoxContent = styled.div`
   display: flex;

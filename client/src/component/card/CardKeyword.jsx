@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
 
 // Import all possible JSON files statically
 import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project_full.json';
@@ -12,26 +14,42 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardKeyword = () => {
+const CardKeyword = ({ keyword }) => {
   const [data, setData] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
-    // Extract part of the URL to determine which data to use
-    const url = window.location.href;
-    const projectIdentifier = url.match(/cpl0\d+/);
-    const identifier = projectIdentifier ? projectIdentifier[0] : 'default';
+    // Select the appropriate data based on the keyword prop
+    const selectedData = dataMapping[keyword] || [];
 
-    // Select the appropriate data based on the identifier
-    const selectedData = dataMapping[identifier] || [];
-    
     if (selectedData.length > 0) {
       // Extract the data array from the JSON file
-      const tableData = selectedData.find(entry => entry.type === 'table' && entry.name === 'keywords').data;
+      const tableData = selectedData.find(
+        (entry) => entry.type === "table" && entry.name === "keywords"
+      ).data;
       setData(tableData);
       setActiveButton(tableData[0].id); // Set default active button
     }
-  }, []);
+  }, [keyword]);
+
+  // useEffect(() => {
+  //   // Extract part of the URL to determine which data to use
+  //   const url = window.location.href;
+  //   const projectIdentifier = url.match(/cpl0\d+/);
+  //   const identifier = projectIdentifier ? projectIdentifier[0] : "default";
+
+  //   // Select the appropriate data based on the identifier
+  //   const selectedData = dataMapping[identifier] || [];
+
+  //   if (selectedData.length > 0) {
+  //     // Extract the data array from the JSON file
+  //     const tableData = selectedData.find(
+  //       (entry) => entry.type === "table" && entry.name === "keywords"
+  //     ).data;
+  //     setData(tableData);
+  //     setActiveButton(tableData[0].id); // Set default active button
+  //   }
+  // }, []);
 
   const handleButtonClick = (id) => {
     setActiveButton(id);
@@ -40,7 +58,7 @@ const CardKeyword = () => {
   return (
     <div className="d-flex row" style={{ marginTop: "-2rem" }}>
       <div className="col-12 mb-5">
-        {data.slice(0, 3).map(item => (
+        {data.slice(0, 3).map((item) => (
           <KeywordButton
             key={item.id}
             active={activeButton === item.id}
@@ -51,7 +69,7 @@ const CardKeyword = () => {
         ))}
       </div>
       <div className="col-12 mb-5">
-        {data.slice(3).map(item => (
+        {data.slice(3).map((item) => (
           <KeywordButton
             key={item.id}
             active={activeButton === item.id}
@@ -63,11 +81,15 @@ const CardKeyword = () => {
       </div>
       <div className="col-12">
         <span className="description">
-          {data.find(item => item.id === activeButton)?.description}
+          {data.find((item) => item.id === activeButton)?.description}
         </span>
       </div>
     </div>
   );
+};
+
+CardKeyword.propTypes = {
+  keyword: PropTypes.string.isRequired,
 };
 
 export default CardKeyword;

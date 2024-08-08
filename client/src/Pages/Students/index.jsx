@@ -1,25 +1,22 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { LuMail } from "react-icons/lu";
-import { FaLinkedinIn, FaReadme } from "react-icons/fa6";
+import { FaLinkedinIn, } from "react-icons/fa6";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
 import SectionTitle from "../../component/SectionTitle";
 import PageElement from "../../component/Element/PageElement";
+import Creators from "../Projects/AccordionContent/Creator";
 
 function Students() {
   const [student, setStudent] = useState(null);
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
   const { std_id } = useParams();
+  const navigate = useNavigate();
 
-  const handleLinkClick = (event) => {
-    event.preventDefault();
-    const url = `/showcase/creators/${otherStudents.std_id}`;
-    window.location.href = url;
-  };
 
   const findProjectById = (project_id) => {
     return (
@@ -81,7 +78,7 @@ function Students() {
     }
   };
 
-  const Getstudents = async () => {
+  const GetData = async () => {
     try {
       // const std_id = 631310081;
       const studentData = await fetchStudentData(std_id);
@@ -102,8 +99,12 @@ function Students() {
   };
 
   useEffect(() => {
-    Getstudents();
-  }, []);
+    GetData();
+  }, [std_id]);
+  const handleStudentClick = (studentId) => {
+    navigate(`/showcase/creators/${studentId}`);
+    window.scrollTo(0, 0); // Scroll to top after navigation
+  };
 
   // console.log(otherStudents);
   useEffect(() => {
@@ -182,7 +183,7 @@ function Students() {
           <div className="">
             <img
               loading="lazy"
-              src={`/profile_img/${student.profile_img}`}
+              src={`/creator_img/${student.profile_img}`}
               alt="creator profile"
               style={{
                 maxWidth: "35vw",
@@ -216,79 +217,14 @@ function Students() {
         <div className="row">
           {otherStudents.map((student, index) => (
             <div className="row" key={index}>
-              <div className="col">
-                <img
-                  src={`/profile_img/${student.profile_img}`}
-                  alt="other creator profile"
-                  style={{
-                    maxWidth: "20vw",
-                    width: "100%",
-                    borderRadius: "1.2rem",
-                  }}
-                  loading="lazy"
-                />
-                <span className="d-flex flex-column">
-                  ({student.nickname_en}) {student.name_en}
-                  <span>
-                    {student.name_th}({student.nickname_th})
-                  </span>
-                </span>
-              </div>
-              <div className="col">
-                <div>
-                  <img
-                    src={`/icon/double-qoute.svg`}
-                    alt="double qoute"
-                    style={{ maxWidth: "5vw", width: "100%" }}
-                    loading="lazy"
-                  />
-                  <span>{student.qoutes}</span>
-                </div>
-                <hr />
-                <div className="icon-link-con">
-                  <a
-                    href={`mailto:${student.email}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="txt-link"
-                  >
-                    <span className="icon-crl me-2">
-                      <LuMail />
-                    </span>
-                    <span>{student.email}</span>
-                  </a>
-                </div>
-                <div className="icon-link-con">
-                  <a
-                    href={student.linkin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="txt-link"
-                  >
-                    <span className="icon-crl me-2">
-                      <FaLinkedinIn />
-                    </span>
-                    <span>{student.name_en}</span>
-                  </a>
-                </div>
-                <Link
-                  to={`/showcase/creators/${student.std_id}`}
-                  onClick={handleLinkClick}
-                  className="txt-link"
-                  style={{
-                    border: ".1rem solid",
-                    padding: ".4rem .8rem",
-                    borderRadius: "100px",
-                  }}
-                >
-                  <span className="txt-upper">
-                    <strong>read more</strong>
-                  </span>
-                  <span className="ms-2">
-                    <FaReadme />
-                  </span>
-                </Link>
-              </div>
+              <Creators
+                nameEN={student.name_en}
+                email={student.email}
+                linkedin={student.linkin}
+                qoutes={student.qoutes}
+                profileImg={`/creator_img/078-card.png`}
+                stdID={student.std_id}
+              />
             </div>
           ))}
         </div>
