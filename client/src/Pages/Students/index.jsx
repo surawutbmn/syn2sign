@@ -10,8 +10,9 @@ import SectionTitle from "../../component/SectionTitle";
 import PageElement from "../../component/Element/PageElement";
 import Creators from "../Projects/AccordionContent/Creator";
 import InterviewCard from "./InterviewCard";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
+import ExhibitImg from "./ExhibitImg";
 
 
 function Students() {
@@ -171,9 +172,9 @@ function Students() {
       </Helmet>
       <PageElement />
 
-      <div className="container mt-5 position-relative">
-        <div className="d-flex justify-content-between">
-          <div className="text-start">
+      <Container className="mt-5 position-relative">
+        <div className="d-flex">
+          <div className="text-start col-7">
             <hr
               style={{
                 width: "15dvw",
@@ -189,13 +190,15 @@ function Students() {
               style={{ maxWidth: "5vw", width: "100%" }}
               loading="lazy"
             />
-            <img
-              src={`/icon/double-qoute.svg`}
-              alt="double qoute"
-              style={{ maxWidth: "5vw", width: "100%" }}
-              loading="lazy"
-            />
-            <h3 className="text-start">{student.qoutes}</h3>
+            <div className="d-flex align-items-baseline justify-content-end my-5">
+              <img
+                src={`/icon/double-qoute.svg`}
+                alt="double qoute"
+                style={{ maxWidth: "5vw", width: "100%" }}
+                loading="lazy"
+              />
+              <h3 className="text-start ms-3">{student.qoutes}</h3>
+            </div>
             <h3 className="text-start">contact to {student.nickname_en}</h3>
             <div className="icon-link-con">
               <a
@@ -245,6 +248,7 @@ function Students() {
             </div>
           </div>
         </div>
+        <ExhibitImg name={student.nickname_en} />
         <SectionTitle
           title={`${student.nickname_en}\u2019s INTERVIEWS`}
           subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
@@ -276,7 +280,6 @@ function Students() {
           {design.length > 0 &&
             design.map((designItem, index) => (
               <Col key={index}>
-
                 <img src={`/tools/designTool/${designItem.icon}`} alt="" />
 
                 {designItem.icon}
@@ -323,7 +326,7 @@ function Students() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </>
   );
 }
