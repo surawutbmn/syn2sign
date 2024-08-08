@@ -3,20 +3,27 @@ import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { LuMail } from "react-icons/lu";
-import { FaLinkedinIn, } from "react-icons/fa6";
+import { FaHandshakeSimple, FaLinkedinIn } from "react-icons/fa6";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
 import SectionTitle from "../../component/SectionTitle";
 import PageElement from "../../component/Element/PageElement";
 import Creators from "../Projects/AccordionContent/Creator";
+import InterviewCard from "./InterviewCard";
+import { Col, Row } from "react-bootstrap";
+import RecTools from "./RecTools";
+
 
 function Students() {
   const [student, setStudent] = useState(null);
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
+  const [questions, setQuestions] = useState([]);
+  const [role, setRole] = useState([]);
+  const [dev, setDev] = useState([]);
+  const [design, setDesign] = useState([]);
   const { std_id } = useParams();
   const navigate = useNavigate();
-
 
   const findProjectById = (project_id) => {
     return (
@@ -38,15 +45,36 @@ function Students() {
       const response = await axios.get(
         `http://localhost/syn2sign/students/${std_id}`
       );
-      return response.data;
+      const studentData = response.data; // Assuming response.data is the student data
+
+      if (studentData.question) {
+        const parsedQuestion = JSON.parse(studentData.question);
+        setQuestions(parsedQuestion); // Assuming setQuestions is a state setter function
+      }
+      
+      if (studentData.roles) {
+        const parsedRole = JSON.parse(studentData.roles); // Parse the role JSON string
+        setRole(parsedRole); // Set the parsed role
+      }
+      if (studentData.devtool) {
+        const parsedDev = JSON.parse(studentData.devtool); // Parse the role JSON string
+        setDev(parsedDev); // Set the parsed role
+      }
+      if (studentData.designtool) {
+        const parsedDesign = JSON.parse(studentData.designtool); // Parse the role JSON string
+        setDesign(parsedDesign); // Set the parsed role
+      }
+
+      return studentData; // Return the fetched student data
     } catch (error) {
-      console.error("Error fetching project data:", error);
+      console.error("Error fetching student data:", error);
       const localStudent = findStudentById(std_id);
       if (localStudent) {
-        return localStudent;
+        return localStudent; // Return local data if the API call fails
       }
     }
   };
+
 
   const fetchProjectData = async (project_id) => {
     try {
@@ -71,7 +99,10 @@ function Students() {
       return response.data;
     } catch (error) {
       console.error("Error fetching other sudent data:", error);
-      const localOtherStudent = findOtherStudentsByProjectId( project_id, std_id);
+      const localOtherStudent = findOtherStudentsByProjectId(
+        project_id,
+        std_id
+      );
       if (localOtherStudent) {
         return localOtherStudent;
       }
@@ -86,8 +117,14 @@ function Students() {
 
       const project_id = studentData.project_id;
 
-      const otherStudentsData = await fetchOtherStudentsData( project_id, std_id);
-      const dataToUse = otherStudentsData.length > 0 ? otherStudentsData : findOtherStudentsByProjectId(project_id, std_id);
+      const otherStudentsData = await fetchOtherStudentsData(
+        project_id,
+        std_id
+      );
+      const dataToUse =
+        otherStudentsData.length > 0
+          ? otherStudentsData
+          : findOtherStudentsByProjectId(project_id, std_id);
       setOtherStudents(dataToUse);
       // console.log("Data to use for other students:", dataToUse);
 
@@ -204,15 +241,66 @@ function Students() {
         <SectionTitle
           title={`${student.nickname_en}\u2019s INTERVIEWS`}
           subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+          className=""
         />
+        <Row xs={1} className="g-5 mb-5">
+          {questions.length > 0 &&
+            questions.map((question, index) => (
+              <Col key={index}>
+                <InterviewCard
+                  id={question.id}
+                  img={question.img}
+                  std={`${student.nickname_th}`}
+                  ig={question.ig || "C9wRgcMMBlJ"}
+                  yt={question.yt || "Uy9GKzld7jI"}
+                  time={question.time}
+                  title1={question.title1}
+                  title2={question.title2}
+                />
+              </Col>
+            ))}
+          {dev.length > 0 &&
+            dev.map((devItem, index) => (
+              <Col key={index}>
+                <img src={`/tools/devTool/${devItem.icon}`} alt="" />
+                {devItem.name} {devItem.desc}
+              </Col>
+            ))}
+          {design.length > 0 &&
+            design.map((designItem, index) => (
+              <Col key={index}>
+
+                <img src={`/tools/designTool/${designItem.icon}`} alt="" />
+
+                {designItem.icon}
+                {designItem.name}
+                {designItem.desc}
+              </Col>
+            ))}
+          <Col>
+            <RecTools />
+          </Col>
+        </Row>
         <SectionTitle
           title={`${student.nickname_en}\u2019s role in Syn2sign`}
-          subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+          subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
         />
+        <Row>
+          {role.length > 0 &&
+            role.map((roleItem, index) => {
+              return (
+                <Col key={index}>
+                  <img src={`/icon/roles/${roleItem.icon}`} alt="" />
+                  {roleItem.name}
+                </Col>
+              );
+            })}
+        </Row>
+
         <SectionTitle
           title={`${student.nickname_en} collaborate`}
           subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
-          className={"header-wline"}
+          className={"header-wline mt-5"}
         />
         <div className="row">
           {otherStudents.map((student, index) => (
