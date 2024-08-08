@@ -75,7 +75,7 @@ const Creators: React.FC<CreatorsProps> = ({
           className="txt-link"
           style={{
             border: ".1rem solid",
-            padding: ".4rem .8rem",
+            padding: ".rem .8rem",
             borderRadius: "100px",
           }}
         >

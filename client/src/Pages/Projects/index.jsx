@@ -23,81 +23,49 @@ function Project() {
   const { prj_id } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [keywords, setKeywords] = useState([]);
+
   const [activeProject, setActiveProject] = useState(
     localStorage.getItem("activeProject") || null
   );
   // console.log(projectsdata);
   // const prj_id = "cpl01";
 
-  const items = [
-    {
-      title: "idea concept",
-      subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept />,
-    },
-    {
-      title: "Key WORD",
-      subtitle: "คำค้นหา / คำสำคัญ ",
-      content: <CardKeyword />,
-    },
-    {
-      title: "MAIN Function",
-      subtitle: "ฟังก์ชันหลัก",
-      content: "Content for section 3",
-    },
-    {
-      title: "DEVELOPMENT TOOLs",
-      subtitle: "เครื่องมือในการพัฒนาผลงาน",
-      content: "Content for section 3",
-    },
-    {
-      title: "DESIGN & PRESENTATION TOOLs",
-      subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
-      content: "Content for section 3",
-    },
-    {
-      title: "Design PROCESS",
-      subtitle: "กระบวนการออกแบบผลงาน",
-      content: "Content for section 3",
-    },
-    {
-      title: "target group",
-      subtitle: "กลุ่มเป้าหมาย",
-      content: "Content for section 3",
-    },
-    {
-      title: "Testing & Feedback",
-      subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: "Content for section 3",
-    },
-    {
-      title: "video demo",
-      subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
-      content: "Content for section 3",
-    },
-    {
-      title: "creator",
-      subtitle: "ผู้สร้างผลงาน",
-      content: " ",
-    },
-  ];
-
-  const fetchProject = async () => {
+  
+  const findProjectById = (project_id) => {
+    return (
+      projectsdata.find((project) => project.project_id === project_id) || null
+    );
+  };
+  const fetchProject = async (project_id) => {
     setLoading(true);
     try {
-      const projectData = projectsdata.find(
-        (proj) => proj.project_id === prj_id
+      const response = await axios.get(
+        `http://localhost/syn2sign/projects/${project_id}`
       );
-      if (projectData) {
-        setProject(projectData);
-        setActiveProject(prj_id);
-        localStorage.setItem("activeProject", prj_id);
-      } else {
-        setError("Project not found");
+      const projectData = response.data;
+      setProject(projectData);
+
+      if (projectData.keyword) {
+        const parsedKeywords = JSON.parse(projectData.keyword);
+        setKeywords(parsedKeywords);
       }
+
+      setActiveProject(project_id);
+      localStorage.setItem("activeProject", project_id);
+      setError(null); // Clear any previous errors
     } catch (error) {
+      console.error("Error fetching project data", error);
       setError("Error fetching project data");
-      console.error(error);
+
+      const localProject = findProjectById(project_id);
+      if (localProject) {
+        setProject(localProject);
+
+        setActiveProject(project_id);
+        localStorage.setItem("activeProject", project_id);
+        setError(null); // Clear any previous errors
+      }
     } finally {
       setLoading(false);
     }
@@ -118,7 +86,7 @@ function Project() {
   };
 
   useEffect(() => {
-    fetchProject();
+    fetchProject(prj_id);
     fetchStudents();
   }, [prj_id]);
 
@@ -139,8 +107,59 @@ function Project() {
   };
 
   const matchedStudents = getMatchedStudents();
-  console.log(students);
-
+  // console.log(students);
+const items = [
+  {
+    title: "idea concept",
+    subtitle: "แนวคิดของผลงาน",
+    content: <CardIdeaConcept />,
+  },
+  {
+    title: "Key WORD",
+    subtitle: "คำค้นหา / คำสำคัญ ",
+    content: <CardKeyword keyword={prj_id} />,
+  },
+  {
+    title: "MAIN Function",
+    subtitle: "ฟังก์ชันหลัก",
+    content: "Content for section 3",
+  },
+  {
+    title: "DEVELOPMENT TOOLs",
+    subtitle: "เครื่องมือในการพัฒนาผลงาน",
+    content: "Content for section 3",
+  },
+  {
+    title: "DESIGN & PRESENTATION TOOLs",
+    subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
+    content: "Content for section 3",
+  },
+  {
+    title: "Design PROCESS",
+    subtitle: "กระบวนการออกแบบผลงาน",
+    content: "Content for section 3",
+  },
+  {
+    title: "target group",
+    subtitle: "กลุ่มเป้าหมาย",
+    content: "Content for section 3",
+  },
+  {
+    title: "Testing & Feedback",
+    subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
+    content: "Content for section 3",
+  },
+  {
+    title: "video demo",
+    subtitle: "คลิปวิดีโอสาธิตการใช้งาน",
+    content: "Content for section 3",
+  },
+  {
+    title: "creator",
+    subtitle: "ผู้สร้างผลงาน",
+    content: " ",
+  },
+];
   const itemsWithStudents = items.map((item) => {
     if (item.title === "creator") {
       return {
@@ -151,9 +170,7 @@ function Project() {
               {matchedStudents.length > 0 ? (
                 matchedStudents.map((student) => (
                   <li key={student.id}>
-                    <Link
-                      to={`/showcase/creators/${student.std_id}`}
-                      className="txt-link"
+                    <div
                     >
                       <Creators
                         nameEN={student.name_en}
@@ -163,8 +180,9 @@ function Project() {
                         linkedin={student.linkin}
                         qoutes={student.qoutes}
                         profileImg={`/profile_img/${student.profile_img}`}
+                        stdID={student.std_id}
                       />
-                    </Link>
+                    </div>
                   </li>
                 ))
               ) : (
@@ -209,6 +227,17 @@ function Project() {
             <p>No students found</p>
           )}
         </div> */}
+        <div>
+          {keywords.length > 0 ? (
+            keywords.map((keyword) => (
+              <div key={keyword.id}>
+                {keyword.keyword} <p>{keyword.description}</p>
+              </div>
+            ))
+          ) : (
+            <p>No keywords found</p>
+          )}
+        </div>
 
         <div className="project-content-sec">
           <div className="row">

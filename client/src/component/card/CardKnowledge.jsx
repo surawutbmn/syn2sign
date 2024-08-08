@@ -55,6 +55,11 @@ const CardBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  &:hover button {
+    color: var(--color-secondary);
+    border: solid 0.05rem var(--color-secondary);
+  }
 `;
 const BoxContent = styled.div`
   display: flex;

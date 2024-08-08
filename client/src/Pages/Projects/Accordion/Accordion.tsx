@@ -23,7 +23,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       <span className="accordion-icon me-2">
         {isOpen ? <IoIosArrowDown /> : <IoIosArrowForward />}
       </span>
-      <SectionTitle title={title} subtitle={subtitle}/>
+      <SectionTitle title={title} subtitle={subtitle} className={``}/>
     </div>
     {isOpen && <div className="accordion-contents">{content}</div>}
   </div>

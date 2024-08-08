@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { LuMail } from "react-icons/lu";
 import { FaLinkedinIn, FaReadme } from "react-icons/fa6";
@@ -14,12 +14,8 @@ function Students() {
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
   const { std_id } = useParams();
+  const navigate = useNavigate();
 
-  const handleLinkClick = (event) => {
-    event.preventDefault();
-    const url = `/showcase/creators/${otherStudents.std_id}`;
-    window.location.href = url;
-  };
 
   const findProjectById = (project_id) => {
     return (
@@ -81,7 +77,7 @@ function Students() {
     }
   };
 
-  const Getstudents = async () => {
+  const GetData = async () => {
     try {
       // const std_id = 631310081;
       const studentData = await fetchStudentData(std_id);
@@ -102,8 +98,12 @@ function Students() {
   };
 
   useEffect(() => {
-    Getstudents();
-  }, []);
+    GetData();
+  }, [std_id]);
+  const handleStudentClick = (studentId) => {
+    navigate(`/showcase/creators/${studentId}`);
+    window.scrollTo(0, 0); // Scroll to top after navigation
+  };
 
   // console.log(otherStudents);
   useEffect(() => {
@@ -273,8 +273,8 @@ function Students() {
                 </div>
                 <Link
                   to={`/showcase/creators/${student.std_id}`}
-                  onClick={handleLinkClick}
                   className="txt-link"
+                  onClick={() => handleStudentClick(student.std_id)}
                   style={{
                     border: ".1rem solid",
                     padding: ".4rem .8rem",
