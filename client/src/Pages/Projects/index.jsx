@@ -250,7 +250,7 @@ function Project() {
             className="video-box"
           ></iframe>
         </div>
-        <LinkButton className="mt-4" />
+        <LinkButton className="mt-4" name={project.name_en}/>
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">

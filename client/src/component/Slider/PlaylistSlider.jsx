@@ -30,7 +30,9 @@ export default function PlaylistSlider() {
             link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
             title={`Youtube playlist • Senior Project Showreel, Academic Year 2023`}
             desc={`เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน<br />จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`}
-            img={``}
+            img={`/other/showreelPl.webp`}
+            btnIcon={`arrow`}
+            btn={`watch now`}
           />
         </SwiperSlide>
 
@@ -39,16 +41,20 @@ export default function PlaylistSlider() {
             link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
             title={`Exhibition Onsite Photo #syn2sign`}
             desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ที่นอกจาก<br/>การจัดแสดงผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
-            img={``}
+            img={`/other/onsitePl.webp`}
+            btnIcon={`arrow`}
+            btn={`watch now`}
           />
         </SwiperSlide>
 
         <SwiperSlide>
           <CardAdditional
             link={`https://www.youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij`}
-            title={``}
-            desc={``}
-            img={``}
+            title={`Syn2sign Gallery #syn2sign`}
+            desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ที่นอกจากการจัด<br/> แสดงโชว์ผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
+            img={`/other/onsitePhoto.webp`}
+            btn={`see more`}
+            btnIcon={`arrow`}
           />
         </SwiperSlide>
       </Swiper>

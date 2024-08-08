@@ -7,7 +7,7 @@ const CardAdditional = (props) => {
     <div>
       <CardBox>
         <Overlay></Overlay>
-        <div className="col-4">
+        <div className="col-4 me-5">
           <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
         </div>
         <BoxContent>
@@ -24,9 +24,10 @@ const CardAdditional = (props) => {
             }}
           />
           <ArrowButton
-            text={`Watch now`}
+            text={`${props.btn}`}
             link={props.link}
             style={`txt-head4`}
+            icon={props.btnIcon}
           />
         </BoxContent>
       </CardBox>
@@ -40,6 +41,8 @@ CardAdditional.propTypes = {
   desc: propTypes.string,
   style: propTypes.string,
   link: propTypes.string,
+  btn: propTypes.string,
+  btnIcon: propTypes.string,
 };
 export default CardAdditional;
 
@@ -49,8 +52,9 @@ const CardBox = styled.div`
   /* width: 1130px; */
   height: auto;
   /* height: 250px; */
+  padding: 2rem;
   background: white;
-  border-radius: 10px;
+  border-radius:1.3rem;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -64,7 +68,7 @@ const CardBox = styled.div`
 const BoxContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
+  /* padding: 30px 0; */
   position: relative;
 `;
 const BoxText = styled.div`
@@ -77,7 +81,7 @@ const ImagePreview = styled.img`
   object-fit: cover;
   border-radius: 40px;
 margin-left: calc(-1 * var(--bs-gutter-x)* .5);
-padding: 30px;
+/* padding: 30px; */
 `;
 
 const Overlay = styled.div`
