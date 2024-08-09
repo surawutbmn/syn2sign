@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
@@ -12,7 +12,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
 import ExhibitImg from "./ExhibitImg";
 import RoleCard from "./RoleCard";
-import CircleLinkBtn from "../../component/Button/CircleLinkBtn";
+import CreatorHeadSection from "./CreatorHeadSection";
 
 function Students() {
   const [student, setStudent] = useState(null);
@@ -20,8 +20,7 @@ function Students() {
   const [otherStudents, setOtherStudents] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [role, setRole] = useState([]);
-  const [dev, setDev] = useState([]);
-  const [design, setDesign] = useState([]);
+  const [tool, setTool] = useState([]);
   const { std_id } = useParams();
 
   const findProjectById = (project_id) => {
@@ -44,36 +43,35 @@ function Students() {
       const response = await axios.get(
         `http://localhost/syn2sign/students/${std_id}`
       );
-      const studentData = response.data; // Assuming response.data is the student data
+      const studentData = response.data;
 
       if (studentData.question) {
         const parsedQuestion = JSON.parse(studentData.question);
-        setQuestions(parsedQuestion); // Assuming setQuestions is a state setter function
+        setQuestions(parsedQuestion); 
       }
 
       if (studentData.roles) {
         const parsedRole = JSON.parse(studentData.roles); // Parse the role JSON string
-        setRole(parsedRole); // Set the parsed role
+        setRole(parsedRole);
       }
-      if (studentData.devtool) {
-        const parsedDev = JSON.parse(studentData.devtool); // Parse the role JSON string
-        setDev(parsedDev); // Set the parsed role
-      }
-      if (studentData.designtool) {
-        const parsedDesign = JSON.parse(studentData.designtool); // Parse the role JSON string
-        setDesign(parsedDesign); // Set the parsed role
+      if (studentData.rectool) {
+        const parsedDev = JSON.parse(studentData.rectool); // Parse the role JSON string
+        setTool(parsedDev);
       }
 
-      return studentData; // Return the fetched student data
+      return studentData;
     } catch (error) {
       console.error("Error fetching student data:", error);
       const localStudent = findStudentById(std_id);
       if (localStudent) {
         if (localStudent.roles) {
-          setRole(localStudent.roles); // Directly set the roles if available
+          setRole(localStudent.roles); // Directly set the if available
         }
         if (localStudent.question) {
-          setQuestions(localStudent.question); // Directly set the roles if available
+          setQuestions(localStudent.question); // Directly set the if available
+        }
+        if (localStudent.rectool) {
+          setTool(localStudent.rectool); // Directly set the if available
         }
         return localStudent; // Return local data if the API call fails
       }
@@ -167,74 +165,7 @@ function Students() {
       <PageElement />
 
       <Container className="mt-5 position-relative">
-        <div className="d-flex">
-          <div className="text-start col-7">
-            <hr
-              style={{
-                width: "15dvw",
-                border: ".3rem solid var(--color-secondary)",
-                opacity: "1",
-              }}
-            />
-            <h2 className="txt-scu-head">Get to know {student.nickname_en},</h2>
-            <h3>Maker of {project.name_en}</h3>
-            <img
-              src={`/icon/prj/${project.icon}`}
-              alt="project icon"
-              style={{ maxWidth: "5vw", width: "100%" }}
-              loading="lazy"
-            />
-            <div className="d-flex align-items-baseline text-end my-5 w-75">
-              <img
-                src={`/icon/double-qoute.svg`}
-                alt="double qoute"
-                style={{ maxWidth: "5vw", width: "100%" }}
-                loading="lazy"
-              />
-              <h3 className="text-start ms-3">{student.qoutes}</h3>
-            </div>
-            <h3 className="text-start txt-second">
-              <strong>Contact to {student.nickname_en}</strong>
-            </h3>
-            <div className="mt-3">
-              <CircleLinkBtn
-                txt={student.email}
-                link={`mailto:${student.email}`}
-                icon={"mail"}
-                bg={"second"}
-              />
-            </div>
-            <div className="mt-2">
-              <CircleLinkBtn
-                txt={student.name_en}
-                link={student.linkin}
-                icon={"linkedin"}
-                bg={"second"}
-              />
-            </div>
-          </div>
-          <div className="">
-            <img
-              loading="lazy"
-              src={`/creator_img/profile/${student.profile_img}`}
-              alt="creator profile"
-              style={{
-                maxWidth: "35vw",
-                width: "100%",
-                borderRadius: "1.2rem",
-              }}
-            />
-            <div className="text-start">
-              <h3 className="txt-upper">
-                {student.name_en} ({student.nickname_en})
-              </h3>
-              <h5>
-                {student.name_th}({student.nickname_th})
-              </h5>
-            </div>
-          </div>
-        </div>
-
+        <CreatorHeadSection student={student} project={project}/>
         <ExhibitImg name={student.nickname_en} std_id={std_id} />
         <SectionTitle
           title={`${student.nickname_en}\u2019s INTERVIEWS`}
@@ -257,27 +188,7 @@ function Students() {
                 />
               </Col>
             ))}
-
-          {dev.length > 0 &&
-            dev.map((devItem, index) => (
-              <Col key={index}>
-                <img src={`/tools/devTool/${devItem.icon}`} alt="" />
-                {devItem.name} {devItem.desc}
-              </Col>
-            ))}
-          {design.length > 0 &&
-            design.map((designItem, index) => (
-              <Col key={index}>
-                <img src={`/tools/designTool/${designItem.icon}`} alt="" />
-
-                {designItem.icon}
-                {designItem.name}
-                {designItem.desc}
-              </Col>
-            ))}
-          <Col>
-            <RecTools />
-          </Col>
+          <RecTools toolArr={tool} />
         </Row>
         <SectionTitle
           title={`${student.nickname_en}\u2019s role in Syn2sign`}

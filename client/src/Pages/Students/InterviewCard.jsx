@@ -40,7 +40,7 @@ function InterviewCard(props) {
             </span>
           </LinkBtn>
           <LinkBtn
-            href={`https://www.instagram.com/reel/${props.yt}`}
+            href={`https://www.youtube.com/watch?v=${props.yt}`}
             target="_blank"
           >
             <Icon className="crl-icon me-2">

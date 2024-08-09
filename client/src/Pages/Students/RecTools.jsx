@@ -1,51 +1,154 @@
-import styled from "styled-components"
-import SectionTitle from "../../component/SectionTitle";
+import styled from "styled-components";
+import propTypes from "prop-types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import { Col, Row } from "react-bootstrap";
 
+function RecTools(props) {
+  const { toolArr = [] } = props;
 
-function RecTools() {
+  // Grouping tools by type
+  const groupedTools = toolArr.reduce((acc, tool) => {
+    if (!acc[tool.type]) {
+      acc[tool.type] = [];
+    }
+    acc[tool.type].push(tool);
+    return acc;
+  }, {});
+
+  const typeTitles = {
+    dev: "Tools for Developers",
+    design: "Tools for Designers",
+  };
+
+  const typeSubtitles = {
+    dev: "แนะนำเครื่องมือสำหรับนักพัฒนา",
+    design: "แนะนำเครื่องมือสำหรับนักออกแบบ",
+  };
+
   return (
     <>
-      <CardBox>
-        <SectionTitle
-          title={`Tools for Developer`}
-          subtitle={`แนะนำเครื่องมือสำหรับนักพัฒนา`}
-          className="text-center txt-second mt-4"
-        />
-        <ToolBox>
-          <img src="/tools/devTool/trello.png" alt="" />
-          <ToolText>
-            <h2>
-              <strong>name</strong>
-            </h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum velit iure ex, vitae dicta quae, nulla perspiciatis excepturi cumque molestiae, amet minima. Fugit illo excepturi ullam nulla eligendi, pariatur consequuntur.</p>
-          </ToolText>
-        </ToolBox>
+      <CardBox className="py-4 pt-5">
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{
+            el: ".custom-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+              return `<span class="${className} custom-bullet">${
+                index + 1
+              }</span>`;
+            },
+          }}
+        >
+          {Object.keys(groupedTools).map((type, index) => (
+            <SwiperSlide key={index}>
+              <div className="text-center txt-second mb-3">
+                <h2 className="txt-cap">
+                  <strong>{typeTitles[type]}</strong>
+                </h2>
+                <span className="txt-grey">{typeSubtitles[type]}</span>
+              </div>
+              <ToolBox>
+                <Row xs={1}>
+                  {groupedTools[type].map((toolItem) => (
+                    <Col
+                      key={toolItem.id}
+                      className="my-4 d-flex justify-content-center"
+                    >
+                      <div className="me-4">
+                        <img
+                          src={`/tools/${toolItem.icon}`}
+                          alt={toolItem.toolName}
+                        />
+                      </div>
+                      <ToolText>
+                        <h2>
+                          <strong>{toolItem.toolName}</strong>
+                        </h2>
+                        <p>{toolItem.desc}</p>
+                      </ToolText>
+                    </Col>
+                  ))}
+                </Row>
+              </ToolBox>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Pg className="custom-pagination"></Pg>
       </CardBox>
     </>
   );
 }
 
-export default RecTools
+RecTools.propTypes = {
+  toolArr: propTypes.arrayOf(
+    propTypes.shape({
+      toolName: propTypes.string,
+      desc: propTypes.string,
+      icon: propTypes.string,
+      type: propTypes.string,
+    })
+  ),
+};
+export default RecTools;
 
+const Pg = styled.div`
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  .custom-bullet {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .custom-bullet.swiper-pagination-bullet-active {
+    background-color: var(--color-primary);
+    font-size: 1.3rem;
+    font-weight: var(--txt-bold);
+  }
+`;
 const ToolText = styled.div`
-display: flex; flex-direction: column; text-align: start; margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 60%;
+  p{font-size: 1.5rem;}
 `;
 const ToolBox = styled.div`
-display: flex;
-align-items: center;
-padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  /* padding: 1rem 4rem 0rem 4rem; */
+  img {
+    width: 100%;
+    max-width: 10dvw;
+  }
 `;
 
 const CardBox = styled.div`
   position: relative;
   border-radius: 10px;
-  padding: 1rem;
   background: transparent;
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1.3rem 1.3rem 0 0;
     padding: 0.1rem;
     background: linear-gradient(
       180deg,
