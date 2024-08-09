@@ -1,7 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 function InterviewCard(props) {
   return (
@@ -9,7 +9,10 @@ function InterviewCard(props) {
       <Overlay />
       <Row className="justify-content-around position-relative">
         <Col xs={6}>
-          <PreviewImg src={`/creator_img/interview/${props.img}`} alt="interview image" />
+          <PreviewImg
+            src={`/creator_img/interview/${props.img}`}
+            alt="interview image"
+          />
         </Col>
         <Col xs={5} className="d-flex flex-column">
           <CardText>
@@ -18,11 +21,11 @@ function InterviewCard(props) {
                 <strong>Q{props.id}:</strong>
               </h1>
               <Title>
-                <strong>{props.title1}</strong>
+                <strong>&ldquo;{props.title1}</strong>
               </Title>
             </div>
             <div className="text-end">
-              <h3>{props.title2}</h3>
+              <h3>{props.title2}&rdquo;</h3>
             </div>
           </CardText>
           <LinkBtn
@@ -44,7 +47,7 @@ function InterviewCard(props) {
               <FaYoutube />
             </Icon>
             <span>
-              บทสัมภาษณ์ของ{props.std} (time: {props.time})
+              บทสัมภาษณ์ของ{props.std} (start: {props.time})
             </span>
           </LinkBtn>
         </Col>
@@ -54,14 +57,14 @@ function InterviewCard(props) {
 }
 
 InterviewCard.propTypes = {
-  id: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  std: PropTypes.string.isRequired,
-  ig: PropTypes.string.isRequired,
-  yt: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  title1: PropTypes.string.isRequired,
-  title2: PropTypes.string.isRequired,
+  id: propTypes.string.isRequired,
+  img: propTypes.string.isRequired,
+  std: propTypes.string.isRequired,
+  ig: propTypes.string.isRequired,
+  yt: propTypes.string.isRequired,
+  time: propTypes.string.isRequired,
+  title1: propTypes.string.isRequired,
+  title2: propTypes.string.isRequired,
 };
 export default InterviewCard;
 

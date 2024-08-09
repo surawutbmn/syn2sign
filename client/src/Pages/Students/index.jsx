@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { LuMail } from "react-icons/lu";
-import { FaHandshakeSimple, FaLinkedinIn } from "react-icons/fa6";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
 import SectionTitle from "../../component/SectionTitle";
@@ -13,7 +11,8 @@ import InterviewCard from "./InterviewCard";
 import { Col, Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
 import ExhibitImg from "./ExhibitImg";
-
+import RoleCard from "./RoleCard";
+import CircleLinkBtn from "../../component/Button/CircleLinkBtn";
 
 function Students() {
   const [student, setStudent] = useState(null);
@@ -24,7 +23,6 @@ function Students() {
   const [dev, setDev] = useState([]);
   const [design, setDesign] = useState([]);
   const { std_id } = useParams();
-  const navigate = useNavigate();
 
   const findProjectById = (project_id) => {
     return (
@@ -52,7 +50,7 @@ function Students() {
         const parsedQuestion = JSON.parse(studentData.question);
         setQuestions(parsedQuestion); // Assuming setQuestions is a state setter function
       }
-      
+
       if (studentData.roles) {
         const parsedRole = JSON.parse(studentData.roles); // Parse the role JSON string
         setRole(parsedRole); // Set the parsed role
@@ -81,7 +79,6 @@ function Students() {
       }
     }
   };
-
 
   const fetchProjectData = async (project_id) => {
     try {
@@ -146,10 +143,7 @@ function Students() {
     GetData();
   }, [std_id]);
   
-  const handleStudentClick = (studentId) => {
-    navigate(`/showcase/creators/${studentId}`);
-    window.scrollTo(0, 0); // Scroll to top after navigation
-  };
+  // console.log(Exhimg);
 
   // console.log(otherStudents);
   useEffect(() => {
@@ -190,7 +184,7 @@ function Students() {
               style={{ maxWidth: "5vw", width: "100%" }}
               loading="lazy"
             />
-            <div className="d-flex align-items-baseline justify-content-end my-5">
+            <div className="d-flex align-items-baseline text-end my-5 w-75">
               <img
                 src={`/icon/double-qoute.svg`}
                 alt="double qoute"
@@ -199,32 +193,24 @@ function Students() {
               />
               <h3 className="text-start ms-3">{student.qoutes}</h3>
             </div>
-            <h3 className="text-start">contact to {student.nickname_en}</h3>
-            <div className="icon-link-con">
-              <a
-                href={`mailto:${student.email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="txt-link"
-              >
-                <span className="icon-crl me-2">
-                  <LuMail />
-                </span>
-                <span>{student.email}</span>
-              </a>
+            <h3 className="text-start txt-second">
+              <strong>Contact to {student.nickname_en}</strong>
+            </h3>
+            <div className="mt-3">
+              <CircleLinkBtn
+                txt={student.email}
+                link={`mailto:${student.email}`}
+                icon={"mail"}
+                bg={"second"}
+              />
             </div>
-            <div className="icon-link-con">
-              <a
-                href={student.linkin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="txt-link"
-              >
-                <span className="icon-crl me-2">
-                  <FaLinkedinIn />
-                </span>
-                <span>{student.name_en}</span>
-              </a>
+            <div className="mt-2">
+              <CircleLinkBtn
+                txt={student.name_en}
+                link={student.linkin}
+                icon={"linkedin"}
+                bg={"second"}
+              />
             </div>
           </div>
           <div className="">
@@ -248,7 +234,8 @@ function Students() {
             </div>
           </div>
         </div>
-        <ExhibitImg name={student.nickname_en} />
+
+        <ExhibitImg name={student.nickname_en} std_id={std_id} />
         <SectionTitle
           title={`${student.nickname_en}\u2019s INTERVIEWS`}
           subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
@@ -270,6 +257,7 @@ function Students() {
                 />
               </Col>
             ))}
+
           {dev.length > 0 &&
             dev.map((devItem, index) => (
               <Col key={index}>
@@ -295,26 +283,26 @@ function Students() {
           title={`${student.nickname_en}\u2019s role in Syn2sign`}
           subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
         />
-        <Row>
+        <Row xs={3} className="gy-4 text-start">
           {role.length > 0 &&
             role.map((roleItem, index) => {
               return (
-                <Col key={index}>
-                  <img src={`/icon/roles/${roleItem.icon}`} alt="" />
-                  {roleItem.name}
-                </Col>
+                <RoleCard
+                  key={index}
+                  role={roleItem.name}
+                  icon={roleItem.icon}
+                />
               );
             })}
         </Row>
-
         <SectionTitle
           title={`${student.nickname_en} collaborate`}
           subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
           className={"header-wline mt-5"}
         />
-        <div className="row">
+        <div className="my-5">
           {otherStudents.map((student, index) => (
-            <div className="row" key={index}>
+            <Row key={index}>
               <Creators
                 nameEN={student.name_en}
                 email={student.email}
@@ -323,7 +311,7 @@ function Students() {
                 profileImg={`/creator_img/078-card.png`}
                 stdID={student.std_id}
               />
-            </div>
+            </Row>
           ))}
         </div>
       </Container>

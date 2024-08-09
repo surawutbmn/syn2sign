@@ -1,51 +1,55 @@
-import { Col, Container, Row } from "react-bootstrap"
-import PropTypes from "prop-types";
+import { Col, Container, Row } from "react-bootstrap";
+import propTypes from "prop-types";
+import styled from "styled-components";
 
-function ExhibitImg(props) {
+function ExhibitImg({ name, std_id }) {
+    const images = [
+      {
+        id: 1,
+        exhimg: `${std_id}-img-1.png`,
+      },
+      {
+        id: 2,
+        exhimg: `${std_id}-img-2.png`,
+      },
+      {
+        id: 3,
+        exhimg: `${std_id}-img-3.png`,
+      },
+      {
+        id: 4,
+        exhimg: `${std_id}-img-4.png`,
+      },
+      {
+        id: 5,
+        exhimg: `${std_id}-img-5.png`,
+      },
+    ];
   return (
     <>
       <Container className="text-start my-5">
         <div className="txt-grey mb-3">
-          Pictures of {props.name} inside the Syn2sign exhibition
+          Some Syncshot of {name} at Syn2sign exhibition 2024
         </div>
         <Row xs={2}>
-          <Col>
-            <img
-              src="/creator_img/exhImg/073-img-1.png"
-              alt="creator onsite"
-              style={{ width: "100%" }}
-            />
-          </Col>
+          {images.slice(0, 1).map((img, index) => (
+            <Col key={index}>
+              <CardImg
+                src={`/creator_img/exhImg/${img.exhimg}`}
+                alt={`image-${index + 1}`}
+              />
+            </Col>
+          ))}
           <Col>
             <Row xs={2} className="g-2">
-              <Col>
-                <img
-                  src="/creator_img/exhImg/073-img-2.png"
-                  alt="creator onsite"
-                  style={{ width: "100%" }}
-                />
-              </Col>
-              <Col>
-                <img
-                  src="/creator_img/exhImg/073-img-3.png"
-                  alt="creator onsite"
-                  style={{ width: "100%" }}
-                />
-              </Col>
-              <Col>
-                <img
-                  src="/creator_img/exhImg/073-img-4.png"
-                  alt="creator onsite"
-                  style={{ width: "100%" }}
-                />
-              </Col>
-              <Col>
-                <img
-                  src="/creator_img/exhImg/073-img-5.png"
-                  alt="creator onsite"
-                  style={{ width: "100%" }}
-                />
-              </Col>
+              {images.slice(1).map((img, index) => (
+                <Col key={index}>
+                  <CardImg
+                    src={`/creator_img/exhImg/${img.exhimg}`}
+                    alt={`image-${index + 2}`}
+                  />
+                </Col>
+              ))}
             </Row>
           </Col>
         </Row>
@@ -55,6 +59,14 @@ function ExhibitImg(props) {
 }
 
 ExhibitImg.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: propTypes.string.isRequired,
+  std_id: propTypes.string.isRequired,
+  //   images: propTypes.arrayOf(
+  //     propTypes.shape({ exhimg: propTypes.string.isRequired })
+  //   ).isRequired,
 };
-export default ExhibitImg
+export default ExhibitImg;
+
+const CardImg = styled.img`
+  width: 100%;
+`;

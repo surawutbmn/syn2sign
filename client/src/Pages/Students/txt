@@ -32,4 +32,11 @@
     {"id":"2","title1":"“หน้าที่หลัก","title2":"ที่ได้ทำในโปรเจคนี้คืออะไร?”","img":"073-interview-2.png","ig":"C992VCPu9Jk","yt":"Uy9GKzld7jI","time":"0.22"},
 {"id":"3","title1":"วิธีฮีลใจ","title2":"เพิ่มพลังในวันที่เครียด หรือหมดไฟ”","img":"073-interview-3.png","ig":"C993_6HCBC1","yt":"Uy9GKzld7jI","time":"0.22"}
 ]
+[
+    {"id":"1","exhimg":"073-img-1.png"},
+    {"id":"2","exhimg":"073-img-2.png"},
+    {"id":"3","exhimg":"073-img-3.png"},
+    {"id":"4","exhimg":"073-img-4.png"},
+    {"id":"5","exhimg":"073-img-5.png"}
+    ]
 
