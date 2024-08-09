@@ -1,23 +1,50 @@
+import React from "react";
 import styled from "styled-components";
 import { BiSolidCommentDetail } from "react-icons/bi";
 import { Container, Row } from "react-bootstrap";
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 
-//
-const SocialApproved = (props) => {
+// Import your JSON data
+import cpl01Data from "/src/Pages/Projects/database_Json/cpl01_project.json";
+import cpl02Data from "/src/Pages/Projects/database_Json/cpl02_project.json";
+import cpl03Data from "/src/Pages/Projects/database_Json/cpl03_project.json";
+import cpl04Data from "/src/Pages/Projects/database_Json/cpl04_project.json";
+import cpl05Data from "/src/Pages/Projects/database_Json/cpl05_project.json";
+import cpl06Data from "/src/Pages/Projects/database_Json/cpl06_project.json";
+import cpl07Data from "/src/Pages/Projects/database_Json/cpl07_project.json";
+import cpl08Data from "/src/Pages/Projects/database_Json/cpl08_project.json";
+// Add more imports as needed
+
+const dataMapping = {
+  cpl01: cpl01Data,
+  cpl02: cpl02Data,
+  cpl03: cpl03Data,
+  cpl04: cpl04Data,
+  cpl05: cpl05Data,
+  cpl06: cpl06Data,
+  cpl07: cpl07Data,
+  cpl08: cpl08Data,
+  // Add more mappings as needed
+};
+
+const SocialApproved = () => {
+  const location = useLocation();
+  const projectId = location.pathname.split("/").pop(); // Get the project identifier from the URL
+  const projectData = dataMapping[projectId]?.find(
+    (item) => item.type === "table" && item.name === "social_approved"
+  );
+
   return (
     <Container fluid>
       <Row>
         <CardBox className="d-flex text-center">
-          <span>
-            <BiSolidCommentDetail /> Concept ดี สามารถพัฒนาต่อได้
-          </span>
-          <CardBoxSub className="d-flex gap-1">
-            <BiSolidCommentDetail /> เป็นการปรับใช้สมาร์ทโฟนกับการออกกำลังได้ดี
-          </CardBoxSub>
-          <span>
-            <BiSolidCommentDetail /> อยากให้พัฒนาผลงานต่อ
-          </span>
+          {projectData &&
+            projectData.data.map((item) => (
+              <StyledSpan className="gap-1" key={item.id} hasBorder={item.id === "2"}>
+                <BiSolidCommentDetail /> {item.socialApproved}
+              </StyledSpan>
+            ))}
         </CardBox>
       </Row>
     </Container>
@@ -25,19 +52,10 @@ const SocialApproved = (props) => {
 };
 
 SocialApproved.propTypes = {
-  
+  // Define any required prop types here if needed
 };
-export default SocialApproved;
 
-// const FullWidthContainer = styled.div`
-//   width: 100vw;
-//   position: relative;
-//   left: 50%;
-//   right: 50%;
-//   margin-left: -50vw;
-//   margin-right: -50vw;
-//   /* background-color: #f8f9fa;  */
-// `;
+export default SocialApproved;
 
 const CardBox = styled.div`
   width: 100%;
@@ -50,6 +68,7 @@ const CardBox = styled.div`
   align-items: center;
 `;
 
+// If you still need this style, keep it, or remove it if unnecessary
 const CardBoxSub = styled.span`
   width: 33.33%;
   height: 60%;
@@ -57,4 +76,17 @@ const CardBoxSub = styled.span`
   border-left: 3px solid var(--color-secondary);
   align-items: center;
   justify-content: center;
+`;
+const StyledSpan = styled.span`
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Adjust the padding as needed */
+  ${(props) =>
+    props.hasBorder &&
+    `
+    border-right: 3px solid var(--color-secondary);
+    border-left: 3px solid var(--color-secondary);
+  `}
 `;

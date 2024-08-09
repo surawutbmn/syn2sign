@@ -1,51 +1,63 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
+import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
+import cpl03Data from '/src/Pages/Projects/database_Json/cpl03_project.json';
+import cpl04Data from '/src/Pages/Projects/database_Json/cpl04_project.json';
+import cpl05Data from '/src/Pages/Projects/database_Json/cpl05_project.json';
+import cpl06Data from '/src/Pages/Projects/database_Json/cpl06_project.json';
+import cpl07Data from '/src/Pages/Projects/database_Json/cpl07_project.json';
+import cpl08Data from '/src/Pages/Projects/database_Json/cpl08_project.json';
+// Add more imports as needed
+
+const dataMapping = {
+  cpl01: cpl01Data,
+  cpl02: cpl02Data,
+  cpl03: cpl03Data,
+  cpl04: cpl04Data,
+  cpl05: cpl05Data,
+  cpl06: cpl06Data,
+  cpl07: cpl07Data,
+  cpl08: cpl08Data,
+  // Add more mappings as needed
+};
+
 const CardMainFunction = () => {
+  const location = useLocation();
+  const urlPath = location.pathname;
+  const projectId = urlPath.split('/').pop(); // Extract projectId from URL
+
+  const projectData = dataMapping[projectId] || []; // Select the data based on the project ID
+
+  // console.log('Project ID:', projectId); 
+  // console.log('Project Data:', projectData); 
+
+  // Extract main_function table data
+  const mainFunctionTable = projectData.find(
+    (item) => item.type === 'table' && item.name === 'main_function'
+  );
+
+  const mainFunctions = mainFunctionTable ? mainFunctionTable.data : []; // Extract main function data
+
   return (
-    <div className="d-flex row justify-content-evenly" style={{marginTop: "-50px"}}>
-      <Card className="col-4 text-center">
-        <Icon src="/icon/prj/1Function.svg" className="mt-5" />
-        <div className="txt-head3 txt-bold mt-4 mb-3">
-          ตรวจสอบและประเมิน ความถูกต้องของท่าทาง
-        </div>
-        <div>
-          <LineHr className=""></LineHr>
-        </div>
-        <div className="mt-3">
-          สามารถตรวจสมรรถภาพทางกายของ ตนเองได้ว่ามีความเสี่ยงในการหกล้มหรือไม่
-          โดยสามารถประเมินก่อนออกกำลังกาย และหลังออกกำลังกายได้
-        </div>
-      </Card>
-
-      <Card className="col-4 text-center">
-        <Icon src="/icon/prj/2Function.svg" className="mt-5" />
-        <div className="txt-head3 txt-bold mt-4 mb-3">
-          ตรวจจับท่าทาง การออกกำลังกายแบบเรียลไทม์
-        </div>
-        <div>
-          <LineHr className=""></LineHr>
-        </div>
-        <div className="mt-3">
-          มีฟังก์ชันในการตรวจจับท่าทางแบบเรียลไทม์ เพื่อตรวจสอบความถูกต้อง
-          ว่าผู้ใช้งาน ทำท่าทางถูกต้องตามตัวอย่างหรือไม่
-        </div>
-      </Card>
-
-      <Card className="col-4 text-center">
-        <Icon src="/icon/prj/3Function.svg" className="mt-5" />
-        <div className="txt-head3 txt-bold mt-4 mb-3">
-          ติดตามผล ดูประวัติย้อนหลังแบบรายวัน
-        </div>
-        <div>
-          <LineHr className=""></LineHr>
-        </div>
-        <div className="mt-3">
-          เพื่อให้ผู้ใช้งานสามารถติดตามผล การออกกำลังกายได้จึงมีการเก็บข้อมูล
-          ส่วนนี้ในรูปแบบของการสรุปผล
-        </div>
-      </Card>
-      {/* <Card className="col-4">2</Card>
-        <Card className="col-4">3</Card> */}
+    <div className="d-flex row justify-content-evenly" style={{ marginTop: "-50px" }}>
+      {mainFunctions.length === 0 ? (
+        <p>No data available</p>
+      ) : (
+        mainFunctions.map((func) => (
+          <Card key={func.id} className="col-4 text-center">
+            <Icon src={`/icon/prj/${func.id}Function.svg`} className="mt-5" />
+            <div className="txt-head3 txt-bold mt-4 mb-3">
+              {func.title}
+            </div>
+            <LineHr />
+            <div className="mt-3">
+              {func.description}
+            </div>
+          </Card>
+        ))
+      )}
     </div>
   );
 };
@@ -58,11 +70,14 @@ const Card = styled.div`
   height: 415px;
   border: 2px solid #8e8e8e;
   border-radius: 20px;
+  padding: 20px;
 `;
+
 const Icon = styled.img`
   width: 107px;
   height: 107px;
 `;
+
 const LineHr = styled.hr`
   border: 1px solid #fff;
   margin-top: 15px;

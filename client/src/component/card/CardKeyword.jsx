@@ -4,13 +4,25 @@ import PropTypes from "prop-types";
 
 
 // Import all possible JSON files statically
-import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project_full.json';
+import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
 import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
+import cpl03Data from '/src/Pages/Projects/database_Json/cpl03_project.json';
+import cpl04Data from '/src/Pages/Projects/database_Json/cpl04_project.json';
+import cpl05Data from '/src/Pages/Projects/database_Json/cpl05_project.json';
+import cpl06Data from '/src/Pages/Projects/database_Json/cpl06_project.json';
+import cpl07Data from '/src/Pages/Projects/database_Json/cpl07_project.json';
+import cpl08Data from '/src/Pages/Projects/database_Json/cpl08_project.json';
 // Add more imports as needed
 
 const dataMapping = {
   cpl01: cpl01Data,
   cpl02: cpl02Data,
+  cpl03: cpl03Data,
+  cpl04: cpl04Data,
+  cpl05: cpl05Data,
+  cpl06: cpl06Data,
+  cpl07: cpl07Data,
+  cpl08: cpl08Data,
   // Add more mappings as needed
 };
 
@@ -58,6 +70,11 @@ const CardKeyword = ({ keyword }) => {
   return (
     <div className="d-flex row" style={{ marginTop: "-2rem" }}>
       <div className="col-12 mb-5">
+        <span className="description">
+          {data.find((item) => item.id === activeButton)?.description}
+        </span>
+      </div>
+      <div className="col-12 mb-5">
         {data.slice(0, 3).map((item) => (
           <KeywordButton
             key={item.id}
@@ -79,17 +96,13 @@ const CardKeyword = ({ keyword }) => {
           </KeywordButton>
         ))}
       </div>
-      <div className="col-12">
-        <span className="description">
-          {data.find((item) => item.id === activeButton)?.description}
-        </span>
-      </div>
+      
     </div>
   );
 };
 
 CardKeyword.propTypes = {
-  keyword: PropTypes.string.isRequired,
+  keyword: PropTypes.string,
 };
 
 export default CardKeyword;

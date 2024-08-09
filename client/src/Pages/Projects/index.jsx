@@ -23,6 +23,7 @@ import CardToolDesignPresentation from "../../component/card/CardToolDesignPrese
 import CardDesignProcess from "../../component/card/CardDesignProcess";
 import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
+import DesignProcessSlider from "../../component/Slider/DesignProcessSlider";
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -123,7 +124,7 @@ function Project() {
       content: <CardIdeaConcept />,
     },
     {
-      title: "Key WORD",
+      title: "KeyWORDS",
       subtitle: "คำค้นหา / คำสำคัญ ",
       content: <CardKeyword keyword={prj_id} />,
     },

@@ -1,22 +1,30 @@
+import React from "react";
 import styled from "styled-components";
-import { BiSolidCommentDetail } from "react-icons/bi";
-//
+
 const CardThreePictureProject = () => {
+  // Extract the project identifier from the URL
+  const url = window.location.href;
+  const projectIdentifier = url.match(/cpl0\d+/)
+    ? url.match(/cpl0\d+/)[0]
+    : "cpl01"; // Default to cpl01 if no match is found
+
   return (
     <div className="d-flex row mt-5 mb-5">
-      {/* <div className="col-12"> */}
       <CardBox className="col-4">
-        <CardImage src="/showcase/Project/cpl01/preview-cpl01-1.png"></CardImage>
+        <CardImage
+          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-1.png`}
+        />
       </CardBox>
       <CardBox className="col-4">
-        {" "}
-        <CardImage src="/showcase/Project/cpl01/preview-cpl01-2.png"></CardImage>
+        <CardImage
+          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-2.png`}
+        />
       </CardBox>
       <CardBox className="col-4">
-        {" "}
-        <CardImage src="/showcase/Project/cpl01/preview-cpl01-3.png"></CardImage>
+        <CardImage
+          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-3.png`}
+        />
       </CardBox>
-      {/* </div> */}
     </div>
   );
 };
@@ -26,12 +34,8 @@ export default CardThreePictureProject;
 const CardBox = styled.div`
   width: 33.33%;
   height: auto;
-  /* border: solid; */
-  /* border-color: rgb(5, 186, 100); */
-  /* position: relative; */
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
 `;
+
 const CardImage = styled.img`
   width: 100%;
   height: 100%;

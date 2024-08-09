@@ -1,0 +1,79 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl07_project"},
+{"type":"table","name":"coding_launguage","database":"cpl07_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"PHP"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl07_project","data":
+[
+{"id":"1","coding_plugin":"Line messaging api"},
+{"id":"2","coding_plugin":"promptpay-qr"},
+{"id":"3","coding_plugin":"Bootstrap"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl07_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio Code"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl07_project","data":
+[
+{"id":"1","concept_th":"ธุรกิจแฟรนไชส์การให้บริการทำความสะอาดเต็นท์ มีการให้บริการในระดับมืออาชีพ \nมีบริการที่ทันสมัย มีความโดดเด่นในเรื่องการใช้เทคโนโลยี กระบวนการขั้นตอนการใช้งานเข้าถึงง่าย\nสะดวกรวดเร็ว และประหยัดเวลา ทำงานควบคู่กับระบบ LINE OA ที่สามารถลงทะเบียนพร้อมทั้งติดตามสถานะของการใช้งาน\n","concept_en":"The tent cleaning service franchise business provides professional services with modern, technology-driven solutions. It offers easy-to-access procedures that save time. The business also integrates with the LINE OA system, allowing users to register and track the status of their service.","technology":"LINE OA APPLICATION","category":"Supporting Businesses","preview_img":"concept-device-cpl07.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl07_project","data":
+[
+{"id":"1","database_system":"MySQL"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl07_project","data":
+[
+{"id":"1","design_present":"Figma"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl07_project","data":
+[
+{"id":"1","keyword":"ธุรกิจแฟรนไชส์","description":"รูปแบบธุรกิจที่เจ้าของธุรกิจหลัก (แฟรนไชเซอร์) ให้สิทธิ์แก่บุคคลหรือองค์กรอื่น (แฟรนไชซี) ในการดำเนินธุรกิจภายใต้แบรนด์ รูปแบบการดำเนินงาน และระบบที่ได้รับการพัฒนามาแล้ว โดยแฟรนไชซีจะได้รับการสนับสนุนจากแฟรนไชเซอร์ในการเริ่มต้นและดำเนินธุรกิจ"},
+{"id":"2","keyword":"ร้านซักเต็นท์","description":"ธุรกิจหรือร้านค้าที่ให้บริการทำความสะอาดเต็นท์ในรูปแบบที่ละเอียดและครบวงจร โดยทั่วไปแล้ว ร้านซักเต็นท์จะทำการซักและบำรุงรักษาเต็นท์ที่ใช้ในกิจกรรมต่าง ๆ เช่น การตั้งแคมป์ งานอีเวนต์ หรือการใช้งานเชิงพาณิชย์"},
+{"id":"3","keyword":"ทำความสะอาดเต็นท์","description":"กระบวนการทำความสะอาดและดูแลเต็นท์เพื่อให้สะอาด ปลอดภัย และพร้อมใช้งาน โดยกระบวนการนี้รวมถึงการขจัดสิ่งสกปรกและการบำรุงรักษาเต็นท์ให้มีสภาพดี"},
+{"id":"4","keyword":"เว็บแอปพลิเคชัน","description":"โปรแกรมหรือซอฟต์แวร์ที่ทำงานผ่านเว็บเบราว์เซอร์โดยไม่ต้องติดตั้งลงบนคอมพิวเตอร์หรืออุปกรณ์ของผู้ใช้โดยตรง เว็บแอปพลิเคชันสามารถเข้าถึงและใช้งานได้จากอุปกรณ์ที่เชื่อมต่อกับอินเทอร์เน็ต เช่น คอมพิวเตอร์, สมาร์ทโฟน, หรือแท็บเล็ต"},
+{"id":"5","keyword":"LINE Official Account (LINE OA)","description":"บัญชี LINE ที่ถูกออกแบบมาสำหรับการใช้งานทางธุรกิจ โดยเฉพาะร้านค้า ไม่ว่าจะเป็นออนไลน์หรือออฟไลน์ รวมถึงองค์กรที่ต้องพูดคุยสื่อสารกับผู้คนจำนวนมาก ซึ่ง LINE OA สามารถส่งข้อความ รูปภาพ วีดีโอต่างๆ เพื่อติดต่อสื่อสารกับผู้ติดตามได้เหมือนกับบัญชี LINE ทั่วไป"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl07_project","data":
+[
+{"id":"1","title":"ระบบการขายแฟรนไชส์","description":"ระบบการขายแฟรนไชส์"},
+{"id":"2","title":"ระบบการจองทำ\nความสะอาดเต็นท์","description":"ระบบการจองทำความสะอาดเต็นท์"},
+{"id":"3","title":"ติดตามสถานะของเต็นท์\nได้ผ่าน LINE OA","description":"ติดตามสถานะของเต็นท์\nได้ผ่าน LINE OA"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl07_project","data":
+[
+{"id":"1","fileName":"preview-cpl07-1.png"},
+{"id":"2","fileName":"preview-cpl07-2.png"},
+{"id":"3","fileName":"preview-cpl07-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl07_project","data":
+[
+{"id":"1","socialApproved":"ทำในสิ่งที่ตัวเองชอบ และนำมาพัฒนา ต่อยอดได้ดี"},
+{"id":"2","socialApproved":"เหมาะสมกับชีวิตประจำวันสำหรับผู้ที่แคมป์ปิ้งบ่อยๆ"},
+{"id":"3","socialApproved":"ไอเดียดี เป็นโปรเจคที่น่าสนใจ แปลกใหม่ ได้ความรู้"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl07_project","data":
+[
+{"id":"1","Demography":"อายุ 24-60 ปี (ทุกเพศ)","Group":"นักธุรกิจหรือนักลงทุน, ผู้ที่สนใจร่วมลงทุนแฟรนไชส์","Personality":"ผู้ที่มีความมุ่งมั่น ตั้งเป้าหมายชัดเจนและมุ่งหวังความสำเร็จระยะยาว, ผู้ที่มองเห็นช่องทางการตลาด ว่าเป็นการบริการที่มีความต้องการสูง, ผู้ที่ชอบความเป็นระเบียบและต้องการให้เต็นท์ของตัวเองสะอาด เพื่อที่จะนำไปใช้งาน","Behavior":"ผู้ที่วางแผนการขยายธุรกิจแฟรนไชส์ในพื้นที่ต่างๆ เพื่อเพิ่มการเข้าถึงลูกค้า, ใช้เทคโนโลยีในการบริหารจัดการธุรกิจ เช่น ระบบจองออนไลน์ หรือติดตามสถานะ, ฝึกอบรมพนักงานอย่างต่อเนื่องเพื่อให้มั่นใจว่าบริการ"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl07_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ  24-60 ปี ผู้ที่วางแผนการขยายธุรกิจแฟรนไชส์ในพื้นที่ต่างๆ • ทดสอบ เมื่อวันที่ 1 มีนาคม 2567","en":"Usability testing with a target group aged 24-60 years who are planning to expand their franchise business into various areas • Tested on March 1, 2024","num_design":"4.62","num_use":"4.22","num_overall":"4.49","opinion_design":"การจัดวางเว็บแอปพลิเคชันดี ใช้งานง่าย ไม่รกตา","opinion_use":"สามารถใช้งานได้ปกติ แต่ด้านระบบแฟรนไชส์อาจจะยังไม่ครบถ้วน","opinion_overall":"ด้านฟังก์ชันโดยปกติ ใช้งานง่าย สีสันสวยงาม UI เข้าใจง่าย อาจต้องลงลึกด้านดีเทลของแฟรนไชส์ให้ละเอียดกว่านี้"}
+]
+}
+]

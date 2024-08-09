@@ -1,0 +1,78 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl05_project"},
+{"type":"table","name":"coding_launguage","database":"cpl05_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl05_project","data":
+[
+{"id":"1","coding_plugin":"Vue.js"},
+{"id":"2","coding_plugin":"Laravel"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl05_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio Code"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl05_project","data":
+[
+{"id":"1","concept_th":"ปัญหาขยะพลาสติกแบบใช้ครั้งเดียว เพื่อลดปริมาณขยะในกรุงเทพมหานครให้มีจำนวนลดลง ด้วยการ เลือกใช้บริการร้านรีฟิล(Refill) เพื่อลดปัญหาขยะพลาสติก ปัจจุบันทั่วโลกให้ความสนใจ และร่วมกันหาวิธีแก้ไขปัญหาสิ่งแวดล้อม หรือส่วนใหญ่มักเรียกตนว่าเป็นชาว Zero-waste จึงนิยมใช้บริการร้านรีฟิลที่มีแนวคิดสนับสนุนการลดการใช้ขยะพลาสติกแลลใช้ครั้งเดียว จึงเป็นการเริ่มต้นรักษาสิ่งแวดล้อมทำให้สิ่งแวดล้อมในปัจจุบันดีขึ้นอย่างเห็นได้ชัด","concept_en":"Single-use plastic waste in the amount of garbage in Bangkok can be greatly reduced. Often use the service of refill shops (Refill). In general, the problem of plastic waste is a regular occurrence around the world and in this part it will be solved. Environmental quality or often call themselves Zero-waste people. Standards prefer to use refill shops that have a concept of supporting the use of single-use plastic waste in order to preserve the environment and make the environment better with efficiency. Control.","technology":"WEB APPLICATION","category":"Supporting Businesses","preview_img":"concept-device-cpl05.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl05_project","data":
+[
+{"id":"1","database_system":"MySQL"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl05_project","data":
+[
+{"id":"1","design_present":"Figma"},
+{"id":"2","design_present":"Canva"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl05_project","data":
+[
+{"id":"1","keyword":"ร้านรีฟิล","description":"RefillStore ถือกำเนิดมาจากความใส่ใจห่วงใยรักษ์โลกของคน ที่ต้องการลดปริมาณขยะจากบรรจุภัณฑ์ต่างๆ  ในรูปแบบการบริหารจัดการร้าน เหมือนร้านสะดวกซื้อหรือร้านขายของชำทั่วไป โดยลูกค้าต้องนำภาชนะมาใส่สินค้าที่อยู่ในภาชนะที่สามารถถ่ายเทได้ง่ายตามจุดต่างๆ ของร้าน"},
+{"id":"2","keyword":"ขยะพลาสติก","description":"เป็นหน่วยความจำที่เปรียบเสมือนคลังข้อมูล สามารถเก็บข้อมูลได้ไม่จำกัด เป็นระยะเวลานาน\nplastic waste หมายถึง ของเสียพลาสติกที่รวบรวมจากบ้านเรือน โรงแรม ภัตตาคาร โรงพยาบาล ร้านค้า สำนักงาน โรงงานอุตสาหกรรม โดยเป็นพลาสติกหรือชิ้นส่วนที่ใช้งานแล้ว หรือเสื่อมสภาพไม่สามารถใช้งานได้หรือไม่เป็นที่ต้องการใช้อีกต่อไป"},
+{"id":"3","keyword":"ซีโร่ เวส","description":"Zero Waste คือ แนวทางการลดขยะให้เหลือศูนย์ หรือลดจำนวนขยะต่อคนให้เหลือน้อยที่สุดเท่าที่จะทำได้ เพื่อเป็นการหยุดปัญหาตั้งแต่ต้นทาง แทนที่จะกำจัดปัญหาขยะที่ปลายทาง ซึ่งเป็นอีกหนึ่งทางเลือกดี ๆ ของการเริ่มต้นใช้ชีวิตแบบรักษ์สิ่งแวดล้อมและพร้อมช่วยโลกอย่างเต็มที่"},
+{"id":"4","keyword":"เครื่องชั่งดิจิตอล","description":"(Digital Scale) เป็นเครื่องมือที่ใช้วัดน้ำหนักของวัตถุหรือสิ่งของต่างๆ ที่สามารถแสดงหน่วยวัด\nได้หลากหลากหลาย เช่น กรัม (g) ออนซ์ (oz) ปอนด์ (Ib) กิโลกรัม (Kg) กะรัต (ct) เป็นต้น การใช้เครื่องชั่งจะช่วยในการวัดปริมาณน้ำหนักได้อย่างละเอียดแม่นยำ"},
+{"id":"5","keyword":"รีฟิล","description":"Refill คือ การพกภาชนะของตัวเองไปเติมเฉพาะผลิตภัณฑ์ เช่น สบู่เหลว แชมพู น้ำยาซักผ้า คือวิธีการหนึ่งที่ช่วยลดขยะพลาสติกจากบรรจุภัณฑ์ได้ แน่นอนว่าการรีฟิลนั้นทั้งถูกกว่าและดีกับสิ่งแวดล้อมมากกว่า"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl05_project","data":
+[
+{"id":"1","title":"การฝากเติม","description":"การฝากเติมสินค้าในร้านรีฟิล เพื่อลดเวลาการใช้บริการทางร้านรีฟิล"},
+{"id":"2","title":"แยกหมวดหมู่ของสินค้า และค้นหาสินค้าต่างๆภายในร้าน","description":"แบ่งหมวดหมู่สินค้า เพื่อผู้ใช้งาน\nสามารถเลือกซื้อสินค้าตามที่ต้องการได้"},
+{"id":"3","title":"สามารถคำนวณราคา\nสินค้าล่วงหน้า","description":"สามารถคำนวณราคาสินค้าที่เราเลือกเติม หรือ รีฟิล ได้ โดยหน่วยสินค้าจะเป็นกรัม แล้วเปลี่ยนเป็นราคาสินค้าได้"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl05_project","data":
+[
+{"id":"1","fileName":"preview-cpl05-1.png"},
+{"id":"2","fileName":"preview-cpl05-2.png"},
+{"id":"3","fileName":"preview-cpl05-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl05_project","data":
+[
+{"id":"1","socialApproved":"การลดขยะเป็นแนวคิดที่แปลกใหม่และน่าสนใจ"},
+{"id":"2","socialApproved":"หน้าตาเว็บดูใช้ง่าย ระบบหลังบ้านใช้งานได้สะดวกดี"},
+{"id":"3","socialApproved":"ระบบจัดการสินค้าดูน่าสนใจ ใช้งานง่าย"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl05_project","data":
+[
+{"id":"1","Demography":"อายุ 20-40 ปี (ทุกเพศ)","Group":"วัยรุ่นและวัยทำงาน","Personality":"ผู้ที่รักสิ่งแวดล้อมและอยากช่วยลงปัญหาขยะพลาสติก","Behavior":"ใช้บริการร้านรีฟิล รักใน Zero Waste อยากให้ขยะเป็นศูนย์"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl05_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ  20-25 ปี ที่มีความสนใจอยากช่วยลงปัญหาขยะพลาสติกและเข้าไปใช้บริการ\nร้านรีฟิล • ทดสอบ เมื่อวันที่ 27 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 20-25 years who are interested in addressing plastic waste issues and using refill services • Tested on February 27, 2024","num_design":"3.68","num_use":"3.84","num_overall":"3.91","opinion_design":"เว็บไซต์ใช้งานง่าย ขนาดฟอนต์อ่านง่าย สบายตา","opinion_use":"ชอบที่มีการฝากเติม เพื่อลดเวลาในการใช้ บริการ และคำนวณราคาสินค้า เพราะจะได้เตรียมจำนวนเงินที่ถูกต้อง","opinion_overall":"ฟังก์ชันน่าสนใจ แต่รูปประกอบมันมีขนาด ที่ต่างกัน ทำให้สินค้าไม่ค่อยน่าสนใจ"}
+]
+}
+]

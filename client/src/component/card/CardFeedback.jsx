@@ -1,75 +1,108 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
+import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
+import cpl03Data from '/src/Pages/Projects/database_Json/cpl03_project.json';
+import cpl04Data from '/src/Pages/Projects/database_Json/cpl04_project.json';
+import cpl05Data from '/src/Pages/Projects/database_Json/cpl05_project.json';
+import cpl06Data from '/src/Pages/Projects/database_Json/cpl06_project.json';
+import cpl07Data from '/src/Pages/Projects/database_Json/cpl07_project.json';
+import cpl08Data from '/src/Pages/Projects/database_Json/cpl08_project.json';
+
+const dataMapping = {
+  cpl01: cpl01Data,
+  cpl02: cpl02Data,
+  cpl03: cpl03Data,
+  cpl04: cpl04Data,
+  cpl05: cpl05Data,
+  cpl06: cpl06Data,
+  cpl07: cpl07Data,
+  cpl08: cpl08Data,
+  // Add more mappings as needed
+};
 
 const CardFeedback = () => {
-    return (
-      <div className="d-flex row" style={{ marginTop: "-50px" }}>
-        {/* <div className="col-4 text-start">img</div> */}
-        <div className="col-7 text-start">
-          <div className="txt-second txt-head2 txt-upper">Testing</div>
-          <div className="txt-body2 mb-4">
-            การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 58-67 ปี
-            ที่มีความสนใจ ในการทำกิจกรรมดูแลสุขภาพ • ทดสอบ เมื่อวันที่ 25
-            กุมภาพันธ์ 2567
-          </div>
-          <div className="txt-body2 txt-grey mb-5">
-            Usability testing with a target group aged 58-67 years who are interested in health care activities • Tested on February 25, 2024
-          </div>
-        </div>
-        <div className="col-3"></div>
-        <CircleContainer>
-          <BoxCircle>
-            <div className="txt-head3">ด้านการออกแบบ</div>
-            <div className="txt-body3">ค่าเฉลี่ย</div>
-            <div className="txt-second txt-bold" style={{fontSize: "5.5rem"}}>4.48</div>
-          </BoxCircle>
+  const location = useLocation();
+  const projectId = location.pathname.split('/')[3];
+  const projectData = dataMapping[projectId] || [];
   
-          <BoxCircle>
-            <div className="txt-head3">ด้านการใช้งาน</div>
-            <div className="txt-body3">ค่าเฉลี่ย</div>
-            <div className="txt-second txt-bold" style={{fontSize: "5.5rem"}}>4.37</div>
-          </BoxCircle>
-  
-          <BoxCircle>
-            <div className="txt-head3">ด้านภาพรวม</div>
-            <div className="txt-body3">ค่าเฉลี่ย</div>
-            <div className="txt-second txt-bold" style={{fontSize: "5.5rem"}}>4.39</div>
-          </BoxCircle>
-        </CircleContainer>
+  // Find the testing data
+  const testingData = projectData.find(item => item.type === 'table' && item.name === 'testing');
+  const feedback = testingData ? testingData.data.find(item => item.id === "1") : {};
 
-        <div className="col-12 text-start mt-4 mb-4 txt-head2 txt-sbold">
-            ความคิดเห็นจากผู้ใช้งาน
+  return (
+    <div className="d-flex row" style={{ marginTop: "-50px" }}>
+      <div className="col-7 text-start">
+        <div className="txt-second txt-head2 txt-upper">Testing</div>
+        <div className="txt-body2 mb-4">
+          {feedback.th || "No data available"}
         </div>
-        
-        <div className="col-4 text-start">
-            <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการออกแบบ</div>
-            <div>แอปใช้งานง่าย, สีที่ใช้มีความสบายตา </div>
-        </div>
-        <div className="col-4 text-start">
-        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการใช้งาน</div>
-            <div>ชอบที่มีเสียงช่วยอ่าน และนับจำนวน ครั้งให้ เพราะบางประโยคมองไม่ค่อยชัด</div>
-        </div>
-        <div className="col-4 text-start">
-        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านภาพรวม</div>
-            <div>ประโยคที่มีข้อความเยอะ ๆ จะอ่านยาก อยากให้ลดทอนข้อความลง</div>
+        <div className="txt-body2 txt-grey mb-5">
+          {feedback.en || "No data available"}
         </div>
       </div>
-    );
-  };
-  
-  export default CardFeedback;
+      <div className="col-3"></div>
+      <CircleContainer>
+        <BoxCircle>
+          <div className="txt-head3">ด้านการออกแบบ</div>
+          <div className="txt-body3">ค่าเฉลี่ย</div>
+          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+            {feedback.num_design || "0"}
+          </div>
+        </BoxCircle>
+
+        <BoxCircle>
+          <div className="txt-head3">ด้านการใช้งาน</div>
+          <div className="txt-body3">ค่าเฉลี่ย</div>
+          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+            {feedback.num_use || "0"}
+          </div>
+        </BoxCircle>
+
+        <BoxCircle>
+          <div className="txt-head3">ด้านภาพรวม</div>
+          <div className="txt-body3">ค่าเฉลี่ย</div>
+          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+            {feedback.num_overall || "0"}
+          </div>
+        </BoxCircle>
+      </CircleContainer>
+
+      <div className="col-12 text-start mt-4 mb-4 txt-head2 txt-sbold">
+        ความคิดเห็นจากผู้ใช้งาน
+      </div>
+
+      <div className="col-4 text-start">
+        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการออกแบบ</div>
+        <div>{feedback.opinion_design || "No data available"}</div>
+      </div>
+      <div className="col-4 text-start">
+        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการใช้งาน</div>
+        <div>{feedback.opinion_use || "No data available"}</div>
+      </div>
+      <div className="col-4 text-start">
+        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านภาพรวม</div>
+        <div>{feedback.opinion_overall || "No data available"}</div>
+      </div>
+    </div>
+  );
+};
+
+export default CardFeedback;
 
 const BoxCircle = styled.div`
   width: 345px;
   height: 345px;
-  border-radius: 50%;
+  border-radius: 200px;
   border: 1px solid #8e8e8e;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Ensures text is centered within each div */
+  text-align: center;
 `;
+
 const CircleContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
