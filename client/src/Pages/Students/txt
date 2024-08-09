@@ -1,0 +1,42 @@
+[
+    {"id":"1","name":"Sponsor Relation & Financial","icon":"sponser.svg"},
+    {"id":"2","name":"Public Relation & Marketing","icon":"pr.svg"},
+    {"id":"3","name":"Exhibition Knowledge Board","icon":"board.svg"},
+    {"id":"4","name":"Pillar LED ​Screen Media","icon":"led.svg"},
+    {"id":"5","name":"Interactive","icon":"interact.svg"},
+    {"id":"6","name":"Location and equipments","icon":"location.svg"}
+]
+
+[
+    {"id":"1","name":"Trello","icon":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?”","desc":"ช่วยในเรื่องของการจัดการโปรเจกต์ต่างๆ สามารถเขียนรายละเอียดงานต่างๆ ที่ต้องทำได้ เช่น วันที่ที่ต้องอัปเดตงาน เช็คลิสต์ย่อยสิ่งที่ต้องทำ สามารถแนบไฟล์ต่างๆ ได้"},
+    {"id":"2","name":"Firebase","icon":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?”","desc":"สามารถตรวจสอบข้อมูลผู้ใช้งานได้หลากหลาย เช่น เบอร์โทรศัพท์, บัญชี Google, Facebook สามารถดูได้ว่าสมัครด้วยวิธีไหน สมัครเมื่อไหร่"}
+]
+[
+    {"id":"1","name":"Figma","icon":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?”","desc":"เป็นเครื่องมือที่สะดวกสบายในการทำงาน สามารถคุย คอมเมนต์งาน หรือแม้แต่โทรกลุ่มได้ใน Figma เลย"},
+    {"id":"2","name":"Adobe After Effects","icon":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?”", "desc":"เป็นโปรแกรมที่เหมาะกับการทำ Animation ต่างๆ และยังสะดวกสบาย สามารถเอากราฟิกที่ออกแบบจาก AI มาใส่ได้เลย"}
+]
+
+
+[
+    {"id":"1","title1":"จุดเริ่มต้น","title2":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?","img":"073-interview-1.png","ig":"C9wRgcMMBlJ","yt":"Uy9GKzld7jI","time":"0.22"},
+    {"id":"2","title1":"“หน้าที่หลัก","title2":"ที่ได้ทำในโปรเจคนี้คืออะไร?”","img":"073-interview-2.png","ig":"C992VCPu9Jk","yt":"Uy9GKzld7jI","time":"0.22"},
+    {"id":"3","title1":"ประกบพลังกัน","title2":"เพื่อก้าวข้ามอุปสรรคของการทำงาน","img":"073-interview-3.png","ig":"C993_6HCBC1","yt":"Uy9GKzld7jI","time":"0.22"}
+]
+[
+    {"id":"1","title1":"จุดเริ่มต้น","title2":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?","img":"073-interview-1.png","ig":"C9wRgcMMBlJ","yt":"Uy9GKzld7jI","time":"0.22"},
+    {"id":"2","title1":"“หน้าที่หลัก","title2":"ที่ได้ทำในโปรเจคนี้คืออะไร?”","img":"073-interview-2.png","ig":"C992VCPu9Jk","yt":"Uy9GKzld7jI","time":"0.22"},
+{"id":"3","title1":"วิธีการรับมือ","title2":"ก่อนเริ่มทำโปรเจค","img":"073-interview-3.png","ig":"C993_6HCBC1","yt":"Uy9GKzld7jI","time":"0.22"}
+]
+[
+    {"id":"1","title1":"จุดเริ่มต้น","title2":"ของการเชื่อมต่อสู่โปรเจคนี้คืออะไร?","img":"073-interview-1.png","ig":"C9wRgcMMBlJ","yt":"Uy9GKzld7jI","time":"0.22"},
+    {"id":"2","title1":"“หน้าที่หลัก","title2":"ที่ได้ทำในโปรเจคนี้คืออะไร?”","img":"073-interview-2.png","ig":"C992VCPu9Jk","yt":"Uy9GKzld7jI","time":"0.22"},
+{"id":"3","title1":"วิธีฮีลใจ","title2":"เพิ่มพลังในวันที่เครียด หรือหมดไฟ”","img":"073-interview-3.png","ig":"C993_6HCBC1","yt":"Uy9GKzld7jI","time":"0.22"}
+]
+[
+    {"id":"1","exhimg":"073-img-1.png"},
+    {"id":"2","exhimg":"073-img-2.png"},
+    {"id":"3","exhimg":"073-img-3.png"},
+    {"id":"4","exhimg":"073-img-4.png"},
+    {"id":"5","exhimg":"073-img-5.png"}
+    ]
+

@@ -7,7 +7,8 @@ import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
 import { FaFilePdf } from "react-icons/fa6";
-import { RxFigmaLogo, RxArrowTopRight } from "react-icons/rx";
+import { RxFigmaLogo } from "react-icons/rx";
+import { LuArrowUpRight } from "react-icons/lu";
 import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
 // import CardAdditional from "../../component/card/CardAdditional";
@@ -125,7 +126,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>Exhibition brife report</strong>
-                      <RxArrowTopRight />
+                      <LuArrowUpRight size={20} />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
@@ -155,7 +156,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>entry booklet</strong>
-                      <RxArrowTopRight />
+                      <LuArrowUpRight size={20} />
                     </h3>
                     <span className="txt-grey">(Senior Project, FIGMA)</span>
                     <p className="card-text mt-4">
@@ -184,7 +185,7 @@ function Exhibition() {
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
                       <strong>T-Shirt brife report</strong>
-                      <RxArrowTopRight />
+                      <LuArrowUpRight size={20} />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 

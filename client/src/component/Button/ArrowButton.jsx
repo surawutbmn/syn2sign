@@ -1,14 +1,22 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { CgSoftwareDownload } from "react-icons/cg";
+
 const ArrowButton = (props) => {
-  // const Line = props.href ? LineImage : 'div';
-  const classname = `txt-dark txt-upper ${props.style || "txt-head4"}`;
+  const iconMap = {
+    arrow: FaArrowRightLong,
+    download: CgSoftwareDownload,
+    // Add other icons here if needed
+  };
+  const { link, text, style } = props;
+  const IconComponent = iconMap[props.icon] || FaArrowRightLong;
+  const classname = `txt-dark txt-upper ${style || "txt-head4"}`;
   return (
     <div className="text-start align-self">
-      <a href={props.link || "#"} target="_blank">
+      <a href={link || "#"} target="_blank">
         <ButtonBox className={classname}>
-          {props.text || "Arrow Button"} <FaArrowRightLong size={30} />
+          {text || "Arrow Button"} <IconComponent size={30} />
         </ButtonBox>
       </a>
     </div>
@@ -19,6 +27,7 @@ ArrowButton.propTypes = {
   link: propTypes.string,
   text: propTypes.string,
   style: propTypes.string,
+  icon: propTypes.oneOf(["arrow", "download"]),
 };
 
 export default ArrowButton;

@@ -7,7 +7,7 @@ interface SectionTitleProps {
 }
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ title, className, subtitle }) => {
-  const classname = `text-start mb-4 ${className}`;
+  const classname = `text-start mb-5 ${className}`;
   return (
     <div className={classname}>
       <h3 className="txt-upper">

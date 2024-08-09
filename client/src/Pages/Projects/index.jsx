@@ -121,12 +121,12 @@ function Project() {
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept />,
+      content: <CardIdeaConcept proj_id={prj_id}/>,
     },
     {
       title: "KeyWORDS",
       subtitle: "คำค้นหา / คำสำคัญ ",
-      content: <CardKeyword keyword={prj_id} />,
+      content: <CardKeyword proj_id={prj_id} />,
     },
     {
       title: "MAIN Function",
@@ -251,7 +251,7 @@ function Project() {
             className="video-box"
           ></iframe>
         </div>
-        <LinkButton className="mt-4" />
+        <LinkButton className="mt-4" name={project.name_en}/>
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">

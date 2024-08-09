@@ -57,6 +57,9 @@ const LinkButton = () => {
   );
 };
 
+LinkButton.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 export default LinkButton;
 
 const LinkButtonContainer = styled.div`
@@ -65,6 +68,11 @@ const LinkButtonContainer = styled.div`
   border-radius: 30px;
   padding: 10px;
   margin-top: 40px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: var(--color-secondary);
+  }
 `;
 
 const Icon = styled(IoLogoYoutube)`

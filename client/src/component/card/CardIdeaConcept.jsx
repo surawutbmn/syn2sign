@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { FaMicrochip } from "react-icons/fa6";
 import { MdOutlineCategory } from "react-icons/md";
 import cpl01Data from "/src/Pages/Projects/database_Json/cpl01_project.json";
@@ -36,7 +37,7 @@ const textMapping = {
   cpl08: "TINY THAI",
 };
 
-const CardIdeaConcept = () => {
+const CardIdeaConcept = (props) => {
   const [projectData, setProjectData] = useState({
     preview_img: "",
     technology: "",
@@ -53,7 +54,7 @@ const CardIdeaConcept = () => {
 
   useEffect(() => {
     // Select the appropriate data based on the identifier
-    const selectedData = dataMapping[projectIdentifier] || [];
+    const selectedData = dataMapping[props.proj_id] || [];
 
     if (selectedData.length > 0) {
       // Extract the necessary data from the JSON file
@@ -68,7 +69,7 @@ const CardIdeaConcept = () => {
         concept_en: conceptData.concept_en,
       });
     }
-  }, [projectIdentifier]); // Add projectIdentifier as a dependency to re-run effect on URL change
+  }, [props.proj_id]); // Add projectIdentifier as a dependency to re-run effect on URL change
 
   return (
     <div className="d-flex row text-start" style={{ marginTop: "-60px" }}>
@@ -98,6 +99,9 @@ const CardIdeaConcept = () => {
   );
 };
 
+CardIdeaConcept.propTypes = {
+  proj_id: PropTypes.string.isRequired,
+};
 export default CardIdeaConcept;
 
 const DeviceContainer = styled.div`
