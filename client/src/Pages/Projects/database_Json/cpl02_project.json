@@ -1,14 +1,86 @@
 [
-    {"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
-    {"type":"database","name":"cpl02_project"},
-    {"type":"table","name":"keywords","database":"cpl01_project","data":
-    [
-        {"id":"1","keyword":"LINE Official Account (LINE OA)","description":"บัญชี LINE ที่ถูกออกแบบมาสำหรับการใช้งานทางธุรกิจ โดยเฉพาะร้านค้า ไม่ว่าจะเป็นออนไลน์หรือออฟไลน์ รวมถึงองค์กรที่ต้องพูดคุยสื่อสารกับผู้คนจำนวนมาก ซึ่ง LINE OA สามารถส่งข้อความ รูปภาพ วีดีโอต่างๆ เพื่อติดต่อสื่อสารกับผู้ติดตามได้เหมือนกับบัญชี LINE ทั่วไป"},
-        {"id":"2","keyword":"Web Application","description":"แอปที่ถูกเขียนขึ้นมาให้สามารถเปิดใช้ใน Web browser ได้โดยตรง ไม่ต้องโหลด Application แบบเต็มๆ ลงเครื่อง ทำให้โดยรวมแล้วกินทรัพยากรค่อนข้างต่ำ สามารถเปิดใช้งานได้ไว"},
-        {"id":"3","keyword":"E-commerce","description":"การค้ารูปแบบใหม่ที่กำลังได้รับความนิยมในปัจจุบัน แต่หลายคนก็ยังคิดว่าการทำธุรกิจ E-commerce เป็นเรื่องไกลตัว เพราะนึกไปถึงการมีเว็บไซต์ที่มีระบบชำระเงินและระบบคลังสินค้าขนาดใหญ่ แต่จริงๆ แล้ว E-commerce มีความหมายกว้างกว่านั้น และทุกธุรกิจสามารถเริ่มต้นทำ E-commerce ได้"},
-        {"id":"4","keyword":"สายมู","description":"สิ่งที่เกี่ยวข้องกับความเชื่อ เรื่องลี้ลับ ของขลัง ไสยศาสตร์ โหราศาสตร์ การดูไพ่ การเสริมดวงและโชคชะตา การบูชาสิ่งศักดิ์สิทธิ์ต่างๆ ฯลฯ ซึ่งจริงๆ แล้ว ในปัจจุบัน \"มูเตลู\" ก็เป็นการหลอมรวมความเชื่อพุทธ พราหมณ์ การนับถือผีและสิ่งเร้นลับเข้าด้วยกัน จนกลืนกลายเป็นความเชื่อที่เสริมกำลังใจผู้นับถือบูชาให้สมหวังในสิ่งที่มุ่งหวัง เช่น มูเตลูด้านการงาน การเงิน และความรัก"},
-        {"id":"5","keyword":"ไหว้เจ้า","description":"การแสดงความเคารพและสักการะเทพเจ้า บรรพบุรุษ หรือสิ่งศักดิ์สิทธิ์ โดยการกราบไหว้หรือทำพิธีตามประเพณีวัฒนธรรมไทยและจีน โดยทั่วไปจะมีการถวายของบูชา เช่น ผลไม้ ดอกไม้ และขนมหวาน เพื่อขอพรหรือแสดงความเคารพ"}
-    ]
-    }
-    ]
-    
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl02_project"},
+{"type":"table","name":"coding_launguage","database":"cpl02_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"PHP"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl02_project","data":
+[
+{"id":"1","coding_plugin":"React"},
+{"id":"2","coding_plugin":"Vue.js"},
+{"id":"3","coding_plugin":"Laravel"},
+{"id":"4","coding_plugin":"LIFF"},
+{"id":"5","coding_plugin":"Line Messaging API"},
+{"id":"6","coding_plugin":"Ant Design"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl02_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio Code"},
+{"id":"2","coding_tool":"phpMyAdmin"},
+{"id":"3","coding_tool":"Postman"},
+{"id":"4","coding_tool":"Ngrok"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl02_project","data":
+[
+{"id":"1","concept_th":"ปัจจุบันมีชาวไทยเชื้อสายจีนจำนวนมากอาศัยอยู่ในประเทศไทย รวมถึงมีประชากรที่มีความเชื่อ ในการบูชาเทพเจ้าที่ตนเองศรัทธา ซึ่งมักประสบปัญหาในการจัดเตรียมพิธีการ การจัดวางที่ถูกต้อง และขาดเวลาในการจัดซื้ออุปกรณ์ที่จำเป็น จากปัญหาดังกล่าวจึงเป็นที่มาของเว็บแอปพลิเคชัน ที่ช่วยเหลือคนกลุ่มนี้ให้สามารถดำเนินชีวิตได้ง่ายขึ้น","concept_en":"Currently, a significant number of Thai people of Chinese descent reside in Thailand. Many of them hold beliefs in worshiping deities they revere. However, they often face problems in organizing ceremonies, arranging items correctly, and finding the time to purchase necessary supplies. To address these issues, a web application has been developed to assist this group of people in leading their lives more conveniently.","technology":"LINE OA APPLICATION","category":"Supporting Businesses","preview_img":"concept-device-cpl02.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl02_project","data":
+[
+{"id":"1","database_system":"MySQL"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl02_project","data":
+[
+{"id":"1","design_present":"Figma"},
+{"id":"2","design_present":"Adobe Illustrator"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl02_project","data":
+[
+{"id":"1","keyword":"LINE Official Account (LINE OA)","description":"บัญชี LINE ที่ถูกออกแบบมาสำหรับการใช้งานทางธุรกิจ โดยเฉพาะร้านค้า ไม่ว่าจะเป็นออนไลน์หรือออฟไลน์ รวมถึงองค์กรที่ต้องพูดคุยสื่อสารกับผู้คนจำนวนมาก ซึ่ง LINE OA สามารถส่งข้อความ รูปภาพ วีดีโอต่างๆ เพื่อติดต่อสื่อสารกับผู้ติดตามได้เหมือนกับบัญชี LINE ทั่วไป"},
+{"id":"2","keyword":"Web Application","description":"แอปที่ถูกเขียนขึ้นมาให้สามารถเปิดใช้ใน Web browser ได้โดยตรง ไม่ต้องโหลด Application แบบเต็มๆ ลงเครื่อง ทำให้โดยรวมแล้วกินทรัพยากรค่อนข้างต่ำ สามารถเปิดใช้งานได้ไว"},
+{"id":"3","keyword":"E-commerce","description":"การค้ารูปแบบใหม่ที่กำลังได้รับความนิยมในปัจจุบัน แต่หลายคนก็ยังคิดว่าการทำธุรกิจ E-commerce เป็นเรื่องไกลตัว เพราะนึกไปถึงการมีเว็บไซต์ที่มีระบบชำระเงินและระบบคลังสินค้าขนาดใหญ่ แต่จริงๆ แล้ว E-commerce มีความหมายกว้างกว่านั้น และทุกธุรกิจสามารถเริ่มต้นทำ E-commerce ได้"},
+{"id":"5","keyword":"สายมู","description":"เป็นคำย่อของ สายมูเตลู คือ สิ่งที่เกี่ยวข้องกับความเชื่อ โหราศาสตร์ การดูไพ่ การเสริมดวงและโชคชะตา การบูชาสิ่งศักดิ์สิทธิ์ต่างๆ ฯลฯ ซึ่งจริงๆ แล้ว ในปัจจุบัน 'มูเตลู' ก็เป็นการหลอมรวมความเชื่อพุทธ พราหมณ์ การนับถือผีและสิ่งเร้นลับเข้าด้วยกัน จนกลายเป็นความเชื่อที่เสริมกำลังใจผู้นับถือบูชาให้สมหวังในสิ่งที่มุ่งหวัง"},
+{"id":"4","keyword":"ไหว้เจ้า","description":"การแสดงความเคารพและสักการะเทพเจ้า บรรพบุรุษ หรือสิ่งศักดิ์สิทธิ์ โดยการกราบไหว้หรือทำพิธีตามประเพณีวัฒนธรรมไทยและจีน โดยทั่วไปจะมีการถวายของบูชาเช่น ผลไม้ ดอกไม้ และขนมหวาน เพื่อขอพรหรือแสดงความเคารพ"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl02_project","data":
+[
+{"id":"1","title":"ฟังก์ชันมินิเกมทดลอง\nจัดของไหว้เจ้า","description":"เกมทดลองจัดวางของไหว้เจ้าระยะสั้น ที่จะช่วยให้ผู้เล่นเกิดความเข้าใจในการจัดไหว้มากขึ้น ว่าสิ่งไหนอยู่จุดไหนและนำไป จัดไหว้ต่อไป"},
+{"id":"2","title":"ระบบติดตามสถานะ\nการสั่งซื้อผ่านไลน์","description":"ระบบที่จะส่งสถานะแจ้งเตือนการสั่งซื้อ ตั้งแต่ยืนยันการสั่งซื้อไปจนถึงผู้ขาย จัดส่งถึงลูกค้า เพื่อมั่นใจในสินค้าที่สั่งไป"},
+{"id":"3","title":"รับรู้ข้อมูลเทศกาลต่างๆ ด้วยบทความเทศกาล","description":"ข้อมูลข่าวสารเทศกาล เทพเจ้าต่างๆ ที่เป็น\nที่นิยมด้วยบทความรายละเอียดฉบับย่อ เพื่อให้มีความเข้าใจได้ง่ายๆ"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl02_project","data":
+[
+{"id":"1","fileName":"preview-cpl02-1.png"},
+{"id":"2","fileName":"preview-cpl02-2.png"},
+{"id":"3","fileName":"preview-cpl02-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl02_project","data":
+[
+{"id":"1","socialApproved":"เป็นเว็บที่เหมาะกับคนสมัยใหม่เชื้อสายจีน"},
+{"id":"2","socialApproved":"ตอบโจทย์คนวัยทำงานช่วงอายุ 30 ได้ดีมากๆ  ครบวงจร"},
+{"id":"3","socialApproved":"หัวข้อมีความน่าสนใจคิดไม่ถึง ออกแบบได้น่าใช้งาน"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl02_project","data":
+[
+{"id":"1","Demography":"อายุ 15-44 ปี (ทุกเพศ)","Group":"กลุ่มคนที่มีความสนใจซื้อ สินค้าเพื่อไหว้เจ้าตาม เทศกาลสำคัญต่างๆ, กลุ่มคนที่ยังไม่สะดวกใน การไปเลือกซื้อของไหว้เจ้าด้วยตนเอง, กลุ่มคนที่ไม่รู้ข้อมูลหรือไม่ มั่นใจในการจัดของไหว้เจ้า ด้วยตนเอง ","Personality":"ได้รับอิทธิพลจากความเชื่อดั้งเดิมและมีส่วนร่วมในกิจกรรมร่วมกับบรรพบุรุษ เคร่งครัดต่อความถูกต้องตามขั้นตอนประเพณี ชื่นชอบในการทำบุญทำทาน","Behavior":"ใช้สมาร์ทโฟน หรือเข้าเว็บไซต์เป็นประจำ ใช้เทคโนโลยีเป็น ชื่นชอบในการสั่งซื้อสินค้าผ่านช่องทางออนไลน์ รักความสะดวกสบาย"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl02_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 15-44 ปี  ที่มีความต้องการซื้อสินค้าและศึกษาการไหว้เจ้า • ทดสอบ เมื่อวันที่ 15 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 15-44 years who have a desire to buy products and study worship • Tested on February 15, 2024","num_design":"4.5","num_use":"4.35","num_overall":"4.47","opinion_design":"การออกแบบมีความใช้งานง่าย เข้าใจ สีสันเหมาะสม\n","opinion_use":"เนื้อหาภายในเว็บไซต์ดูดี มีครบทุกข้อสงสัยเกี่ยวกับการไหว้เจ้า","opinion_overall":"การใช้งานระบบเกมทำได้ดี มีบอกถูกผิด มีเสียงเพิ่มความน่าตื่นเต้น\n"}
+]
+}
+]

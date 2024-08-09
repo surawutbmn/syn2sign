@@ -1,0 +1,83 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl04_project"},
+{"type":"table","name":"coding_launguage","database":"cpl04_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"C-Sharp"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl04_project","data":
+[
+{"id":"1","coding_plugin":"React"},
+{"id":"2","coding_plugin":"Bootstrap"},
+{"id":"3","coding_plugin":"Node.js"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl04_project","data":
+[
+{"id":"1","coding_tool":"Unity"},
+{"id":"2","coding_tool":"Visual Studio"},
+{"id":"3","coding_tool":"Visual Studio Code"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl04_project","data":
+[
+{"id":"1","concept_th":" ในปัจจุบันที่คนวัยทำงานให้ความสำคัญกับการพัฒนาตนเอง เพื่อให้สามารถทำงานและใช้ชีวิต ประจำวันได้อย่างมีประสิทธิภาพ โดยหนึ่งในทักษะที่ใช้ในการพัฒนาตนเองที่สำคัญสำหรับวัยทำงาน ก็คือทักษะในการจดจำ แต่เนื่องด้วยการที่คนวัยทำงานมีเวลาว่างน้อย จึงทำให้เกิดแนวคิดในการ พัฒนาทักษะด้านความจำโดยใช้เกมที่มีความเพลิดเพลินบวกกับการใช้เวลาเล่นที่ไม่มากขึ้นมา","concept_en":"People of working age place significant importance on self-development to enhance their work and daily life efficiency. One crucial skill for self-development is memory enhancement. However, due to limited free time, there is a growing interest in developing memory skills through enjoyable and time-efficient games.","technology":"MOBILE APPLICATION","category":"MEDICAL AND HEALTH","preview_img":"concept-device-cpl04.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl04_project","data":
+[
+{"id":"1","database_system":"MySQL"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl04_project","data":
+[
+{"id":"1","design_present":"Figma"},
+{"id":"2","design_present":"Canva"},
+{"id":"3","design_present":"Google Slide"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl04_project","data":
+[
+{"id":"1","keyword":"ความทรงจำระยะสั้น","description":"เป็นความจำหลังการรับรู้สิ่งเร้าที่ได้รับการตีความจนเกิดการรับรู้แล้วก็จะอยู่ในความจำระยะสั้น เราใช้ความจำระยะสั้นสำหรับการจำชั่วคราวเพื่อใช้เป็นประโยชน์ในขณะที่จำอยู่เท่านั้น\n"},
+{"id":"2","keyword":"ความจำระยะยาว","description":"เป็นหน่วยความจำที่เปรียบเสมือนคลังข้อมูล สามารถเก็บข้อมูลได้ไม่จำกัด เป็นระยะเวลานาน\n"},
+{"id":"3","keyword":"Chunking ","description":"วิธีการเอาชนะข้อจำกัดนี้คือการ \"จับกลุ่ม\" ข้อมูลให้ง่ายจำ ยกตัวอย่าง เบอร์โทรศัพท์ เราก็จำเป็นกลุ่ม 3-3-4 แทนที่จะจำ 10 ตัวรวดเดียว"},
+{"id":"4","keyword":"ความทรงจำ","description":"การบันทึกประสบการณ์ต่าง ๆ ของเราผ่านการเรียนรู้ ไม่ว่าเราจะเรียนรู้อะไรมาก็ตามมันจะถูกบันทึกเข้าความทรงจำของเรา ความทรงจำจะประกอบไปด้วยกระบวนการเก็บ ดึงออกมา และ การใช้ข้อมูลที่เกี่ยวกับสิ่งเร้าต่าง ๆ ไม่ว่าจะเป็น รูป เหตุการณ์ ไอเดีย หรือ สกิลในการทำอะไรต่าง ๆ หลังจากที่ข้อมูลดั้งเดิมไม่ได้มีอยู่แล้ว"},
+{"id":"5","keyword":"เกม","description":"เป็นลักษณะของกิจกรรมของมนุษย์เพื่อประโยชน์อย่างใดอย่างหนึ่ง เช่น เพื่อความสนุกสนานบันเทิง เพื่อฝึกทักษะ และเพื่อการเรียนรู้ เป็นต้น และในบางครั้งอาจใช้เพื่อประโยชน์ทางการศึกษาได้"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl04_project","data":
+[
+{"id":"1","title":"ภารกิจประจำวัน","description":"เป็นการแนะนำในการใช้แอปพลิเคชันว่า ให้ทำอะไรในวันนี้ โดยจะเปลี่ยนไปตามในแต่ละวัน มีภารกิจให้ทำอย่างเช่น อ่านบทความ หรือการเล่นเกม"},
+{"id":"2","title":"เกมความจำ","description":"เกมที่ออกแบบมาเพื่อเพิ่มทักษะความจำ โดยจะมีให้เลือกเล่นตามความต้องการศิลปินที่กดแสดงความสนใจเข้ามาได้"},
+{"id":"3","title":"แนวโน้มความจำ","description":"สามารถดูคะแนนความจำที่เกิดจากการเล่นเกม โดยจะเปรียบเทียบกันต่อสัปดาห์ ว่ามีคะแนนความจำเป็นอย่างไร"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl04_project","data":
+[
+{"id":"1","fileName":"preview-cpl04-1.png"},
+{"id":"2","fileName":"preview-cpl04-2.png"},
+{"id":"3","fileName":"preview-cpl04-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl04_project","data":
+[
+{"id":"1","socialApproved":"เหมาะสำหรับเล่นเวลาว่างๆเลย"},
+{"id":"2","socialApproved":"ถ้าตัวหนังสือใหญกว่านี้ จะทำให้คนมีอายุเล่นได้ง่ายขึ้น"},
+{"id":"3","socialApproved":"เกมสามารถเอาไปใช้ได้จริง"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl04_project","data":
+[
+{"id":"1","Demography":"อายุ 24-35 ปี (ทุกเพศ)","Group":"คนวัยทำงาน","Personality":"มีเวลาว่างน้อยแต่ต้องการใช้ช่วงเวลาที่เหลือให้เกิดประโยชน์ในการพัฒนาตนเอง","Behavior":"ใช้งาน Social Media เป็นประจำ และใช้ระบบระบบปฏิบัติการ iOS"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl04_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 24-35 ปี ที่มีความสนใจชอบเปิดมือถือเพื่อหาอะไรทำเวลาว่าง และอยากใช้เวลาว่างให้เกิดประโยชน์ • ทดสอบ เมื่อวันที่ 28-29 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 24-35 years who are interested in using their phones to find activities during their free time and want to make the most of their free time • Tested on February 28-29, 2024","num_design":"4.31","num_use":"4.42","num_overall":"4.39","opinion_design":" สีที่ใช้มีความสบายตา,อยากให้หน้าแรกดูดึงดูดคนให้มากกว่านี้","opinion_use":" ชอบฟังก์ชันแนวโน้ม แต่อยากเห็นเป็นกราฟมากกว่าตัวเลข","opinion_overall":"เพิ่มเกมให้มากขึ้น เพื่อความหลากหลาย"}
+]
+}
+]

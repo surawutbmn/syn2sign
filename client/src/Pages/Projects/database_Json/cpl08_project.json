@@ -1,0 +1,75 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl08_project"},
+{"type":"table","name":"coding_launguage","database":"cpl08_project","data":
+[
+{"id":"1","coding_launguage":"C-Sharp"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl08_project","data":
+[
+
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl08_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio Code"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl08_project","data":
+[
+{"id":"1","concept_th":"นักเรียนชั้นประถมศึกษาปีที่ 2 มีปัญหาอ่านออกเสียงและการสะกดคำ ที่ทำได้ช้าหรือไม่ถูกต้อง เป็นที่มาของแอปพลิเคชันบนไอแพด ที่สอนสะกดคำแบบแจกรูป เพื่อให้สามารถสะกดคำได้อย่างรวดเร็วและถูกต้องมากขึ้น ผ่านการฝึกฝนจากคลังคำศัพท์จำนวนกว่า 100 รูปแบบคำสะกด","concept_en":"The pronunciation and spelling problems of second grade students are slow or incorrect. This is the source of an iPad application that teaches spelling pictures. Ability to spell words faster and more accurately. Trained in a vocabulary library of over 100 spelling forms.","technology":"TABLET INTERACTIVE","category":"Digital Education","preview_img":"concept-device-cpl08.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl08_project","data":
+[
+{"id":"1","database_system":"Firebase"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl08_project","data":
+[
+{"id":"1","design_present":"Figma"},
+{"id":"2","design_present":"Canva"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl08_project","data":
+[
+{"id":"1","keyword":"AI Voice","description":"เสียงที่ใช้ประกอบคำอธิบายภายในเกมสื่อการเรียนรู้"},
+{"id":"2","keyword":"ฟังก์ชันตรวจสอบคำ","description":"การตรวจสอบคำว่าสะกดถูกต้องหรือไม่"},
+{"id":"3","keyword":"หมวดการเรียนรู้","description":"หมวดที่ช่วยให้เด็กสร้างความรู้และความเข้าใจเรื่องการสะกดคำในภาษาไทยให้ดียิ่งขึ้น"},
+{"id":"4","keyword":"หมวดเกมคำศัพท์","description":"หมวดเกมที่ใช้ทดสอบว่าเด็กมีความเข้าใจมากน้อยแค่ไหนจากการเล่นในหมวดเรียนรู้"},
+{"id":"5","keyword":"คะแนน","description":"คะแนนจะปรากฏอยู่ในหมวดเกมคําศัพท์ที่เพื่อเป็นตัวบงบอกทักษะการสะกดคำที่เรียนรู้ไปในหมวดการเรียนรู้ว่าดีหรือแย่ลงอย่างไร"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl08_project","data":
+[
+{"id":"1","title":"การอ่านคำสะกด","description":"มีเสียงการอ่านคำสะกดในแต่ละข้อ เพื่อเพิ่มความมั่นใจในการอ่านออกเสียง"},
+{"id":"2","title":"มีแบ่งหมวดหมู่","description":"มีหมวดหมู่การเรียนรู้และหมวดหมู่\nเกมเรียงคำศัพท์"},
+{"id":"3","title":"ตรวจสอบคำ","description":"มีฟังก์ชันตรวจสอบคำ ว่าสะกดถูกต้องหรือไม่"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl08_project","data":
+[
+{"id":"1","fileName":"preview-cpl08-1.png"},
+{"id":"2","fileName":"preview-cpl08-2.png"},
+{"id":"3","fileName":"preview-cpl08-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl08_project","data":
+[
+{"id":"1","socialApproved":"สไตล์ภาพกราฟิกน่ารัก"},
+{"id":"2","socialApproved":"ไอเดียดี น่าสนใจ"},
+{"id":"3","socialApproved":"สนุกและเข้าใจง่าย"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl08_project","data":
+[
+{"id":"1","Demography":"อายุ 8-9 ปี (ทุกเพศ)","Group":"ประถมศึกษาชั้นปีที่ 2","Personality":"Generation ALPHA อายุ 8-9 ปี (ทุกเพศ)  ประถมศึกษาชั้นปีที่ 2, Interests ความสนุกสนาน สีสัน กิจกรรม การละเล่น","Behavior":"มีปัญหาด้านการสะกดคำ, มีพื้นฐานด้านการสะกดคำน้อย"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl08_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ  8-9 ปี มีความตั้งใจในการใฝ่รู้ ใฝ่เรียน\nและอยากพัฒนาตนเองให้เก่งขึ้น • ทดสอบ เมื่อวันที่ 23 กุมภาพันธ์ 2566","en":"Usability testing with a target group aged 24-60 years who are planning to expand\ntheir franchise business into various areas • Tested on March 1, 2024","num_design":"4.42","num_use":"4","num_overall":"3","opinion_design":"ในด้านของการออกแบบสื่อรูปแบบ\nและองค์ประกอบ","opinion_use":"ในด้านโปรแกรมมีการตรวจสอบคำตอบว่า\nเด็กๆ สะกดได้ถูกต้อง เพื่อเพิ่มความมั่นใจ มากขึ้น","opinion_overall":"ใช้คำศัพท์ที่เกี่ยวข้องในชีวิตประจำวันของ เด็กทำให้สร้างความเข้าใจในคำศัพท์ที่ง่าย ขึ้น"}
+]
+}
+]

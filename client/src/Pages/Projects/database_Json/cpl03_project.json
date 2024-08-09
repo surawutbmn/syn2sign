@@ -1,0 +1,79 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl03_project"},
+{"type":"table","name":"coding_launguage","database":"cpl03_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"PHP"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl03_project","data":
+[
+{"id":"1","coding_plugin":"Laravel"},
+{"id":"2","coding_plugin":"Bootstrap"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl03_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio\nCode"},
+{"id":"2","coding_tool":"Ngrok"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl03_project","data":
+[
+{"id":"1","concept_th":"เว็บแอปพลิเคชันตัวกลางระหว่างศิลปินและผู้จัดงานที่ช่วยรวบรวมการประกาศเปิดรับสมัครศิลปิน ไว้ในที่เดียว ซึ่งเราช่วยอำนวยความสะดวกในการสร้างพื้นที่หรือแพลตฟอร์มที่ผู้จัดงานทุกคน สามารถประกาศรับสมัครที่มีรายละเอียดที่เหมาะสมต่อศิลปินในการตัดสินใจเพื่อเข้าร่วมหรือการ แสดงความสนใจต่อการสมัคร และสร้างพื้นที่รวบรวมผลงานเป็นแฟ้มสะสมผลงานรูปแบบออนไลน์","concept_en":"An intermediary web application between artists and organizers that helps collect artist recruitment announcements in one place. We facilitate the creation of a space or platform where any organizer can post recruitment announcements with appropriate details for artists to decide to participate or express interest in applying, and create a place to collect their work as an online portfolio.","technology":"WEB APPLICATION","category":"Innovation Culture","preview_img":"concept-device-cpl03.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl03_project","data":
+[
+{"id":"1","database_system":"phpMyAdmin"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl03_project","data":
+[
+{"id":"1","design_present":"Figma"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl03_project","data":
+[
+{"id":"1","keyword":"Artist","description":"ศิลปิน หมายถึง ผู้มีความสามารถแสดงออกซึ่งคุณสมบัติทางศิลปะ"},
+{"id":"2","keyword":"Organizer","description":"ผู้จัดงาน หมายถึง ตำแหน่งเจ้าหน้าที่ดูแลงานภาพรวมของนิทรรศการ"},
+{"id":"3","keyword":"Exhibition","description":"นิทรรศการ หมายถึง การให้การศึกษาอย่างหนึ่งด้วยการแสดงงานให้ชม เป็นการจัดแสดงและนำโสตทัศนวัสดุรวมถึงวัสดุต่าง ๆ ที่ให้ข้อมูล ข่าวสาร ที่ผู้ชมสามารถสัมผัส เรียนรู้ ทดลองใช้ หรือมีกิจกรรมเสริมประกอบ นิทรรศการเป็นสื่อในการให้การศึกษา ความรู้ความเข้าใจ เพื่อกระตุ้นความสนใจ ตอบสนองและเปลี่ยนแปลงพฤติกรรมของผู้ชมให้บรรลุสู่เป้าหมายในเรื่องนั้น ๆ"},
+{"id":"4","keyword":"Open Call","description":"ประกาศรับสมัคร หมายถึง ประกาศรับสมัครสำหรับศิลปินเพื่อเข้าสู่การคัดเลือกตัวศิลปินและผลงาน เพื่อนำผลงานไปจัดแสดงในงานนิทรรศการหรืออีเว้นต์ต่างๆ ที่ผู้ประกาศรับสมัครต้องการ"},
+{"id":"5","keyword":"Portfolio","description":"แฟ้มสะสมผลงาน หมายถึง การเก็บสะสมรวบรวมผลงาน กิจกรรมที่เคยเข้าร่วม และประวัติส่วนตัว"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl03_project","data":
+[
+{"id":"1","title":"โพสต์ประกาศ\nรับสมัครศิลปิน","description":"ผู้จัดงานสามารถสร้างโพสต์\nประกาศรับสมัครศิลปิน"},
+{"id":"2","title":"จัดการคัดเลือกข้อมูลผู้สมัคร","description":"ระบบที่จะส่งสถานะแจ้งเตือนการสั่งซื้อ ตั้งแต่ยืนยันการสั่งซื้อไปจนถึงผู้ขาย จัดส่งถึงลูกค้า เพื่อมั่นใจในสินค้าที่สั่งไปผู้จัดงานสามารถจัดการข้อมูลและคัดเลือก\nศิลปินที่กดแสดงความสนใจเข้ามาได้"},
+{"id":"3","title":"สร้างแฟ้มสะสมผลงาน\nฉบับออนไลน์","description":"สร้างโปรไฟล์เพื่อเป็นพื้นที่เก็บผลงาน\nซึ่งเปรียบเสมือนแฟ้มสะสมผลงาน\nฉบับออนไลน์\n"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl03_project","data":
+[
+{"id":"1","fileName":"preview-cpl03-1.png"},
+{"id":"2","fileName":"preview-cpl03-2.png"},
+{"id":"3","fileName":"preview-cpl03-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl03_project","data":
+[
+{"id":"1","socialApproved":"ช่วยลดช่องว่างหรือ pain point ระหว่างศิลปินกับผู้จัดงานได้ดี"},
+{"id":"2","socialApproved":"เห็นถึงความตั้งใจมากค่ะ"},
+{"id":"3","socialApproved":"ภาพรวมมีฟังก์ชันการใช้งานเหมาะสมสำหรับโปรเจคจบ"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl03_project","data":
+[
+{"id":"1","Demography":"อายุ 18-38 ปี (ทุกเพศ)","Group":"กลุ่มคนที่มีความสนใจเริ่มต้นหรือประกอบอาชีพเกี่ยวกับศิลปะ และผู้ประกอบการพิพิธภัณฑ์ หอศิลป์ คาเฟ่ หรืออื่นๆ","Personality":"มีความสนใจด้านศิลปะ มองหาโอกาส มองหาผู้คนในวงการเดียวกัน มองหารายได้ มองหาการสร้างโปรไฟล์ตนเอง บนพื้นที่ออนไลน์สาธารณะ","Behavior":" ใช้งาน Social Media เป็นประจำ มีความเข้าใจในด้านเทคโนโลยีอยู่บ้าง ชอบความเป็นระเบียบเรียบร้อย"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl03_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 18-38 ปี ที่มีความสนใจในการวาดรูป มองหาผู้คนที่มีความคิดสร้างสรรค์ • ทดสอบ เมื่อวันที่ 19 สิงหาคม 2566","en":"Usability testing with a target group aged 18-38 years who are interested in drawing and looking for creative individuals • Tested on August 19, 2023","num_design":"4.42","num_use":"4.31","num_overall":"4.31","opinion_design":"โทนสีสบายตาเหมาะสมกับเนื้อหาเว็บไซต์ สามารถเข้าใจการใช้งานเว็บไซต์ได้ดี","opinion_use":"อธิบายการใช้งานได้ดี อาจยังเข้าใจยากในบางส่วนสำหรับผู้ใช้ที่ไม่ชินกับเนื้อหาของเว็บไซต์ลักษณะนี้","opinion_overall":"ภาพรวมมีฟังก์ชันที่น่าสนใจ ทุกคนเข้าถึงได้"}
+]
+}
+]

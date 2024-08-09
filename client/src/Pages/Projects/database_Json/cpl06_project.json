@@ -1,0 +1,78 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cpl06_project"},
+{"type":"table","name":"coding_launguage","database":"cpl06_project","data":
+[
+{"id":"1","coding_launguage":"HTML"},
+{"id":"2","coding_launguage":"CSS"},
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"PHP"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl06_project","data":
+[
+{"id":"1","coding_plugin":"Laravel"},
+{"id":"2","coding_plugin":"Bootstrap"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl06_project","data":
+[
+{"id":"1","coding_tool":"Visual Studio Code"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl06_project","data":
+[
+{"id":"1","concept_th":"แฟชั่นดีไซน์เนอร์รุ่นใหม่ กล้าที่จะแสดงออกผ่านผลงานที่มีความคิดสร้างสรรค์ ลงแพลตฟอร์มและทำให้ดีไซน์เนอร์มีพื้นที่และคนรู้จักเพิ่มมากขึ้น คนไทยหันมาสนับสนุนแบรนด์ไทยด้วยกันเอง","concept_en":"A new generation of fashion designers, daring to express themselves through creative work, onto platforms and giving designers more space and acquaintance. Thais turn to support Thai brands together.","technology":"WEB APPLICATION","category":"Innovation Culture","preview_img":"concept-device-cpl06.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl06_project","data":
+[
+{"id":"1","database_system":"MySQL"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl06_project","data":
+[
+{"id":"1","design_present":"Figma"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl06_project","data":
+[
+{"id":"1","keyword":"แฟชั่นดีไซน์เนอร์","description":"(Fashion Designer) คือ ผู้ที่ออกแบบเสื้อผ้าใหม่ๆ โดยใช้ความคิดสร้างสรรค์ในการออกแบบ มีความเชี่ยวชาญในการเลือกสีสัน เนื้อผ้า ลวดลาย และการตัดเย็บเสื้อผ้าเพื่อให้ได้รูปทรงที่เหมาะสมและสวยงามตามที่ลูกค้าต้องการ"},
+{"id":"2","keyword":"ผู้ที่เกี่ยวข้อง","description":"(Participants) คือ ผู้ที่เกี่ยวข้องกับสายอาชีพ เช่น ช่างภาพ ช่างแต่งหน้า และอื่นๆ ที่เกี่ยวข้องกับสายอาชีพนั้นๆplastic waste หมายถึง ของเสียพลาสติกที่รวบรวมจากบ้านเรือน โรงแรม ภัตตาคาร โรงพยาบาล ร้านค้า สำนักงาน โรงงานอุตสาหกรรม โดยเป็นพลาสติกหรือชิ้นส่วนที่ใช้งานแล้ว หรือเสื่อมสภาพไม่สามารถใช้งานได้หรือไม่เป็นที่ต้องการใช้อีกต่อไป"},
+{"id":"3","keyword":"หาเพื่อนร่วมทีม","description":"(Find a teammate) คือ การหาเพื่อน เพื่อมาร่วมทำงานหรือมาร่วมโปรเจคกับเรา เพื่อเก็บไปเป็น Portfolio"},
+{"id":"4","keyword":"แฟชั่น","description":"(Fashion) คือ การบ่งบอกถึงบุคลิกของคนผ่านการแต่งกาย ไม่ว่าจะเป็นเสื้อผ้า รองเท้า หรือเครื่องประดับต่างๆ ทุกคนมีสไตล์ที่ชอบต่างกันไป ถ่ายถอดออกมาเป็นแฟชั่นที่หลากหลาย"},
+{"id":"5","keyword":"หางาน","description":"(Get a job) คือ หางานตามที่ตนเองสนใจ และต้องการ มีคุณสมบัติตรงตามที่บริษัทต้องการ"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl06_project","data":
+[
+{"id":"1","title":"ฟังก์ชันหาเพื่อนร่วมทีม","description":"ฟังก์ชันหาเพื่อนร่วมทีม\n"},
+{"id":"2","title":"ฟังก์ชันอัปโหลดผลงาน","description":"ฟังก์ชันอัปโหลดผลงานเพื่อเก็บเป็น แฟ้มสะสมผลงาน สำหรับแฟชั่นดีไซน์เนอร์ และผู้เกี่ยวข้องทางสายอาชีพแฟชั่น"},
+{"id":"3","title":"ฟังก์ชันการแจ้งเตือน","description":"ฟังก์ชันแจ้งเตือนผู้ใช้เมื่อได้งาน"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl06_project","data":
+[
+{"id":"1","fileName":"preview-cpl06-1.png"},
+{"id":"2","fileName":"preview-cpl06-2.png"},
+{"id":"3","fileName":"preview-cpl06-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl06_project","data":
+[
+{"id":"1","socialApproved":"ส่งเสริมงานออกแบบของไทย เปิดโอกาสให้มีพื้นที่ติดต่องาน"},
+{"id":"2","socialApproved":"สะดวกต่อการติดต่องานของผู้เกี่ยวข้องในสายอาชีพ"},
+{"id":"3","socialApproved":"ไอเดีย แนวคิดดี"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl06_project","data":
+[
+{"id":"1","Demography":"อายุ 22-44 ปี (ทุกเพศ)","Group":"นักศึกษาด้านแฟชั่น (จบใหม่) และผู้ที่เกี่ยวข้องในสายอาชีพแฟชั่นดีไซน์เนอร์","Personality":"Generation Y - Z อายุ 22 - 44 ปี (ทุกเพศ) สนใจงานด้านแฟชั่น","Behavior":"มีความสนใจด้านแฟชั่น ต้องการหางาน และหาเพื่อนร่วมทีม"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl06_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ  22-44 ปี ที่มีความมุ่งมั่นที่จะทำงาน และอยากเป็นที่รู้จักในวงการแฟชั่น • ทดสอบ เมื่อวันที่ 29 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 22-44 years who are dedicated to their work and want to be recognized in the fashion industry • Tested on February 29, 2024","num_design":"4.64","num_use":"4.46","num_overall":"4.44","opinion_design":"ดีไซน์ดูเรียบดี ใช้งานง่าย สบายตา","opinion_use":"เข้าใจง่าย","opinion_overall":"ภาพรวมดูดี"}
+]
+}
+]

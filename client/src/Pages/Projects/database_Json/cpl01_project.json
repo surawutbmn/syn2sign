@@ -1,13 +1,79 @@
 [
 {"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
 {"type":"database","name":"cpl01_project"},
-{"type":"table","name":"keywords","database":"cpl01_project","data":
+{"type":"table","name":"coding_launguage","database":"cpl01_project","data":
+[
+{"id":"1","coding_launguage":"SwiftUI"}
+]
+}
+,{"type":"table","name":"coding_plugin","database":"cpl01_project","data":
+[
+{"id":"1","coding_plugin":"QuickPose.ai (v.1.0.0)"},
+{"id":"2","coding_plugin":"Firebase-ios-sdk"}
+]
+}
+,{"type":"table","name":"coding_tool","database":"cpl01_project","data":
+[
+{"id":"1","coding_tool":"Firebase Console"},
+{"id":"2","coding_tool":"Xcode"}
+]
+}
+,{"type":"table","name":"concept","database":"cpl01_project","data":
+[
+{"id":"1","concept_th":"การพลัดตกหกล้มเป็นสาเหตุการตายอันดับสองในกลุ่มของการบาดเจ็บโดยไม่ได้ตั้งใจ โดย 50% ของผู้เสียชีวิตจากการพลัดตกหกล้มในประเทศไทยเป็นผู้สูงอายุ ซึ่งเป็นปัญหาด้านการเสื่อมถอยของร่างกาย ทำให้ร่างกายทรงตัวไม่ดีพอ ดังนั้น EVAL BALANCE (อีวาล บาลานซ์) จึงเป็นตัวช่วยในการประเมินสมรรถภาพทางกายและเป็นตัวช่วยในการดูแลสุขภาพด้วยการออกกำลังกาย เพื่อลดความเสี่ยงต่อการหกล้มในผู้สูงอายุ และเสริมสร้างความแข็งแรงของกล้ามเนื้อ","concept_en":"Among accidental injuries, falls rank as the second most common cause of death; in Thailand, 50% of fall fatalities occur in older adults. This is an issue with the body's degradation, which makes the body insufficiently stable. Thus, EVAL BALANCE is a support. Assess physical fitness and help seniors maintain their health through exercise to lower their chance of falling. And build up muscles.","technology":"MOBILE APPLICATION","category":"MEDICAL AND HEALTH","preview_img":"concept-device-cpl01.png"}
+]
+}
+,{"type":"table","name":"database_system","database":"cpl01_project","data":
+[
+{"id":"1","database_system":"Firebase"}
+]
+}
+,{"type":"table","name":"design_present","database":"cpl01_project","data":
+[
+{"id":"1","design_present":"Figma"},
+{"id":"2","design_present":"Adobe After Effects"},
+{"id":"3","design_present":"Google Sheet"},
+{"id":"4","design_present":"Google Form"}
+]
+}
+,{"type":"table","name":"keywords","database":"cpl01_project","data":
 [
 {"id":"1","keyword":"ออกกำลังกาย","description":"การทำกิจกรรมที่มีการเคลื่อนไหวร่างกายหรือออกแรง โดยการทำซ้ำๆ เพื่อเป็นการเสริมสร้างสมรรถภาพทางกายในด้านต่าง ๆ"},
 {"id":"2","keyword":"ติดตามผล","description":"กระบวนการเก็บข้อมูลที่มีตัวชี้วัดสำคัญ เป็นตัวบ่งชี้ความคืบหน้าของการออกกำลังกายให้ผู้ใช้งานได้รับทราบ"},
 {"id":"3","keyword":"การพลัดตกหกล้ม","description":"การสูญเสียการทรงตัว ที่เป็นการบาดเจ็บโดยไม่ได้ตั้งใจ และไม่สามารถควบคุมได้ ทำให้ร่างกายลงไปสู่พื้นที่ต่ำกว่าร่างกาย ซึ่งอาจได้รับการบาดเจ็บ"},
 {"id":"4","keyword":"ประเมินสมรรถภาพทางกาย","description":"การวัดระดับความสามารถของร่างกาย ว่าดีมากน้อยเพียงใด โดยเฉพาะความแข็งแรงของกล้ามเนื้อ และความทนทาน"},
 {"id":"5","keyword":"ตรวจจับท่าทางการออกกำลังกายแบบเรียลไทม์","description":"อุปกรณ์อิเล็กทรอนิกส์ที่ออกแบบมาเพื่อใช้ในการตรวจจับความเคลื่อนไหวของร่างกายหรือวัตถุต่างๆ และประมวลผลออกมาเป็นผลลัพธ์ในทันที เช่น ตัวเลขหรือภาพ"}
+]
+}
+,{"type":"table","name":"main_function","database":"cpl01_project","data":
+[
+{"id":"1","title":"ตรวจสอบและประเมิน\r\nความถูกต้องของท่าทาง","description":"สามารถตรวจสมรรถภาพทางกายของ\r\nตนเองได้ว่ามีความเสี่ยงในการหกล้มหรือไม่ โดยสามารถประเมินก่อนออกกำลังกาย และหลังออกกำลังกายได้"},
+{"id":"2","title":"ตรวจจับท่าทาง\r\nการออกกำลังกายแบบเรียลไทม์","description":"มีฟังก์ชันในการตรวจจับท่าทางแบบเรียลไทม์ เพื่อตรวจสอบความถูกต้อง ว่าผู้ใช้งาน\r\nทำท่าทางถูกต้องตามตัวอย่างหรือไม่"},
+{"id":"3","title":"ติดตามผล ดูประวัติย้อนหลังแบบรายวัน","description":"เพื่อให้ผู้ใช้งานสามารถติดตามผล\r\nการออกกำลังกายได้จึงมีการเก็บข้อมูล\r\nส่วนนี้ในรูปแบบของการสรุปผล"}
+]
+}
+,{"type":"table","name":"preview_images","database":"cpl01_project","data":
+[
+{"id":"1","fileName":"preview-cpl01-1.png"},
+{"id":"2","fileName":"preview-cpl01-2.png"},
+{"id":"3","fileName":"preview-cpl01-3.png"}
+]
+}
+,{"type":"table","name":"social_approved","database":"cpl01_project","data":
+[
+{"id":"1","socialApproved":"อยากให้มีโครงร่างเป็นท่าทางต่างๆ ขณะออกกำลังกาย"},
+{"id":"2","socialApproved":"มีความน่าสนใจ สามารถพัฒนาต่อได้"},
+{"id":"3","socialApproved":"ออกแบบสวย มีการออกแบบที่หลากหลาย เข้าใจได้ง่าย"}
+]
+}
+,{"type":"table","name":"target_group","database":"cpl01_project","data":
+[
+{"id":"1","Demography":"อายุ 58-67 ปี (ทุกเพศ)","Group":"ผู้สูงอายุุตอนต้น","Personality":"กลุ่มวัยเกษียณหรือกำลังเกษียณ สามารถช่วยเหลือตัวเองได้ มีเวลาว่างและชอบเรียนรู้สิ่งใหม่ๆ","Behavior":"มีพฤติกรรมชอบออกกำลังกายแบบเบาๆ มีความสนใจในการทำกิจกรรมที่เกี่ยวกับการดูแลสุขภาพ และใช้เทคโนโลยีเป็นประจำ"}
+]
+}
+,{"type":"table","name":"testing","database":"cpl01_project","data":
+[
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 58-67 ปี ที่มีความสนใจ ในการทำกิจกรรมดูแลสุขภาพ • ทดสอบ เมื่อวันที่ 25 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 58-67 years who are interested in health care activities • Tested on February 25, 2024","num_design":"4.48","num_use":"4.37","num_overall":"4.39","opinion_design":"แอปใช้งานง่าย, สีที่ใช้มีความสบายตา ","opinion_use":"ชอบที่มีเสียงช่วยอ่าน และนับจำนวน ครั้งให้ เพราะบางประโยคมองไม่ค่อยชัด","opinion_overall":"ประโยคที่มีข้อความเยอะ ๆ จะอ่านยาก อยากให้ลดทอนข้อความลง"}
 ]
 }
 ]
