@@ -49,7 +49,7 @@ const DesignProcessSlider = () => {
 
       <Swiper
         modules={[Navigation]}
-        slidesPerView={4}
+        slidesPerView={3.5}
         navigation={{
           nextEl: ".prj-pl-nav .swiper-button-next",
           prevEl: ".prj-pl-nav .swiper-button-prev",

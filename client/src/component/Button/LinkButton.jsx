@@ -1,3 +1,5 @@
+import React from 'react'; // Ensure React is imported
+import PropTypes from 'prop-types'; // Import PropTypes
 import styled from "styled-components";
 import { IoLogoYoutube } from "react-icons/io";
 
@@ -58,8 +60,9 @@ const LinkButton = () => {
 };
 
 LinkButton.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired, // Check if 'name' is needed here
 };
+
 export default LinkButton;
 
 const LinkButtonContainer = styled.div`
