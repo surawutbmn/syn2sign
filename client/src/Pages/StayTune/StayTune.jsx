@@ -33,12 +33,14 @@ function StayTune() {
             year="23"
             NameVideo="DOTWISH/*ON"
             link="https://funcslash.com/dotwishion/"
-            linkVideo=""
-            linkImage=""
+            linkVideo="https://www.facebook.com/reel/797297252002902?rdid=0lROPLGnkYxdfZTX"
+            linkImage="https://youtu.be/ovDdRpS3pns?si=m8xALqy3pihyRFP1"
             description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2023 "
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
             description3="มหาวิทยาลัยศิลปากร"
             line="/other/line.png"
+            imgPreview1='public\staytune\dotwishion-video-preview.png'
+            imgPreview2='public\staytune\dotwishion-video-preview2.png'
           />
           {/* STY}E:YEET (2022) */}
           <CardMainThree
@@ -48,11 +50,15 @@ function StayTune() {
             year="22"
             NameVideo="STY}E:YEET"
             link="https://funcslash.com/styleyeet/"
-            linkVideo=""
-            linkImage=""
+            
+
+            linkVideo="https://youtu.be/FF2HUOdQqgM?si=aaR8zeR6Bz8IEtrl"
+            linkImage="https://youtu.be/7Qm-h_boM5c?si=rTU3qJ7IxxDWgYqN"
             description1="เว็บไซต์รวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 "
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 "
             description3="มหาวิทยาลัยศิลปากร"
+               imgPreview1='public\staytune\styleyeet-video-preview.png'
+            imgPreview2='public\staytune\styleyeet-video-preview2.png'
           />
           {/* &TIVIRUS (2021) */}
           <CardMainThree
@@ -62,11 +68,13 @@ function StayTune() {
             year="21"
             NameVideo="&TIVIRUS"
             link="https://www.youtube.com/playlist?list=PLiCmIB88gkWSOhh-DCS-kF6LqRvJS5Aay"
-            linkVideo=""
-            linkImage=""
+            linkVideo="https://fb.watch/tSyyX6yz5w/"
+            linkImage="https://fb.watch/tSyAiGZuTM/"
             description1="การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021"
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 "
             description3="มหาวิทยาลัยศิลปากร"
+               imgPreview1='public\staytune\&TIVIRUS-video-preview.png'
+            imgPreview2='public\staytune\&TIVIRUS-video-preview2.png'
           />
         </div>
 

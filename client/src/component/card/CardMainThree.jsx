@@ -75,7 +75,7 @@ const CardMainThree = (props) => {
               <TabVideoAndImageBox className="col-12">
               <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
               <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
-                <img src="/staytune/dotwishion-video-preview.png">
+                <img src={props.imgPreview1}>
                 </img>
                 
                 <Overlay />
@@ -90,7 +90,7 @@ const CardMainThree = (props) => {
               <TabVideoAndImageBox className="col-12">
               {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
               <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
-                <img src="/staytune/dotwishion-video-preview.png">
+                <img src={props.imgPreview2}>
                 </img>
                 
                 <Overlay />
@@ -120,6 +120,8 @@ CardMainThree.propTypes = {
   NameVideo: propTypes.string,
   linkVideo: propTypes.string,
   linkImage: propTypes.string,
+  imgPreview1: propTypes.string,
+  imgPreview2: propTypes.string,
 };
 
 export default CardMainThree;
