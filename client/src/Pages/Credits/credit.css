@@ -34,7 +34,7 @@
 @media (max-width: 767.98px) {
     .advice-con{
         border-left: none; justify-content: start; 
-        margin-left: 1.3rem; padding: 10px 0 0 0; border-top: .5px solid;
+        padding: 10px 0 0 0; border-top: .5px solid;
         &:first-child{padding-top: 0; border-top: none;}
     }
     .grid-cols-md-1{grid-template-columns: repeat(1, minmax(0,1fr));}

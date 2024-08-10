@@ -71,14 +71,32 @@ const CardText = styled.div`
   left: 1rem;
   bottom: 0.1rem;
   z-index: 1;
+  @media (max-width: 767.98px) {
+    left: 0.3rem;
+  }
+  @media (max-width: 991.98px) {
+    left: 0.5rem;
+  }
 `;
 const Caption = styled.div`
   font-size: 0.7rem;
   margin-bottom: 0.2rem;
+  @media (max-width: 767.98px) {
+    font-size: 0.45rem;
+  }
+  @media (max-width: 991.98px) {
+    font-size: 0.5rem;
+  }
 `;
 const Title = styled.div`
   font-weight: var(--txt-sbold);
   font-size: 0.9rem;
+  @media (max-width: 767.98px) {
+    font-size: 0.56rem;
+  }
+  @media (max-width: 991.98px) {
+    font-size: 0.65rem;
+  }
 `;
 const ReadMoreText = styled.div`
   font-size: 1rem;
@@ -97,6 +115,9 @@ const CardOverlay = styled.div`
   color: white;
   height: 25%;
   width: 100%;
+  @media (max-width: 767.98px) {
+    height: 30%;
+  }
 `;
 const ReadMore = styled.div`
   position: absolute;
@@ -109,6 +130,10 @@ const ReadMore = styled.div`
   align-items: center;
   white-space: nowrap;
   display: flex;
+  @media (max-width: 991.98px) {
+    top: 10px;
+    right: -80px;
+  }
 `;
 const ReadMoreIcon = styled.img`
   filter: brightness(0) saturate(100%) invert(1%) sepia(12%) saturate(6%)
@@ -116,6 +141,13 @@ const ReadMoreIcon = styled.img`
   opacity: 0.8;
   transition: all 0.3s ease;
   max-width: 4rem;
+  @media (max-width: 767.98px) {
+    max-width: 2rem;
+  }
+
+  @media (max-width: 575.98px) {
+
+  }
 `;
 const ImgCreator = styled.img`
   width: 100%;
@@ -144,5 +176,9 @@ const CardStudents = styled.div`
   }
   &:hover .std-card-overlay {
     height: 100%;
+  }
+
+  @media (max-width: 767.98px) {
+    border-radius: .7rem;
   }
 `;

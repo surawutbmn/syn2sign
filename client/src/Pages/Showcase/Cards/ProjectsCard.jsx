@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => (
             )}
           </CreatorName>
         </CreatorSec>
-        <ImgThumb className="card-prj-thumb">
+        <ImgThumb className="card-prj-thumb d-none d-md-flex">
           <img
             src={`/icon/prj/${project.img_thumb}`}
             alt="project thumbnail"

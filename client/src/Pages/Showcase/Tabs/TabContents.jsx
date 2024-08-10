@@ -13,7 +13,7 @@ const TabContent = ({
 }) => (
   <div className="tab-content">
     {activeTab === 1 && (
-      <Row xs={2} xl={3} className="g-4">
+      <Row xs={1} md={2} xl={3} className="g-4">
         {updatedProjects.length === 0
           ? projectsdata.map((proj) => (
               <ProjectCard key={proj.id} project={proj} />

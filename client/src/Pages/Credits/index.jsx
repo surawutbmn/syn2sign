@@ -21,7 +21,7 @@ import gsap, { Power1 } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import "./credit.css";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import PageElement from "../../component/Element/PageElement";
 
 function Credit() {
@@ -77,7 +77,7 @@ function Credit() {
             </p>
           </span>
         </div>
-        <div className="mt-5">
+        <Container className="mt-5">
           <h2 className="txt-scdhead mb-4">Project Advisory Committee</h2>
           <div
             className="row row-cols-1 row-cols-md-3 justify-content-center"
@@ -162,7 +162,7 @@ function Credit() {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
       </Container>
       <div className="w-100 su-line mt-5">
         <div className="container">
@@ -185,7 +185,7 @@ function Credit() {
             </p>
           </span>
         </div>
-        <div className="mt-4">
+        <Container className="mt-4">
           <h2 className="txt-scdhead mb-4">INSI(gn)DER</h2>
           <div className="grid grid-cols-2 grid-cols-md-1 ml-20 team-credit gap-4">
             <div className="d-flex">
@@ -351,8 +351,8 @@ function Credit() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="mt-5">
+        </Container>
+        <Container className="mt-5">
           <h2 className="mb-4 txt-scdhead">Thank you for your support</h2>
           <div className="grid grid-cols-2 grid-cols-md-1 ml-20 gap-4">
             <div className="d-flex">
@@ -393,11 +393,10 @@ function Credit() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="mt-6">
-          <div className="row sponser-con justify-content-center">
+        </Container>
+        <Container className="mt-6 sponser-con justify-content-center">
             <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
-            <div className="col-12 mb-5">
+            <Col xs={12} className=" mb-5">
               <a
                 href="http://https://emdistrict.com/"
                 target="_blank"
@@ -415,7 +414,7 @@ function Credit() {
                   <u>The Em District</u> <br /> ดิ เอ็มดิสทริค
                 </p>
               </a>
-            </div>
+            </Col>
             <div className="grid grid-cols-3 gap-5">
               <div className="d-flex justify-content-center">
                 <a
@@ -608,9 +607,8 @@ function Credit() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="my-5">
+        </Container>
+        <Container className="my-5">
           <h2 className="mb-4 txt-scdhead">onsite supporter</h2>
           <span>
             <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
@@ -662,8 +660,8 @@ function Credit() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="mb-5">
+        </Container>
+        <Container className="mb-5">
           <h2 className="mb-4 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
           <p>
             <strong>Project Manager:</strong> Chalida Ingkapattanakul{" "}
@@ -699,7 +697,7 @@ function Credit() {
             <br /> INTERACTIVE APPLICATION PROGRAMME <br /> ICT SILPAKORN
             UNIVERSITY
           </span>
-        </div>
+        </Container>
       </Container>
     </>
   );
