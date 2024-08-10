@@ -23,12 +23,13 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardMainFunction = () => {
+const CardMainFunction = (props) => {
   const location = useLocation();
   const urlPath = location.pathname;
   const projectId = urlPath.split('/').pop(); // Extract projectId from URL
 
-  const projectData = dataMapping[projectId] || []; // Select the data based on the project ID
+  // const projectData = dataMapping[projectId] || []; // Select the data based on the project ID
+  const projectData = dataMapping[props.proj_id] || []; // Select the data based on the project ID
 
   // console.log('Project ID:', projectId); 
   // console.log('Project Data:', projectData); 

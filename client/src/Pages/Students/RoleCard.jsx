@@ -2,19 +2,29 @@ import { Col } from "react-bootstrap";
 import propTypes from "prop-types";
 
 
-function RoleCard({role,icon}) {
+function RoleCard(props) {
+  const { roleArr = [] } = props;
   return (
     <>
-      <Col>
-        <img src={`/icon/roles/${icon}`} alt="" />
-        <span className="ms-3 txt-cap">{role}</span>
-      </Col>
+      {roleArr.map((roleItem, index) => {
+          return (
+            <Col key={index}>
+              <img src={`/icon/roles/${roleItem.icon}`} alt="" />
+              <span className="ms-3 txt-upper">{roleItem.name}</span>
+            </Col>
+          );
+        })}
     </>
   );
 }
 
 RoleCard.propTypes = {
-  role: propTypes.string.isRequired,
-  icon: propTypes.string.isRequired,
+  roleArr: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      icon: propTypes.string.isRequired,
+    })
+  ).isRequired,
 };
+
 export default RoleCard;

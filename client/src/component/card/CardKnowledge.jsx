@@ -29,7 +29,11 @@ function CardKnowledge(props) {
               }}
             />
           </div>
-          <ArrowButton text={`${props.btn}`} style={`txt-head4`} icon={props.btnIcon}/>
+            <ArrowButton
+              text={`${props.btn}`}
+              style={`txt-head4`}
+              icon={props.btnIcon}
+            />
         </BoxContent>
       </CardBox>
     </>
@@ -51,7 +55,7 @@ export default CardKnowledge;
 const CardBox = styled.div`
   width: 100%;
   height: auto;
-  min-height: 49dvw; 
+  min-height: 700px; 
   background: white;
   border-radius: 1rem;
   overflow: hidden;
@@ -70,6 +74,7 @@ const BoxContent = styled.div`
   padding: 1.3rem;
   padding-top: 0;
   position: relative;
+  flex-grow: 1;
 `;
 const BoxText = styled.div`
   flex-grow: 1;

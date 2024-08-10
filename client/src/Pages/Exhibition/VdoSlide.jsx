@@ -84,7 +84,7 @@ export const VdoSlide = () => {
         }}
         loop={true}
         autoplay={{
-          delay: 3200,
+          delay: 3400,
           disableOnInteraction: false, // Continue autoplay after user interactions
         }}
         // onSwiper={(swiper) => console.log(swiper)}

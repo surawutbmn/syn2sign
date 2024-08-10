@@ -4,67 +4,76 @@ import styled from "styled-components";
 import propTypes from "prop-types";
 
 function InterviewCard(props) {
+  const { question = [], std } = props;
   return (
-    <CardBox>
-      <Overlay />
-      <Row className="justify-content-around position-relative">
-        <Col xs={6}>
-          <PreviewImg
-            src={`/creator_img/interview/${props.img}`}
-            alt="interview image"
-          />
-        </Col>
-        <Col xs={5} className="d-flex flex-column">
-          <CardText>
-            <div className="text-start">
-              <h1>
-                <strong>Q{props.id}:</strong>
-              </h1>
-              <Title>
-                <strong>&ldquo;{props.title1}</strong>
-              </Title>
-            </div>
-            <div className="text-end">
-              <h3>{props.title2}&rdquo;</h3>
-            </div>
-          </CardText>
-          <LinkBtn
-            href={`https://www.instagram.com/reel/${props.ig}`}
-            target="_blank"
-          >
-            <Icon className="crl-icon me-2">
-              <FaInstagram />
-            </Icon>
-            <span>
-              บทสัมภาษณ์ของ{props.std} (start: {props.time})
-            </span>
-          </LinkBtn>
-          <LinkBtn
-            href={`https://www.instagram.com/reel/${props.yt}`}
-            target="_blank"
-          >
-            <Icon className="crl-icon me-2">
-              <FaYoutube />
-            </Icon>
-            <span>
-              บทสัมภาษณ์ของ{props.std} (start: {props.time})
-            </span>
-          </LinkBtn>
-        </Col>
-      </Row>
-    </CardBox>
+    <>
+      {question.map((question, index) => (
+        <CardBox key={index} className="mb-5">
+          <Overlay />
+          <Row className="justify-content-around position-relative">
+            <Col xs={12} lg={6}>
+              <PreviewImg
+                src={`/creator_img/interview/${question.img}`}
+                alt="interview image"
+              />
+            </Col>
+            <Col xs={12} lg={5} className="d-flex flex-column">
+              <CardText>
+                <div className="text-start">
+                  <h1>
+                    <strong>Q{question.id}:</strong>
+                  </h1>
+                  <Title>
+                    <strong>&ldquo;{question.title1}</strong>
+                  </Title>
+                </div>
+                <div className="text-end">
+                  <h3>{question.title2}&rdquo;</h3>
+                </div>
+              </CardText>
+              <LinkBtn
+                href={`https://www.instagram.com/reel/${question.ig}`}
+                target="_blank"
+              >
+                <Icon className="crl-icon me-2">
+                  <FaInstagram />
+                </Icon>
+                <span>
+                  บทสัมภาษณ์ของ{std} (start: {question.time})
+                </span>
+              </LinkBtn>
+              <LinkBtn
+                href={`https://www.youtube.com/watch?v=${question.yt}`}
+                target="_blank"
+              >
+                <Icon className="crl-icon me-2">
+                  <FaYoutube />
+                </Icon>
+                <span>
+                  บทสัมภาษณ์ของ{std} (start: {question.time})
+                </span>
+              </LinkBtn>
+            </Col>
+          </Row>
+        </CardBox>
+      ))}
+    </>
   );
 }
 
 InterviewCard.propTypes = {
-  id: propTypes.string.isRequired,
-  img: propTypes.string.isRequired,
   std: propTypes.string.isRequired,
-  ig: propTypes.string.isRequired,
-  yt: propTypes.string.isRequired,
-  time: propTypes.string.isRequired,
-  title1: propTypes.string.isRequired,
-  title2: propTypes.string.isRequired,
+  question: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      img: propTypes.string.isRequired,
+      ig: propTypes.string.isRequired,
+      yt: propTypes.string.isRequired,
+      time: propTypes.string.isRequired,
+      title1: propTypes.string.isRequired,
+      title2: propTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 export default InterviewCard;
 

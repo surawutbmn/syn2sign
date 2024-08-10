@@ -5,18 +5,24 @@
 [
 {"id":"1","coding_launguage":"HTML"},
 {"id":"2","coding_launguage":"CSS"},
-{"id":"3","coding_launguage":"JavaScript"}
+{"id":"3","coding_launguage":"JavaScript"},
+{"id":"4","coding_launguage":"PHP"}
+
 ]
 }
 ,{"type":"table","name":"coding_plugin","database":"cpl05_project","data":
 [
 {"id":"1","coding_plugin":"Vue.js"},
-{"id":"2","coding_plugin":"Laravel"}
+{"id":"2","coding_plugin":"Laravel"},
+{"id":"3","coding_plugin":"promptpay-qr"},
+{"id":"4","coding_plugin":"Bootstrap"}
+
 ]
 }
 ,{"type":"table","name":"coding_tool","database":"cpl05_project","data":
 [
-{"id":"1","coding_tool":"Visual Studio Code"}
+{"id":"1","coding_tool":"Visual Studio Code"},
+{"id":"2","coding_tool":"phpMyAdmin"}
 ]
 }
 ,{"type":"table","name":"concept","database":"cpl05_project","data":

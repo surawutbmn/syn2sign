@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
@@ -12,16 +12,15 @@ import { Col, Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
 import ExhibitImg from "./ExhibitImg";
 import RoleCard from "./RoleCard";
-import CircleLinkBtn from "../../component/Button/CircleLinkBtn";
+import CreatorHeadSection from "./CreatorHeadSection";
 
 function Students() {
   const [student, setStudent] = useState(null);
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
   const [questions, setQuestions] = useState([]);
-  const [role, setRole] = useState([]);
-  const [dev, setDev] = useState([]);
-  const [design, setDesign] = useState([]);
+  const [roles, setRole] = useState([]);
+  const [tools, setTool] = useState([]);
   const { std_id } = useParams();
 
   const findProjectById = (project_id) => {
@@ -44,36 +43,33 @@ function Students() {
       const response = await axios.get(
         `http://localhost/syn2sign/students/${std_id}`
       );
-      const studentData = response.data; // Assuming response.data is the student data
-
+      const studentData = response.data;
       if (studentData.question) {
         const parsedQuestion = JSON.parse(studentData.question);
-        setQuestions(parsedQuestion); // Assuming setQuestions is a state setter function
+        setQuestions(parsedQuestion); 
       }
 
       if (studentData.roles) {
-        const parsedRole = JSON.parse(studentData.roles); // Parse the role JSON string
-        setRole(parsedRole); // Set the parsed role
+        const parsedRole = JSON.parse(studentData.roles);
+        setRole(parsedRole);
       }
-      if (studentData.devtool) {
-        const parsedDev = JSON.parse(studentData.devtool); // Parse the role JSON string
-        setDev(parsedDev); // Set the parsed role
+      if (studentData.rectool) {
+        const parsedTool = JSON.parse(studentData.rectool);
+        setTool(parsedTool);
       }
-      if (studentData.designtool) {
-        const parsedDesign = JSON.parse(studentData.designtool); // Parse the role JSON string
-        setDesign(parsedDesign); // Set the parsed role
-      }
-
-      return studentData; // Return the fetched student data
+      return studentData;
     } catch (error) {
       console.error("Error fetching student data:", error);
       const localStudent = findStudentById(std_id);
       if (localStudent) {
         if (localStudent.roles) {
-          setRole(localStudent.roles); // Directly set the roles if available
+          setRole(localStudent.roles); // Directly set the if available
         }
         if (localStudent.question) {
-          setQuestions(localStudent.question); // Directly set the roles if available
+          setQuestions(localStudent.question); // Directly set the if available
+        }
+        if (localStudent.rectool) {
+          setQuestions(localStudent.rectool); // Directly set the if available
         }
         return localStudent; // Return local data if the API call fails
       }
@@ -142,7 +138,7 @@ function Students() {
   useEffect(() => {
     GetData();
   }, [std_id]);
-  
+
   // console.log(Exhimg);
 
   // console.log(otherStudents);
@@ -150,7 +146,8 @@ function Students() {
     if (student && project) {
       document.title = `${student.nickname_en} ${student.name_en} / ${project.name_en} - Syn2sign senior project exhibition 2024`;
     }
-  }, [student, project]);
+    window.scrollTo(0, 0);
+  }, [student, project, std_id]);
 
   if (!student) {
     return <div>Loading...</div>;
@@ -167,153 +164,47 @@ function Students() {
       <PageElement />
 
       <Container className="mt-5 position-relative">
-        <div className="d-flex">
-          <div className="text-start col-7">
-            <hr
-              style={{
-                width: "15dvw",
-                border: ".3rem solid var(--color-secondary)",
-                opacity: "1",
-              }}
-            />
-            <h2 className="txt-scu-head">Get to know {student.nickname_en},</h2>
-            <h3>Maker of {project.name_en}</h3>
-            <img
-              src={`/icon/prj/${project.icon}`}
-              alt="project icon"
-              style={{ maxWidth: "5vw", width: "100%" }}
-              loading="lazy"
-            />
-            <div className="d-flex align-items-baseline text-end my-5 w-75">
-              <img
-                src={`/icon/double-qoute.svg`}
-                alt="double qoute"
-                style={{ maxWidth: "5vw", width: "100%" }}
-                loading="lazy"
-              />
-              <h3 className="text-start ms-3">{student.qoutes}</h3>
-            </div>
-            <h3 className="text-start txt-second">
-              <strong>Contact to {student.nickname_en}</strong>
-            </h3>
-            <div className="mt-3">
-              <CircleLinkBtn
-                txt={student.email}
-                link={`mailto:${student.email}`}
-                icon={"mail"}
-                bg={"second"}
-              />
-            </div>
-            <div className="mt-2">
-              <CircleLinkBtn
-                txt={student.name_en}
-                link={student.linkin}
-                icon={"linkedin"}
-                bg={"second"}
-              />
-            </div>
-          </div>
-          <div className="">
-            <img
-              loading="lazy"
-              src={`/creator_img/profile/${student.profile_img}`}
-              alt="creator profile"
-              style={{
-                maxWidth: "35vw",
-                width: "100%",
-                borderRadius: "1.2rem",
-              }}
-            />
-            <div className="text-start">
-              <h3 className="txt-upper">
-                {student.name_en} ({student.nickname_en})
-              </h3>
-              <h5>
-                {student.name_th}({student.nickname_th})
-              </h5>
-            </div>
-          </div>
-        </div>
-
+        <CreatorHeadSection student={student} project={project} />
         <ExhibitImg name={student.nickname_en} std_id={std_id} />
-        <SectionTitle
-          title={`${student.nickname_en}\u2019s INTERVIEWS`}
-          subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
-          className=""
-        />
-        <Row xs={1} className="g-5 mb-5">
-          {questions.length > 0 &&
-            questions.map((question, index) => (
-              <Col key={index}>
-                <InterviewCard
-                  id={question.id}
-                  img={question.img}
-                  std={`${student.nickname_th}`}
-                  ig={question.ig || "C9wRgcMMBlJ"}
-                  yt={question.yt || "Uy9GKzld7jI"}
-                  time={question.time}
-                  title1={question.title1}
-                  title2={question.title2}
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en}\u2019s INTERVIEWS`}
+            subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+            className=""
+          />
+          <InterviewCard question={questions} std={student.nickname_th} />
+          <RecTools toolArr={tools} />
+        </Container>
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en}\u2019s role in Syn2sign`}
+            subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
+          />
+          <Row xs={3} className="gy-4 text-start">
+            <RoleCard roleArr={roles} />
+          </Row>
+        </Container>
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en} collaborate`}
+            subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
+            className={"header-wline mt-5"}
+          />
+          <div className="my-5">
+            {otherStudents.map((student, index) => (
+              <Row key={index}>
+                <Creators
+                  nameEN={student.name_en}
+                  email={student.email}
+                  linkedin={student.linkin}
+                  qoutes={student.qoutes}
+                  profileImg={`/creator_img/078-card.png`}
+                  stdID={student.std_id}
                 />
-              </Col>
+              </Row>
             ))}
-
-          {dev.length > 0 &&
-            dev.map((devItem, index) => (
-              <Col key={index}>
-                <img src={`/tools/devTool/${devItem.icon}`} alt="" />
-                {devItem.name} {devItem.desc}
-              </Col>
-            ))}
-          {design.length > 0 &&
-            design.map((designItem, index) => (
-              <Col key={index}>
-                <img src={`/tools/designTool/${designItem.icon}`} alt="" />
-
-                {designItem.icon}
-                {designItem.name}
-                {designItem.desc}
-              </Col>
-            ))}
-          <Col>
-            <RecTools />
-          </Col>
-        </Row>
-        <SectionTitle
-          title={`${student.nickname_en}\u2019s role in Syn2sign`}
-          subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
-        />
-        <Row xs={3} className="gy-4 text-start">
-          {role.length > 0 &&
-            role.map((roleItem, index) => {
-              return (
-                <RoleCard
-                  key={index}
-                  role={roleItem.name}
-                  icon={roleItem.icon}
-                />
-              );
-            })}
-        </Row>
-        <SectionTitle
-          title={`${student.nickname_en} collaborate`}
-          subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
-          className={"header-wline mt-5"}
-        />
-        <div className="my-5">
-          {otherStudents.map((student, index) => (
-            <Row key={index}>
-              <Creators
-                nameEN={student.name_en}
-                email={student.email}
-                linkedin={student.linkin}
-                qoutes={student.qoutes}
-                profileImg={`/creator_img/078-card.png`}
-                stdID={student.std_id}
-              />
-            </Row>
-          ))}
-        </div>
+          </div>
+        </Container>
       </Container>
     </>
   );
