@@ -70,7 +70,7 @@ function Exhibition() {
           </h1>
           <h5>
             <strong>
-              <MdLocationOn style={{ fontSize: "1.5rem" }} /> SPHERE GALLERY 1,
+              <MdLocationOn size={25} /> SPHERE GALLERY 1,
               M FLOOR, EMSPHERE
             </strong>
           </h5>
@@ -213,117 +213,9 @@ function Exhibition() {
           <div className="exh-vdosec-content mt-4">
             <VdoSlide />
           </div>
-          {/* <div className="exh-vdosec-title text-start mt-5">
-            <h2>VIDEO Syn2sign</h2>
-            <span>ภาพบรรยากาศภายในงาน</span>
-          </div>
-          <div className="exh-vdosec-content mt-4">
-            <div className="row">
-              <div className="col-4 flex-column">
-                <div className="mx-auto ratio ratio-16x9">
-                  <iframe
-                    src={`https://www.youtube-nocookie.com/embed/Kkvge3HhIZc`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="video-box"
-                  ></iframe>
-                </div>
-                <h4 className="text-start txt-sbold mt-3">
-                  ภาพบรรยากาศงาน Day 2{" "}
-                  <span
-                    style={{ fontSize: ".8rem", fontWeight: "var(--txt-med)" }}
-                  >
-                    (June 27, 2024)
-                  </span>
-                </h4>
-                <div className="insta-link-con w-50">
-                  <a
-                    href="https://www.instagram.com/reel/C9wRgcMMBlJ/?utm_source=ig_web_button_share_sheet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="icon-crl me-2">
-                      <FaInstagram />
-                    </span>
-                    <span>บทสัมภาษณ์ “ผู้เข้าชมงาน”</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="exh-content-sec my-5">
           <div className="exh-content-card">
-            {/* <div className="row row-cols-1 row-cols-lg-2 g-4"> */}
-            {/* <div className="col">
-                <div className="card-exh-link">
-                  <a
-                    href="https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=xomeDL8DZmFDNhkO"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="exh-card-ovl"></div>
-                    <div className="row g-4 card-exh-con">
-                      <div className="col-4">
-                        <div className="exh-img-pl"></div>
-                      </div>
-                      <div className="col-8 d-flex flex-column text-start">
-                        <h4 className="card-exh-title">
-                          Youtube playlist • Senior Project Showreel, Academic
-                          Year 2023
-                        </h4>
-                        <p className="card-exh-text">
-                          เราได้จัดทำ Youtube playlist รวบรวมคลิป Showreel
-                          ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566
-                          เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น
-                        </p>
-                        <div className="card-foot">
-                          <span className="btn-icon">
-                            Watch now <FaArrowRightLong />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col">
-                <div className="card-exh-link">
-                  <a
-                    href="https://www.facebook.com/media/set/?set=a.808621128076703&type=3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="exh-card-ovl"></div>
-                    <div className="row g-4 card-exh-con">
-                      <div className="col-4">
-                        <div className="exh-img-ph"></div>
-                      </div>
-                      <div className="col-8 d-flex flex-column text-start">
-                        <h4 className="card-exh-title">
-                          Exhibition Onsite Photo #syn2sign
-                        </h4>
-                        <p className="card-exh-text">
-                          รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign
-                          ที่นอกจากการจัด
-                          แสดงโชว์ผลงานจุลนิพนธ์แล้วภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย
-                        </p>
-                        <div className="card-foot">
-                          <span className="btn-icon">
-                            SEE MORE <FaArrowRightLong />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div> */}
-
-            {/* </div> */}
-            {/* <CardAdditional /> */}
             <PlaylistSlider />
             <div className="exh-knowledge-sec mt-5">
               <Knowslide />
@@ -361,18 +253,6 @@ function Exhibition() {
                       </span>
                     ))}
                   </div>
-
-                  {/* <div className="mt-6">
-                    <span className="txt-bubble me-5">{message}</span>
-                    <span className="txt-bubble  me-5">{message}</span>
-                    <span className="txt-bubble  me-5">{message}</span>
-                  </div>
-
-                  <div className="mt-6">
-                    <span className="txt-bubble me-5">{message}</span>
-                    <span className="txt-bubble  me-5">{message}</span>
-                    <span className="txt-bubble  me-5">{message}</span>
-                  </div> */}
                 </div>
               </div>
             </div>

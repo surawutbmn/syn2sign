@@ -7,7 +7,7 @@ const CardAdditional = (props) => {
     <div>
       <CardBox>
         <Overlay></Overlay>
-        <div className="col-4 me-5">
+        <div className="col-5 me-4">
           <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
         </div>
         <BoxContent>
@@ -70,6 +70,7 @@ const BoxContent = styled.div`
   flex-direction: column;
   /* padding: 30px 0; */
   position: relative;
+  flex-grow: 1;
 `;
 const BoxText = styled.div`
   flex-grow: 1;
@@ -79,9 +80,7 @@ const ImagePreview = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 40px;
-margin-left: calc(-1 * var(--bs-gutter-x)* .5);
-/* padding: 30px; */
+  border-radius: 1rem;
 `;
 
 const Overlay = styled.div`

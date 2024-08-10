@@ -11,7 +11,6 @@ function KnowledgeSlide() {
         style={{ overflow: "visible" }}
         modules={[Navigation, Autoplay]}
         slidesPerView={1.8}
-        loop={true}
         freeMode={true}
         autoplay={{
           delay: 3200,

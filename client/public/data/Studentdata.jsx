@@ -380,7 +380,7 @@ const studentsdata = [
     nickname_en: "Not",
     profile_img: "081-profile.webp",
     thumb_img: "081-thumb.webp",
-    qoutes: "ค่อยๆทำความเข้าใจปัญหาไปทีละส่วนเพื่อหาวิธีแก้ไขมัน",
+    qoutes: "ค่อยๆทำความเข้าใจปัญหาไปทีละส่วน ยิ่งเราเข้าใจมันทางออกของปัญหามันจะมาเอง",
     email: "surawut.bmn@gmail.com",
     linkin: "http://linkedin.com/in/surawut-binmamud",
     resume_filename: "-",

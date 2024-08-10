@@ -19,8 +19,7 @@ function Students() {
   const [project, setProject] = useState({});
   const [otherStudents, setOtherStudents] = useState([]);
   const [questions, setQuestions] = useState([]);
-  const [role, setRole] = useState([]);
-  const [tool, setTool] = useState([]);
+  const [roles, setRole] = useState([]);
   const { std_id } = useParams();
 
   const findProjectById = (project_id) => {
@@ -44,21 +43,15 @@ function Students() {
         `http://localhost/syn2sign/students/${std_id}`
       );
       const studentData = response.data;
-
       if (studentData.question) {
         const parsedQuestion = JSON.parse(studentData.question);
         setQuestions(parsedQuestion); 
       }
 
       if (studentData.roles) {
-        const parsedRole = JSON.parse(studentData.roles); // Parse the role JSON string
+        const parsedRole = JSON.parse(studentData.roles);
         setRole(parsedRole);
       }
-      if (studentData.rectool) {
-        const parsedDev = JSON.parse(studentData.rectool); // Parse the role JSON string
-        setTool(parsedDev);
-      }
-
       return studentData;
     } catch (error) {
       console.error("Error fetching student data:", error);
@@ -69,9 +62,6 @@ function Students() {
         }
         if (localStudent.question) {
           setQuestions(localStudent.question); // Directly set the if available
-        }
-        if (localStudent.rectool) {
-          setTool(localStudent.rectool); // Directly set the if available
         }
         return localStudent; // Return local data if the API call fails
       }
@@ -140,7 +130,7 @@ function Students() {
   useEffect(() => {
     GetData();
   }, [std_id]);
-  
+
   // console.log(Exhimg);
 
   // console.log(otherStudents);
@@ -165,66 +155,47 @@ function Students() {
       <PageElement />
 
       <Container className="mt-5 position-relative">
-        <CreatorHeadSection student={student} project={project}/>
+        <CreatorHeadSection student={student} project={project} />
         <ExhibitImg name={student.nickname_en} std_id={std_id} />
-        <SectionTitle
-          title={`${student.nickname_en}\u2019s INTERVIEWS`}
-          subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
-          className=""
-        />
-        <Row xs={1} className="g-5 mb-5">
-          {questions.length > 0 &&
-            questions.map((question, index) => (
-              <Col key={index}>
-                <InterviewCard
-                  id={question.id}
-                  img={question.img}
-                  std={`${student.nickname_th}`}
-                  ig={question.ig || "C9wRgcMMBlJ"}
-                  yt={question.yt || "Uy9GKzld7jI"}
-                  time={question.time}
-                  title1={question.title1}
-                  title2={question.title2}
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en}\u2019s INTERVIEWS`}
+            subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
+            className=""
+          />
+          <InterviewCard question={questions} std={student.nickname_th}/>
+          <RecTools toolArr={student.rectool} />
+        </Container>
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en}\u2019s role in Syn2sign`}
+            subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
+          />
+          <Row xs={3} className="gy-4 text-start">
+            <RoleCard roleArr={roles} />
+          </Row>
+        </Container>
+        <Container>
+          <SectionTitle
+            title={`${student.nickname_en} collaborate`}
+            subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
+            className={"header-wline mt-5"}
+          />
+          <div className="my-5">
+            {otherStudents.map((student, index) => (
+              <Row key={index}>
+                <Creators
+                  nameEN={student.name_en}
+                  email={student.email}
+                  linkedin={student.linkin}
+                  qoutes={student.qoutes}
+                  profileImg={`/creator_img/078-card.png`}
+                  stdID={student.std_id}
                 />
-              </Col>
+              </Row>
             ))}
-          <RecTools toolArr={tool} />
-        </Row>
-        <SectionTitle
-          title={`${student.nickname_en}\u2019s role in Syn2sign`}
-          subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
-        />
-        <Row xs={3} className="gy-4 text-start">
-          {role.length > 0 &&
-            role.map((roleItem, index) => {
-              return (
-                <RoleCard
-                  key={index}
-                  role={roleItem.name}
-                  icon={roleItem.icon}
-                />
-              );
-            })}
-        </Row>
-        <SectionTitle
-          title={`${student.nickname_en} collaborate`}
-          subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
-          className={"header-wline mt-5"}
-        />
-        <div className="my-5">
-          {otherStudents.map((student, index) => (
-            <Row key={index}>
-              <Creators
-                nameEN={student.name_en}
-                email={student.email}
-                linkedin={student.linkin}
-                qoutes={student.qoutes}
-                profileImg={`/creator_img/078-card.png`}
-                stdID={student.std_id}
-              />
-            </Row>
-          ))}
-        </div>
+          </div>
+        </Container>
       </Container>
     </>
   );

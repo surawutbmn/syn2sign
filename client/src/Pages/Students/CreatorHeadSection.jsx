@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import CircleLinkBtn from "../../component/Button/CircleLinkBtn";
 import propTypes from "prop-types";
+import { Container } from "react-bootstrap";
 
 function CreatorHeadSection(props) {
   const { student = {}, project = {} } = props;
 
   return (
-    <>
+    <Container>
       <div className="d-flex">
         <div className="d-flex flex-column col-7 pe-3">
           <div className="mb-5 d-flex flex-column align-items-start">
@@ -24,14 +25,16 @@ function CreatorHeadSection(props) {
               <h3 className="txt-cap">Maker of {project.name_en}</h3>
             </div>
           </div>
-          <QouteBox className="d-flex align-items-baseline ms-auto mb-5">
-            <img
-              src={`/icon/double-qoute.svg`}
-              alt="double qoute"
-              style={{ maxWidth: "5vw", width: "100%" }}
-              loading="lazy"
-            />
-            <h3 className="ms-3 text-start">{student.qoutes}</h3>
+          <QouteBox className=" ms-auto mb-5 position-relative">
+            <div className="d-flex align-items-baseline quotecon">
+              <img
+                src={`/icon/double-qoute.svg`}
+                alt="double qoute"
+                style={{ maxWidth: "5vw", width: "100%" }}
+                loading="lazy"
+              />
+              <h3 className="ms-3 text-start">{student.qoutes}</h3>
+            </div>
           </QouteBox>
 
           <div className="text-start mt-4">
@@ -80,7 +83,7 @@ function CreatorHeadSection(props) {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 }
 
@@ -104,8 +107,10 @@ CreatorHeadSection.propTypes = {
 export default CreatorHeadSection;
 
 const QouteBox = styled.div`
-width: 80%;
-`
+  width: 100%;
+  height:100%;
+  .quotecon{position: absolute; top:0; right:0; width:80%;}
+`;
 const LineHead = styled.hr`
   width: 15dvw;
   border: 0.3rem solid var(--color-secondary);
