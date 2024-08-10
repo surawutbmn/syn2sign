@@ -121,7 +121,7 @@ function Project() {
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept proj_id={prj_id}/>,
+      content: <CardIdeaConcept proj_id={prj_id} />,
     },
     {
       title: "KeyWORDS",
@@ -131,7 +131,7 @@ function Project() {
     {
       title: "MAIN Function",
       subtitle: "ฟังก์ชันหลัก",
-      content: <CardMainFunction/>,
+      content: <CardMainFunction proj_id={prj_id} />,
     },
     {
       title: "DEVELOPMENT TOOLs",
@@ -141,22 +141,22 @@ function Project() {
     {
       title: "DESIGN & PRESENTATION TOOLs",
       subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
-      content: <CardToolDesignPresentation/>,
+      content: <CardToolDesignPresentation />,
     },
     {
       title: "Design PROCESS",
       subtitle: "กระบวนการออกแบบผลงาน",
-      content: <CardDesignProcess/>,
+      content: <CardDesignProcess />,
     },
     {
       title: "target group",
       subtitle: "กลุ่มเป้าหมาย",
-      content: <CardTargetGroup/>,
+      content: <CardTargetGroup />,
     },
     {
       title: "Testing & Feedback",
       subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: <CardFeedback/>,
+      content: <CardFeedback />,
     },
     {
       title: "creator",
