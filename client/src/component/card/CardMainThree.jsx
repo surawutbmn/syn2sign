@@ -46,7 +46,7 @@ const CardMainThree = (props) => {
           <div className="col-12 txt-body1">
             <ThreeLogoExhibition src={props.logo} />
           </div>
-          <div className="col-12 txt-head3 txt-bold txt-second mt-4">
+          <div className="col-12 txt-head3 txt-bold txt-prim mt-4">
             {props.name}
           </div>
           <div className="col-12 txt-body1 txt-grey mb-4 mt-4">

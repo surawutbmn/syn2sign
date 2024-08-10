@@ -34,7 +34,7 @@ const CardFeedback = () => {
   return (
     <div className="d-flex row" style={{ marginTop: "-50px" }}>
       <div className="col-7 text-start">
-        <div className="txt-second txt-head2 txt-upper">Testing</div>
+        <div className="txt-prim txt-head2 txt-upper">Testing</div>
         <div className="txt-body2 mb-4">
           {feedback.th || "No data available"}
         </div>
@@ -47,7 +47,7 @@ const CardFeedback = () => {
         <BoxCircle>
           <div className="txt-head3">ด้านการออกแบบ</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
             {feedback.num_design || "0"}
           </div>
         </BoxCircle>
@@ -55,7 +55,7 @@ const CardFeedback = () => {
         <BoxCircle>
           <div className="txt-head3">ด้านการใช้งาน</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
             {feedback.num_use || "0"}
           </div>
         </BoxCircle>
@@ -63,7 +63,7 @@ const CardFeedback = () => {
         <BoxCircle>
           <div className="txt-head3">ด้านภาพรวม</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-second txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
             {feedback.num_overall || "0"}
           </div>
         </BoxCircle>
@@ -74,15 +74,15 @@ const CardFeedback = () => {
       </div>
 
       <div className="col-4 text-start">
-        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการออกแบบ</div>
+        <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านการออกแบบ</div>
         <div>{feedback.opinion_design || "No data available"}</div>
       </div>
       <div className="col-4 text-start">
-        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านการใช้งาน</div>
+        <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านการใช้งาน</div>
         <div>{feedback.opinion_use || "No data available"}</div>
       </div>
       <div className="col-4 text-start">
-        <div className="txt-second txt-sbold txt-head3 mb-3">ด้านภาพรวม</div>
+        <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านภาพรวม</div>
         <div>{feedback.opinion_overall || "No data available"}</div>
       </div>
     </div>

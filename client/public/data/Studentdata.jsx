@@ -33,7 +33,7 @@ const studentsdata = [
       shreel_link: "_41WQgd5qKw",
     },
     roles: [
-      { id: "1", name: "Sponsor Relation & Financial", icon: "sponser.svg" },
+      { id: "1", name: "Sponsor Relation & Financial", icon: "sponsor.svg" },
       { id: "2", name: "Public Relation & Marketing", icon: "pr.svg" },
       { id: "3", name: "Exhibition Knowledge Board", icon: "board.svg" },
       { id: "4", name: "Pillar LED ​Screen Media", icon: "led.svg" },
@@ -199,7 +199,7 @@ const studentsdata = [
       shreel_link: "OwyQ7eIHmoc",
     },
     roles: [
-      { id: "1", name: "Sponsor Relation & Financial", icon: "sponser.svg" },
+      { id: "1", name: "Sponsor Relation & Financial", icon: "sponsor.svg" },
       { id: "2", name: "Location and equipments", icon: "location.svg" },
       { id: "3", name: "Exhibition Knowledge Board", icon: "board.svg" },
       { id: "4", name: "Animated media screen on LED pillar", icon: "led.svg" },
@@ -335,7 +335,7 @@ const studentsdata = [
       shreel_link: "_41WQgd5qKw",
     },
     roles: [
-      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponser.svg" },
+      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponsor.svg" },
       { id: "2", name: "Public Relation & Marketing", icon: "pr.svg" },
       { id: "3", name: "Interactive designer", icon: "interact.svg" },
       { id: "4", name: "Website Designer", icon: "web.svg" },
@@ -473,7 +473,7 @@ const studentsdata = [
       shreel_link: "OwyQ7eIHmoc",
     },
     roles: [
-      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponser.svg" },
+      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponsor.svg" },
       { id: "2", name: "Exhibition Knowledge Board", icon: "board.svg" },
     ],
     question: [
@@ -609,7 +609,7 @@ const studentsdata = [
       shreel_link: "KhAfnkMRctc",
     },
     roles: [
-      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponser.svg" },
+      { id: "1", name: "Sponsor Relation & Financial ", icon: "sponsor.svg" },
       { id: "2", name: "Exhibition Knowledge Board", icon: "board.svg" },
     ],
     question: [

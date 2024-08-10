@@ -16,8 +16,8 @@
   -moz-osx-font-smoothing: grayscale;
   --color-light: rgb(245, 245, 245);
   --color-dark: rgb(18, 18, 18);
-  --color-primary: rgb(83, 76, 254);
-  --color-secondary: rgb(5, 186, 100);
+  --color-primary: rgb(5, 186, 100);
+  --color-secondary: rgb(83, 76, 254);
   --filter-color-secondary: brightness(0) saturate(100%) invert(50%) sepia(43%) saturate(2498%) hue-rotate(117deg) brightness(95%) contrast(96%);
   --color-yellow: rgb(255, 222, 23);
   --color-grey: rgb(142, 142, 142);;
@@ -36,7 +36,7 @@
   position: relative;
   /* grid-template-rows: auto 1fr auto;   */
   min-height: 100vh;
-  max-width: 1920px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 body {
@@ -89,6 +89,7 @@ b{font-weight: var(--txt-bold);}
 .txt-second {  color: var(--color-secondary);}
 .link-txt{color: var(--color-light); text-decoration: none;}
 .txt-scu-head{color: var(--color-secondary); font-weight: var(--txt-bold); text-transform: uppercase;}
+.txt-pru-head{color: var(--color-primary); font-weight: var(--txt-bold); text-transform: uppercase;}
 .header-wline{border-left: solid .5rem ; padding-left: 1rem;}
 
 .txt-grey{

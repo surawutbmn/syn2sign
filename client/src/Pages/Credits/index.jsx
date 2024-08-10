@@ -37,9 +37,9 @@ function Credit() {
   return (
     <>
       <PageElement />
-      <Container className="mx-auto w-100 position-relative">
+      <Container className="position-relative">
         <div className="text-center mt-5">
-          <h1 className="txt-second txt-sbold">CREDIT Syn2sign</h1>
+          <h1 className="txt-prim txt-sbold">CREDIT Syn2sign</h1>
           <div className="mt-5">
             <span className="txt-sbold txt-upper">
               <h3 className="mb-4">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
@@ -187,7 +187,7 @@ function Credit() {
         </div>
         <Container className="mt-4">
           <h2 className="txt-scdhead mb-4">INSI(gn)DER</h2>
-          <div className="grid grid-cols-2 grid-cols-md-1 ml-20 team-credit gap-4">
+          <div className="grid grid-cols-2 grid-cols-md-1 ml-lg-10 ml-20 team-credit gap-4">
             <div className="d-flex">
               <div className="ele-icon">
                 <img src={graphic} alt="graphic icon" />
@@ -211,7 +211,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <div className="ele-icon">
-                <img src={sp} alt="sponser icon" />
+                <img src={sp} alt="sponsor icon" />
               </div>
               <div className="text-start ">
                 <span>
@@ -394,219 +394,219 @@ function Credit() {
             </div>
           </div>
         </Container>
-        <Container className="mt-6 sponser-con justify-content-center">
-            <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
-            <Col xs={12} className=" mb-5">
+        <Container className="mt-6 sponsor-con justify-content-center">
+          <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
+          <Col xs={12} className=" mb-5">
+            <a
+              href="http://https://emdistrict.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="txt-link"
+            >
+              <img
+                src={em}
+                alt="emdistrict logo"
+                loading="lazy"
+                className="spon-logo"
+                style={{ maxHeight: "6rem" }}
+              />
+              <p>
+                <u>The Em District</u> <br /> ดิ เอ็มดิสทริค
+              </p>
+            </a>
+          </Col>
+          <div className="grid grid-cols-3 grid-cols-md-1 gap-5">
+            <div className="d-flex justify-content-center">
               <a
-                href="http://https://emdistrict.com/"
+                href="https://www.ddproperty.com/en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="txt-link"
               >
                 <img
-                  src={em}
-                  alt="emdistrict logo"
+                  src={dd}
+                  alt="ddproperty logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "18rem" }}
+                />
+
+                <p>
+                  <u>DDproperty</u>
+                  <br />
+                  บริษัท ออลพร็อพเพอร์ตี้ มีเดีย จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                href="https://funcslash.com/styleyeet/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <img
+                  src={st}
+                  alt="styleyeet logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "8em" }}
+                />
+                <p>
+                  <u>sty&#125;e:yeet/</u>
+                  <br />
+                  ศิษย์เก่าเอกออกแบบเว็บและสื่อโต้ตอบ รุ่น 16
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                href="https://ducklab.co.th/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <img
+                  src={dl}
+                  alt="ducklab logo"
                   loading="lazy"
                   className="spon-logo"
                   style={{ maxHeight: "6rem" }}
                 />
                 <p>
-                  <u>The Em District</u> <br /> ดิ เอ็มดิสทริค
+                  <u>DUCK LAB</u>
+                  <br />
+                  บริษัท ดัค แล็บ จำกัด
                 </p>
               </a>
-            </Col>
-            <div className="grid grid-cols-3 gap-5">
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://www.ddproperty.com/en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={dd}
-                    alt="ddproperty logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "18rem" }}
-                  />
-
-                  <p>
-                    <u>DDproperty</u>
-                    <br />
-                    บริษัท ออลพร็อพเพอร์ตี้ มีเดีย จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://funcslash.com/styleyeet/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={st}
-                    alt="styleyeet logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "8em" }}
-                  />
-                  <p>
-                    <u>sty&#125;e:yeet/</u>
-                    <br />
-                    ศิษย์เก่าเอกออกแบบเว็บและสื่อโต้ตอบ รุ่น 16
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://ducklab.co.th/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={dl}
-                    alt="ducklab logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem" }}
-                  />
-                  <p>
-                    <u>DUCK LAB</u>
-                    <br />
-                    บริษัท ดัค แล็บ จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://www.merge.co.th/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={meg}
-                    alt="merge logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "10rem" }}
-                  />
-                  <p>
-                    <u>MERGE DIGITAL AGENCY</u>
-                    <br />
-                    บริษัท เมิร์จ ดิจิตอล เอเจนซี่ จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://nabladigital.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={nb}
-                    alt="nabladigital logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "9rem" }}
-                  />
-                  <p>
-                    <u>NABLA DIGITAL COMPANY LIMITED</u>
-                    <br />
-                    บริษัท แนบบลา ดิจิตอล จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  href="https://www.deemmi.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="txt-link"
-                >
-                  <img
-                    src={dm}
-                    alt="deemi logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
-                  />
-                  <p>
-                    <u>Deemmi AI and Tech Consultant</u>
-                    <br />
-                    บริษัท ดีมมี่ คอนซัลแตนท์ จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  className="txt-link"
-                  href="https://www.diloproducts.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={dlo}
-                    alt="dilo logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "8rem" }}
-                  />
-                  <p>
-                    <u>DILO PRODUCTS GROUP</u>
-                    <br />
-                    บริษัท ดิโล โปรดักส์ กรุ๊ป จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  className="txt-link"
-                  href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={ql}
-                    alt="qlight logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
-                  />
-                  <p>
-                    <u>Q Light & Sound</u>
-                    <br />
-                    บริษัท คิว ไลท์ แอนด์ ซาวด์ จำกัด
-                  </p>
-                </a>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a
-                  className="txt-link"
-                  href="https://www.facebook.com/ApologizeCh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={m7}
-                    alt="mango7 logo"
-                    loading="lazy"
-                    className="spon-logo"
-                    style={{ maxHeight: "6rem", maxWidth: "4rem" }}
-                  />
-                  <p>
-                    <u>Manggo07 Official</u>
-                    <br />
-                    แมงโก้ เซเว่น ออฟฟิศเชียล
-                  </p>
-                </a>
-              </div>
             </div>
+            <div className="d-flex justify-content-center">
+              <a
+                href="https://www.merge.co.th/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <img
+                  src={meg}
+                  alt="merge logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "10rem" }}
+                />
+                <p>
+                  <u>MERGE DIGITAL AGENCY</u>
+                  <br />
+                  บริษัท เมิร์จ ดิจิตอล เอเจนซี่ จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                href="https://nabladigital.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <img
+                  src={nb}
+                  alt="nabladigital logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "9rem" }}
+                />
+                <p>
+                  <u>NABLA DIGITAL COMPANY LIMITED</u>
+                  <br />
+                  บริษัท แนบบลา ดิจิตอล จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                href="https://www.deemmi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="txt-link"
+              >
+                <img
+                  src={dm}
+                  alt="deemi logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                />
+                <p>
+                  <u>Deemmi AI and Tech Consultant</u>
+                  <br />
+                  บริษัท ดีมมี่ คอนซัลแตนท์ จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                className="txt-link"
+                href="https://www.diloproducts.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={dlo}
+                  alt="dilo logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "8rem" }}
+                />
+                <p>
+                  <u>DILO PRODUCTS GROUP</u>
+                  <br />
+                  บริษัท ดิโล โปรดักส์ กรุ๊ป จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                className="txt-link"
+                href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={ql}
+                  alt="qlight logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                />
+                <p>
+                  <u>Q Light & Sound</u>
+                  <br />
+                  บริษัท คิว ไลท์ แอนด์ ซาวด์ จำกัด
+                </p>
+              </a>
+            </div>
+            <div className="d-flex justify-content-center">
+              <a
+                className="txt-link"
+                href="https://www.facebook.com/ApologizeCh/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={m7}
+                  alt="mango7 logo"
+                  loading="lazy"
+                  className="spon-logo"
+                  style={{ maxHeight: "6rem", maxWidth: "4rem" }}
+                />
+                <p>
+                  <u>Manggo07 Official</u>
+                  <br />
+                  แมงโก้ เซเว่น ออฟฟิศเชียล
+                </p>
+              </a>
+            </div>
+          </div>
         </Container>
         <Container className="my-5">
           <h2 className="mb-4 txt-scdhead">onsite supporter</h2>

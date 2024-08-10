@@ -37,14 +37,14 @@ const Creators: React.FC<CreatorsProps> = ({
   };
   return (
     <Row className="align-items-center">
-      <Col>
+      <Col >
         <img
           src={profileImg}
           alt=""
           style={{ width: "100%", maxWidth: "30dvw" }}
         />
       </Col>
-      <Col xs={7} className="text-start">
+      <Col xs={12} md={7} className="text-start">
         <DetailBox>
           <div className="d-flex align-items-baseline">
             <DoubleQoute
@@ -116,7 +116,7 @@ const ReadMore = styled.span`
   border-radius: 100px;
   transition: all 0.3s ease;
   &:hover {
-    border-color: var(--color-secondary);
-    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
   }
 `;

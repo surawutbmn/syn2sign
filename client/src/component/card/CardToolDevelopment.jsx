@@ -36,7 +36,7 @@ const CardToolDevelopment = () => {
     <Container>
       <LeftColumn>
         <Section className="coding-language text-start">
-          <div className="txt-second txt-head3 txt-upper">Coding Language</div>
+          <div className="txt-prim txt-head3 txt-upper">Coding Language</div>
           <FlexContainer>
             {codingLanguages.map((item) => (
               <ItemBox key={item.id}>
@@ -48,7 +48,7 @@ const CardToolDevelopment = () => {
         </Section>
 
         <Section className="database-system text-start">
-          <div className="txt-second txt-head3 txt-upper">Database System</div>
+          <div className="txt-prim txt-head3 txt-upper">Database System</div>
           <FlexContainer>
             {databaseSystems.map((item) => (
               <ItemBox key={item.id}>
@@ -62,7 +62,7 @@ const CardToolDevelopment = () => {
 
       <RightColumn>
         <Section className="coding-plugin text-start">
-          <div className="txt-second txt-head3 txt-upper">Coding Plugin / Library</div>
+          <div className="txt-prim txt-head3 txt-upper">Coding Plugin / Library</div>
           <FlexContainer>
             {codingPlugins.map((item, index) => (
               <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
@@ -74,7 +74,7 @@ const CardToolDevelopment = () => {
         </Section>
 
         <Section className="coding-tools text-start">
-          <div className="txt-second txt-head3 txt-upper">Coding Tools</div>
+          <div className="txt-prim txt-head3 txt-upper">Coding Tools</div>
           <FlexContainer>
             {codingTools.map((item) => (
               <ItemBox key={item.id}>

@@ -13,6 +13,8 @@ import Knowslide from "./KnowledgeSlide";
 import { VdoSlide } from "./VdoSlide";
 // import CardAdditional from "../../component/card/CardAdditional";
 import PlaylistSlider from "../../component/Slider/PlaylistSlider";
+import { Container, Row } from "react-bootstrap";
+import SectionTitle from "../../component/SectionTitle";
 // import { FaYoutube } from "react-icons/fa";
 //
 function Exhibition() {
@@ -50,7 +52,6 @@ function Exhibition() {
   return (
     <>
       <div className="bg-gd-btr"></div>
-
       <div className="exh-banner exh-banner-bg mt-5">
         <div className="exh-banner-overlay"></div>
         <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
@@ -70,49 +71,41 @@ function Exhibition() {
           </h1>
           <h5>
             <strong>
-              <MdLocationOn size={25} /> SPHERE GALLERY 1,
-              M FLOOR, EMSPHERE
+              <MdLocationOn size={25} /> SPHERE GALLERY 1, M FLOOR, EMSPHERE
             </strong>
           </h5>
           <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
         </div>
       </div>
-      <div className="container my-6">
+      <Container className="my-6">
         <div className="exh-report-sec mb-6">
-          <div className="row row-cols-1 row-cols-md-2 g-4">
+          <Row xs={1} md={2} className=" g-4">
             <div className="col">
-              <a
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-txt"
-              >
-                <div className="card text-start">
-                  <div className="exh-ovl"></div>
-                  <div className="card-body">
-                    <h3 className="card-exh-title mb-2">
-                      <span className="txt-upper">Evaluate exhibition </span>
-                      Syn2sign
-                    </h3>
-                    <p className="card-text txt-grey fs-5">
-                      <MdPerson className="me-2 fs-4 d-lg-block d-none" />
-                      ผลการประเมินความพึงพอใจ จากผู้เข้าชมงาน 150 ท่าน
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <div className="card-exh-desc">
-                        {" "}
-                        <animated.div>
-                          {props.number.to((n) => n.toFixed(2))}
-                        </animated.div>
-                      </div>
-                      <div className="card-exh-icon d-flex align-items-end">
-                        <div className="crl-icon-line"></div>
-                        <MdPerson />
-                      </div>
+              <div className="card text-start">
+                <div className="exh-ovl"></div>
+                <div className="card-body">
+                  <h3 className="card-exh-title mb-2">
+                    <span className="txt-upper">Evaluate exhibition </span>
+                    Syn2sign
+                  </h3>
+                  <p className="card-text txt-grey fs-5">
+                    <MdPerson className="me-2 fs-4 d-lg-block d-none" />
+                    ผลการประเมินความพึงพอใจ จากผู้เข้าชมงาน 150 ท่าน
+                  </p>
+                  <div className="d-flex justify-content-between">
+                    <div className="card-exh-desc">
+                      {" "}
+                      <animated.div>
+                        {props.number.to((n) => n.toFixed(2))}
+                      </animated.div>
+                    </div>
+                    <div className="card-exh-icon d-flex align-items-end">
+                      <div className="crl-icon-line"></div>
+                      <MdPerson />
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="col">
               <a
@@ -131,9 +124,9 @@ function Exhibition() {
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ ที่เกี่ยวข้องกับนิทรรศการแสดง<br></br>
-                      ผลงานสำเร็จการศึกษาของนักศึกษา syn2sign <br></br>
-                      Senior Project Exhibition 2024
+                      รายงานฉบับย่อ ที่เกี่ยวข้องกับนิทรรศการแสดง
+                      ผลงานสำเร็จการศึกษาของนักศึกษา syn2sign Senior Project
+                      Exhibition 2024
                     </p>
                     <br className="d-xl-none d-block" />
                     <div className="card-exh-icon text-end">
@@ -146,7 +139,7 @@ function Exhibition() {
             </div>
             <div className="col">
               <a
-                href="http://"
+                href="https://www.figma.com/design/271FigZHhsvQ3aZz6ivp55/2024-Syn2sign-entry-booklet-draft?node-id=2019-320&t=lpSO2hfUPHLPE10b-1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-txt"
@@ -160,9 +153,9 @@ function Exhibition() {
                     </h3>
                     <span className="txt-grey">(Senior Project, FIGMA)</span>
                     <p className="card-text mt-4">
-                      หนังสือรวบรวมผลงานจุลนิพนธ์ ของนักศึกษา สาขา<br></br>
-                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>
-                      คณะไอซีที รุ่นที่ 18 ม.ศิลปากร ปีการศึกษา 2566
+                      หนังสือรวบรวมผลงานจุลนิพนธ์ ของนักศึกษา สาขา
+                      วิชาเอกการออกแบบอินเทอร์แอคทีฟแอปพลิเคชัน คณะไอซีที
+                      รุ่นที่ 18 ม.ศิลปากร ปีการศึกษา 2566
                     </p>
                     <br className="d-xxl-block d-none" />
                     <div className="card-exh-icon text-end">
@@ -175,7 +168,7 @@ function Exhibition() {
             </div>
             <div className="col">
               <a
-                href="http://"
+                href="https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/EbEjAOTvh3VKs360KFTqdVgBfe7DZZ7vVyPbEXTvkVzF_Q?e=1t23IC"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-txt"
@@ -190,9 +183,9 @@ function Exhibition() {
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ<br></br>
-                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน <br></br>
-                      ชั้นปีที่ 4 ปีการศึกษา 2566
+                      รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ
+                      ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน ชั้นปีที่ 4
+                      ปีการศึกษา 2566
                     </p>
                     <br />
                     <div className="card-exh-icon text-end">
@@ -203,62 +196,60 @@ function Exhibition() {
                 </div>
               </a>
             </div>
-          </div>
+          </Row>
         </div>
-        <div className="exh-vdo-sec">
-          <div className="exh-vdosec-title text-start">
-            <h2>VIDEO Syn2sign</h2>
-            <span>ความรู้สึกหลังการจัดงานนิทรรศการ</span>
+      </Container>
+      <div className="mb-6">
+        <VdoSlide />
+      </div>
+      <div className="mb-6">
+        <PlaylistSlider />
+      </div>
+      <div className="mb-6">
+        <Knowslide />
+      </div>
+      <Container className="mt-5 mb-6">
+        <div className="feedback-con">
+          <div className="paper-plane">
+            <img src={paper_plane} alt="paper plane" loading="lazy" />
           </div>
-          <div className="exh-vdosec-content mt-4">
-            <VdoSlide />
-          </div>
-        </div>
-        <div className="exh-content-sec my-5">
-          <div className="exh-content-card">
-            <PlaylistSlider />
-            <div className="exh-knowledge-sec mt-5">
-              <Knowslide />
-            </div>
-            <div className="exh-feedback-sec mt-5">
-              <div className="feedback-con">
-                <div className="paper-plane">
-                  <img src={paper_plane} alt="paper plane" loading="lazy" />
-                </div>
-                <h3 className="text-start txt-second mt-3 ms-3">
-                  ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
-                </h3>
-
-                <div className="text-center txt-bubble-con">
-                  <div className="mt-6">
-                    {displayMessages.slice(0, 3).map((message, index) => (
-                      <span key={index} className="txt-bubble me-5">
-                        {message}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-6">
-                    {displayMessages.slice(3, 6).map((message, index) => (
-                      <span key={index} className="txt-bubble me-5">
-                        {message}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-6">
-                    {displayMessages.slice(6, 9).map((message, index) => (
-                      <span key={index} className="txt-bubble me-5">
-                        {message}
-                      </span>
-                    ))}
-                  </div>
+          <span className="txt-prim feedback-title">
+            ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
+          </span>
+          <div className="txt-con-feedback">
+            {displayMessages.map((message, index) => (
+              <div className={`txt-bubble-con position-${index + 1}`} key={index}>
+                <div className="txt-bubble">
+                  <span>{message}</span>
                 </div>
               </div>
+            ))}
+            {/* <div className="mt-6">
+              {displayMessages.slice(0, 3).map((message, index) => (
+                <span key={index} className="txt-bubble me-5">
+                  {message}
+                </span>
+              ))}
             </div>
+
+            <div className="mt-6">
+              {displayMessages.slice(3, 6).map((message, index) => (
+                <span key={index} className="txt-bubble me-5">
+                  {message}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-6">
+              {displayMessages.slice(6, 9).map((message, index) => (
+                <span key={index} className="txt-bubble me-5">
+                  {message}
+                </span>
+              ))}
+            </div> */}
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

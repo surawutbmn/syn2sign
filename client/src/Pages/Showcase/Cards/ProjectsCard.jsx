@@ -101,7 +101,7 @@ const HeadText = styled.div`
   color: var(--color-grey);
 `;
 const Title = styled.h4`
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: var(--txt-sbold);
 `;
 const ImgThumb = styled.div`
@@ -123,9 +123,15 @@ const CardProjects = styled.div`
     margin: -0.3rem 0 1rem 0;
   }
   .creators-icon {
-    min-width: 5dvw;
+    min-width: 5em;
   }
   .projects-card-icon img {
-    width: 5.3dvw;
+    width: 5em;
+  }
+  @media (max-width: 575.98px) {
+    padding: 10px 15px;
+    .projects-card-icon img {
+      width: 4em;
+    }
   }
 `;

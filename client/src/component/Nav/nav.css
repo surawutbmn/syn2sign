@@ -46,7 +46,7 @@ padding: 0;
 
 .link-nav.active,
 .link-nav:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: white;
     font-weight: var(--txt-med);
 }

@@ -85,7 +85,7 @@ const CardBox = styled.div`
   overflow: hidden;
   background-color: var(--color-light);
   padding: 1.8rem 0.3rem;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   border-radius: 1.3rem;
 `;
 const Title = styled.span`
@@ -114,11 +114,14 @@ const LinkBtn = styled.a`
   text-decoration: none;
   transition: all 0.3s ease;
   &:hover {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
   }
   &:hover .crl-icon {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+  }
+  @media (max-width: 767.98px) {
+    width: 100%;
   }
 `;
 

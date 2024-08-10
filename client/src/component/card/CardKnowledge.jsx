@@ -12,12 +12,12 @@ function CardKnowledge(props) {
         </div>
         <BoxContent>
           <div className="card-body text-start">
-            <div className="">
-              <h4 className="card-exh-title mt-3">
+            <Title>
+              <h4 className="card-exh-title">
                 {props.title ||
                   "Starting Up • 10 Components for a Digital Platform"}
               </h4>
-            </div>
+            </Title>
             <BoxText
               className="txt-dark mb-5"
               dangerouslySetInnerHTML={{
@@ -29,11 +29,12 @@ function CardKnowledge(props) {
               }}
             />
           </div>
-            <ArrowButton
-              text={`${props.btn}`}
-              style={`txt-head4`}
-              icon={props.btnIcon}
-            />
+          <ArrowButton
+            text={`${props.btn}`}
+            style={`txt-head4`}
+            link={props.link}
+            icon={props.btnIcon}
+          />
         </BoxContent>
       </CardBox>
     </>
@@ -55,7 +56,7 @@ export default CardKnowledge;
 const CardBox = styled.div`
   width: 100%;
   height: auto;
-  min-height: 700px; 
+  min-height: 700px;
   background: white;
   border-radius: 1rem;
   overflow: hidden;
@@ -63,9 +64,15 @@ const CardBox = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  &:hover button {
-    color: var(--color-secondary);
-    border: solid 0.05rem var(--color-secondary);
+  /* &:hover button {
+    color: var(--color-primary);
+    border: solid 0.05rem var(--color-primary);
+  } */
+  @media (max-width: 991.98px) {
+    min-height: 600px;
+  }
+  @media (max-width: 767.98px) {
+    min-height: 500px;
   }
 `;
 const BoxContent = styled.div`
@@ -76,8 +83,16 @@ const BoxContent = styled.div`
   position: relative;
   flex-grow: 1;
 `;
+const Title = styled.div`
+  @media (max-width: 767.98px) {
+    font-size: 1.3rem;
+  }
+`;
 const BoxText = styled.div`
   flex-grow: 1;
+  @media (max-width: 767.98px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const ImagePreview = styled.img`

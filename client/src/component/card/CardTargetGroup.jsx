@@ -39,10 +39,10 @@ const CardTargetGroup = () => {
 
   return (
     <div className='d-flex row text-start txt-body1 ' style={{ marginTop: "-50px" }}>
-        <div className="Demography"><span className='txt-second txt-sbold'>Demography: </span><span className='txt-body2'>{targetGroupData.Demography}</span></div>
-        <div className="Group"><span className='txt-second txt-sbold'>Group: </span><span className='txt-body2'>{targetGroupData.Group}</span></div>
-        <div className="Personality"><span className='txt-second txt-sbold'>Personality: </span><span className='txt-body2'>{targetGroupData.Personality}</span></div>
-        <div className="Behavior"><span className='txt-second txt-sbold'>Behavior: </span><span className='txt-body2'>{targetGroupData.Behavior}</span></div>
+        <div className="Demography"><span className='txt-prim txt-sbold'>Demography: </span><span className='txt-body2'>{targetGroupData.Demography}</span></div>
+        <div className="Group"><span className='txt-prim txt-sbold'>Group: </span><span className='txt-body2'>{targetGroupData.Group}</span></div>
+        <div className="Personality"><span className='txt-prim txt-sbold'>Personality: </span><span className='txt-body2'>{targetGroupData.Personality}</span></div>
+        <div className="Behavior"><span className='txt-prim txt-sbold'>Behavior: </span><span className='txt-body2'>{targetGroupData.Behavior}</span></div>
     </div>
   )
 }

@@ -213,7 +213,7 @@ function Project() {
             className="prj-sec-icon"
           />
           <div className="text-start mx-3">
-            <h1 className="txt-scu-head ">
+            <h1 className="txt-pru-head ">
               <strong>{project.name_en}</strong>
             </h1>
             <p>({project.name_th})</p>

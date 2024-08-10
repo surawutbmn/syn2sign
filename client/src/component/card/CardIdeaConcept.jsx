@@ -86,7 +86,7 @@ const CardIdeaConcept = (props) => {
         </div>
       </div>
       <div className="col-7">
-        <div className="txt-upper txt-second txt-head2">connect IDEA w/</div>
+        <div className="txt-upper txt-prim txt-head2">connect IDEA w/</div>
         <div className="txt-upper txt-head2">
           {textMapping[projectIdentifier] || "EVAL Balance"}
         </div>

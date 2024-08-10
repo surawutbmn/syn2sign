@@ -74,7 +74,7 @@ const LinkButtonContainer = styled.div`
   background-color: transparent;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
   }
 `;
 

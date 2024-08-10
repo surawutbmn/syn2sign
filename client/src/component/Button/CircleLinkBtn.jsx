@@ -39,7 +39,7 @@ const BtnCon = styled.a`
   align-items: baseline;
   color: var(--color-light);
   &:hover .bg-light {
-    background: var(--color-secondary) !important;
+    background: var(--color-primary) !important;
     color: var(--color-light);
   }
   &:hover .bg-second {
@@ -61,7 +61,7 @@ const Icon = styled.span`
     color: var(--color-dark);
   }
   &.bg-second {
-    background: var(--color-secondary);
-    color: var(--color-light);
+    background: var(--color-primary);
+    color: var(--color-dark);
   }
 `;

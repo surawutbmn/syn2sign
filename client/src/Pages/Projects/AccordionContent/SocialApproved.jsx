@@ -60,7 +60,7 @@ export default SocialApproved;
 const CardBox = styled.div`
   width: 100%;
   height: 100px;
-  border: solid var(--color-secondary);
+  border: solid var(--color-primary);
   border-left: none;
   border-right: none;
   position: relative;
@@ -72,8 +72,8 @@ const CardBox = styled.div`
 const CardBoxSub = styled.span`
   width: 33.33%;
   height: 60%;
-  border-right: 3px solid var(--color-secondary);
-  border-left: 3px solid var(--color-secondary);
+  border-right: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
   align-items: center;
   justify-content: center;
 `;
@@ -86,7 +86,7 @@ const StyledSpan = styled.span`
   ${(props) =>
     props.hasBorder &&
     `
-    border-right: 3px solid var(--color-secondary);
-    border-left: 3px solid var(--color-secondary);
+    border-right: 3px solid var(--color-primary);
+    border-left: 3px solid var(--color-primary);
   `}
 `;

@@ -180,7 +180,7 @@ function Students() {
             title={`${student.nickname_en}\u2019s role in Syn2sign`}
             subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
           />
-          <Row xs={3} className="gy-4 text-start">
+          <Row xs={2} md={3} className="gy-4 text-start">
             <RoleCard roleArr={roles} />
           </Row>
         </Container>

@@ -12,7 +12,7 @@ function Home() {
           <Col xs={3} className="text-start">
             <h1>
               <strong>
-                0<span className="txt-second">8*2</span>
+                0<span className="txt-prim">8*2</span>
               </strong>
             </h1>
             <h4>projects</h4>

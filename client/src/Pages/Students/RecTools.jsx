@@ -47,7 +47,7 @@ function RecTools(props) {
         >
           {Object.keys(groupedTools).map((type, index) => (
             <SwiperSlide key={index}>
-              <div className="text-center txt-second mb-3">
+              <div className="text-center txt-prim mb-3">
                 <h2 className="txt-cap">
                   <strong>{typeTitles[type]}</strong>
                 </h2>

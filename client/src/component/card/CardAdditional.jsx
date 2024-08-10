@@ -1,17 +1,19 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
 import ArrowButton from "../Button/ArrowButton";
+import { Col } from "react-bootstrap";
 const CardAdditional = (props) => {
   // const Line = props.href ? LineImage : 'div';
   return (
     <div>
       <CardBox>
         <Overlay></Overlay>
-        <div className="col-5 me-4">
+
+        <Col md={5} lg={5} className=" me-4">
           <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
-        </div>
+        </Col>
         <BoxContent>
-          <div className="txt-head2 txt-second text-start">
+          <div className="txt-head2 txt-prim text-start">
             {props.title ||
               "Youtube playlist • Senior Project Showreel, Academic Year 2023"}
           </div>
@@ -23,12 +25,12 @@ const CardAdditional = (props) => {
                 `เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน<br />จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`,
             }}
           />
-          <ArrowButton
-            text={`${props.btn}`}
-            link={props.link}
-            style={`txt-head4`}
-            icon={props.btnIcon}
-          />
+            <ArrowButton
+              text={`${props.btn}`}
+              link={props.link}
+              style={`txt-head4`}
+              icon={props.btnIcon}
+            />
         </BoxContent>
       </CardBox>
     </div>
@@ -54,26 +56,45 @@ const CardBox = styled.div`
   /* height: 250px; */
   padding: 2rem;
   background: white;
-  border-radius:1.3rem;
+  border-radius: 1.3rem;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  &:hover button {
-    color: var(--color-secondary);
-    border: solid 0.05rem var(--color-secondary);
+  /* &:hover button {
+    color: var(--color-primary);
+    border: solid 0.05rem var(--color-primary);
+  } */
+  @media (max-width: 991.98px) {
+    padding: 1rem;
   }
 `;
 const BoxContent = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 30px 0; */
   position: relative;
   flex-grow: 1;
+  @media (max-width: 1199.98px) {
+    .txt-head2 {
+      font-size: 1.8em;
+    }
+    .txt-body1 {
+      font-size: 1.2em;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .txt-head2 {
+      font-size: 1.2em;
+    }
+    .txt-body1 {
+      font-size: 0.7em;
+    }
+  }
 `;
 const BoxText = styled.div`
   flex-grow: 1;
+  
 `;
 
 const ImagePreview = styled.img`
@@ -81,6 +102,9 @@ const ImagePreview = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 1rem;
+  @media (max-width: 991.98px) {
+    object-fit: cover;
+  }
 `;
 
 const Overlay = styled.div`

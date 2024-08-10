@@ -16,7 +16,10 @@ const ArrowButton = (props) => {
     <div className="text-start align-self">
       <a href={link || "#"} target="_blank">
         <ButtonBox className={classname}>
-          {text || "Arrow Button"} <IconComponent size={30} />
+          <IconWrapper>
+            {text || "Arrow Button"}
+            <IconComponent className="ms-2"size={30}/>
+          </IconWrapper>
         </ButtonBox>
       </a>
     </div>
@@ -43,7 +46,22 @@ const ButtonBox = styled.button`
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
   &:hover {
-    color: var(--color-secondary);
-    border: solid 0.05rem var(--color-secondary);
+    color: var(--color-primary);
+    border: solid 0.05rem var(--color-primary);
+  }
+`;
+
+const IconWrapper = styled.div`
+  font-size: 1.5rem;
+
+  @media (max-width: 991.98px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 767.98px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 575.98px) {
+    font-size: .9rem;
   }
 `;

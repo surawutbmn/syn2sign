@@ -1,10 +1,10 @@
 function Notfound() {
   return (
     <div style={{}}>
-      <div className="" style={{ marginBottom: "20vw" }}>
+      <div className="d-flex flex-column">
         <h1
-          className="txt-second"
-          style={{ fontSize: "5rem", marginTop: "15dvw" }}
+          className="txt-prim"
+          style={{ fontSize: "5rem"}}
         >
           <strong>404 PAGE NOT FOUND</strong>
         </h1>

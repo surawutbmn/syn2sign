@@ -32,7 +32,7 @@ const CardToolDesignPresentation = () => {
 
   return (
     <Container>
-      <Title className="txt-second txt-head3 text-start">
+      <Title className="txt-prim txt-head3 text-start">
         DESIGN & PRESENTATION
       </Title>
       <FlexContainer>

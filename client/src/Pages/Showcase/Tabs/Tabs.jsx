@@ -22,9 +22,30 @@ const TabButton = styled.div`
   border-bottom: 4px solid var(--color-grey);
   color: var(--color-grey);
   text-transform: uppercase;
+  font-size: 1.8rem;
+  img {
+    width: 1.9rem;
+  }
   &.active {
-    color: var(--color-secondary);
-    border-bottom: 4px solid var(--color-secondary);
+    color: var(--color-primary);
+    border-bottom: 4px solid var(--color-primary);
+  }
+  @media (max-width: 991.98px) {
+    img {
+      width: 1.5rem;
+    }
+  }
+  @media (max-width: 767.98px) {
+    img {
+      width: 2rem;
+    }
+    font-size: 1.3rem;
+  }
+  @media (max-width: 575.98px) {
+    font-size: 0.8rem;
+    img {
+      width: 1.3rem;
+    }
   }
 `;
 

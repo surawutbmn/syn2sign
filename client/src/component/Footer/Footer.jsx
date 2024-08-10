@@ -1,242 +1,30 @@
 import "./footer.css";
-import fb from "./social-logo/i-fb.svg";
-import ig from "./social-logo/i-ig.svg";
-import tw from "./social-logo/i-tw.svg";
-import yt from "./social-logo/i-y.svg";
-import me from "./social-logo/i-m.svg";
-import tk from "./social-logo/i-tk.svg";
-import em from "./spon-logo/em.svg";
-import dd from "./spon-logo/dd.svg";
-import st from "./spon-logo/st.svg";
-import dl from "./spon-logo/dl.svg";
-import meg from "./spon-logo/merge.svg";
-import nb from "./spon-logo/nb.svg";
-import dm from "./spon-logo/dm.svg";
-import dlo from "./spon-logo/dlo.svg";
-import ql from "./spon-logo/ql.svg";
-import m7 from "./spon-logo/m7.svg";
 import { Col, Container, Row } from "react-bootstrap";
+import SponsorsGrid from "./Sponsor/SponsorGrid";
+import SponRow from "./Sponsor/SponRow";
+import { sponsors } from "./Sponsor/Sponsor";
+import SocialLinks from "./Social/SocialLink";
 
 export const Footers = () => {
   return (
     <>
       <footer id="footer" className="pb-3 position-relative">
         {/* <div className="bg-gd-foot"></div> */}
-        <Container className="px-4 w-100 d-flex justify-content-between">
+        <Container className="align px-4 d-flex flex-column flex-lg-row justify-content-between align-items-center">
+          <div className="d-block d-lg-none w-100 w-xs-50 mb-3">
+            <h5 className="txt-cap text-center">sponsored by:</h5>
+            <SponsorsGrid sponsors={sponsors} />
+          </div>
+          <div className="d-none d-lg-flex">
+            <SponRow sponsors={sponsors} />
+          </div>
           <Row>
             <Col>
-              <h6 className="txt-cap text-start">sponsored by:</h6>
-              <div className="d-flex align-items-center foot-l">
-                <div className="box-logo">
-                  <a
-                    href="https://emdistrict.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={em}
-                      alt="emdistrict"
-                      style={{ maxWidth: "8em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="https://www.ddproperty.com/en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={dd}
-                      alt="ddproperty"
-                      style={{ maxWidth: "8em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="https://funcslash.com/styleyeet/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={st}
-                      alt="styleyeet"
-                      style={{ maxWidth: "2.5em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="https://ducklab.co.th/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={dl}
-                      alt="ducklab"
-                      style={{ maxWidth: "1.5em" }}
-                    />
-                  </a>
-                </div>
-                <br />
-                <div className="box-logo">
-                  <a
-                    href="https://www.merge.co.th/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={meg}
-                      alt="merge"
-                      style={{ maxWidth: "3em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="https://nabladigital.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={nb}
-                      alt="nabladigital"
-                      style={{ maxWidth: "3em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="https://www.deemmi.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={dm}
-                      alt="deemmi"
-                      style={{ maxWidth: "1.3em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    className="foot-logo"
-                    href="https://www.diloproducts.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={dlo}
-                      alt="diloproducts"
-                      style={{ maxWidth: "2em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    className="foot-logo"
-                    href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={ql}
-                      alt="Q-Light&Sound"
-                      style={{ maxWidth: "1em" }}
-                    />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    className="foot-logo"
-                    href="https://www.facebook.com/ApologizeCh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="foot-logo"
-                      src={m7}
-                      alt="ApologizeCh"
-                      style={{ maxWidth: "1.1em" }}
-                    />
-                  </a>
-                </div>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <h6 className="txt-cap text-start">Follow us:</h6>
-              <div className="d-flex align-items-center footer-r">
-                <div className="box-logo">
-                  <a
-                    href="http://www.facebook.com/funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={fb} alt="facebook" />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="http://www.instagram.com/funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={ig} alt="instragram" />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="http://twitter.com/funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={tw} alt="x/twitter" />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="http://www.youtube.com/@funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={yt} alt="youtube" />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="http://medium.com/funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={me} alt="medium" />
-                  </a>
-                </div>
-                <div className="box-logo">
-                  <a
-                    href="http://www.tiktok.com/@funcslash"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="foot-logo" src={tk} alt="tiktok" />
-                  </a>
-                </div>
-              </div>
+              <SocialLinks />
             </Col>
           </Row>
         </Container>
       </footer>
     </>
   );
-}
+};
