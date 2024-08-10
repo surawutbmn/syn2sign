@@ -73,7 +73,7 @@ function CreatorHeadSection(props) {
               }}
             />
             <div className="mt-4">
-              <h4 className="txt-upper">
+              <h4 className="txt-cap">
                 {student.name_en} ({student.nickname_en})
               </h4>
               <h6>

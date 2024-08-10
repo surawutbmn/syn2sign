@@ -62,7 +62,7 @@ function RecTools(props) {
                     >
                       <div className="me-4">
                         <img
-                          src={`/tools/${toolItem.icon}`}
+                          src={`/tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
                       </div>
@@ -90,7 +90,7 @@ RecTools.propTypes = {
     propTypes.shape({
       toolName: propTypes.string,
       desc: propTypes.string,
-      icon: propTypes.string,
+      toolIcon: propTypes.string,
       type: propTypes.string,
     })
   ),

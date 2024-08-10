@@ -20,6 +20,7 @@ function Students() {
   const [otherStudents, setOtherStudents] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [roles, setRole] = useState([]);
+  const [tools, setTool] = useState([]);
   const { std_id } = useParams();
 
   const findProjectById = (project_id) => {
@@ -52,6 +53,10 @@ function Students() {
         const parsedRole = JSON.parse(studentData.roles);
         setRole(parsedRole);
       }
+      if (studentData.rectool) {
+        const parsedTool = JSON.parse(studentData.rectool);
+        setTool(parsedTool);
+      }
       return studentData;
     } catch (error) {
       console.error("Error fetching student data:", error);
@@ -62,6 +67,9 @@ function Students() {
         }
         if (localStudent.question) {
           setQuestions(localStudent.question); // Directly set the if available
+        }
+        if (localStudent.rectool) {
+          setQuestions(localStudent.rectool); // Directly set the if available
         }
         return localStudent; // Return local data if the API call fails
       }
@@ -138,7 +146,8 @@ function Students() {
     if (student && project) {
       document.title = `${student.nickname_en} ${student.name_en} / ${project.name_en} - Syn2sign senior project exhibition 2024`;
     }
-  }, [student, project]);
+    window.scrollTo(0, 0);
+  }, [student, project, std_id]);
 
   if (!student) {
     return <div>Loading...</div>;
@@ -163,8 +172,8 @@ function Students() {
             subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
             className=""
           />
-          <InterviewCard question={questions} std={student.nickname_th}/>
-          <RecTools toolArr={student.rectool} />
+          <InterviewCard question={questions} std={student.nickname_th} />
+          <RecTools toolArr={tools} />
         </Container>
         <Container>
           <SectionTitle
