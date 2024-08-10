@@ -640,7 +640,7 @@ function Credit() {
             </div>
             <div className="d-flex">
               <p>
-                <strong>Board service provider:</strong>{" "}
+                <strong className="txt-upper">Board service provider:</strong>{" "}
                 <br className="d-block d-md-none" />
                 Thumnaksilp Advertising
               </p>
@@ -664,14 +664,14 @@ function Credit() {
         <Container className="mb-5">
           <h2 className="mb-4 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
           <p>
-            <strong>Project Manager:</strong> Chalida Ingkapattanakul{" "}
+            <strong className="txt-upper">Project Manager:</strong> Chalida Ingkapattanakul{" "}
           </p>
           <p>
-            <strong>Assistant Project Manager:</strong> Panita Lainananukul
+            <strong className="txt-upper">Assistant Project Manager:</strong> Panita Lainananukul
           </p>
           <h2 className="mt-5 mb-4 txt-scdhead">SUPPORTER AND ADVISOR</h2>
           <p>
-            <strong>Project Consultant:</strong> Kowit Meboon
+            <strong className="txt-upper">Project Consultant:</strong> Kowit Meboon
           </p>
           <p>
             <strong>SUPPORTER:</strong> Methin Pingsutthiwong
