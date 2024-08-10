@@ -6,11 +6,11 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from 'styled-components';
 
-// Adjust the path to where your JSON file is located
 const imageDataUrl = '/imageData.json';
 
 const DesignProcessSlider = () => {
   const [imageList, setImageList] = useState([]);
+  const [slidesPerView, setSlidesPerView] = useState(3.5); // Default to mobile view
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const location = useLocation();
@@ -26,7 +26,16 @@ const DesignProcessSlider = () => {
         }
         const data = await response.json();
         if (projectId && data[projectId]) {
-          setImageList(data[projectId]);
+          const images = data[projectId];
+          setImageList(images);
+
+          // Determine slidesPerView based on the first image's aspect ratio
+          const firstAspect = images[0]?.aspect;
+          if (firstAspect === 'desktop' || firstAspect === 'tablet') {
+            setSlidesPerView(1.5);
+          } else {
+            setSlidesPerView(3.5);
+          }
         } else {
           console.error('Project ID not found in the JSON data.');
         }
@@ -46,20 +55,18 @@ const DesignProcessSlider = () => {
 
   return (
     <div className="position-relativ">
-
       <Swiper
         modules={[Navigation]}
-        slidesPerView={3.5}
+        slidesPerView={slidesPerView}
         navigation={{
           nextEl: ".prj-pl-nav .swiper-button-next",
           prevEl: ".prj-pl-nav .swiper-button-prev",
         }}
-        spaceBetween={10}
-        
+        spaceBetween={50}
       >
-        {imageList.map((src, index) => (
+        {imageList.map((image, index) => (
           <SwiperSlide key={index}>
-            <DesignProcess src={src} alt={`Design Process ${index + 1}`} />
+            <DesignProcess src={image.src} alt={`Design Process ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -71,14 +78,13 @@ export default DesignProcessSlider;
 
 const DesignProcess = styled.img`
   height: 500px;
-  width: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Ensure image doesn’t overflow the container */
-  object-fit: contain; /* Ensure proper fit within container */
+  width: auto; 
+  max-width: 100%;
+  object-fit: contain; 
   display: block;
-  margin: 0 auto; /* Center image horizontally */
-  /* Optional: Add additional styling for different aspect ratios */
+  margin: 0 auto;
+
   ${props => props.aspect === 'desktop' && `
-    object-fit: cover; /* Cover for desktop aspect ratio images */
+    object-fit: cover; 
   `}
 `;
-

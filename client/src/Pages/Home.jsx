@@ -8,7 +8,7 @@ function Home() {
     <div>
       <HomeElement />
       <Container className="position-relative">
-        <Row className="align-items-center">
+        {/* <Row className="align-items-center">
           <Col xs={3} className="text-start">
             <h1>
               <strong>
@@ -32,7 +32,7 @@ function Home() {
           <Col xs={3}>
             <p>social review</p>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );

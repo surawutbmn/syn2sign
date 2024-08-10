@@ -80,7 +80,7 @@
 }
 ,{"type":"table","name":"testing","database":"cpl02_project","data":
 [
-{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 15-44 ปี  ที่มีความต้องการซื้อสินค้าและศึกษาการไหว้เจ้า • ทดสอบ เมื่อวันที่ 15 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 15-44 years who have a desire to buy products and study worship • Tested on February 15, 2024","num_design":"4.5","num_use":"4.35","num_overall":"4.47","opinion_design":"การออกแบบมีความใช้งานง่าย เข้าใจ สีสันเหมาะสม\n","opinion_use":"เนื้อหาภายในเว็บไซต์ดูดี มีครบทุกข้อสงสัยเกี่ยวกับการไหว้เจ้า","opinion_overall":"การใช้งานระบบเกมทำได้ดี มีบอกถูกผิด มีเสียงเพิ่มความน่าตื่นเต้น\n"}
+{"id":"1","th":"การทำ Usability Testing กับกลุ่มเป้าหมาย ช่วงอายุ 15-44 ปี  ที่มีความต้องการซื้อสินค้าและศึกษาการไหว้เจ้า • ทดสอบ เมื่อวันที่ 15 กุมภาพันธ์ 2567","en":"Usability testing with a target group aged 15-44 years who have a desire to buy products and study worship • Tested on February 15, 2024","num_design":"4.50","num_use":"4.35","num_overall":"4.47","opinion_design":"การออกแบบมีความใช้งานง่าย เข้าใจ สีสันเหมาะสม\n","opinion_use":"เนื้อหาภายในเว็บไซต์ดูดี มีครบทุกข้อสงสัยเกี่ยวกับการไหว้เจ้า","opinion_overall":"การใช้งานระบบเกมทำได้ดี มีบอกถูกผิด มีเสียงเพิ่มความน่าตื่นเต้น\n"}
 ]
 }
 ]
