@@ -39,8 +39,8 @@ function StayTune() {
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
             description3="มหาวิทยาลัยศิลปากร"
             line="/other/line.png"
-            imgPreview1='public\staytune\dotwishion-video-preview.png'
-            imgPreview2='public\staytune\dotwishion-video-preview2.png'
+            imgPreview1='/staytune/dotwishion-video-preview.png'
+            imgPreview2='/staytune/dotwishion-video-preview2.png'
           />
           {/* STY}E:YEET (2022) */}
           <CardMainThree
@@ -57,8 +57,8 @@ function StayTune() {
             description1="เว็บไซต์รวบรวม 17 ผลงานสำเร็จการศึกษา ปีการศึกษา 2022 "
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 16 "
             description3="มหาวิทยาลัยศิลปากร"
-               imgPreview1='public\staytune\styleyeet-video-preview.png'
-            imgPreview2='public\staytune\styleyeet-video-preview2.png'
+               imgPreview1='/staytune/styleyeet-video-preview.png'
+            imgPreview2='/staytune/styleyeet-video-preview2.png'
           />
           {/* &TIVIRUS (2021) */}
           <CardMainThree
@@ -73,8 +73,8 @@ function StayTune() {
             description1="การจัดรวบรวม 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2021"
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 15 "
             description3="มหาวิทยาลัยศิลปากร"
-               imgPreview1='public\staytune\&TIVIRUS-video-preview.png'
-            imgPreview2='public\staytune\&TIVIRUS-video-preview2.png'
+               imgPreview1='/staytune/&TIVIRUS-video-preview.png'
+            imgPreview2='/staytune/&TIVIRUS-video-preview2.png'
           />
         </div>
 
