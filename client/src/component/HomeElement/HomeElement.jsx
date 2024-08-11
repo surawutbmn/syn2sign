@@ -6,7 +6,7 @@ function HomeElement() {
   useEffect(() => {
     gsap.fromTo(
       ".ele-l",
-      2,
+      4,
       { x: 0, y: -10 },
       {
         x: 50,
@@ -14,12 +14,12 @@ function HomeElement() {
         ease: Power2.easeInOut,
         repeat: -1,
         yoyo: true,
-        delay: 0.4,
+        delay: 1.5,
       }
     );
     gsap.fromTo(
       ".ele-r",
-      2,
+      4,
       { x: 50, y: 10 },
       {
         x: 0,
@@ -27,7 +27,7 @@ function HomeElement() {
         ease: Power2.easeInOut,
         repeat: -1,
         yoyo: true,
-        delay: 0.6,
+        delay: 2,
       }
     );
     gsap.fromTo(

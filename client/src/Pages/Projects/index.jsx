@@ -24,6 +24,8 @@ import CardDesignProcess from "../../component/card/CardDesignProcess";
 import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
 import DesignProcessSlider from "../../component/Slider/DesignProcessSlider";
+import styled from "styled-components";
+import { FaArrowLeft } from "react-icons/fa";
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -206,6 +208,12 @@ function Project() {
       </Helmet>
       <PageElement />
       <Container className="mt-5 position-relative">
+        <BackBtn className="text-start link-txt txt-upper">
+          <Link to={`/showcase#project`}>
+            <FaArrowLeft className="me-2" size={20} />
+            <strong>back</strong>
+          </Link>
+        </BackBtn>
         <div className="d-flex justify-content-around">
           <img
             src={`/icon/prj/${project.icon}`}
@@ -251,7 +259,7 @@ function Project() {
             className="video-box"
           ></iframe>
         </div>
-        <LinkButton className="mt-4" name={project.name_en}/>
+        <LinkButton className="mt-4" name={project.name_en} />
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">
@@ -309,3 +317,18 @@ function Project() {
   );
 }
 export default Project;
+
+const BackBtn = styled.h3`
+  a {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-light);
+    transition: all 300ms ease;
+  }
+`;

@@ -32,7 +32,8 @@ const FooterLink = styled.a`
 const SocialLinks = () => (
   <Row>
     <Col>
-      <h6 className="txt-cap text-center text-xs-start">Follow us:</h6>
+      <h6 className="txt-cap text-start d-none d-md-flex">Follow us:</h6>
+      <h6 className="txt-cap text-center d-flex d-md-none">Follow us:</h6>
       <div className="d-flex align-items-center">
         {socialLinks.map((link, index) => (
           <FooterLink

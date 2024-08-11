@@ -56,7 +56,9 @@ function Students() {
       if (studentData.rectool) {
         const parsedTool = JSON.parse(studentData.rectool);
         setTool(parsedTool);
+        
       }
+      // console.log(studentData.rectool);
       return studentData;
     } catch (error) {
       console.error("Error fetching student data:", error);
@@ -139,7 +141,7 @@ function Students() {
     GetData();
   }, [std_id]);
 
-  // console.log(Exhimg);
+  // console.log(tools);
 
   // console.log(otherStudents);
   useEffect(() => {

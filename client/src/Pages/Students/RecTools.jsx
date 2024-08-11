@@ -17,6 +17,8 @@ function RecTools(props) {
     acc[tool.type].push(tool);
     return acc;
   }, {});
+//   console.log(toolArr);
+  
 
   const typeTitles = {
     dev: "Tools for Developers",
@@ -61,7 +63,7 @@ function RecTools(props) {
                       className="my-4 d-flex justify-content-center"
                     >
                       <div className="me-4">
-                        <ToolIcon
+                        <img
                           src={`/tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
@@ -97,7 +99,6 @@ RecTools.propTypes = {
 };
 export default RecTools;
 
-const ToolIcon = styled.img` border-radius: 1.3rem;`;
 const Pg = styled.div`
   justify-content: center;
   align-items: center;
@@ -140,6 +141,8 @@ const ToolBox = styled.div`
   img {
     width: 100%;
     max-width: 10dvw;
+    border-radius: 2.3rem;
+    box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
   }
 `;
 
