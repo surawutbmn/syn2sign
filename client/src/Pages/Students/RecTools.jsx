@@ -61,7 +61,7 @@ function RecTools(props) {
                       className="my-4 d-flex justify-content-center"
                     >
                       <div className="me-4">
-                        <img
+                        <ToolIcon
                           src={`/tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
@@ -97,6 +97,7 @@ RecTools.propTypes = {
 };
 export default RecTools;
 
+const ToolIcon = styled.img` border-radius: 1.3rem;`;
 const Pg = styled.div`
   justify-content: center;
   align-items: center;
