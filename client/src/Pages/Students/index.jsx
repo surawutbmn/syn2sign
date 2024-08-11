@@ -71,8 +71,9 @@ function Students() {
           setQuestions(localStudent.question); // Directly set the if available
         }
         if (localStudent.rectool) {
-          setQuestions(localStudent.rectool); // Directly set the if available
+          setTool(localStudent.rectool); // Directly set the if available
         }
+        
         return localStudent; // Return local data if the API call fails
       }
     }
@@ -141,12 +142,12 @@ function Students() {
     GetData();
   }, [std_id]);
 
-  // console.log(tools);
+  console.log(tools);
 
   // console.log(otherStudents);
   useEffect(() => {
     if (student && project) {
-      document.title = `${student.nickname_en} ${student.name_en} / ${project.name_en} - Syn2sign senior project exhibition 2024`;
+      document.title = `${student.nickname_en} (${student.name_en}) - Syn2sign senior project exhibition 2024`;
     }
     window.scrollTo(0, 0);
   }, [student, project, std_id]);

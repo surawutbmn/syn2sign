@@ -6,23 +6,23 @@ function ExhibitImg({ name, std_id }) {
     const images = [
       {
         id: 1,
-        exhimg: `${std_id}-img-1.png`,
+        exhimg: `${std_id}-img-1.webp`,
       },
       {
         id: 2,
-        exhimg: `${std_id}-img-2.png`,
+        exhimg: `${std_id}-img-2.webp`,
       },
       {
         id: 3,
-        exhimg: `${std_id}-img-3.png`,
+        exhimg: `${std_id}-img-3.webp`,
       },
       {
         id: 4,
-        exhimg: `${std_id}-img-4.png`,
+        exhimg: `${std_id}-img-4.webp`,
       },
       {
         id: 5,
-        exhimg: `${std_id}-img-5.png`,
+        exhimg: `${std_id}-img-5.webp`,
       },
     ];
   return (

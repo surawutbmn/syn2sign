@@ -103,7 +103,7 @@ function Project() {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.name_en} / ${project.fullname_th} - Syn2sign senior project exhibition 2024`;
+      document.title = `${project.name_en} - Syn2sign senior project exhibition 2024`;
     }
   }, [project]);
 
