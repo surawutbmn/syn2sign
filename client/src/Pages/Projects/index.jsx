@@ -250,7 +250,7 @@ function Project() {
         <CardThreePictureProject />
         <div className="mx-auto ratio ratio-16x9">
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}`}
+            src={`https://www.youtube-nocookie.com/embed/${project.shreel_link}?autoplay=1&mute=1`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

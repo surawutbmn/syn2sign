@@ -8,9 +8,9 @@ function RoleCard(props) {
     <>
       {roleArr.map((roleItem, index) => {
           return (
-            <Col key={index}>
-              <img src={`/icon/roles/${roleItem.icon}`} alt="" />
-              <span className="ms-3 txt-upper">{roleItem.name}</span>
+            <Col key={index} className="d-flex align-items-center">
+                <img src={`/icon/roles/${roleItem.icon}`} alt="" />
+                <span className="ms-3 txt-upper">{roleItem.name}</span>
             </Col>
           );
         })}

@@ -14,7 +14,8 @@ function CreatorHeadSection(props) {
       <Container>
         <BackBtn className="text-start link-txt txt-upper">
           <Link to={`/showcase#creator`}>
-            <FaArrowLeft className="me-2" size={20}/><strong>back</strong>
+            <FaArrowLeft className="me-2" size={20} />
+            <strong>back</strong>
           </Link>
         </BackBtn>
         <div className="d-flex">
@@ -36,8 +37,8 @@ function CreatorHeadSection(props) {
                 </h3>
               </ProjName>
             </div>
-            <QouteBox className=" ms-auto my-5 position-relative">
-              <div className="d-flex align-items-baseline quotecon">
+            <QouteBox className="my-4">
+              <div className="ms-auto d-flex w-75 align-items-baseline quotecon">
                 <img
                   src={`/icon/double-qoute.svg`}
                   alt="double qoute"
@@ -49,9 +50,7 @@ function CreatorHeadSection(props) {
             </QouteBox>
 
             <div className="text-start mt-4">
-              <h3 className="txt-prim txt-upper">
-                Contact to {student.nickname_en}
-              </h3>
+              <h4 className="txt-prim txt-upper">Contact</h4>
 
               <div className="mt-3">
                 <CircleLinkBtn
@@ -137,7 +136,7 @@ const ProjName = styled.div`a{&:hover{color: var(--color-primary);}} a{transitio
 const QouteBox = styled.div`
   width: 100%;
   height:100%;
-  .quotecon{position: absolute; top:0; right:0; width:80%;}
+  /* .quotecon{position: absolute; top:0; right:0; width:80%;} */
 `;
 const LineHead = styled.hr`
   width: 15dvw;

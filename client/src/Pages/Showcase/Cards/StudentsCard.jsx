@@ -124,6 +124,9 @@ const CardOverlay = styled.div`
   color: white;
   height: 25%;
   width: 100%;
+  @media (max-width: 1599.98px) {
+    height: 30%;
+  }
   @media (max-width: 991.98px) {
     height: 28%;
   }

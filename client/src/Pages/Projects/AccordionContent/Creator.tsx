@@ -37,7 +37,7 @@ const Creators: React.FC<CreatorsProps> = ({
   };
   return (
     <Row className="align-items-center">
-      <Col >
+      <Col>
         <img
           src={profileImg}
           alt=""
@@ -56,23 +56,6 @@ const Creators: React.FC<CreatorsProps> = ({
             <h5>{qoutes}</h5>
           </div>
           <Boxline />
-          <div className="mt-3">
-            <CircleLinkBtn
-              txt={email}
-              link={`mailto:${email}`}
-              icon={"mail"}
-              bg={"light"}
-            />
-          </div>
-          <div className="mt-2">
-            <CircleLinkBtn
-              txt={nameEN}
-              link={linkedin}
-              icon={"linkedin"}
-              bg={"light"}
-            />
-          </div>
-
           <BtnBox>
             <Link
               to={`/showcase/creators/${stdID}`}

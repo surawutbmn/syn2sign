@@ -59,26 +59,26 @@ function Credit() {
           />
         </div>
         <div className="mt-4">
-          <h2 className="txt-scdhead mb-4">
+          <h2 className="txt-prmhead mb-4">
             Silpakorn University Administration Committee
           </h2>
           <span>
             <h5>
               <strong>Nathaporn Karnjanapoomi</strong>
             </h5>
-            <p>Dean Of Faculty Of Information And Communication Technology</p>
+            <p>Dean of Faculty of Information and Communication Technology</p>
           </span>
           <span>
             <h5>
               <strong>Yuwaboon Thamrongsombatsakul</strong>
             </h5>
             <p>
-              Chairman Of Academic Disciplines, Digital Technology For Design
+              Chairman of Academic Disciplines, Digital Technology for Design
             </p>
           </span>
         </div>
         <Container className="mt-5">
-          <h2 className="txt-scdhead mb-4">Project Advisory Committee</h2>
+          <h2 className="txt-prmhead mb-4">Project Advisory Committee</h2>
           <div
             className="row row-cols-1 row-cols-md-3 justify-content-center"
             style={{ fontSize: "1.2em" }}
@@ -125,20 +125,9 @@ function Credit() {
           </div>
           <div className="col-12 text-center mt-5">
             <div className="">
-              <h2 className="txt-scdhead mb-4">
+              <h2 className="txt-prmhead mb-4">
                 Introducing the ICT:SILPAKORN
               </h2>
-              <p>
-                <a
-                  href="https://ict.su.ac.th/?page_id=30"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "white" }}
-                >
-                  หลักสูตรเทคโนโลยีดิจิทัลเพื่อธุรกิจ (Digital Technology for
-                  Business),
-                </a>
-              </p>
               <p>
                 <a
                   href="https://ict.su.ac.th/?page_id=32"
@@ -148,16 +137,6 @@ function Credit() {
                 >
                   หลักสูตรเทคโนโลยีดิจิทัลเพื่อการออกแบบ (Digital Technology for
                   Design),
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://ict.su.ac.th/?page_id=34"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "white" }}
-                >
-                  หลักสูตรนิเทศศาสตร์ (Communication Arts)
                 </a>
               </p>
             </div>
@@ -175,7 +154,7 @@ function Credit() {
       </div>
       <Container className="mt-5">
         <div className="mb-5">
-          <h2 className="mb-3 txt-scdhead">syn2sign exhibition venue</h2>
+          <h2 className="mb-3 txt-prmhead">syn2sign exhibition venue</h2>
           <span>
             <strong>DIRECTED BY:</strong> FACULTY OF INFORMATION AND
             COMMUNICATION TECHNOLOGY, SILPAKORN UNIVERSITY
@@ -186,7 +165,7 @@ function Credit() {
           </span>
         </div>
         <Container className="mt-4">
-          <h2 className="txt-scdhead mb-4">INSI(gn)DER</h2>
+          <h2 className="txt-prmhead mb-4">INSI(gn)DER</h2>
           <div className="grid grid-cols-2 grid-cols-md-1 ml-lg-10 ml-20 team-credit gap-4">
             <div className="d-flex">
               <div className="ele-icon">
@@ -353,7 +332,7 @@ function Credit() {
           </div>
         </Container>
         <Container className="mt-5">
-          <h2 className="mb-4 txt-scdhead">Thank you for your support</h2>
+          <h2 className="mb-4 txt-prmhead">Thank you for your support</h2>
           <div className="grid grid-cols-2 grid-cols-md-1 ml-20 gap-4">
             <div className="d-flex">
               <div className="ele-icon">
@@ -395,7 +374,7 @@ function Credit() {
           </div>
         </Container>
         <Container className="mt-6 sponsor-con justify-content-center">
-          <h2 className="txt-scdhead mb-5">exhibition sponsored by</h2>
+          <h2 className="txt-prmhead mb-5">exhibition sponsored by</h2>
           <Col xs={12} className=" mb-5">
             <a
               href="http://https://emdistrict.com/"
@@ -609,7 +588,7 @@ function Credit() {
           </div>
         </Container>
         <Container className="my-5">
-          <h2 className="mb-4 txt-scdhead">onsite supporter</h2>
+          <h2 className="mb-4 txt-prmhead">onsite supporter</h2>
           <span>
             <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
             <p>
@@ -662,16 +641,19 @@ function Credit() {
           </div>
         </Container>
         <Container className="mb-5">
-          <h2 className="mb-4 txt-scdhead">EXHIBITION PROJECT MANAGER</h2>
+          <h2 className="mb-4 txt-prmhead">EXHIBITION PROJECT MANAGER</h2>
           <p>
-            <strong className="txt-upper">Project Manager:</strong> Chalida Ingkapattanakul{" "}
+            <strong className="txt-upper">Project Manager:</strong> Chalida
+            Ingkapattanakul{" "}
           </p>
           <p>
-            <strong className="txt-upper">Assistant Project Manager:</strong> Panita Lainananukul
+            <strong className="txt-upper">Assistant Project Manager:</strong>{" "}
+            Panita Lainananukul
           </p>
-          <h2 className="mt-5 mb-4 txt-scdhead">SUPPORTER AND ADVISOR</h2>
+          <h2 className="mt-5 mb-4 txt-prmhead">SUPPORTER AND ADVISOR</h2>
           <p>
-            <strong className="txt-upper">Project Consultant:</strong> Kowit Meboon
+            <strong className="txt-upper">Project Consultant:</strong> Kowit
+            Meboon
           </p>
           <p>
             <strong>SUPPORTER:</strong> Methin Pingsutthiwong
@@ -682,7 +664,7 @@ function Credit() {
           <p>
             <strong>SUPPORTER:</strong> Sarayut Thibhodee
           </p>
-          <h2 className="mt-5 txt-scdhead">Publicize Project BY</h2>
+          <h2 className="mt-5 txt-prmhead">Publicize Project BY</h2>
           <span>
             <a
               href="https://ict.su.ac.th/func/"
