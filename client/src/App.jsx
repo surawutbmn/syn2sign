@@ -27,7 +27,7 @@ function App() {
         setTitle("Syn2sign senior project exhibition 2024 - Home Page");
         break;
       case "/showcase":
-        setTitle("SHOWCASE LIST - Syn2sign senior project exhibition 2024");
+        setTitle("8 Projects and 16 Creators List - Syn2sign senior project exhibition 2024");
         break;
       case "/exhibition":
         setTitle("EXHIBITION ARCHIVE - Syn2sign senior project exhibition 2024");
