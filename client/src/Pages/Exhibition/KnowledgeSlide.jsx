@@ -81,7 +81,9 @@ function KnowledgeSlide() {
         }}
         breakpoints={{
           768: { slidesPerView: 1.5 },
-          1440: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 2 },
+          1200: { slidesPerView: 2.5 },
+          1440: { slidesPerView: 2.5 },
         }}
         spaceBetween={20}
         navigation={{
@@ -119,7 +121,7 @@ for a Digital Platform`}
             title={`Download Syn2sign Stickers Free`}
             desc={`สติกเกอร์ลายพิเศษจากนิทรรศการ Syn2sign ที่ออกแบบ สำหรับงานนี้โดยเฉพาะ (สามารถดาวน์โหลดไฟล์ได้ที่นี่)`}
             btn={`download`}
-            btn2={`free`}
+            btn2={`1.5mb`}
             btnIcon={`download`}
           />
         </SwiperSlide>
