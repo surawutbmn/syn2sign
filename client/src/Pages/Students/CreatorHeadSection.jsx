@@ -101,7 +101,7 @@ function CreatorHeadSection(props) {
 
 CreatorHeadSection.propTypes = {
   student: propTypes.shape({
-    id: propTypes.number,
+    id: propTypes.string,
     nickname_en: propTypes.string,
     name_en: propTypes.string,
     qoutes: propTypes.string,

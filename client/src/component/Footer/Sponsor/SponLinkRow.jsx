@@ -9,15 +9,15 @@ const LinkBox = styled.a`
 `;
 
 const LogoContainer = styled.img`
-  width: ${({ spon, type }) => {
+  width: ${({ $spon, type }) => {
     if (type === "LogoRec") {
-      return spon === "tier-1" ? "7em" : spon === "tier-2" ? "4.5em" : "3em";
+      return $spon === "tier-1" ? "7em" : $spon === "tier-2" ? "4.5em" : "3em";
     } else {
-      return spon === "tier-1"
+      return $spon === "tier-1"
         ? "3.3em"
-        : spon === "tier-2-dl"
+        : $spon === "tier-2-dl"
         ? "2.5em"
-        : spon === "tier-2"
+        : $spon === "tier-2"
         ? "1.8em"
         : "1.5em";
     }
@@ -37,7 +37,7 @@ const SponLinkRow = (props) => {
   const { href, imgSrc, alt, type, spon } = props;
   return (
     <LinkBox className="spon-row" href={href} target="_blank" rel="noopener noreferrer">
-      <LogoContainer spon={spon} type={type} src={imgSrc} alt={alt} />
+      <LogoContainer $spon={spon} type={type} src={imgSrc} alt={alt} />
     </LinkBox>
   );
 };

@@ -1,6 +1,3 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import styled from "styled-components";
 import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
 import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
 import cpl03Data from '/src/Pages/Projects/database_Json/cpl03_project.json';
@@ -9,6 +6,8 @@ import cpl05Data from '/src/Pages/Projects/database_Json/cpl05_project.json';
 import cpl06Data from '/src/Pages/Projects/database_Json/cpl06_project.json';
 import cpl07Data from '/src/Pages/Projects/database_Json/cpl07_project.json';
 import cpl08Data from '/src/Pages/Projects/database_Json/cpl08_project.json';
+import PropTypes from "prop-types";
+
 // Add more imports as needed
 
 const dataMapping = {
@@ -23,12 +22,8 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardTargetGroup = () => {
-  const location = useLocation();
-  const urlPath = location.pathname;
-  const projectId = urlPath.split('/').pop(); // Extract projectId from URL
-
-  const projectData = dataMapping[projectId] || {}; // Select the data based on the project ID
+const CardTargetGroup = ({proj_id}) => {
+  const projectData = dataMapping[proj_id] || {}; // Select the data based on the project ID
 
   // Extract target_group table data
   const targetGroupTable = projectData.find(
@@ -47,4 +42,7 @@ const CardTargetGroup = () => {
   )
 }
 
+CardTargetGroup.propTypes = {
+  proj_id: PropTypes.string,
+};
 export default CardTargetGroup;

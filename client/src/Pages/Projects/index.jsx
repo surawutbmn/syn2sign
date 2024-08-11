@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./project.css";
 import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
@@ -18,12 +17,10 @@ import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
 import CardMainFunction from "../../component/card/CardMainFunction";
 import CardToolDevelopment from "../../component/card/CardToolDevelopment";
-import CardToolPresentation from "../../component/card/CardToolDesignPresentation";
 import CardToolDesignPresentation from "../../component/card/CardToolDesignPresentation";
 import CardDesignProcess from "../../component/card/CardDesignProcess";
 import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
-import DesignProcessSlider from "../../component/Slider/DesignProcessSlider";
 import styled from "styled-components";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -33,13 +30,10 @@ function Project() {
   const { prj_id } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [keywords, setKeywords] = useState([]);
 
   const [activeProject, setActiveProject] = useState(
     localStorage.getItem("activeProject") || null
   );
-  // console.log(projectsdata);
-  // const prj_id = "cpl01";
 
   const findProjectById = (project_id) => {
     return (
@@ -49,34 +43,16 @@ function Project() {
   const fetchProject = async (project_id) => {
     setLoading(true);
     try {
-      const response = await axios.get(
-        `http://localhost/syn2sign/projects/${project_id}`
-      );
-      const projectData = response.data;
-      setProject(projectData);
-
-      if (projectData.keyword) {
-        const parsedKeywords = JSON.parse(projectData.keyword);
-        setKeywords(parsedKeywords);
-      }
-
-      setActiveProject(project_id);
-      localStorage.setItem("activeProject", project_id);
-      setError(null); // Clear any previous errors
-    } catch (error) {
-      console.error("Error fetching project data", error);
-      setError("Error fetching project data");
-
       const localProject = findProjectById(project_id);
       if (localProject) {
         setProject(localProject);
-        const keyword = localProject.keyword;
-        setKeywords(keyword);
-
         setActiveProject(project_id);
         localStorage.setItem("activeProject", project_id);
         setError(null); // Clear any previous errors
       }
+    } catch (error) {
+      console.error("Error fetching project data", error);
+      setError("Error fetching project data");
     } finally {
       setLoading(false);
     }
@@ -84,15 +60,11 @@ function Project() {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost/syn2sign/students`);
-      if (Array.isArray(response.data)) {
-        setStudents(response.data);
-      } else {
-        console.error("Expected an array but received:", response.data);
+      if (studentsdata) {
+        setStudents(studentsdata);
       }
     } catch (error) {
       console.error("Error fetching student data", error);
-      setStudents(studentsdata);
     }
   };
 
@@ -138,12 +110,12 @@ function Project() {
     {
       title: "DEVELOPMENT TOOLs",
       subtitle: "เครื่องมือในการพัฒนาผลงาน",
-      content: <CardToolDevelopment />,
+      content: <CardToolDevelopment proj_id={prj_id} />,
     },
     {
       title: "DESIGN & PRESENTATION TOOLs",
       subtitle: "เครื่องมือในการออกแบบ และนำเสนอผลงาน",
-      content: <CardToolDesignPresentation />,
+      content: <CardToolDesignPresentation proj_id={prj_id} />,
     },
     {
       title: "Design PROCESS",
@@ -153,12 +125,12 @@ function Project() {
     {
       title: "target group",
       subtitle: "กลุ่มเป้าหมาย",
-      content: <CardTargetGroup />,
+      content: <CardTargetGroup proj_id={prj_id} />,
     },
     {
       title: "Testing & Feedback",
       subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: <CardFeedback />,
+      content: <CardFeedback proj_id={prj_id} />,
     },
     {
       title: "creator",

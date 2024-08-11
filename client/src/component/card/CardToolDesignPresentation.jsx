@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import cpl01Data from "/src/Pages/Projects/database_Json/cpl01_project.json";
 import cpl02Data from "/src/Pages/Projects/database_Json/cpl02_project.json";
 import cpl03Data from "/src/Pages/Projects/database_Json/cpl03_project.json";
@@ -22,10 +21,9 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardToolDesignPresentation = () => {
-  const location = useLocation();
-  const projectId = location.pathname.split("/").pop();
-  const projectData = dataMapping[projectId] || {};
+const CardToolDesignPresentation = (props) => {
+  const {proj_id} = props;
+  const projectData = dataMapping[proj_id] || {};
 
   const designPresentItems =
     projectData.find((item) => item.name === "design_present")?.data || [];
@@ -52,6 +50,9 @@ const CardToolDesignPresentation = () => {
   );
 };
 
+CardToolDesignPresentation.propTypes = {
+  proj_id: PropTypes.string,
+};
 export default CardToolDesignPresentation;
 
 const Container = styled.div`

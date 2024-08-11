@@ -1,5 +1,4 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
 import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
@@ -24,16 +23,8 @@ const dataMapping = {
 };
 
 const CardMainFunction = (props) => {
-  const location = useLocation();
-  const urlPath = location.pathname;
-  const projectId = urlPath.split('/').pop(); // Extract projectId from URL
 
-  // const projectData = dataMapping[projectId] || []; // Select the data based on the project ID
-  const projectData = dataMapping[props.proj_id] || []; // Select the data based on the project ID
-
-  // console.log('Project ID:', projectId); 
-  // console.log('Project Data:', projectData); 
-
+  const projectData = dataMapping[props.proj_id] || [];
   // Extract main_function table data
   const mainFunctionTable = projectData.find(
     (item) => item.type === 'table' && item.name === 'main_function'
@@ -63,6 +54,9 @@ const CardMainFunction = (props) => {
   );
 };
 
+CardMainFunction.propTypes = {
+  proj_id: PropTypes.string,
+};
 export default CardMainFunction;
 
 const Card = styled.div`

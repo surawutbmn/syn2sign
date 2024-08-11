@@ -6,15 +6,15 @@ const LinkBox = styled.a`
 `;
 
 const LogoContainer = styled.img`
-  width: ${({ tier, type }) => {
+  width: ${({ $tier, type }) => {
     if (type === "LogoRec") {
-      return tier === "tier-1" ? "10em" : tier === "tier-2" ? "7em" : "4.5em";
+      return $tier === "tier-1" ? "10em" : $tier === "tier-2" ? "7em" : "4.5em";
     } else {
-      return tier === "tier-1"
+      return $tier === "tier-1"
         ? "5em"
-        : tier === "tier-2-dl"
+        : $tier === "tier-2-dl"
         ? "4em"
-        : tier === "tier-2"
+        : $tier === "tier-2"
         ? "3.5em"
         : "3em";
     }
@@ -28,15 +28,19 @@ const LogoContainer = styled.img`
   }};
   object-fit: contain;
   @media (max-width: 991.98px) {
-    width: ${({ tier, type }) => {
+    width: ${({ $tier, type }) => {
       if (type === "LogoRec") {
-        return tier === "tier-1" ? "14em" : tier === "tier-2" ? "9em" : "5.5em";
+        return $tier === "tier-1"
+          ? "14em"
+          : $tier === "tier-2"
+          ? "9em"
+          : "5.5em";
       } else {
-        return tier === "tier-1"
+        return $tier === "tier-1"
           ? "7em"
-          : tier === "tier-2-dl"
+          : $tier === "tier-2-dl"
           ? "5em"
-          : tier === "tier-2"
+          : $tier === "tier-2"
           ? "3.5em"
           : "3em";
       }
@@ -70,7 +74,7 @@ const SponLink = (props) => {
   return (
     // <LogoContainer tier={tier} type={type}>
     <LinkBox href={href} target="_blank" rel="noopener noreferrer">
-      <LogoContainer tier={tier} type={type} src={imgSrc} alt={alt} />
+      <LogoContainer $tier={tier} type={type} src={imgSrc} alt={alt} />
     </LinkBox>
     // </LogoContainer>
   );

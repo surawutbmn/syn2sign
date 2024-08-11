@@ -31,7 +31,6 @@ const CardKeyword = (props) => {
   const [activeButton, setActiveButton] = useState(null);
 
   useEffect(() => {
-    // Select the appropriate data based on the keyword prop
     const selectedData = dataMapping[props.proj_id] || [];
 
     if (selectedData.length > 0) {
@@ -44,32 +43,13 @@ const CardKeyword = (props) => {
     }
   }, [props.proj_id]);
 
-  // useEffect(() => {
-  //   // Extract part of the URL to determine which data to use
-  //   const url = window.location.href;
-  //   const projectIdentifier = url.match(/cpl0\d+/);
-  //   const identifier = projectIdentifier ? projectIdentifier[0] : "default";
-
-  //   // Select the appropriate data based on the identifier
-  //   const selectedData = dataMapping[identifier] || [];
-
-  //   if (selectedData.length > 0) {
-  //     // Extract the data array from the JSON file
-  //     const tableData = selectedData.find(
-  //       (entry) => entry.type === "table" && entry.name === "keywords"
-  //     ).data;
-  //     setData(tableData);
-  //     setActiveButton(tableData[0].id); // Set default active button
-  //   }
-  // }, []);
-
   const handleButtonClick = (id) => {
     setActiveButton(id);
   };
 
   return (
-    <div className="d-flex row" style={{ marginTop: "-2rem" }}>
-      <div className="col-12 mb-5">
+    <div className="row justify-content-center" style={{ marginTop: "-2rem" }}>
+      <div className="col-8 mb-5">
         <span className="description">
           {data.find((item) => item.id === activeButton)?.description}
         </span>
@@ -102,7 +82,7 @@ const CardKeyword = (props) => {
 };
 
 CardKeyword.propTypes = {
-  keyword: PropTypes.string,
+  proj_id: PropTypes.string,
 };
 
 export default CardKeyword;

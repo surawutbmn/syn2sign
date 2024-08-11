@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import projectdata from "../../../public/data/Projectdata";
@@ -40,28 +39,6 @@ function Students() {
 
   const fetchStudentData = async (std_id) => {
     try {
-      const response = await axios.get(
-        `http://localhost/syn2sign/students/${std_id}`
-      );
-      const studentData = response.data;
-      if (studentData.question) {
-        const parsedQuestion = JSON.parse(studentData.question);
-        setQuestions(parsedQuestion); 
-      }
-
-      if (studentData.roles) {
-        const parsedRole = JSON.parse(studentData.roles);
-        setRole(parsedRole);
-      }
-      if (studentData.rectool) {
-        const parsedTool = JSON.parse(studentData.rectool);
-        setTool(parsedTool);
-        
-      }
-      // console.log(studentData.rectool);
-      return studentData;
-    } catch (error) {
-      console.error("Error fetching student data:", error);
       const localStudent = findStudentById(std_id);
       if (localStudent) {
         if (localStudent.roles) {
@@ -73,35 +50,27 @@ function Students() {
         if (localStudent.rectool) {
           setTool(localStudent.rectool); // Directly set the if available
         }
-        
+
         return localStudent; // Return local data if the API call fails
       }
+    } catch (error) {
+      console.error("Error fetching student data:", error);
     }
   };
 
   const fetchProjectData = async (project_id) => {
     try {
-      const response = await axios.get(
-        `http://localhost/syn2sign/projects/${project_id}`
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching student data:", error);
       const localProject = findProjectById(project_id);
       if (localProject) {
         return localProject;
       }
+    } catch (error) {
+      console.error("Error fetching student data:", error);
     }
   };
 
   const fetchOtherStudentsData = async (project_id, std_id) => {
     try {
-      const response = await axios.get(
-        `http://localhost/syn2sign/otherstudents/${project_id}/${std_id}`
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching other sudent data:", error);
       const localOtherStudent = findOtherStudentsByProjectId(
         project_id,
         std_id
@@ -109,6 +78,8 @@ function Students() {
       if (localOtherStudent) {
         return localOtherStudent;
       }
+    } catch (error) {
+      console.error("Error fetching other sudent data:", error);
     }
   };
 
@@ -142,7 +113,7 @@ function Students() {
     GetData();
   }, [std_id]);
 
-  console.log(tools);
+  // console.log(tools);
 
   // console.log(otherStudents);
   useEffect(() => {

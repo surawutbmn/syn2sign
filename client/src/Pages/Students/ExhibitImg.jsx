@@ -29,7 +29,7 @@ function ExhibitImg({ name, std_id }) {
     <>
       <Container className="text-start my-5">
         <div className="txt-grey mb-3">
-          Some Syncshot of {name} at Syn2sign exhibition 2024
+          Some {name}&rsquo;s Syncshot at Syn2sign Exhibition 2024
         </div>
         <Row xs={2}>
           {images.slice(0, 1).map((img, index) => (

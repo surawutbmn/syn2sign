@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { FaMicrochip } from "react-icons/fa6";
@@ -45,19 +45,10 @@ const CardIdeaConcept = (props) => {
     concept_th: "",
     concept_en: "",
   });
-
-  // Extract part of the URL to determine which data to use
-  const url = window.location.href;
-  const projectIdentifier = url.match(/cpl0\d+/)
-    ? url.match(/cpl0\d+/)[0]
-    : "default";
-
   useEffect(() => {
-    // Select the appropriate data based on the identifier
     const selectedData = dataMapping[props.proj_id] || [];
 
     if (selectedData.length > 0) {
-      // Extract the necessary data from the JSON file
       const conceptData = selectedData.find(
         (entry) => entry.type === "table" && entry.name === "concept"
       ).data[0];
@@ -69,7 +60,7 @@ const CardIdeaConcept = (props) => {
         concept_en: conceptData.concept_en,
       });
     }
-  }, [props.proj_id]); // Add projectIdentifier as a dependency to re-run effect on URL change
+  }, [props.proj_id]); 
 
   return (
     <div className="d-flex row text-start" style={{ marginTop: "-60px" }}>
@@ -77,7 +68,7 @@ const CardIdeaConcept = (props) => {
         <DeviceContainer className="">
           <DeviceImage
             className="text-end"
-            src={`/showcase/Project/${projectIdentifier}/${projectData.preview_img}`}
+            src={`/showcase/Project/${props.proj_id}/${projectData.preview_img}`}
           />
         </DeviceContainer>
         <div className="mt-3 txt-upper">
@@ -88,7 +79,7 @@ const CardIdeaConcept = (props) => {
       <div className="col-7">
         <div className="txt-upper txt-prim txt-head2">connect IDEA w/</div>
         <div className="txt-upper txt-head2">
-          {textMapping[projectIdentifier] || "EVAL Balance"}
+          {textMapping[props.proj_id] || "EVAL Balance"}
         </div>
         <div className="txt-body2">{projectData.concept_th}</div>
         <Line className="txt-body3 mt-3">

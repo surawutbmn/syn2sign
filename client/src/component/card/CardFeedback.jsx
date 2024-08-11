@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 import cpl01Data from '/src/Pages/Projects/database_Json/cpl01_project.json';
 import cpl02Data from '/src/Pages/Projects/database_Json/cpl02_project.json';
 import cpl03Data from '/src/Pages/Projects/database_Json/cpl03_project.json';
@@ -22,12 +21,9 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardFeedback = () => {
-  const location = useLocation();
-  const projectId = location.pathname.split('/')[3];
-  const projectData = dataMapping[projectId] || [];
-  
-  // Find the testing data
+const CardFeedback = ({proj_id}) => {
+
+  const projectData = dataMapping[proj_id] || [];
   const testingData = projectData.find(item => item.type === 'table' && item.name === 'testing');
   const feedback = testingData ? testingData.data.find(item => item.id === "1") : {};
 
@@ -89,6 +85,9 @@ const CardFeedback = () => {
   );
 };
 
+CardFeedback.propTypes = {
+  proj_id: PropTypes.string,
+};
 export default CardFeedback;
 
 const BoxCircle = styled.div`

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import "./showcase.css";
-// import { Link } from "react-router-dom";
-import axios from "axios";
 import { Container } from "react-bootstrap";
 import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
@@ -21,36 +19,27 @@ function Showcase() {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get(`http://localhost/syn2sign/students`);
-      // console.log("API response for students:", response.data);
-      if (Array.isArray(response.data)) {
-        setStudents(response.data);
+      if (studentsdata) {
+        setStudents(studentsdata);
       } else {
-        console.error("Expected an array but received:", response.data);
+        console.error("Expected an array but received:", studentsdata);
       }
     } catch (error) {
       console.error("Error fetching student data:", error);
-      if (studentsdata) {
-        setStudents(studentsdata);
-      }
     }
   };
 
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get(`http://localhost/syn2sign/projects`);
-      // console.log("API response:", response.data);
-      if (Array.isArray(response.data)) {
-        setProjects(response.data);
+      if (projectdata) {
+        setProjects(projectdata);
       } else {
-        console.error("Expected an array but received:", response.data);
+        console.error("Expected an array but received:", projectdata);
       }
     } catch (error) {
       console.error("Error fetching project data:", error);
-      if (projectdata) {
-        setStudents(projectdata);
-      }
+      
     }
   };
 

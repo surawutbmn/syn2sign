@@ -22,7 +22,7 @@ const TabButton = styled.div`
   border-bottom: 4px solid var(--color-grey);
   color: var(--color-grey);
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   img {
     width: 1.9rem;
   }

@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => (
         to={`/showcase/projects/${project.project_id}`}
         className="card-link"
       >
-        <div className="d-flex align-items-start">
+        <div className="d-flex align-items-start pt-3 px-3">
           <div className="projects-card-icon me-3">
             <img
               src={`/icon/prj/${project.icon_card}`}
@@ -28,8 +28,10 @@ const ProjectCard = ({ project }) => (
             <p className="line-clamp-2">{project.fullname_th}</p>
           </HeadText>
         </div>
-        <hr />
-        <CreatorSec>
+        <div className="px-3">
+          <hr />
+        </div>
+        <CreatorSec className="px-3">
           <div className="creators-icon">
             <img
               src={`/icon/prj/${project.icon_std}`}
@@ -54,7 +56,7 @@ const ProjectCard = ({ project }) => (
         </CreatorSec>
         <ImgThumb className="card-prj-thumb d-none d-md-flex">
           <img
-            src={`/icon/prj/${project.img_thumb}`}
+            src={`/project_img/prj_thumb/${project.img_thumb}`}
             alt="project thumbnail"
             loading="lazy"
           />
@@ -106,21 +108,23 @@ const Title = styled.h4`
 `;
 const ImgThumb = styled.div`
   overflow: hidden;
-  border-radius: 1.2rem;
+  /* border-radius: 1.2rem; */
   img {
     width: 100%;
   }
 `;
 const CardProjects = styled.div`
   background-color: var(--color-light);
-  padding: 20px 15px;
-  border-radius: 16px;
-  &:hover .card-prj-thumb img {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+  /* padding: 20px 0 0 0; */
+  border-radius: 1.2rem;
+  overflow: hidden;
+  &:hover {
+    transform: scale3d(1.02, 1.02, 1.02);
+    transition: transform 0.3s cubic-bezier(0.37, -0.59, 1, 0.29);
   }
   hr {
-    margin: -0.3rem 0 1rem 0;
+    margin: 0.1em 0 1em 0;
+    border: 0.05em solid;
   }
   .creators-icon {
     min-width: 5em;
