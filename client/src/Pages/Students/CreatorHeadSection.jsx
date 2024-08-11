@@ -2,6 +2,9 @@ import styled from "styled-components";
 import CircleLinkBtn from "../../component/Button/CircleLinkBtn";
 import propTypes from "prop-types";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
 
 function CreatorHeadSection(props) {
   const { student = {}, project = {} } = props;
@@ -9,6 +12,11 @@ function CreatorHeadSection(props) {
   return (
     <>
       <Container>
+        <BackBtn className="text-start link-txt txt-upper">
+          <Link to={`/showcase#creator`}>
+            <FaArrowLeft className="me-2" size={20}/><strong>back</strong>
+          </Link>
+        </BackBtn>
         <div className="d-flex">
           <div className="d-flex flex-column col-7 pe-3">
             <div className="mb-5 d-flex flex-column align-items-start">
@@ -16,15 +24,17 @@ function CreatorHeadSection(props) {
               <h1 className="txt-prim txt-upper">
                 <strong>Get to know {student.nickname_en}</strong>
               </h1>
-              <div className="d-flex align-items-start">
-                {/* <img
-                src={`/icon/prj/${project.icon}`}
-                alt="project icon"
-                style={{ maxWidth: "5vw", width: "100%" }}
-                loading="lazy"
-              /> */}
-                <h3 className="txt-cap">Maker of {project.name_en}</h3>
-              </div>
+              <ProjName className="d-flex align-items-start">
+                <h3 className="txt-cap">
+                  Maker of{" "}
+                  <Link
+                    to={`/showcase/projects/${project.project_id}`}
+                    className="card-link txt-light"
+                  >
+                    <u> {project.name_en}</u>
+                  </Link>
+                </h3>
+              </ProjName>
             </div>
             <QouteBox className=" ms-auto my-5 position-relative">
               <div className="d-flex align-items-baseline quotecon">
@@ -109,6 +119,21 @@ CreatorHeadSection.propTypes = {
 };
 export default CreatorHeadSection;
 
+const BackBtn = styled.h3`
+  a {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-light);
+    transition: all 300ms ease;
+  }
+`;
+const ProjName = styled.div`a{&:hover{color: var(--color-primary);}} a{transition: all 300ms ease}`
 const QouteBox = styled.div`
   width: 100%;
   height:100%;

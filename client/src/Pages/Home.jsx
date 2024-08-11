@@ -66,7 +66,7 @@ function Home() {
           <Col xs={6} className="d-flex text-end justify-content-end">
             <DeviceBox>
               <FrontBox>
-                <div className="txt-upper txt-second text-start txt-bold ms-3 mt-1" style={{fontSize: "1.25rem"}}>WAIWAN</div>
+                <div className="txt-upper txt-prim text-start txt-bold ms-3 mt-1" style={{fontSize: "1.25rem"}}>WAIWAN</div>
                 <div className="txt-dark text-start ms-3 txt-body3">LINE OA APPLICATION</div>
               </FrontBox>
               <DeviceImage src="/showcase/Project/cpl03/concept-device-cpl03.png" />
@@ -76,7 +76,7 @@ function Home() {
           <Col xs={6} className="d-flex text-end justify-content-start">
             <DeviceBox>
               <FrontBox2>
-                <div className="txt-upper txt-second text-start txt-bold ms-3 mt-1" style={{fontSize: "1.25rem"}}>Young & Chick</div>
+                <div className="txt-upper txt-prim text-start txt-bold ms-3 mt-1" style={{fontSize: "1.25rem"}}>Young & Chick</div>
                 <div className="txt-dark text-start ms-3 txt-body3">WEB APPLICATION</div>
               </FrontBox2>
               <DeviceImage src="/showcase/Project/cpl06/concept-device-cpl06.png" />

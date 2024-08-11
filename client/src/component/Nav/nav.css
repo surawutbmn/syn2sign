@@ -65,7 +65,7 @@ background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%
     .menuClick .navbar { backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);}
     .navbar .navbar-nav{
-        width: 100%; padding: 30px 0 0 0; border: none; background-color: transparent; border-radius: 0;
+        width: 100%; padding: 5rem 0 0 0; border: none; background-color: transparent; border-radius: 0;
     }
     .navbar-collapse {
         transition: height ease-in-out .5s;
@@ -78,9 +78,9 @@ background: linear-gradient(180deg, rgba(83,76,254,.3) 0%, rgba(83,76,254,0) 75%
         margin-left: auto;
     }
     .menuClick .navbar-collapse {height: calc(100vh - 48px);}
-    .link-nav{font-size: 1.2em;}
+    .link-nav{font-size: 1.5em;}
     .link-nav:hover,
-    .link-nav.active{background-color: transparent; color: var(--color-secondary);}
+    .link-nav.active{background-color: transparent; color: var(--color-primary);}
     .nav-r li{margin-right: 0; margin-bottom: 8px;}
     .nav-r li.link-nav{margin: 0; display: flex; justify-self: center; margin-bottom: 8px;}
     .btn-menu { display:flex;  right:30px; align-items:center; cursor:pointer; z-index:12;padding: 12px 0;}

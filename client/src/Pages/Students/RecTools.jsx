@@ -106,6 +106,7 @@ const Pg = styled.div`
     width: 35px;
     height: 35px;
     background-color: rgba(255, 255, 255, .5);
+    color: var(--color-light);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-radius: 50%;
@@ -118,7 +119,8 @@ const Pg = styled.div`
   }
 
   .custom-bullet.swiper-pagination-bullet-active {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-light);
     font-size: 1.3rem;
     font-weight: var(--txt-bold);
   }
