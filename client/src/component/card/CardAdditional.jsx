@@ -30,6 +30,7 @@ const CardAdditional = (props) => {
               link={props.link}
               style={`txt-head4`}
               icon={props.btnIcon}
+              text2={props.btn2}
             />
         </BoxContent>
       </CardBox>
@@ -44,6 +45,7 @@ CardAdditional.propTypes = {
   style: propTypes.string,
   link: propTypes.string,
   btn: propTypes.string,
+  btn2: propTypes.string,
   btnIcon: propTypes.string,
 };
 export default CardAdditional;

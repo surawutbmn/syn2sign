@@ -1,23 +1,24 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { RxArrowTopRight } from "react-icons/rx";
+
 import { CgSoftwareDownload } from "react-icons/cg";
 
 const ArrowButton = (props) => {
   const iconMap = {
-    arrow: FaArrowRightLong,
+    arrow: RxArrowTopRight,
     download: CgSoftwareDownload,
     // Add other icons here if needed
   };
-  const { link, text, style } = props;
-  const IconComponent = iconMap[props.icon] || FaArrowRightLong;
+  const { link, text, text2, style } = props;
+  const IconComponent = iconMap[props.icon] || RxArrowTopRight;
   const classname = `txt-dark txt-upper ${style || "txt-head4"}`;
   return (
     <div className="text-start align-self">
       <a href={link || "#"} target="_blank">
         <ButtonBox className={classname}>
           <IconWrapper>
-            {text || "Arrow Button"}
+            {text || "Arrow Button"} <Goto className="txt-cap">({text2 || "on next"})</Goto>
             <IconComponent className="ms-2"size={30}/>
           </IconWrapper>
         </ButtonBox>
@@ -29,17 +30,17 @@ const ArrowButton = (props) => {
 ArrowButton.propTypes = {
   link: propTypes.string,
   text: propTypes.string,
+  text2: propTypes.string,
   style: propTypes.string,
   icon: propTypes.oneOf(["arrow", "download"]),
 };
 
 export default ArrowButton;
 
+const Goto = styled.span`font-size: .8em`
 const ButtonBox = styled.button`
   width: auto;
   height: auto;
-  /* height: 250px; */
-  /* background: white; */
   background: none;
   border: solid 0.05rem var(--color-grey);
   border-radius: 100px;

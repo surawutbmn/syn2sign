@@ -96,6 +96,7 @@ function KnowledgeSlide() {
 for a Digital Platform`}
             desc={`นิทรรศการความรู้ “10 ชุดประกอบสร้างดิจิทัลแพลตฟอร์ม” ที่รวบรวม องค์ความรู้ทั้งในมุมมองด้านการออกแบบร่วมกับด้านพัฒนาโค้ดดิ้ง พร้อมทั้งกรณีศึกษาที่เป็นประโยชน์อีกมากมาย`}
             btn={`See more`}
+            btn2={`on figma`}
             btnIcon={`arrow`}
             link={`https://www.figma.com/design/lQcCtWZLHIkAvhGOHwHmod/2024-syn2sign-10digital-platform?node-id=0-1&t=itzuGUzEMSundGkV-1`}
           />
@@ -107,6 +108,7 @@ for a Digital Platform`}
             title={`Syn2sign Story`}
             desc={`เราได้รวบรวมเรื่องราวที่มากว่าจะเป็น...ชื่อ โลโก้ โปสเตอร์ มาเล่าในบทความนี้ “กว่าจะเป็น... #syn2sign”`}
             btn={`Read more`}
+            btn2={`on medium`}
             btnIcon={`arrow`}
           />
         </SwiperSlide>
@@ -117,6 +119,7 @@ for a Digital Platform`}
             title={`Download Syn2sign Stickers Free`}
             desc={`สติกเกอร์ลายพิเศษจากนิทรรศการ Syn2sign ที่ออกแบบ สำหรับงานนี้โดยเฉพาะ (สามารถดาวน์โหลดไฟล์ได้ที่นี่)`}
             btn={`download`}
+            btn2={`free`}
             btnIcon={`download`}
           />
         </SwiperSlide>

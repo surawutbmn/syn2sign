@@ -1,5 +1,4 @@
-import React from 'react'; // Ensure React is imported
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 import styled from "styled-components";
 import { IoLogoYoutube } from "react-icons/io";
 

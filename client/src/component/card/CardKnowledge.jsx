@@ -31,6 +31,7 @@ function CardKnowledge(props) {
           </div>
           <ArrowButton
             text={`${props.btn}`}
+            text2={`${props.btn2}`}
             style={`txt-head4`}
             link={props.link}
             icon={props.btnIcon}
@@ -48,6 +49,7 @@ CardKnowledge.propTypes = {
   style: propTypes.string,
   link: propTypes.string,
   btn: propTypes.string,
+  btn2: propTypes.string,
   btnIcon: propTypes.string,
 };
 

@@ -118,6 +118,7 @@ export default function PlaylistSlider() {
               img={`/other/playlistAtmos.png`}
               btnIcon={`arrow`}
               btn={`watch now`}
+              btn2={`on youtube`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -128,6 +129,7 @@ export default function PlaylistSlider() {
               img={`/other/gallery1.png`}
               btn={`see more`}
               btnIcon={`arrow`}
+              btn2={`on facebook`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -138,6 +140,7 @@ export default function PlaylistSlider() {
               img={`/other/gallery2.png`}
               btn={`see more`}
               btnIcon={`arrow`}
+              btn2={`on facebook`}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -148,6 +151,7 @@ export default function PlaylistSlider() {
               img={`/other/gallery3.png`}
               btn={`see more`}
               btnIcon={`arrow`}
+              btn2={`on facebook`}
             />
           </SwiperSlide>
         </Swiper>
@@ -180,6 +184,7 @@ export default function PlaylistSlider() {
               desc={`เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`}
               img={`/other/playlistShow.png`}
               btnIcon={`arrow`}
+              btn2={`on youtube`}
               btn={`watch now`}
             />
           </SwiperSlide>
@@ -190,6 +195,7 @@ export default function PlaylistSlider() {
               desc={`เราได้จัดทำ Youtube playlist รวบรวมคลิปบรรยากาศในงาน นิทรรศการ Syn2signและคลิปสัมภาษณ์ผู้เข้าร่วมชมงานนิทรรศการ เพื่อให้ทุกคนได้เพลิดเพลินไปกับเรา`}
               img={`/other/playlistAtmos.png`}
               btnIcon={`arrow`}
+              btn2={`on youtube`}
               btn={`watch now`}
             />
           </SwiperSlide>
@@ -200,6 +206,7 @@ export default function PlaylistSlider() {
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 1 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
               img={`/other/gallery1.png`}
               btn={`see more`}
+              btn2={`on facebook`}
               btnIcon={`arrow`}
             />
           </SwiperSlide>
@@ -210,6 +217,7 @@ export default function PlaylistSlider() {
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 2 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
               img={`/other/gallery2.png`}
               btn={`see more`}
+              btn2={`on facebook`}
               btnIcon={`arrow`}
             />
           </SwiperSlide>
@@ -220,6 +228,7 @@ export default function PlaylistSlider() {
               desc={`รวบรวมภาพบรรยากาศการเข้าร่วมกิจกรรมต่างๆ ของผู้เข้าชมงาน นิทรรศการ ที่นอกจากการจัดแสดงโชว์ผลงานจุลนิพนธ์แล้ว ภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
               img={`/other/gallery3.png`}
               btn={`see more`}
+              btn2={`on facebook`}
               btnIcon={`arrow`}
             />
           </SwiperSlide>
