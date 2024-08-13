@@ -28,7 +28,7 @@ const StudentCard = ({ student }) => (
                 {student.nickname_en && `(${student.nickname_en})`}
               </Title>
               <Caption>
-                Email: {student.email}
+                <span>{student.email}</span>
                 {/* {student.name_th}{" "}
                 {student.nickname_th && `(${student.nickname_th})`} */}
                 <br />
@@ -164,16 +164,17 @@ const ReadMoreIcon = styled.img`
   @media (max-width: 767.98px) {
     max-width: 2rem;
   }
-
-  
 `;
 const ImgCreator = styled.img`
   width: 100%;
+  height: auto;
+  object-fit: cover;
 `;
 const CardStudents = styled.div`
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
+  height: auto;
   &:hover .rdm-icon {
     filter: brightness(0) saturate(100%) invert(100%) sepia(72%) saturate(79%)
       hue-rotate(308deg) brightness(113%) contrast(92%);
@@ -197,6 +198,6 @@ const CardStudents = styled.div`
   }
 
   @media (max-width: 767.98px) {
-    border-radius: .7rem;
+    border-radius: 0.7rem;
   }
 `;

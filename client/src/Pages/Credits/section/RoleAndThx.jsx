@@ -16,12 +16,18 @@ const Section = styled.div`
 const Heading = styled.h2`
   margin-bottom: 2rem;
   color: var(--color-primary);
+  font-weight: var(--txt-bold);
+  text-transform: uppercase;
+  span{text-transform: capitalize;}
 `;
 
 const SubHeading = styled.h2`
   margin-top: 3rem;
   margin-bottom: 3rem;
+  font-weight: var(--txt-bold);
+  text-transform: uppercase;
   color: var(--color-primary);
+  span{text-transform: none;}
 `;
 
 const GridContainer = styled.div`
@@ -71,7 +77,9 @@ function RoleAndThx() {
   return (
     <>
       <Section>
-        <Heading>syn2sign exhibition venue</Heading>
+        <Heading>
+          <span>Syn2sign</span> exhibition venue
+        </Heading>
         <span>
           <strong>DIRECTED BY:</strong> FACULTY OF INFORMATION AND COMMUNICATION
           TECHNOLOGY, SILPAKORN UNIVERSITY
@@ -81,7 +89,9 @@ function RoleAndThx() {
           </p>
         </span>
       </Section>
-      <SubHeading>INSI(gn)DER</SubHeading>
+      <SubHeading>
+        INSI<span>(gn)</span>DER
+      </SubHeading>
       <GridContainer>
         <FlexContainer>
           <IconContainer>
@@ -234,7 +244,7 @@ function RoleAndThx() {
           </TextContainer>
         </FlexContainer>
       </GridContainer>
-      <SubHeading>Thank you for your support</SubHeading>
+      <SubHeading>Thank you for Your Support</SubHeading>
       <GridContainer>
         <FlexContainer>
           <IconContainer>

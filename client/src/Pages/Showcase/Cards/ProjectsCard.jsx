@@ -128,8 +128,18 @@ const Title = styled.h4`
 const ImgThumb = styled.div`
   overflow: hidden;
   border-radius: 1.2rem;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  background-color: #f0f0f0; /* Placeholder color */
+
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 const CardProjects = styled.div`
@@ -150,16 +160,19 @@ const CardProjects = styled.div`
   }
   .projects-card-icon img {
     width: 100%;
+    height: 100%;
     border-radius: 1.2rem;
+    object-fit: cover;
   }
   .projects-card-icon {
     position: relative;
     margin-right: 0.5em;
-
     width: 3.5em;
+    height: 3.5em;
     background: rgb(255, 255, 255);
     border-radius: 1.2rem;
     font-size: 1.4em;
+    overflow: hidden;
     &::before {
       content: "";
       position: absolute;

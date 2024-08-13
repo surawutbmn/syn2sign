@@ -1,10 +1,11 @@
-import { Container } from 'react-bootstrap';
+import styled from "styled-components";
+import { Container } from "react-bootstrap";
 
 function LastSec() {
   return (
-    <Container className="position-relative">
-      <div className="my-5">
-        <h2 className="mb-4 txt-prmhead">onsite supporter</h2>
+    <StyledContainer>
+      <Section>
+        <Heading>Onsite Supporter</Heading>
         <span>
           <strong>ONSITE PHOTOGRAPHY TEAM:</strong>
           <p>
@@ -18,52 +19,52 @@ function LastSec() {
             <br /> Bualoi Roongrueangsub Transport Limited Partnership
           </p>
         </span>
-        <div className="grid grid-cols-2 grid-cols-md-1 ml-20 onsite-thx gap-4">
-          <div className="d-flex">
+        <SupporterGrid>
+          <SupporterItem>
             <p>
               <strong>LIGHTING & SOUND:</strong>{" "}
               <br className="d-block d-md-none" />Q Light & Sound
             </p>
-          </div>
-          <div className="d-flex">
+          </SupporterItem>
+          <SupporterItem>
             <p>
               <strong>CARPET INSTALLATION:</strong>{" "}
               <br className="d-block d-md-none" />
               DILO PRODUCTS
             </p>
-          </div>
-          <div className="d-flex">
+          </SupporterItem>
+          <SupporterItem>
             <p>
               <strong>MEDIA PRINTING:</strong>{" "}
               <br className="d-block d-md-none" />
               IMP factory
             </p>
-          </div>
-          <div className="d-flex">
+          </SupporterItem>
+          <SupporterItem>
             <p>
               <strong className="txt-upper">Board service provider:</strong>{" "}
               <br className="d-block d-md-none" />
               Thumnaksilp Advertising
             </p>
-          </div>
-          <div className="d-flex">
+          </SupporterItem>
+          <SupporterItem>
             <p>
               <strong>T-SHIRT SUPPLIER:</strong>{" "}
               <br className="d-block d-md-none" />
               INDYt-shirt
             </p>
-          </div>
-          <div className="d-flex text-start">
+          </SupporterItem>
+          <SupporterItem>
             <p>
               <strong>Attachments and more:</strong>{" "}
               <br className="d-block d-md-none" />
               17bxn.paperprint
             </p>
-          </div>
-        </div>
-      </div>
-      <div className="mb-5">
-        <h2 className="mb-4 txt-prmhead">EXHIBITION PROJECT MANAGER</h2>
+          </SupporterItem>
+        </SupporterGrid>
+      </Section>
+      <Section>
+        <Heading>Exhibition Project Manager</Heading>
         <p>
           <strong className="txt-upper">Project Manager:</strong> Chalida
           Ingkapattanakul{" "}
@@ -72,7 +73,7 @@ function LastSec() {
           <strong className="txt-upper">Assistant Project Manager:</strong>{" "}
           Panita Lainananukul
         </p>
-        <h2 className="mt-5 mb-4 txt-prmhead">SUPPORTER AND ADVISOR</h2>
+        <Heading>Supporter and Advisor</Heading>
         <p>
           <strong className="txt-upper">Project Consultant:</strong> Kowit
           Meboon
@@ -86,24 +87,65 @@ function LastSec() {
         <p>
           <strong>SUPPORTER:</strong> Sarayut Thibhodee
         </p>
-        <h2 className="mt-5 txt-prmhead">Publicize Project BY</h2>
+        <Heading>Publicize Project by</Heading>
         <span>
-          <a
+          <StyledLink
             href="https://ict.su.ac.th/func/"
             target="_blank"
             rel="noopener noreferrer"
-            className="txt-link"
           >
             <u>
               <strong>FUNC/ (FUNCSLASH)</strong>
             </u>
-          </a>
+          </StyledLink>
           <br /> INTERACTIVE APPLICATION PROGRAMME <br /> ICT SILPAKORN
           UNIVERSITY
         </span>
-      </div>
-    </Container>
+      </Section>
+    </StyledContainer>
   );
 }
 
 export default LastSec;
+
+const StyledContainer = styled(Container)`
+  position: relative;
+`;
+
+const Section = styled.div`
+  margin: 3rem 0;
+`;
+
+const Heading = styled.h2`
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: var(--txt-bold);
+`;
+
+const SupporterGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-left: 14rem;
+
+  @media (max-width: 767.99px) {
+    margin-left: 1rem;
+  }
+  @media (max-width: 575.99px) {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 5rem; */
+  }
+`;
+
+const SupporterItem = styled.div`
+  display: flex;
+`;
+
+const StyledLink = styled.a`
+  color: var(--link-color);
+  text-decoration: underline;
+`;
