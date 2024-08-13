@@ -11,6 +11,7 @@ import cpl05Data from "/src/Pages/Projects/database_Json/cpl05_project.json";
 import cpl06Data from "/src/Pages/Projects/database_Json/cpl06_project.json";
 import cpl07Data from "/src/Pages/Projects/database_Json/cpl07_project.json";
 import cpl08Data from "/src/Pages/Projects/database_Json/cpl08_project.json";
+import LinkButtonIG from "../Button/LinkButtonIG";
 // Add more imports as needed
 
 const dataMapping = {
@@ -77,7 +78,9 @@ const CardIdeaConcept = (props) => {
         </div>
       </div>
       <div className="col-7">
-        <div className="txt-upper txt-prim txt-head2">connect IDEA w/</div>
+<span className="txt-upper txt-prim txt-head2" style={{ display: 'flex', alignItems: 'center' }}>
+  connect IDEA w/ <LinkButtonIG name={props.proj_id} />
+</span>
         <div className="txt-upper txt-head2">
           {textMapping[props.proj_id] || "EVAL Balance"}
         </div>

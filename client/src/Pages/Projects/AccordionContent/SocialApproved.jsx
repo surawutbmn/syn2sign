@@ -28,7 +28,7 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const SocialApproved = () => {
+const   SocialApproved = () => {
   const location = useLocation();
   const projectId = location.pathname.split("/").pop(); // Get the project identifier from the URL
   const projectData = dataMapping[projectId]?.find(

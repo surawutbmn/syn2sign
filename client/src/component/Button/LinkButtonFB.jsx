@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 import { IoLogoYoutube } from "react-icons/io";
-import LinkButtonIG from "../../component/Button/LinkButtonIG";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const LinkButton = () => {
   // Get the current URL path
@@ -12,36 +13,36 @@ const LinkButton = () => {
 
   const linkMappings = {
     cpl01: {
-      href: "https://www.youtube.com/watch?v=_41WQgd5qKw",
-      text: "EVAL Balance (อีวาล บาลานซ์) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8RvmBBvh4z/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl02: {
-      href: "https://www.youtube.com/watch?v=OwyQ7eIHmoc",
-      text: "WAIWAN (ไหว้วาน) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8TXpOQvj4m/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl03: {
-      href: "https://www.youtube.com/watch?v=dp_AlUgThnQ",
-      text: "ARTIST MATCH (อาร์ทิส แมทช์) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8UOhH9P8rh/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl04: {
-      href: "https://www.youtube.com/watch?v=zPt2Uu3vZ4I",
-      text: "MORYTECH (โมรี่เทค) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8YhJlHMBRf/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl05: {
-      href: "https://www.youtube.com/watch?v=wMnxzOlEVPA",
-      text: "FULL FILL (ฟูลฟิล) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8bF64wJb5b/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl06: {
-      href: "https://www.youtube.com/watch?v=asaKqFdHkRE",
-      text: "YOUNG & CHIC (ยังแอนด์ชิค) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8dqvfPxrvJ/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl07: {
-      href: "https://www.youtube.com/watch?v=KhAfnkMRctc",
-      text: "TENT CARE (เต็นท์แคร์) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8gPiCRvWjX/?img_index=1",
+      text: "Concept Trailer",
     },
     cpl08: {
-      href: "https://www.youtube.com/watch?v=2fkCoiR49wo",
-      text: "TINY THAI (ไทนี่ไทย) • Video SHOWREEL",
+      href: "https://www.instagram.com/p/C8i0UMOxLbx/?img_index=1",
+      text: "Concept Trailer",
     },
   };
 
@@ -50,12 +51,11 @@ const LinkButton = () => {
 
   return (
     <span className="d-flex row align-items-center txt-body1">
-      <LinkButtonContainer>
+       {/* <LinkButtonContainer> */}
         <Link href={currentLink.href} target="_blank">
           <Icon /> <span className="ms-2 pe-2">{currentLink.text}</span>
-        </Link>      
-      </LinkButtonContainer>
-
+        </Link>
+       {/* </LinkButtonContainer> */}
     </span>
   );
 };
@@ -79,7 +79,7 @@ const LinkButtonContainer = styled.div`
   }
 `;
 
-const Icon = styled(IoLogoYoutube)`
+const Icon = styled(FaFacebookSquare)`
   color: white;
   font-size: 25px;
   margin-left: 10px;

@@ -6,13 +6,14 @@ import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
 import Creators from "./AccordionContent/Creator";
-import { Container } from "react-bootstrap";
+import { Container,Breadcrumb  } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
 import SocialApproved from "./AccordionContent/SocialApproved";
 import CardThreePictureProject from "./AccordionContent/TopPicture";
 import LinkButton from "../../component/Button/LinkButton";
+import LinkButtonIG from "../../component/Button/LinkButtonIG";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
 import CardMainFunction from "../../component/card/CardMainFunction";
@@ -21,7 +22,10 @@ import CardToolDesignPresentation from "../../component/card/CardToolDesignPrese
 import CardDesignProcess from "../../component/card/CardDesignProcess";
 import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
+import CardCreator from "../../component/card/CardCreator";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
+
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -29,6 +33,17 @@ function Project() {
   const { prj_id } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Hook to programmatically navigate
+  const handleImageClick = () => {
+    // Navigate to a different link when the image is clicked
+    navigate('/'); // Replace with your desired URL
+  };
+  
+  const handleShowcaseClick = (event) => {
+    event.preventDefault(); // Prevent default behavior of link
+    handleScrollToTop();
+    navigate('/showcase#project'); // Programmatically navigate to the desired URL
+  };
 
   const [activeProject, setActiveProject] = useState(
     localStorage.getItem("activeProject") || null
@@ -38,6 +53,12 @@ function Project() {
     return (
       projectsdata.find((project) => project.project_id === project_id) || null
     );
+  };
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll effect
+    });
   };
   const fetchProject = async (project_id) => {
     setLoading(true);
@@ -134,7 +155,7 @@ function Project() {
     {
       title: "creator",
       subtitle: "ผู้สร้างผลงาน",
-      content: " ",
+      content: <CardCreator />,
     },
   ];
   const itemsWithStudents = items.map((item) => {
@@ -143,11 +164,13 @@ function Project() {
         ...item,
         content: (
           <>
-            <ul>
+          <CardCreator/>
+            {/* <ul>
               {matchedStudents.length > 0 ? (
                 matchedStudents.map((student) => (
                   <li key={student.id}>
                     <div>
+                      
                       <Creators
                         nameEN={student.name_en}
                         email={student.email}
@@ -162,7 +185,7 @@ function Project() {
               ) : (
                 <p>No students found</p>
               )}
-            </ul>
+            </ul> */}
           </>
         ),
       };
@@ -225,7 +248,10 @@ function Project() {
             className="video-box"
           ></iframe>
         </div>
+        <div>
         <LinkButton className="mt-4" name={project.name_en} />
+        </div>
+        
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">
@@ -278,8 +304,56 @@ function Project() {
             </div>
           </div>
         </div>
+        <BreadcrumbContainer>
+      <BreadcrumbImage
+        src="/s2s-logo/s2s-outline-logo.svg"
+        alt="breadcrumb icon"
+        onClick={handleImageClick}
+      />
+      <Separator>→</Separator>
+      <BreadcrumbItem onClick={handleShowcaseClick}>
+        SHOWCASE
+      </BreadcrumbItem>
+      <Separator>→</Separator>
+      <BreadcrumbItem>
+        {project.name_en}
+      </BreadcrumbItem>
+    </BreadcrumbContainer>
       </Container>
+      
     </>
   );
 }
 export default Project;
+const BreadcrumbContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px; // Adjust spacing as needed
+  margin-bottom: 20px; // Adjust spacing as needed
+`;
+
+const BreadcrumbImage = styled.img`
+  width: 50px; // Adjust size as needed
+  height: auto;
+  cursor: pointer;
+  z-index: 10; // Ensure image is above other content
+  position: relative; // Ensure it is positioned correctly
+  pointer-events: auto; // Ensure pointer events are enabled
+  /* Optional: temporary styles for debugging */
+  /* background-color: rgba(255, 0, 0, 0.2); */
+  /* border: 1px solid red; */
+`;
+
+
+const BreadcrumbItem = styled.span`
+  font-size: 16px; // Adjust font size as needed
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline; // Adds underline on hover for better UX
+  }
+`;
+
+const Separator = styled.span`
+  margin: 0 8px; // Adjust spacing as needed
+  color: #ccc; // Grey color for the separator
+`;
