@@ -22,7 +22,7 @@ function StayTune() {
       <div style={{ height: "fit-content", backgroundColor: "" }}>
         <div className="container my-5 position-relative">
           <h2 className="txt-upper txt-prim txt-bold mb-5">
-            stay tuned at other year&rsquo;s exhibition
+            stay tuned at previous year&rsquo;s exhibition
           </h2>
 
           {/* Dotwisihon (2023) */}

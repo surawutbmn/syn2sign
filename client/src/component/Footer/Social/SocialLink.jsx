@@ -30,11 +30,12 @@ const FooterLink = styled.a`
 `;
 
 const SocialLinks = () => (
-  <Row>
-    <Col>
-      <h6 className="txt-cap text-start d-none d-md-flex">Follow us:</h6>
-      <h6 className="txt-cap text-center d-flex d-md-none">Follow us:</h6>
-      <div className="d-flex align-items-center">
+  // <Row>
+  //   <Col>
+  <div>
+      <h6 className="txt-cap text-start d-none d-md-flex"  style={{ fontSize: "0.625rem" }}>Follow us:</h6>
+      {/* <h6 className="txt-cap text-center d-flex d-md-none">Follow us:</h6> */}
+      <div className="d-flex align-items-center mt-4">
         {socialLinks.map((link, index) => (
           <FooterLink
             key={index}
@@ -46,8 +47,9 @@ const SocialLinks = () => (
           </FooterLink>
         ))}
       </div>
-    </Col>
-  </Row>
+     {/* </Col> */}
+   {/* </Row> */}
+  </div>
 );
 
 export default SocialLinks;

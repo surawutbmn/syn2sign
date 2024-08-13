@@ -10,18 +10,23 @@ export const Footers = () => {
     <>
       <footer id="footer" className="pb-3 position-relative">
         {/* <div className="bg-gd-foot"></div> */}
-        <Container className="align px-4 d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <Container className="align px-4 d-flex flex-column flex-lg-row justify-content-between ">
+
           <div className="d-block d-lg-none w-100 w-xs-50 mb-3">
-            <h5 className="txt-cap text-center">sponsored by:</h5>
+            {/* <span className="txt-cap text-center txt-body3">sponsored by:</span> */}
             <SponsorsGrid sponsors={sponsors} />
           </div>
+
           <div className="d-none d-lg-flex">
             <SponRow sponsors={sponsors} />
           </div>
+
           <Row>
-            <Col>
-              <SocialLinks />
+
+            <Col >
+              <SocialLinks/>
             </Col>
+
           </Row>
         </Container>
       </footer>

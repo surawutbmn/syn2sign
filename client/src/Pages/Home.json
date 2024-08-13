@@ -1,0 +1,50 @@
+{
+    "CPL01": {
+        "title": "Eval Balance",
+        "subtitle": "Mobile Application",
+        "link": "/showcase/projects/cpl01",
+        "img": "/showcase/Project/cpl01/concept-device-cpl01.png"
+    },
+    "CPL02": {
+        "title": "WAIWAN",
+        "subtitle": "Line OA Application",
+        "link": "/showcase/projects/cpl02",
+        "img": "/showcase/Project/cpl02/concept-device-cpl02.png"
+    },
+    "CPL03": {
+        "title": "ARTIST MATCH",
+        "subtitle": "Web Application",
+        "link": "/showcase/projects/cpl03",
+        "img": "/showcase/Project/cpl03/concept-device-cpl03.png"
+    },
+    "CPL04": {
+        "title": "MORYTECH",
+        "subtitle": "Mobile Application",
+        "link": "/showcase/projects/cpl04",
+        "img": "/showcase/Project/cpl04/concept-device-cpl04.png"
+    },
+    "CPL05": {
+        "title": "FULL FILL",
+        "subtitle": "Web Application",
+        "link": "/showcase/projects/cpl05",
+        "img": "/showcase/Project/cpl05/concept-device-cpl05.png"
+    },
+    "CPL06": {
+        "title": "YOUNG & CHIC",
+        "subtitle": "Web Application",
+        "link": "/showcase/projects/cpl06",
+        "img": "/showcase/Project/cpl06/concept-device-cpl06.png"
+    },
+    "CPL07": {
+        "title": "TENT CARE",
+        "subtitle": "Line OA Application",
+        "link": "/showcase/projects/cpl07",
+        "img": "/showcase/Project/cpl07/concept-device-cpl07.png"
+    },
+    "CPL08": {
+        "title": "TINY THAI",
+        "subtitle": "Tablet Interactive",
+        "link": "/showcase/projects/cpl08",
+        "img": "/showcase/Project/cpl08/concept-device-cpl08.png"
+    }
+}

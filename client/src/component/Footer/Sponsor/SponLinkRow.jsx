@@ -4,17 +4,17 @@ import propTypes from "prop-types";
 const LinkBox = styled.a`
   text-decoration: none;
   &.spon-row:hover img{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 
 const LogoContainer = styled.img`
   width: ${({ $spon, type }) => {
     if (type === "LogoRec") {
-      return $spon === "tier-1" ? "7em" : $spon === "tier-2" ? "4.5em" : "3em";
+      return $spon === "tier-1" ? "6em" : $spon === "tier-2" ? "3.5em" : "2em";
     } else {
       return $spon === "tier-1"
-        ? "3.3em"
+        ? "2.3em"
         : $spon === "tier-2-dl"
         ? "2.5em"
         : $spon === "tier-2"

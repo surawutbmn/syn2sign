@@ -120,10 +120,13 @@ const Title = styled.h4`
   font-weight: var(--txt-sbold);
 `;
 const ImgThumb = styled.div`
-  overflow: hidden;
-  /* border-radius: 1.2rem; */
+  /* overflow: hidden; */
+  /* border: 1px solid transparent; */
+  /* border-radius: 50px; */
+  padding: 15px;
   img {
     width: 100%;
+    border-radius: 20px;
   }
 `;
 const CardProjects = styled.div`
@@ -131,9 +134,11 @@ const CardProjects = styled.div`
   /* padding: 20px 0 0 0; */
   border-radius: 1.2rem;
   overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
   &:hover {
     transform: scale3d(1.02, 1.02, 1.02);
-    transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
+    /* transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44); */
+    
   }
   hr {
     margin: 0.1em 0 1em 0;

@@ -52,7 +52,7 @@ function Exhibition() {
   return (
     <>
       <div className="bg-gd-btr"></div>
-      <div className="exh-banner exh-banner-bg mt-5">
+      <div className="exh-banner exh-banner-bg mt-5 mb-6">
         <div className="exh-banner-overlay"></div>
         <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
         <div className="git-link">
@@ -77,7 +77,7 @@ function Exhibition() {
           <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
         </div>
       </div>
-      <Container className="my-6">
+      <Container className="">
         <div className="exh-report-sec mb-6">
           <Row xs={1} md={2} className=" g-4">
             <div className="col">
@@ -202,13 +202,13 @@ function Exhibition() {
       <div className="mb-6">
         <VdoSlide />
       </div>
-      <div className="mb-6">
+      <div className="mb-5">
         <PlaylistSlider />
       </div>
-      <div className="mb-6">
+      <div className="mb-">
         <Knowslide />
       </div>
-      <Container className="mt-5 mb-6">
+      <Container className="mt- mb-6">
         <div className="feedback-con">
           <div className="paper-plane">
             <img src={paper_plane} alt="paper plane" loading="lazy" />

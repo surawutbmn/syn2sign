@@ -43,7 +43,7 @@ const CardFeedback = ({proj_id}) => {
         <BoxCircle>
           <div className="txt-head3">ด้านการออกแบบ</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_design || "0"}
           </div>
         </BoxCircle>
@@ -51,7 +51,7 @@ const CardFeedback = ({proj_id}) => {
         <BoxCircle>
           <div className="txt-head3">ด้านการใช้งาน</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_use || "0"}
           </div>
         </BoxCircle>
@@ -59,7 +59,7 @@ const CardFeedback = ({proj_id}) => {
         <BoxCircle>
           <div className="txt-head3">ด้านภาพรวม</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
-          <div className="txt-prim txt-bold" style={{ fontSize: "5.5rem" }}>
+          <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_overall || "0"}
           </div>
         </BoxCircle>
@@ -91,8 +91,8 @@ CardFeedback.propTypes = {
 export default CardFeedback;
 
 const BoxCircle = styled.div`
-  width: 345px;
-  height: 345px;
+  width: 300px;
+  height: 300px;
   border-radius: 200px;
   border: 1px solid #8e8e8e;
   display: flex;
