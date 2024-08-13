@@ -7,7 +7,7 @@ import SectionTitle from "../../component/SectionTitle";
 import PageElement from "../../component/Element/PageElement";
 import Creators from "../Projects/AccordionContent/Creator";
 import InterviewCard from "./InterviewCard";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
 import ExhibitImg from "./ExhibitImg";
 import RoleCard from "./RoleCard";

@@ -22,7 +22,6 @@ import CardDesignProcess from "../../component/card/CardDesignProcess";
 import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
 import styled from "styled-components";
-import { FaArrowLeft } from "react-icons/fa";
 
 function Project() {
   const [project, setProject] = useState(null);
