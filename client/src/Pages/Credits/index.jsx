@@ -21,7 +21,7 @@ import gsap, { Power1 } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import "./credit.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import PageElement from "../../component/Element/PageElement";
 
 function Credit() {
@@ -60,7 +60,8 @@ function Credit() {
         </div>
         <div className="mt-4">
           <h2 className="txt-prmhead mb-4">
-            Silpakorn University Administration Committee
+            Administration Committee of the Faculty of Information and
+            communication technology
           </h2>
           <span>
             <h5>
@@ -219,11 +220,13 @@ function Credit() {
                   </h5>
                 </span>
                 <p>
-                  <strong>Designer: </strong> Chalida Ingkapattanakul
+                  <strong>Designer: </strong> <br />
+                  Chalida Ingkapattanakul
                   <br /> Panita Lainananukul
                   <br /> Sasikan Tianchanthuek
                   <br />
                   <strong>Developer: </strong>
+                  <br />
                   Chawakorn Jitpathak <br /> Surawut Binmamud
                 </p>
               </div>
@@ -240,11 +243,13 @@ function Credit() {
                 </span>
                 <p>
                   <strong>Designer: </strong>
+                  <br />
                   Chalida Ingkapattanakul
                   <br /> Natthanan Vaowkhajon
                   <br /> Sasikan Tianchanthuek
                   <br />
                   <strong>Developer: </strong>
+                  <br />
                   Chawakorn Jitpathak <br /> Surawut Binmamud
                 </p>
               </div>
@@ -304,10 +309,8 @@ function Credit() {
                 </span>
                 <p>
                   <strong>Leader:</strong> Surawut Binmamud <br />
-                  Methasit Sitthametha <br />
-                  Panita Lainananukul <br />
-                  Pattawan Srattatam <br />
-                  Piyapat Homkrajay Supakorn Achcha
+                  Chalida Ingkapattanakul <br />
+                  Panita Lainananukul <br /> Supakorn Achcha
                 </p>
               </div>
             </div>
@@ -318,12 +321,14 @@ function Credit() {
               <div className="text-start ">
                 <span>
                   <h5 className="txt-upper">
-                    <strong>Animated media screen on LED pillar</strong>
+                    <strong>pillar LED screen & Video Editor</strong>
                   </h5>
                 </span>
                 <p>
                   Chanamon Kewsomnuk <br />
+                  Chalida Ingkapattanakul <br />
                   Panita Lainananukul <br />
+                  Panyada Suxruxsa <br />
                   Piyapat Homkrajay <br />
                   Supakorn Achcha
                 </p>
@@ -367,7 +372,8 @@ function Credit() {
                   </h5>
                 </span>
                 <p>
-                  Methin Pingsutthiwong <br /> Sarayut Thibhodee
+                  Methin Pingsutthiwong <br /> Sarayut Thibhodee <br /> ICT Web
+                  & Interactive design Alumni
                 </p>
               </div>
             </div>
@@ -585,6 +591,22 @@ function Credit() {
                 </p>
               </a>
             </div>
+          </div>
+          <div className="mt-5">
+            <p>Yanisa Hemprachitchai (คุณญาณิศา เหมประชิตชัย)</p>
+            <p>dotwish/*on (ศิษย์เก่าเอกออกแบบเว็บและสื่อโต้ตอบ รุ่น 17)</p>
+            <p>
+              EXPERT PEST SYSTEM COMPANY LIMITED <br /> (บริษัท เอ็กซ์เปอร์ท
+              เพสท์ ซิสเต็ม จำกัด)
+            </p>
+            <p>
+              DEEP LOVE COMPANY LIMITED <br />
+              (บริษัท ดีพ เลิฟ จำกัด)
+            </p>
+            <p>
+              IMP FACTORY COMPANY LIMITED <br />
+              (บริษัท ไอเอ็มพี แฟคทอรี่ จำกัด)
+            </p>
           </div>
         </Container>
         <Container className="my-5">

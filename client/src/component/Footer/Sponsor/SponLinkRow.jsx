@@ -30,7 +30,7 @@ const LogoContainer = styled.img`
     }
   }};
   object-fit: contain;
-  transition: all .3s ease;
+  transition: all 0.3s cubic-bezier(0.33, 2, 0.41, 0.69);
 `;
 
 const SponLinkRow = (props) => {

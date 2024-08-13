@@ -1,15 +1,15 @@
 import propTypes from "prop-types";
 import SponLinkRow from "./SponLinkRow";
+import styled from "styled-components";
 
 const SponRow = ({ sponsors }) => {
   return (
-    <div className="d-none d-lg-flex flex-column">
-      <h6 className="txt-cap text-start" style={{ fontSize: "0.625rem" }}>Sponsored by:</h6>
+    <>
+      <span className="txt-cap text-start">Sponsored by:</span>
         <div className="d-flex align-items-center">
        
           {sponsors.map((sponsor, index) => (
-            
-            <div key={index} className="me-3">
+            <RowCon key={index} >
               <SponLinkRow
                 href={sponsor.href}
                 imgSrc={sponsor.imgSrc}
@@ -17,10 +17,10 @@ const SponRow = ({ sponsors }) => {
                 type={sponsor.type}
                 spon={sponsor.tier}
               />
-            </div>
+            </RowCon>
           ))}
         </div>
-    </div>
+    </>
   );
 };
 
@@ -35,3 +35,11 @@ SponRow.propTypes = {
   ),
 };
 export default SponRow;
+
+const RowCon = styled.div`
+  margin-right: 1.3em;
+  @media (max-width: 991.98px) {
+    margin-right: 1em;
+    
+  }
+`;
