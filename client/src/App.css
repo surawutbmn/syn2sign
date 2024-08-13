@@ -10,12 +10,10 @@
 
 }
 .wrapper{
-  /* display: grid;
-  grid-template-rows: auto 1fr auto; */
   display: flex;
   flex-direction: column;
 }
-.main-content{flex-grow: 1; position: relative; z-index: 1; display: flex; flex-direction: column;}
+.main-content{flex-grow: 1; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;}
 
 .bg-trans {
   background-color: transparent;

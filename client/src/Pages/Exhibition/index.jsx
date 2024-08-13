@@ -214,11 +214,14 @@ function Exhibition() {
             <img src={paper_plane} alt="paper plane" loading="lazy" />
           </div>
           <span className="txt-prim feedback-title">
-            ข้อความส่งพลังและให้กำลังใจจากผู้ร่วมงาน
+            ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)
           </span>
           <div className="txt-con-feedback">
             {displayMessages.map((message, index) => (
-              <div className={`txt-bubble-con position-${index + 1}`} key={index}>
+              <div
+                className={`txt-bubble-con position-${index + 1}`}
+                key={index}
+              >
                 <div className="txt-bubble">
                   <span>{message}</span>
                 </div>
