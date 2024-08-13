@@ -17,8 +17,7 @@ function RecTools(props) {
     acc[tool.type].push(tool);
     return acc;
   }, {});
-//   console.log(toolArr);
-  
+  //   console.log(toolArr);
 
   const typeTitles = {
     dev: "Tools for Developers",
@@ -32,7 +31,7 @@ function RecTools(props) {
 
   return (
     <>
-      <CardBox className="py-4 pt-5">
+      <CardBox>
         <Swiper
           modules={[Pagination]}
           spaceBetween={50}
@@ -50,17 +49,17 @@ function RecTools(props) {
           {Object.keys(groupedTools).map((type, index) => (
             <SwiperSlide key={index}>
               <div className="text-center txt-prim mb-3">
-                <h2 className="txt-cap">
+                <h2 className="txt-cap tt">
                   <strong>{typeTitles[type]}</strong>
                 </h2>
-                <span className="txt-grey">{typeSubtitles[type]}</span>
+                <span className="txt-grey tst">{typeSubtitles[type]}</span>
               </div>
               <ToolBox>
                 <Row xs={1}>
                   {groupedTools[type].map((toolItem) => (
                     <Col
                       key={toolItem.id}
-                      className="my-4 d-flex justify-content-center"
+                      className="my-2 my-md-4 d-flex justify-content-center"
                     >
                       <div className="me-4">
                         <img
@@ -107,7 +106,7 @@ const Pg = styled.div`
   .custom-bullet {
     width: 35px;
     height: 35px;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.5);
     color: var(--color-light);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -126,13 +125,32 @@ const Pg = styled.div`
     font-size: 1.3rem;
     font-weight: var(--txt-bold);
   }
+  @media (max-width: 767.98px) {
+    margin-top: .5rem;
+
+    .custom-bullet {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+    }
+  }
 `;
 const ToolText = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
   width: 60%;
-  p{font-size: 1.5rem;}
+  p {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 767.98px) {
+    p {
+      font-size: 0.8em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
 `;
 const ToolBox = styled.div`
   display: flex;
@@ -144,10 +162,19 @@ const ToolBox = styled.div`
     border-radius: 2.3rem;
     box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
   }
+  @media (max-width: 767.98px) {
+    img {
+      max-width: 20dvw;
+      border-radius: 1.3rem;
+      box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
+    }
+  }
 `;
 
 const CardBox = styled.div`
   position: relative;
+  padding-top: 3em;
+  padding-bottom: 1.5em;
   border-radius: 10px;
   background: transparent;
   &::before {
@@ -165,5 +192,16 @@ const CardBox = styled.div`
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+  @media (max-width: 767.98px) {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 1rem;
+    .tt {
+      font-size: 1.3em;
+    }
+    .tst {
+      font-size: .8em;
+    }
   }
 `;

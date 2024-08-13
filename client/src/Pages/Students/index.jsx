@@ -154,7 +154,7 @@ function Students() {
             title={`${student.nickname_en}\u2019s role in Syn2sign`}
             subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
           />
-          <Row xs={2} md={3} className="gy-4 text-start">
+          <Row xs={1} md={3} className="gy-4 text-start">
             <RoleCard roleArr={roles} />
           </Row>
         </Container>
@@ -172,7 +172,7 @@ function Students() {
                   email={student.email}
                   linkedin={student.linkin}
                   qoutes={student.qoutes}
-                  profileImg={`/creator_img/078-card.png`}
+                  profileImg={`/creator_img/card/073-card.webp`}
                   stdID={student.std_id}
                 />
               </Row>

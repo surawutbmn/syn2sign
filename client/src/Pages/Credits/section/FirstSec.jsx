@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HeadTxt = styled.h1`
 font-weight: var(--txt-sbold);`;
 const AdviceCon = styled.div`
-    font-size: 1.2em;
+  font-size: 1.2em;
 `;
 function FirstSec() {
   return (
@@ -14,8 +14,8 @@ function FirstSec() {
         <div className="mt-5">
           <span className="txt-sbold txt-upper">
             <h3 className="mb-4">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
-            Senior Project Exhibition 2024 • FROM 802408 SENIOR PROJECT
-            PREPARATION AND 802409 SENIOR PROJECT
+            Senior Project Exhibition 2024 • FROM SENIOR PROJECT
+            PREPARATION AND SENIOR PROJECT
             <p>
               INTERACTIVE APPLICATION PROGRAMME DIGITAL TECHNOLOGY FOR DESIGN{" "}
               <br />

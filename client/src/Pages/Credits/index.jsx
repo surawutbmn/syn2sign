@@ -31,7 +31,7 @@ function Credit() {
   return (
     <>
       <PageElement />
-      <FirstSec/>
+      <FirstSec />
       <div className="w-100 su-line mt-5">
         <div className="container">
           <img
@@ -42,7 +42,7 @@ function Credit() {
         </div>
       </div>
       <Container className="mt-5">
-        <RoleAndThx/>
+        <RoleAndThx />
         <Container className="mt-6 sponsor-con justify-content-center">
           <h2 className="txt-prmhead mb-5">exhibition sponsored by</h2>
           <Col xs={12} className=" mb-5">
@@ -237,7 +237,7 @@ function Credit() {
             <div className="d-flex justify-content-center">
               <a
                 className="txt-link"
-                href="https://www.facebook.com/ApologizeCh/"
+                href="https://www.youtube.com/@ApologizeCh122"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -273,8 +273,8 @@ function Credit() {
             </p>
           </div>
         </Container>
-        
-        <LastSec/>
+
+        <LastSec />
       </Container>
     </>
   );

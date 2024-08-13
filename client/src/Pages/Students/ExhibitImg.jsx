@@ -31,7 +31,7 @@ function ExhibitImg({ name, std_id }) {
         <div className="txt-grey mb-3">
           Some {name}&rsquo;s Syncshot at Syn2sign Exhibition 2024
         </div>
-        <Row xs={2}>
+        <Row xs={1} md={2} className="gy-3">
           {images.slice(0, 1).map((img, index) => (
             <Col key={index}>
               <CardImg
