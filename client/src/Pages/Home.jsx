@@ -191,7 +191,9 @@ const DeviceBox = styled.div`
   }
 `;
 
-const DeviceImage = styled.img`
+const DeviceImage = styled.img.attrs({
+  loading: "lazy"  // Add the lazy loading attribute
+})`
   height: 100%;
   width: auto;
   object-fit: contain; /* Ensures the image maintains its aspect ratio */
