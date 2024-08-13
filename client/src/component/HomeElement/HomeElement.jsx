@@ -99,14 +99,14 @@ const EleHomel = styled.div`
 `;
 const EleHomehl = styled.div`
   position: absolute;
-  top: -15%;
-  left: 0%;
+  top: -45%;
+  left: -20%;
   opacity: 1;
 `;
 const EleHomehr = styled.div`
   position: absolute;
-  top: -15%;
-  right: 0%;
+  top: -45%;
+  right: -15%;
 `;
 const EleHomebl = styled.div`
   position: absolute;

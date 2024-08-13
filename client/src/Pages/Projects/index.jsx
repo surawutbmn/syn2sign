@@ -10,7 +10,7 @@ import { Container } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
-import SocialApproved from "./AccordionContent/SocialApproved"
+import SocialApproved from "./AccordionContent/SocialApproved";
 import CardThreePictureProject from "./AccordionContent/TopPicture";
 import LinkButton from "../../component/Button/LinkButton";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
@@ -180,36 +180,31 @@ function Project() {
       </Helmet>
       <PageElement />
       <Container className="mt-5 position-relative">
-        <BackBtn className="text-start link-txt txt-upper">
-          <Link to={`/showcase#project`}>
-            <FaArrowLeft className="me-2" size={20} />
-            <strong>back</strong>
-          </Link>
-        </BackBtn>
-        <div className="d-flex justify-content-around">
-          <img
-            src={`/icon/prj/${project.icon}`}
-            alt="project icon"
-            className="prj-sec-icon"
-          />
-          <div className="text-start mx-3">
-            <h1 className="txt-pru-head ">
-              <strong>{project.name_en}</strong>
-            </h1>
-            <p>({project.name_th})</p>
+        <div className="d-flex justify-content-between">
+          <div className="d-flex">
+            <img
+              className="prj-sec-icon"
+              src={`/project_img/prj_logo/${project.icon_sqr}`}
+              alt={`${project.name_en} icon`}
+            />
+            <div className="text-start mx-3">
+              <h1 className="txt-pru-head ">
+                <strong>{project.name_en}</strong>
+              </h1>
+              <p>{project.name_th}</p>
+            </div>
           </div>
-          <hr className="prj-name-line" />
-          <h1 className="outlined-text mx-3">#{project.id}</h1>
-          <img
-            src={`/icon/prj/${project.icon_std}`}
-            alt="creator icon"
-            className="prj-sec-icon"
-          />
+          <div className="d-flex align-items-baseline">
+            <h1 className="outlined-text">#{project.id}</h1>
+            <div className="prj-sec-icon2 ms-4">
+              <img
+                src={`/project_img/prj_icon/${project.icon_std}`}
+                alt="creator icon"
+              />
+            </div>
+          </div>
         </div>
-        <div
-          className="d-flex flex-column text-start mb-3 txt-body1 mt-3"
-          style={{ width: "75%" }}
-        >
+        <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3 w-75">
           <span>
             <p>{project.fullname_th}</p>
           </span>
@@ -270,11 +265,11 @@ function Project() {
                         <div className="icon-prj-ovl"></div>
                         <img
                           className="icon-img-link"
-                          src={`/icon/prj/${proj.icon_sqr}`}
+                          src={`/project_img/prj_logo/${proj.icon_sqr}`}
                           alt={`${proj.name_en} icon`}
                         />
                       </div>
-                      <div className="mt-3 fs-5 txt-upper">
+                      <div className="mt-3 txt-upper prj_name">
                         <span>{proj.name_en}</span>
                       </div>
                     </div>
@@ -289,18 +284,3 @@ function Project() {
   );
 }
 export default Project;
-
-const BackBtn = styled.h3`
-  a {
-    &:hover {
-      color: var(--color-primary);
-    }
-  }
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-light);
-    transition: all 300ms ease;
-  }
-`;

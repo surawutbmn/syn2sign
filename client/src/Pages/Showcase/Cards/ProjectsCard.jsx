@@ -8,14 +8,14 @@ function ProjectCard({ project }) {
   const [gradientDegree, setGradientDegree] = useState(180); // Default value
 
   useEffect(() => {
-    const degrees = [150, 180, 80];
+    const degrees = [-25, 180, 50];
     const randomIndex = Math.floor(Math.random() * degrees.length);
     setGradientDegree(degrees[randomIndex]);
   }, []);
 
   return (
     <Col>
-      <CardProjects gradientDegree={gradientDegree}>
+      <CardProjects $gradientDegree={gradientDegree}>
         <Link
           to={`/showcase/projects/${project.project_id}`}
           className="card-link"
@@ -23,7 +23,7 @@ function ProjectCard({ project }) {
           <div className="d-flex align-items-start pt-3 px-3">
             <div className="projects-card-icon me-3">
               <img
-                src={`/icon/prj/${project.icon_sqr}`}
+                src={`/project_img/prj_logo/${project.icon_sqr}`}
                 alt="project icon"
                 loading="lazy"
               />
@@ -43,13 +43,13 @@ function ProjectCard({ project }) {
           <CreatorSec className="px-3">
             <div className="creators-icon">
               <img
-                src={`/icon/prj/${project.icon_std}`}
+                src={`/project_img/prj_icon/${project.icon_std}`}
                 alt="creators icon"
                 loading="lazy"
               />
             </div>
             <CreatorName className="text-start">
-              Sync to Creator
+              <strong className="txt-prim">Sync to Creator</strong>
               <br />
               {project.students && project.students.length > 0 ? (
                 project.students.map((student) => (
@@ -158,8 +158,8 @@ const CardProjects = styled.div`
       inset: 0;
       border-radius: 1.2rem;
       padding: 0.2rem;
-      background: ${({ gradientDegree }) =>
-        `linear-gradient(${gradientDegree}deg,rgba(5, 186, 100, 1) 30%, rgba(67, 67, 67, 1) 100%)`};
+      background: ${({ $gradientDegree }) =>
+        `linear-gradient(${$gradientDegree}deg,rgba(5, 186, 100, 1) 30%, rgba(67, 67, 67, 1) 100%)`};
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;

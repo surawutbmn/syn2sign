@@ -160,7 +160,7 @@ function Students() {
         </Container>
         <Container>
           <SectionTitle
-            title={`${student.nickname_en} collaborate`}
+            title={`${student.nickname_en}\u2019s collaborate`}
             subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
             className={"header-wline mt-5"}
           />
