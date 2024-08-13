@@ -15,7 +15,9 @@ const CardCreator = () => {
 
     if (projectId) {
       // Find all student data by project ID
-      const filteredData = studentsdata.filter((data) => data.project_id === projectId);
+      const filteredData = studentsdata.filter(
+        (data) => data.project_id === projectId
+      );
       setStudentData(filteredData);
     }
   }, []);
@@ -25,10 +27,13 @@ const CardCreator = () => {
   }
 
   return (
-    <div className='d-flex row'>
+    <div className="d-flex row">
       <div className="col-5">
         {/* Assuming the same image for demonstration purposes */}
-        <CreatorImg src={`/creator_img/${studentData[0].project_id}.png`} style={{ marginTop: "-60px" }} />
+        <CreatorImg
+          src={`/creator_img/${studentData[0].project_id}.png`}
+          style={{ marginTop: "-60px" }}
+        />
       </div>
       <div className="col-7">
         {studentData.map((student, index) => (
@@ -54,13 +59,25 @@ const CardCreator = () => {
             <div className="text-start mt-3">
               <IconImage src="/creator_img/linkedin.svg" alt="linkedin" />
               <span className="ms-3">
-                <a href={student.linkin} className="txt-link" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={
+                    student.linkin.startsWith("http")
+                      ? student.linkin
+                      : `https://${student.linkin}`
+                  }
+                  className="txt-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {student.linkin}
                 </a>
               </span>
             </div>
             <BtnBox>
-              <Link to={`/showcase/creators/${student.std_id}`} className="txt-link">
+              <Link
+                to={`/showcase/creators/${student.std_id}`}
+                className="txt-link"
+              >
                 <ReadMore className="d-flex">
                   <span className="txt-upper">
                     <strong>read more</strong>
@@ -91,7 +108,7 @@ const CreatorImg = styled.img`
 `;
 
 const Boxline = styled.hr`
-  border: .07rem solid var(--color-grey);
+  border: 0.07rem solid var(--color-grey);
   opacity: 1;
 `;
 
@@ -102,7 +119,7 @@ const DoubleQoute = styled.img`
 
 const DetailBox = styled.div`
   padding: 2rem;
-  border: .08rem solid var(--color-grey);
+  border: 0.08rem solid var(--color-grey);
   border-radius: 1rem;
   margin-bottom: 1rem; /* Add margin to separate multiple DetailBoxes */
 `;
