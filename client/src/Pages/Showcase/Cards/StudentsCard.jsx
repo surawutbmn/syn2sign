@@ -13,7 +13,7 @@ const StudentCard = ({ student }) => (
             alt="readmore icon"
             className="rdm-icon"
           />
-          <ReadMoreText className="rdm-text">READ MORE</ReadMoreText>
+          <ReadMoreText className="rdm-text">SEE MORE</ReadMoreText>
         </ReadMore>
         <div className="card-std-img">
           <ImgCreator
@@ -28,8 +28,9 @@ const StudentCard = ({ student }) => (
                 {student.nickname_en && `(${student.nickname_en})`}
               </Title>
               <Caption>
-                {student.name_th}{" "}
-                {student.nickname_th && `(${student.nickname_th})`}
+                Email: {student.email}
+                {/* {student.name_th}{" "}
+                {student.nickname_th && `(${student.nickname_th})`} */}
                 <br />
                 เจ้าของผลงาน: #{student.project?.id ||
                   student.project[0].id}{" "}
@@ -51,6 +52,7 @@ StudentCard.propTypes = {
     std_id: PropTypes.string.isRequired,
     name_en: PropTypes.string.isRequired,
     name_th: PropTypes.string,
+    email: PropTypes.string,
     nickname_en: PropTypes.string,
     nickname_th: PropTypes.string,
     profile_img: PropTypes.string.isRequired,

@@ -20,8 +20,8 @@ function ProjectCard({ project }) {
           to={`/showcase/projects/${project.project_id}`}
           className="card-link"
         >
-          <div className="d-flex align-items-start pt-3 px-3">
-            <div className="projects-card-icon me-3">
+          <div className="d-flex align-items-md-start align-items-center">
+            <div className="projects-card-icon">
               <img
                 src={`/project_img/prj_logo/${project.icon_sqr}`}
                 alt="project icon"
@@ -34,13 +34,12 @@ function ProjectCard({ project }) {
                   #{project.id} {project.name_en}
                 </strong>
               </Title>
-              <p className="line-clamp-2">{project.fullname_th}</p>
+              <p>Thech: {project.type}</p>
+              {/* <p className="line-clamp-2">{project.fullname_th}</p> */}
             </HeadText>
           </div>
-          <div className="px-3">
-            <hr />
-          </div>
-          <CreatorSec className="px-3">
+          <hr />
+          <CreatorSec>
             <div className="creators-icon">
               <img
                 src={`/project_img/prj_icon/${project.icon_std}`}
@@ -83,6 +82,7 @@ ProjectCard.propTypes = {
     name_en: PropTypes.string.isRequired,
     fullname_th: PropTypes.string.isRequired,
     icon_card: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     icon_sqr: PropTypes.string.isRequired,
     icon_std: PropTypes.string.isRequired,
     img_thumb: PropTypes.string.isRequired,
@@ -114,46 +114,49 @@ const CreatorSec = styled.div`
 const HeadText = styled.div`
   text-align: left;
   color: var(--color-grey);
+  @media (max-width: 991.98px) {
+    font-size: .8em;
+  }
 `;
 const Title = styled.h4`
   color: var(--color-primary);
   font-weight: var(--txt-sbold);
+  @media (max-width: 991.98px) {
+    font-size: 1.5em;
+  }
 `;
 const ImgThumb = styled.div`
-  /* overflow: hidden; */
-  /* border: 1px solid transparent; */
-  /* border-radius: 50px; */
-  padding: 15px;
+  overflow: hidden;
+  border-radius: 1.2rem;
   img {
     width: 100%;
-    border-radius: 20px;
   }
 `;
 const CardProjects = styled.div`
   background-color: var(--color-light);
-  /* padding: 20px 0 0 0; */
+  padding: 1.2em 1em;
   border-radius: 1.2rem;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
   &:hover {
     transform: scale3d(1.02, 1.02, 1.02);
-    /* transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44); */
-    
+    transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
   }
   hr {
-    margin: 0.1em 0 1em 0;
+    margin: 0.3em 0 1em 0;
     border: 0.05em solid;
   }
   .creators-icon {
-    min-width: 5em;
+    min-width: 4em;
   }
   .projects-card-icon img {
-    width: 3.5em;
+    width: 100%;
     border-radius: 1.2rem;
   }
   .projects-card-icon {
     position: relative;
-    width: 5em;
+    margin-right: 0.5em;
+
+    width: 3.5em;
     background: rgb(255, 255, 255);
     border-radius: 1.2rem;
     font-size: 1.4em;
@@ -171,10 +174,19 @@ const CardProjects = styled.div`
       mask-composite: exclude;
     }
   }
+  @media (max-width: 991.98px) {
+    .projects-card-icon {
+      width: 3em;
+      margin-right: 0.5em;
+    }
+  }
   @media (max-width: 575.98px) {
     padding: 10px 15px;
-    .projects-card-icon img {
+    .projects-card-icon {
       width: 4em;
+    }
+    hr {
+      margin: 0.3em 0 1em 0;
     }
   }
 `;

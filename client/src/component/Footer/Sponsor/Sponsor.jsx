@@ -63,7 +63,7 @@ export const sponsors = [
     tier: "tier-3",
   },
   {
-    href: "https://www.facebook.com/ApologizeCh/",
+    href: "https://www.youtube.com/@ApologizeCh122",
     imgSrc: "/s2s-logo/spon-logo/m7.svg",
     alt: "Apologize Ch",
     type: "LogoSqr",

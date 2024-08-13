@@ -10,27 +10,33 @@ import lo from "../img/icon/location.svg";
 import led from "../img/icon/led.svg";
 
 const Section = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 `;
 
 const Heading = styled.h2`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--color-primary);
 `;
 
 const SubHeading = styled.h2`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   color: var(--color-primary);
 `;
 
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 4rem;
-
-  @media (max-width: 768px) {
+  grid-gap: 3rem;
+  margin-left: 5rem;
+  @media (max-width: 991.99px) {
+      grid-gap: 1rem;
+    margin-left: 1.5rem;
+  }
+  @media (max-width: 575.99px) {
+      grid-gap: 1.5rem;
     grid-template-columns: 1fr;
+    margin-left: 1.5rem;
   }
 `;
 
@@ -44,6 +50,12 @@ const IconContainer = styled.div`
   max-width: 6dvw;
   img {
     width: 100%;
+  }
+  @media (max-width: 991.99px) {
+    max-width: 8dvw;
+  }
+  @media (max-width: 575.99px) {
+    max-width: 15dvw;
   }
 `;
 

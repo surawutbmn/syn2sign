@@ -10,25 +10,25 @@ function InterviewCard(props) {
       {question.map((question, index) => (
         <CardBox key={index} className="mb-5">
           <Overlay />
-          <Row className="justify-content-around position-relative">
-            <Col xs={12} lg={6}>
+          <Row className="justify-content-between position-relative">
+            <Col xs={12} md={6} >
               <PreviewImg
                 src={`/creator_img/interview/${question.img}`}
                 alt="interview image"
               />
             </Col>
-            <Col xs={12} lg={5} className="d-flex flex-column">
+            <Col xs={12} md={6} className="d-flex flex-column">
               <CardText>
                 <div className="text-start">
-                  <h1>
+                  <Ques>
                     <strong>Q{question.id}:</strong>
-                  </h1>
+                  </Ques>
                   <Title>
                     <strong>&ldquo;{question.title1}</strong>
                   </Title>
                 </div>
                 <div className="text-end">
-                  <h3>{question.title2}&rdquo;</h3>
+                  <Title2>{question.title2}&rdquo;</Title2>
                 </div>
               </CardText>
               <LinkBtn
@@ -79,29 +79,74 @@ export default InterviewCard;
 
 const CardText = styled.div`
   flex-grow: 1;
+  @media (max-width: 767.98px) {
+   white-space: nowrap;
+  }
 `;
 const CardBox = styled.div`
   position: relative;
   overflow: hidden;
   background-color: var(--color-light);
-  padding: 1.8rem 0.3rem;
+  padding: 1.8rem;
   color: var(--color-primary);
   border-radius: 1.3rem;
+  @media (max-width: 991.98px) {
+    padding: 1rem;
+  }
+  @media (max-width: 767.98px) {
+    padding: 1rem;
+  }
+`;
+const Ques = styled.h1`
+  font-size: 2.4rem;
+  @media (max-width: 991.98px) {
+    font-size: calc(1rem + 0.6vw);
+  }
+  @media (max-width: 767.98px) {
+    margin-top: 1rem;
+    font-size: calc(1.2rem + 0.6vw);
+  }
+`;
+const Title2 = styled.span`
+  font-size: calc(1.3rem + 0.6vw);
+  @media (max-width: 991.98px) {
+    font-size: calc(.7rem + 0.6vw);
+  }
+  @media (max-width: 767.98px) {
+    font-size: calc(1rem + 0.6vw);
+  }
 `;
 const Title = styled.span`
   font-size: 3.3rem;
+  @media (max-width: 991.98px) {
+    font-size: calc(1.8rem + 0.6vw);
+  }
+  @media (max-width: 767.98px) {
+    font-size: calc(2rem + 0.6vw);
+  }
 `;
 const PreviewImg = styled.img`
   width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
 `;
 
 const Icon = styled.span`
   background-color: var(--color-dark);
   color: var(--color-light);
   font-size: 1.3rem;
-  padding: 0.01rem 0.4rem;
-  border-radius: 10rem;
+  padding: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   transition: all 0.3s ease;
+  @media (max-width: 991.98px) {
+    padding: .4rem;
+  }
+  @media (max-width: 767.98px) {
+    padding: 0.3rem;
+  }
 `;
 const LinkBtn = styled.a`
   border: 0.1rem solid var(--color-grey);
@@ -110,6 +155,8 @@ const LinkBtn = styled.a`
   text-align: start;
   border-radius: 10rem;
   width: 80%;
+  align-items: center;
+  display: flex;
   color: var(--color-dark);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -120,8 +167,27 @@ const LinkBtn = styled.a`
   &:hover .crl-icon {
     background-color: var(--color-primary);
   }
+  @media (max-width: 1199.98px) {
+    /* width: 100%; */
+    margin-top: .4rem;
+    padding: 0.1rem;
+    span {
+      font-size: 0.8em;
+    }
+  }
+  @media (max-width: 991.98px) {
+    /* width: 100%; */
+    margin-top: .4rem;
+    padding: 0.1rem;
+    span {
+      font-size: 0.6em;
+    }
+  }
   @media (max-width: 767.98px) {
-    width: 100%;
+    /* width: 100%; */
+    span {
+      font-size: 0.8em;
+    }
   }
 `;
 
