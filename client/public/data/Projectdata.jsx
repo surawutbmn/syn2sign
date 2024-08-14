@@ -15,6 +15,7 @@ const projectsdata = [
     img_thumb: "cpl01-thumb.webp",
     icon_card: "cpl01-icard.webp",
     shreel_link: "_41WQgd5qKw",
+    device_img: "concept-device-cpl01.png",
     keyword: [
       {
         id: "1",
@@ -98,6 +99,7 @@ const projectsdata = [
     icon_std: "cpl02-p.svg",
     icon_sqr: "cpl02-sqr.webp",
     shreel_link: "OwyQ7eIHmoc",
+    device_img: "concept-device-cpl02.png",
     keyword: [
       {
         id: "1",
@@ -179,6 +181,7 @@ const projectsdata = [
     icon_std: "cpl03-p.svg",
     icon_sqr: "cpl03-sqr.webp",
     shreel_link: "dp_AlUgThnQ",
+    device_img: "concept-device-cpl03.png",
     students: [
       {
         id: "2",
@@ -228,6 +231,7 @@ const projectsdata = [
     icon_sqr: "cpl04-sqr.webp",
     icon_std: "cpl04-p.svg",
     shreel_link: "zPt2Uu3vZ4I",
+    device_img: "concept-device-cpl04.png",
     students: [
       {
         id: "8",
@@ -279,6 +283,7 @@ const projectsdata = [
     icon_sqr: "cpl05-sqr.webp",
     icon_std: "cpl05-p.svg",
     shreel_link: "wMnxzOlEVPA",
+    device_img: "concept-device-cpl05.png",
     students: [
       {
         id: "4",
@@ -329,6 +334,7 @@ const projectsdata = [
     icon_std: "cpl06-p.svg",
     icon_sqr: "cpl06-sqr.webp",
     shreel_link: "asaKqFdHkRE",
+    device_img: "concept-device-cpl06.png",
     students: [
       {
         id: "15",
@@ -381,6 +387,7 @@ const projectsdata = [
     icon_std: "cpl07-p.svg",
     icon_sqr: "cpl07-sqr.webp",
     shreel_link: "KhAfnkMRctc",
+    device_img: "concept-device-cpl07.png",
     students: [
       {
         id: "9",
@@ -432,6 +439,7 @@ const projectsdata = [
     icon_std: "cpl08-p.svg",
     icon_sqr: "cpl08-sqr.webp",
     shreel_link: "2fkCoiR49wo",
+    device_img: "concept-device-cpl08.png",
     students: [
       {
         id: "11",

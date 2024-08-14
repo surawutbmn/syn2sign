@@ -3,8 +3,9 @@
   import HomeElement from "../component/HomeElement/HomeElement";
   import styled from "styled-components";
   import messagesData from "/src/Pages/Exhibition/messages.json"; // Adjust path as needed
-  import projectsData from "./Home.json"; // Adjust path as needed
   import { Helmet } from "react-helmet";
+  import projectsdata from "../../public/data/Projectdata";
+import { Link } from "react-router-dom";
 
   function Home() {
     const [messages, setMessages] = useState([]);
@@ -34,15 +35,18 @@
   
       // Function to get 2 random projects
       const getRandomProjects = () => {
-        const projectKeys = Object.keys(projectsData);
+        const projectKeys = Object.keys(projectsdata);
         const shuffledKeys = projectKeys.sort(() => 0.5 - Math.random());
-        return [projectsData[shuffledKeys[0]], projectsData[shuffledKeys[1]]];
+        return [projectsdata[shuffledKeys[0]], projectsdata[shuffledKeys[1]]];
       };
+      
   
       // Set initial messages and projects
       setMessages(getMessagesForContainer1());
       setMessagesContainer2(getMessagesForContainer2());
       setProjects(getRandomProjects());
+      console.log(projects);
+      
   
       // Update messages and projects every 5 seconds
       const interval = setInterval(() => {
@@ -57,22 +61,32 @@
 
     return (
       <div>
-           <Helmet>
-        <title>Home - Showcase of Projects</title>
-        <meta property="og:title" content="Home - Showcase of Projects" />
-        <meta property="og:description" content="Explore the latest student senior projects from 2024. A collection of innovative work from the academic year 2566." />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
-        <meta property="og:url" content="http://localhost:5173/showcase/projects" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Showcase Projects" />
-      </Helmet>
+        <Helmet>
+          <title>Home - Showcase of Projects</title>
+          <meta property="og:title" content="Home - Showcase of Projects" />
+          <meta
+            property="og:description"
+            content="Explore the latest student senior projects from 2024. A collection of innovative work from the academic year 2566."
+          />
+          <meta property="og:image" content="/path-to-your-image.jpg" />
+          <meta
+            property="og:url"
+            content="http://localhost:5173/showcase/projects"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Showcase Projects" />
+        </Helmet>
         <HomeElement />
-        <Container className="position-relative" style={{
-          // marginTop: window.innerWidth <= 767 ? '1rem' : '0', // Adjust the value as needed
-          // paddingTop: window.innerWidth <= 767 ? '1rem' : '0'  // Adjust the value as needed
-        }}>
+        <Container
+          className="position-relative"
+          style={
+            {
+              // marginTop: window.innerWidth <= 767 ? '1rem' : '0', // Adjust the value as needed
+              // paddingTop: window.innerWidth <= 767 ? '1rem' : '0'  // Adjust the value as needed
+            }
+          }
+        >
           <Row className="align-items-start mb-5 mt-3">
-
             <Col xs={6} className="text-start d-block d-md-none">
               <h1>
                 <strong>
@@ -90,36 +104,40 @@
               </p>
             </Col>
             <Col xs={12} className="d-block d-md-none mt-5">
-            <img
+              <img
                 className="w-75 "
                 src="/s2s-logo/s2s-outline-logo.svg"
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
-                &ldquo;Syn of art and technology, the force of ideas combined and
-                brought into syn2sign&rdquo;
+                &ldquo;Syn of art and technology, the force of ideas combined
+                and brought into syn2sign&rdquo;
               </h2>
             </Col>
             <Col xs={12} className="d-block d-md-none mt-4">
-            {/* test */}
-            <p className="">Review Records (3★ Out of 20)</p>
-            <SocialContainer2 >
+              {/* test */}
+              <p className="">Review Records (3★ Out of 20)</p>
+              <SocialContainer2>
                 {messagesContainer2.map((msg, index) => (
-                  <SocialBox2 className="txt-body3 " key={index} >
+                  <SocialBox2 className="txt-body3 " key={index}>
                     {msg.message}
                   </SocialBox2>
                 ))}
               </SocialContainer2>
             </Col>
             {projects.map((project, index) => (
-              <Col style={{marginTop: "5rem"}}
+              <Col
+                style={{ marginTop: "5rem" }}
                 xs={6}
                 className={`d-flex text-end d-block d-md-none ${
                   index === 0 ? "justify-content-end" : "justify-content-start"
                 }`}
                 key={index}
               >
-                <a href={project.link} className="mt-">
+                <Link
+                  to={`/showcase/projects/${project.project_id}`}
+                  className="mt-"
+                >
                   <DeviceBox>
                     {index === 0 ? (
                       <FrontBox>
@@ -127,10 +145,10 @@
                           className="txt-upper txt-prim text-start txt-bold ms-3 mt-1"
                           style={{ fontSize: "1.25rem" }}
                         >
-                          {project.title}
+                          {project.name_en}
                         </div>
                         <div className="txt-dark text-start ms-3 txt-body3">
-                          {project.subtitle}
+                          {project.type}
                         </div>
                       </FrontBox>
                     ) : (
@@ -139,20 +157,23 @@
                           className="txt-upper txt-prim text-start txt-bold ms-3 mt-1"
                           style={{ fontSize: "1.25rem" }}
                         >
-                          {project.title}
+                          {project.name_en}
                         </div>
                         <div className="txt-dark text-start ms-3 txt-body3">
-                          {project.subtitle}
+                          {project.type}
                         </div>
                       </FrontBox2>
                     )}
-                    <DeviceImage src={project.img} />
+                    <DeviceImage src={`/project_img/device/${project.device_img}`} />
                   </DeviceBox>
-                </a>
+                </Link>
               </Col>
             ))}
 
-            <Col xs={4} className="text-start mb-6 align-self-start mt-3 d-none d-md-block">
+            <Col
+              xs={4}
+              className="text-start mb-6 align-self-start mt-3 d-none d-md-block"
+            >
               <h1>
                 <strong>
                   0<span className="txt-prim">8*2</span>
@@ -173,8 +194,8 @@
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
-                &ldquo;Syn of art and technology, the force of ideas combined and
-                brought into syn2sign&rdquo;
+                &ldquo;Syn of art and technology, the force of ideas combined
+                and brought into syn2sign&rdquo;
               </h2>
             </Col>
             <Col xs={4} className="text-end mt-3 d-none d-md-block">
@@ -196,7 +217,10 @@
                 } `}
                 key={index}
               >
-                <a href={project.link} className="d-none d-md-block">
+                <Link
+                  to={`/showcase/projects/${project.project_id}`}
+                  className="d-none d-md-block"
+                >
                   <DeviceBox>
                     {index === 0 ? (
                       <FrontBox>
@@ -204,10 +228,10 @@
                           className="txt-upper txt-prim text-start txt-bold ms-3 mt-1"
                           style={{ fontSize: "1.25rem" }}
                         >
-                          {project.title}
+                          {project.name_en}
                         </div>
                         <div className="txt-dark text-start ms-3 txt-body3">
-                          {project.subtitle}
+                          {project.type}
                         </div>
                       </FrontBox>
                     ) : (
@@ -216,16 +240,16 @@
                           className="txt-upper txt-prim text-start txt-bold ms-3 mt-1"
                           style={{ fontSize: "1.25rem" }}
                         >
-                          {project.title}
+                          {project.name_en}
                         </div>
                         <div className="txt-dark text-start ms-3 txt-body3">
-                          {project.subtitle}
+                          {project.type}
                         </div>
                       </FrontBox2>
                     )}
-                    <DeviceImage src={project.img} />
+                    <DeviceImage src={`/project_img/device/${project.device_img}`} />
                   </DeviceBox>
-                </a>
+                </Link>
               </Col>
             ))}
           </Row>
