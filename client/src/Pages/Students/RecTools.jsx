@@ -63,7 +63,7 @@ function RecTools(props) {
                     >
                       <div className="me-4">
                         <img
-                          src={`/syn2sign/demo/tools/${toolItem.toolIcon}`}
+                          src={`/tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
                       </div>

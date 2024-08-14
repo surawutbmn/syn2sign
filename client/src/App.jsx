@@ -19,6 +19,7 @@ import Exhibition from "./Pages/Exhibition";
 import Credit from "./Pages/Credits";
 import StayTune from "./Pages/StayTune/StayTune";
 import Notfound from "./Pages/Notfound";
+import LoadingPage from "./Loading";
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,8 @@ function App() {
     description: "Syn2sign senior project exhibition 2024",
     image: "default-image-url", // Replace with a default image URL
   });
+  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -128,6 +131,16 @@ function App() {
         break;
     }
   }, [location]);
+  useEffect(() => {
+    // Simulate data loading or initialization
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust timeout as needed
+  }, []);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   return (
     <HelmetProvider>

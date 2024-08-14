@@ -12,6 +12,7 @@ import RecTools from "./RecTools";
 import ExhibitImg from "./ExhibitImg";
 import RoleCard from "./RoleCard";
 import CreatorHeadSection from "./CreatorHeadSection";
+import LoadingPage from "../../Loading";
 
 function Students() {
   const [student, setStudent] = useState(null);
@@ -124,7 +125,7 @@ function Students() {
   }, [student, project, std_id]);
 
   if (!student) {
-    return <div>Loading...</div>;
+    return <LoadingPage/>;
   }
   return (
     <>

@@ -10,8 +10,8 @@ function CardKnowledge(props) {
         <div>
           <ImagePreview
             src={
-              `/syn2sign/demo/other/${props.img}` ||
-              "/syn2sign/demo/images/s2s-logo/fb-profile.png"
+              `/other/${props.img}` ||
+              "/images/s2s-logo/fb-profile.png"
             }
           />
         </div>

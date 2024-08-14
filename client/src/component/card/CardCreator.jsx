@@ -31,7 +31,7 @@ const CardCreator = () => {
       <div className="col-5">
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
-          src={`/syn2sign/demo/images/creator_img/${studentData[0].project_id}.png`}
+          src={`/images/creator_img/${studentData[0].project_id}.png`}
           //   style={{ marginTop: "-60px" }}
         />
       </div>
@@ -40,7 +40,7 @@ const CardCreator = () => {
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/syn2sign/demo/icon/double-qoute.svg`}
+                src={`/icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -50,7 +50,7 @@ const CardCreator = () => {
             <Boxline />
             <div className="text-start">
               <IconImage
-                src="/syn2sign/demo/images/creator_img/email.svg"
+                src="/images/creator_img/email.svg"
                 alt="email"
               />
               <span className="ms-3">
@@ -61,7 +61,7 @@ const CardCreator = () => {
             </div>
             <div className="text-start mt-3">
               <IconImage
-                src="/syn2sign/demo/images/creator_img/linkedin.svg"
+                src="/images/creator_img/linkedin.svg"
                 alt="linkedin"
               />
               <span className="ms-3">

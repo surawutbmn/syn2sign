@@ -42,8 +42,8 @@ const Creators: React.FC<CreatorsProps> = ({
       <ImgBox className="p-0 text-start">
         <ImgCreator
           src={
-            `/syn2sign/demo/images/creator_img/card/${profileImg}` ||
-            `/syn2sign/demo/images/creator_img/card/073-card.webp`
+            `/images/creator_img/card/${profileImg}` ||
+            `/images/creator_img/card/073-card.webp`
           }
           alt=""
         />
@@ -55,7 +55,7 @@ const Creators: React.FC<CreatorsProps> = ({
         </Title>
         <QouteBox>
           <DoubleQoute
-            src={`/syn2sign/demo/icon/double-qoute.svg`}
+            src={`/icon/double-qoute.svg`}
             alt="double quote"
             loading="lazy"
             className="me-4"

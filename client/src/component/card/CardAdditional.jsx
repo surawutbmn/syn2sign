@@ -11,7 +11,7 @@ const CardAdditional = (props) => {
 
         <Col md={5} lg={5} className=" me-4">
           <ImagePreview
-            src={`/syn2sign/demo/other/${props.img}` || "/images/s2s-logo/fb-profile.png"}
+            src={`/other/${props.img}` || "/images/s2s-logo/fb-profile.png"}
           />
         </Col>
         <BoxContent>
