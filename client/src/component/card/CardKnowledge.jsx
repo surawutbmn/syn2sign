@@ -8,7 +8,7 @@ function CardKnowledge(props) {
       <CardBox>
         <Overlay></Overlay>
         <div>
-          <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
+          <ImagePreview src={props.img || "/images/s2s-logo/fb-profile.png"} />
         </div>
         <BoxContent>
           <div className="card-body text-start">

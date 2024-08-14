@@ -31,7 +31,7 @@ const CardCreator = () => {
       <div className="col-5">
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
-          src={`/creator_img/${studentData[0].project_id}.png`}
+          src={`/images/creator_img/${studentData[0].project_id}.png`}
         //   style={{ marginTop: "-60px" }}
         />
       </div>
@@ -49,7 +49,7 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage src="/creator_img/email.svg" alt="email" />
+              <IconImage src="/images/creator_img/email.svg" alt="email" />
               <span className="ms-3">
                 <a href={`mailto:${student.email}`} className="txt-link">
                   {student.email}
@@ -57,7 +57,7 @@ const CardCreator = () => {
               </span>
             </div>
             <div className="text-start mt-3">
-              <IconImage src="/creator_img/linkedin.svg" alt="linkedin" />
+              <IconImage src="/images/creator_img/linkedin.svg" alt="linkedin" />
               <span className="ms-3">
                 <a
                   href={

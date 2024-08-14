@@ -10,7 +10,7 @@ const CardAdditional = (props) => {
         <Overlay></Overlay>
 
         <Col md={5} lg={5} className=" me-4">
-          <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
+          <ImagePreview src={props.img || "/images/s2s-logo/fb-profile.png"} />
         </Col>
         <BoxContent>
           <div className="txt-head2 txt-prim text-start">

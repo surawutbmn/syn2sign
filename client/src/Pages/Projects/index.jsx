@@ -176,7 +176,7 @@ function Project() {
                         email={student.email}
                         linkedin={student.linkin}
                         qoutes={student.qoutes}
-                        profileImg={`/creator_img/078-card.png`}
+                        profileImg={`/images/creator_img/078-card.png`}
                         stdID={student.std_id}
                       />
                     </div>
@@ -306,7 +306,7 @@ function Project() {
         </div>
         <BreadcrumbContainer>
       <BreadcrumbImage
-        src="/s2s-logo/s2s-outline-logo.svg"
+        src="/images/s2s-logo/s2s-outline-logo.svg"
         alt="breadcrumb icon"
         onClick={handleImageClick}
       />

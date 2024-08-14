@@ -42,8 +42,8 @@ const Creators: React.FC<CreatorsProps> = ({
         <ImgBox className="p-0 text-start">
           <ImgCreator
             src={
-              `/creator_img/card/${profileImg}` ||
-              `/creator_img/card/073-card.webp`
+              `/images/creator_img/card/${profileImg}` ||
+              `/images/creator_img/card/073-card.webp`
             }
             alt=""
           />

@@ -92,7 +92,7 @@ import { Link } from "react-router-dom";
             <Col xs={12} className="d-block d-md-none mt-5">
               <img
                 className="w-75 "
-                src="/s2s-logo/s2s-outline-logo.svg"
+                src="/images/s2s-logo/s2s-outline-logo.svg"
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
@@ -176,7 +176,7 @@ import { Link } from "react-router-dom";
             <Col xs={4} className="mb-4 align-self-start d-none d-md-block">
               <img
                 className="w-100"
-                src="/s2s-logo/s2s-outline-logo.svg"
+                src="/images/s2s-logo/s2s-outline-logo.svg"
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">

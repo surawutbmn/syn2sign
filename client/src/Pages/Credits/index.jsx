@@ -17,7 +17,7 @@ function Credit() {
       <div className="w-100 su-line mt-5">
         <div className="container">
           <Logo
-            src="../../s2s-logo/su_logo.svg"
+            src="../../images/s2s-logo/su_logo.svg"
             alt="ict slipakorn logo"
           />
         </div>

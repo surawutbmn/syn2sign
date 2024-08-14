@@ -21,7 +21,7 @@ function CreatorHeadSection(props) {
           <ProfileImg>
             <img
               loading="lazy"
-              src={`/creator_img/profile/${student.profile_img}`}
+              src={`/images/creator_img/profile/${student.profile_img}`}
               alt="creator profile"
             />
           </ProfileImg>
@@ -91,7 +91,7 @@ function CreatorHeadSection(props) {
               <ProfileImg>
                 <img
                   loading="lazy"
-                  src={`/creator_img/profile/${student.profile_img}`}
+                  src={`/images/creator_img/profile/${student.profile_img}`}
                   alt="creator profile"
                 />
               </ProfileImg>

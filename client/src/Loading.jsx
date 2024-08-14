@@ -3,7 +3,7 @@ import styled from "styled-components";
 function LoadingPage() {
   return (
     <LoadingWrapper>
-      <Syntosign src="/s2s-logo/syn2sign_logo_cl.svg" alt="" />
+      <Syntosign src="/images/s2s-logo/syn2sign_logo_cl.svg" alt="" />
       {/* <DotContainer>
         {[...Array(9)].map((_, index) => (
           <Dot
