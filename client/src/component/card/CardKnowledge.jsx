@@ -8,7 +8,12 @@ function CardKnowledge(props) {
       <CardBox>
         <Overlay></Overlay>
         <div>
-          <ImagePreview src={props.img || "/images/s2s-logo/fb-profile.png"} />
+          <ImagePreview
+            src={
+              `/syn2sign/demo/other/${props.img}` ||
+              "/syn2sign/demo/images/s2s-logo/fb-profile.png"
+            }
+          />
         </div>
         <BoxContent>
           <div className="card-body text-start">
@@ -74,6 +79,9 @@ const CardBox = styled.div`
     min-height: 650px;
   }
   @media (max-width: 1439.98px) {
+    min-height: 640px;
+  }
+  @media (max-width: 1359.98px) {
     min-height: 600px;
   }
   @media (max-width: 991.98px) {

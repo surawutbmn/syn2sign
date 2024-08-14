@@ -1,8 +1,16 @@
 function PageElement() {
   return (
     <>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <img
+        src="/syn2sign/demo/icon/ele-head-l.svg"
+        className="ele-head-l"
+        alt=""
+      />
+      <img
+        src="/syn2sign/demo/icon/ele-head-r.svg"
+        className="ele-head-r"
+        alt=""
+      />
       <div className="bg-gd-btr"></div>
     </>
   );

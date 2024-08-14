@@ -150,7 +150,7 @@ import { Link } from "react-router-dom";
                       </FrontBox2>
                     )}
                     <DeviceImage
-                      src={`/syn2sign/demo/project_img/device/${project.device_img}`}
+                      src={`/syn2sign/demo/images/project_img/device/${project.device_img}`}
                     />
                   </DeviceBox>
                 </Link>
@@ -235,7 +235,7 @@ import { Link } from "react-router-dom";
                       </FrontBox2>
                     )}
                     <DeviceImage
-                      src={`/syn2sign/demo/project_img/device/${project.device_img}`}
+                      src={`/syn2sign/demo/images/project_img/device/${project.device_img}`}
                     />
                   </DeviceBox>
                 </Link>

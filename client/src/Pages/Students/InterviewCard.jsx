@@ -11,9 +11,9 @@ function InterviewCard(props) {
         <CardBox key={index} className="mb-5">
           <Overlay />
           <Row className="justify-content-between position-relative">
-            <Col xs={12} md={6} >
+            <Col xs={12} md={6}>
               <PreviewImg
-                src={`/images/creator_img/interview/${question.img}`}
+                src={`/syn2sign/demo/images/creator_img/interview/${question.img}`}
                 alt="interview image"
               />
             </Col>

@@ -20,7 +20,7 @@ const SlideCon = styled.div`
     width: 130px;
     height: 100%;
     top: 6%;
-    right: 0%;
+    right: -5%;
   }
   .prj-pl-nav-2 .swiper-button-prev,
   .prj-pl-nav .swiper-button-prev {
@@ -35,7 +35,7 @@ const SlideCon = styled.div`
     width: 130px;
     height: 100%;
     top: 6%;
-    left: 0%;
+    left: -5%;
   }
   .prj-pl-nav-2 .swiper-button-prev.swiper-button-disabled,
   .prj-pl-nav-2 .swiper-button-next.swiper-button-disabled,
@@ -105,7 +105,7 @@ export default function PlaylistSlider() {
               link={`https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=aYnCQPUgQNGu5f7Y`}
               title={`Youtube playlist • Senior Project Showreel, Academic Year 2023`}
               desc={`เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`}
-              img={`/other/playlistShow.webp`}
+              img={`playlistShow.webp`}
               btnIcon={`arrow`}
               btn={`watch now`}
             />
@@ -115,7 +115,7 @@ export default function PlaylistSlider() {
               link={`https://youtube.com/playlist?list=PLiCmIB88gkWS2P5lAglpcinRaCB8vtAIV&si=CegzMdumnDopwtf3`}
               title={`Youtube playlist • Exhibition Atmosphere #syn2sign`}
               desc={`เราได้จัดทำ Youtube playlist รวบรวมคลิปบรรยากาศในงาน นิทรรศการ Syn2signและคลิปสัมภาษณ์ผู้เข้าร่วมชมงานนิทรรศการ เพื่อให้ทุกคนได้เพลิดเพลินไปกับเรา`}
-              img={`/other/playlistAtmos.webp`}
+              img={`playlistAtmos.webp`}
               btnIcon={`arrow`}
               btn={`watch now`}
               btn2={`on youtube`}
@@ -126,7 +126,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808621128076703&type=3`}
               title={`Syn2sign Gallery 1 #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 1 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
-              img={`/other/gallery1.webp`}
+              img={`gallery1.webp`}
               btn={`see more`}
               btnIcon={`arrow`}
               btn2={`on facebook`}
@@ -137,7 +137,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808628818075934&type=3`}
               title={`Syn2sign Gallery 2 #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 2 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
-              img={`/other/gallery2.webp`}
+              img={`gallery2.webp`}
               btn={`see more`}
               btnIcon={`arrow`}
               btn2={`on facebook`}
@@ -148,7 +148,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808637004741782&type=3`}
               title={`Syn2sign Gallery Activity #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศการเข้าร่วมกิจกรรมต่างๆ ของผู้เข้าชมงาน นิทรรศการ ที่นอกจากการจัดแสดงโชว์ผลงานจุลนิพนธ์แล้ว ภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
-              img={`/other/gallery3.webp`}
+              img={`gallery3.webp`}
               btn={`see more`}
               btnIcon={`arrow`}
               btn2={`on facebook`}
@@ -182,7 +182,7 @@ export default function PlaylistSlider() {
               link={`https://youtube.com/playlist?list=PLiCmIB88gkWQyzpusqxE8uaydKCTN-dij&si=aYnCQPUgQNGu5f7Y`}
               title={`Youtube playlist • Senior Project Showreel, Academic Year 2023`}
               desc={`เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`}
-              img={`/other/playlistShow.webp`}
+              img={`playlistShow.webp`}
               btnIcon={`arrow`}
               btn2={`on youtube`}
               btn={`watch now`}
@@ -193,7 +193,7 @@ export default function PlaylistSlider() {
               link={`https://youtube.com/playlist?list=PLiCmIB88gkWS2P5lAglpcinRaCB8vtAIV&si=CegzMdumnDopwtf3`}
               title={`Youtube playlist • Exhibition Atmosphere #syn2sign`}
               desc={`เราได้จัดทำ Youtube playlist รวบรวมคลิปบรรยากาศในงาน นิทรรศการ Syn2signและคลิปสัมภาษณ์ผู้เข้าร่วมชมงานนิทรรศการ เพื่อให้ทุกคนได้เพลิดเพลินไปกับเรา`}
-              img={`/other/playlistAtmos.webp`}
+              img={`playlistAtmos.webp`}
               btnIcon={`arrow`}
               btn2={`on youtube`}
               btn={`watch now`}
@@ -204,7 +204,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808621128076703&type=3`}
               title={`Syn2sign Gallery 1 #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 1 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
-              img={`/other/gallery1.webp`}
+              img={`gallery1.webp`}
               btn={`see more`}
               btn2={`on facebook`}
               btnIcon={`arrow`}
@@ -215,7 +215,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808628818075934&type=3`}
               title={`Syn2sign Gallery 2 #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศภายในงานนิทรรศการ #syn2sign ชุดที่ 2 กับการพูดคุยแลกเปลี่ยนประสบการณ์ของผู้จัดทำผลงานกับผู้เข้าชม งานนิทรรศการ`}
-              img={`/other/gallery2.webp`}
+              img={`gallery2.webp`}
               btn={`see more`}
               btn2={`on facebook`}
               btnIcon={`arrow`}
@@ -226,7 +226,7 @@ export default function PlaylistSlider() {
               link={`https://www.facebook.com/media/set/?set=a.808637004741782&type=3`}
               title={`Syn2sign Gallery Activity #syn2sign`}
               desc={`รวบรวมภาพบรรยากาศการเข้าร่วมกิจกรรมต่างๆ ของผู้เข้าชมงาน นิทรรศการ ที่นอกจากการจัดแสดงโชว์ผลงานจุลนิพนธ์แล้ว ภายในงานยังมีจุดที่น่าสนใจอีกมากมายด้วย`}
-              img={`/other/gallery3.webp`}
+              img={`gallery3.webp`}
               btn={`see more`}
               btn2={`on facebook`}
               btnIcon={`arrow`}

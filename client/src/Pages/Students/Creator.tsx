@@ -39,46 +39,46 @@ const Creators: React.FC<CreatorsProps> = ({
   };
   return (
     <CardBox>
-        <ImgBox className="p-0 text-start">
-          <ImgCreator
-            src={
-              `/images/creator_img/card/${profileImg}` ||
-              `/images/creator_img/card/073-card.webp`
-            }
-            alt=""
+      <ImgBox className="p-0 text-start">
+        <ImgCreator
+          src={
+            `/syn2sign/demo/images/creator_img/card/${profileImg}` ||
+            `/syn2sign/demo/images/creator_img/card/073-card.webp`
+          }
+          alt=""
+        />
+      </ImgBox>
+      <DetailBox>
+        <Title>
+          <Heading>Get to know {nicknameEN}</Heading>
+          <SubHead>Collaborative Member</SubHead>
+        </Title>
+        <QouteBox>
+          <DoubleQoute
+            src={`/syn2sign/demo/icon/double-qoute.svg`}
+            alt="double quote"
+            loading="lazy"
+            className="me-4"
           />
-        </ImgBox>
-          <DetailBox>
-            <Title>
-              <Heading>Get to know {nicknameEN}</Heading>
-              <SubHead>Collaborative Member</SubHead>
-            </Title>
-            <QouteBox>
-              <DoubleQoute
-                src={`/icon/double-qoute.svg`}
-                alt="double quote"
-                loading="lazy"
-                className="me-4"
-              />
-              <h4>{qoutes}</h4>
-            </QouteBox>
-            <BtnBox>
-              <Link
-                to={`/showcase/creators/${stdID}`}
-                className="txt-link"
-                onClick={handleStudentClick}
-              >
-                <ReadMore>
-                  <span className="txt-upper">
-                    <strong>see more</strong>
-                  </span>
-                  <span className="ms-3">
-                    <FaReadme />
-                  </span>
-                </ReadMore>
-              </Link>
-            </BtnBox>
-          </DetailBox>
+          <h4>{qoutes}</h4>
+        </QouteBox>
+        <BtnBox>
+          <Link
+            to={`/showcase/creators/${stdID}`}
+            className="txt-link"
+            onClick={handleStudentClick}
+          >
+            <ReadMore>
+              <span className="txt-upper">
+                <strong>see more</strong>
+              </span>
+              <span className="ms-3">
+                <FaReadme />
+              </span>
+            </ReadMore>
+          </Link>
+        </BtnBox>
+      </DetailBox>
     </CardBox>
   );
 };

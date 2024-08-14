@@ -5,15 +5,13 @@ import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
-import Creators from "../Students/Creator";
-import { Container,Breadcrumb  } from "react-bootstrap";
+import { Container  } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
 import SocialApproved from "./AccordionContent/SocialApproved";
 import CardThreePictureProject from "./AccordionContent/TopPicture";
 import LinkButton from "../../component/Button/LinkButton";
-import LinkButtonIG from "../../component/Button/LinkButtonIG";
 import CardIdeaConcept from "../../component/card/CardIdeaConcept";
 import CardKeyword from "../../component/card/CardKeyword";
 import CardMainFunction from "../../component/card/CardMainFunction";
@@ -25,6 +23,7 @@ import CardFeedback from "../../component/card/CardFeedback";
 import CardCreator from "../../component/card/CardCreator";
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
+import { FaArrowRight } from "react-icons/fa6";
 
 
 function Project() {
@@ -206,7 +205,7 @@ function Project() {
           <div className="d-flex">
             <img
               className="prj-sec-icon"
-              src={`/project_img/prj_logo/${project.icon_sqr}`}
+              src={`/syn2sign/demo/images/project_img/prj_logo/${project.icon_sqr}`}
               alt={`${project.name_en} icon`}
             />
             <div className="text-start mx-3">
@@ -220,7 +219,7 @@ function Project() {
             <h1 className="outlined-text">#{project.id}</h1>
             <div className="prj-sec-icon2 ms-4">
               <img
-                src={`/project_img/prj_icon/${project.icon_std}`}
+                src={`/syn2sign/demo/images/project_img/prj_icon/${project.icon_std}`}
                 alt="creator icon"
               />
             </div>
@@ -290,7 +289,7 @@ function Project() {
                         <div className="icon-prj-ovl"></div>
                         <img
                           className="icon-img-link"
-                          src={`/project_img/prj_logo/${proj.icon_sqr}`}
+                          src={`/syn2sign/demo/images/project_img/prj_logo/${proj.icon_sqr}`}
                           alt={`${proj.name_en} icon`}
                         />
                       </div>
@@ -306,15 +305,15 @@ function Project() {
         </div>
         <BreadcrumbContainer>
       <BreadcrumbImage
-        src="/images/s2s-logo/s2s-outline-logo.svg"
+        src="/syn2sign/demo/images/s2s-logo/syn2sign_logo.svg"
         alt="breadcrumb icon"
         onClick={handleImageClick}
       />
-      <Separator>→</Separator>
+      <Separator><FaArrowRight/></Separator>
       <BreadcrumbItem onClick={handleShowcaseClick}>
         SHOWCASE
       </BreadcrumbItem>
-      <Separator>→</Separator>
+      <Separator><FaArrowRight/></Separator>
       <BreadcrumbItem>
         {project.name_en}
       </BreadcrumbItem>
