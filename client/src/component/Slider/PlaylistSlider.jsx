@@ -95,7 +95,7 @@ export default function PlaylistSlider() {
             prevEl: ".prj-pl-nav-2 .swiper-button-prev",
           }}
           breakpoints={{
-            0: { slidesPerView: 1.5 },
+            0: { slidesPerView: 1.1 },
             768: { slidesPerView: 1.5 },
             1440: { slidesPerView: 2.2 },
           }}
@@ -109,6 +109,7 @@ export default function PlaylistSlider() {
               img={`playlistShow.webp`}
               btnIcon={`arrow`}
               btn={`watch now`}
+              btn2={`on youtube`}
             />
           </SwiperSlide>
           <SwiperSlide>

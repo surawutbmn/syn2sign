@@ -31,6 +31,47 @@ const LogoContainer = styled.img`
   }};
   object-fit: contain;
   transition: all 0.3s cubic-bezier(0.33, 2, 0.41, 0.69);
+  @media (max-width: 991.98px) {
+    width: ${({ $spon, type }) => {
+      if (type === "LogoRec") {
+        return $spon === "tier-1"
+          ? "8em"
+          : $spon === "tier-2"
+          ? "4em"
+          : "3em";
+      } else {
+        return $spon === "tier-1"
+          ? "3em"
+          : $spon === "tier-2-dl"
+          ? "2.8em"
+          : $spon === "tier-2"
+          ? "1.8em"
+          : "1.5em";
+      }
+    }};
+  }
+  @media (max-width: 767.98px) {
+    width: ${({ tier, type }) => {
+      if (type === "LogoRec") {
+        return tier === "tier-1" ? "12em" : tier === "tier-2" ? "8em" : "6em";
+      } else {
+        return tier === "tier-1"
+          ? "5em"
+          : tier === "tier-2-dl"
+          ? "4em"
+          : tier === "tier-2"
+          ? "3.5em"
+          : "3em";
+      }
+    }};
+    aspect-ratio: ${({ type }) => {
+      if (type === "LogoRec") {
+        return "16 / 9";
+      } else {
+        return "1 / 1";
+      }
+    }};
+  }
 `;
 
 const SponLinkRow = (props) => {

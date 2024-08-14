@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./project.css";
 import { Link, useParams } from "react-router-dom";
 import { BsCheckLg } from "react-icons/bs";
@@ -41,8 +41,9 @@ function Project() {
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // Hook to programmatically navigate
   const isMobile = useIsMobile();
+const projectRefs = useRef([]); // Create an array of refs
+
   const handleImageClick = () => {
-    // Navigate to a different link when the image is clicked
     navigate("/"); // Replace with your desired URL
   };
 
@@ -55,6 +56,15 @@ function Project() {
   const [activeProject, setActiveProject] = useState(
     localStorage.getItem("activeProject") || null
   );
+  useEffect(() => {
+    if (activeProject && projectRefs.current[activeProject]) {
+      projectRefs.current[activeProject].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    }
+  }, [activeProject]);
 
   const findProjectById = (project_id) => {
     return (
@@ -105,6 +115,7 @@ function Project() {
       document.title = `${project.name_en} - Syn2sign senior project exhibition 2024`;
     }
   }, [project]);
+  
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -274,7 +285,7 @@ function Project() {
         <div className="text-start txt-grey mb-2 ms-4 d-block d-md-none">Social Approved</div>
       </Container>
 
-      <SocialApproved className="" />
+      <SocialApproved proj_id={prj_id} />
       <SocialApprovedMobile className="" />
       <Container>
         <CardThreePictureProject />
@@ -296,19 +307,20 @@ function Project() {
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">
-          {/* <div className="col  d-none d-md-block">
+          <div className="col">
             <SectionTitle
               title="Other Projects"
               subtitle="ผลงานอื่นๆ"
               className="header-wline"
             />
-            <div className="d-flex justify-content-around text-center mb-5">
-              {projectsdata.map((proj) => (
+            <LinkPrjCon className="d-flex justify-content-around text-center mb-5">
+              {projectsdata.map((proj, index = project.prj_id) => (
                 <div
-                  key={proj.project_id}
+                  key={index}
                   className={`list-group-item ${
                     activeProject === proj.project_id ? "active" : ""
                   }`}
+                  ref={(el) => (projectRefs.current[proj.project_id] = el)} // Set ref for each project
                 >
                   <Link
                     to={`/showcase/projects/${proj.project_id}`}
@@ -342,11 +354,11 @@ function Project() {
                   </Link>
                 </div>
               ))}
-            </div>
-          </div> */}
+            </LinkPrjCon>
+          </div>
 
           {/* Mobile  */}
-          <div className="col-12 mb-5">
+          {/* <div className="col-12 mb-5">
             <SectionTitle
               title="Other Projects"
               subtitle="ผลงานอื่นๆ"
@@ -424,7 +436,7 @@ function Project() {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </div> */}
         </div>
         <BreadcrumbContainer>
           <BreadcrumbImage
@@ -448,6 +460,18 @@ function Project() {
   );
 }
 export default Project;
+const LinkPrjCon = styled.div`
+  overflow-x: scroll;
+  overflow-y: hidden;
+  .icon-img-link {
+    max-width: 6em;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+`;
 const BreadcrumbContainer = styled.div`
   display: flex;
   align-items: center;

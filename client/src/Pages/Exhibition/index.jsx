@@ -52,7 +52,7 @@ function Exhibition() {
   return (
     <>
       <div className="bg-gd-btr"></div>
-      <div className="exh-banner exh-banner-bg mt-5 mb-6">
+      <div className="exh-banner exh-banner-bg">
         <div className="exh-banner-overlay"></div>
         <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
         <div className="git-link">
@@ -208,7 +208,7 @@ function Exhibition() {
       <Container className="mb-">
         <Knowslide />
       </Container>
-      <Container className="mt- mb-6">
+      <Container className="">
         <div className="feedback-con">
           <div className="paper-plane">
             <img src={paper_plane} alt="paper plane" loading="lazy" />

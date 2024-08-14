@@ -79,6 +79,7 @@ function HomeElement() {
       <EleHomebr>
         <Eleimg src="/icon/ele-btm-r.svg" alt="" />
       </EleHomebr>
+      <Btmfw/>
     </>
   );
 }
@@ -90,35 +91,118 @@ const EleHomer = styled.div`
   top: 0;
   right: -5%;
   opacity: 1;
+  @media (min-width: 1440.98px) {
+    right: -5%;
+    width: 50em;
+  }
+  @media (max-width: 1199.98px) {
+    right: -5%;
+    width: 35em;
+  }
+  @media (max-width: 1023.98px) {
+    right: -10%;
+    width: 30em;
+  }
+  @media (max-width: 575.98px) {
+    width: 15em;
+    top: 25%;
+    right: -8%;
+  }
 `;
 const EleHomel = styled.div`
   position: absolute;
   opacity: 1;
   top: 0;
   left: -10%;
+  @media (min-width: 1440.98px) {
+    left: -5%;
+    width: 60em;
+  }
+  @media (max-width: 1199.98px) {
+    left: -10%;
+    width: 35em;
+  }
+  @media (max-width: 1023.98px) {
+    width: 40em;
+  }
+  @media (max-width: 575.98px) {
+    left: -18%;
+    top: 20%;
+    width: 20em;
+  }
 `;
 const EleHomehl = styled.div`
   position: absolute;
   top: -45%;
   left: -20%;
   opacity: 1;
+  @media (min-width: 1440.98px) {
+    left: -8%;
+    top: -30%;
+    width: 80em;
+  }
+  @media (max-width: 575.98px) {
+    left: -48%;
+    top: -20%;
+    width: 40em;
+  }
 `;
 const EleHomehr = styled.div`
   position: absolute;
   top: -45%;
   right: -15%;
+  @media (min-width: 1440.98px) {
+    right: -8%;
+    top: -20%;
+    width: 80em;
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 `;
 const EleHomebl = styled.div`
   position: absolute;
   bottom: -20%;
   left: 0%;
   opacity: 1;
+  @media (min-width: 1440.98px) {
+    left: 0%;
+    bottom: -20%;
+    width: 80em;
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 `;
 const EleHomebr = styled.div`
   position: absolute;
   bottom: -40%;
   right: 0%;
+  @media (min-width: 1440.98px) {
+    right: 0%;
+    bottom: -40%;
+    width: 80em;
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 `;
 const Eleimg = styled.img`
   width: 100%;
+`;
+const Btmfw = styled.div`
+  position: absolute;
+  bottom: -30%;
+  transform: translateY(30%);
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(5, 186, 100, 0.8) 100%
+  );
+  @media (min-width: 767.98px) {
+    display: none;
+  }
 `;

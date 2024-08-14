@@ -84,10 +84,16 @@ const CardBox = styled.div`
   @media (max-width: 1359.98px) {
     min-height: 600px;
   }
+  @media (max-width: 1199.98px) {
+    min-height: 590px;
+  }
   @media (max-width: 991.98px) {
     min-height: 600px;
   }
   @media (max-width: 767.98px) {
+    min-height: 550px;
+  }
+  @media (max-width: 575.98px) {
     min-height: 500px;
   }
 `;
