@@ -208,7 +208,7 @@ function Exhibition() {
       <Container className="mb-">
         <Knowslide />
       </Container>
-      <Container className="mt- mb-6">
+      <Container className="">
         <div className="feedback-con">
           <div className="paper-plane">
             <img src={paper_plane} alt="paper plane" loading="lazy" />
