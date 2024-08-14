@@ -5,67 +5,38 @@ import { FaGlobe, FaPlayCircle } from "react-icons/fa";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
-const CardMainThree = (props) => {
+const CardMainThreeMobile = (props) => {
   // const Line = props.href ? LineImage : 'div';
   return (
     <div>
-      <div className="row" style={{ marginBottom: "9rem" }}>
-        <div className="col-4">
-          {/* L */}
-          <div
-            className="col-12 text-end txt-staytune-big-year txt-bold"
-            style={{ marginTop: "8.5rem", marginLeft: "" }}
-          >
-            <div className="txt-dark-outline">20</div>
-            <div style={{ marginTop: "-2rem" }}>{props.year}</div>
-          </div>
-          <div
-            className="col-12 txt-body1 txt-grey text-start"
-            style={{ marginRight: "5rem" }}
-          >
-            Poster
-          </div>
-          <div className="col-12 text-end">
-            <ThreePosterExhibition src={props.poster} />
-          </div>
-        </div>
-
-        <div className="col-1">
-          {/* <div className="line"> */}
-          {props.line && (
-            <LineImage
-              src={props.line}
-              onError={(e) => (e.target.style.display = "none")}
-            />
-          )}
-          {/* </div> */}
-        </div>
-
-        <div className="col-7 text-start">
-          {/* R */}
-          <div className="col-12 txt-body1">
+      <div className="d-flex row" style={{ marginBottom: "9rem" }}>
+        <div className="col-12 text-start">
+          <div className="txt-body1">
             <ThreeLogoExhibition src={props.logo} />
           </div>
-          <div className="col-12 txt-head3 txt-bold txt-prim mt-4">
-            {props.name}
-          </div>
-          <div className="col-12 txt-body1 txt-grey mb-4 mt-4">
+          <div className="txt-head3 txt-bold txt-prim mt-2">{props.name}</div>
+          <div className="col-12 txt-body1 txt-grey mb-4 mt-2">
             <ThreeLinkExhibition
               className="txt-body3"
               href={props.link}
               target="_blank"
             >
-              {/* <FontAwesomeIcon icon={faGlobe} size="xl" />{" "} */}
+              
               <FaGlobe size="1.3em" className="me-2" />
               {props.linkText}
             </ThreeLinkExhibition>
           </div>
-          <div className="col-12 txt-body1 txt-grey mt-1">
+          <div className="txt-body1 txt-grey mt-1">
             {props.description1}
-            <br></br>
-            {props.description2}
-            <br></br>
-            {props.description3}
+          </div>
+          <div
+            className="txt-body1 txt-grey text-start mt-5"
+            style={{ marginRight: "5rem" }}
+          >
+            Poster
+          </div>
+          <div className="text-end">
+            <ThreePosterExhibition src={props.poster} />
           </div>
           <VideoBoxExhibition className="col-12 txt-body1 mt-5">
             <div className="col-12 txt-body1 text-start mt-4 mb-4 ms-4">
@@ -108,7 +79,7 @@ const CardMainThree = (props) => {
   );
 };
 
-CardMainThree.propTypes = {
+CardMainThreeMobile.propTypes = {
   name: propTypes.string,
   year: propTypes.string,
   poster: propTypes.string,
@@ -116,8 +87,6 @@ CardMainThree.propTypes = {
   link: propTypes.string,
   linkText: propTypes.string,
   description1: propTypes.string,
-  description2: propTypes.string,
-  description3: propTypes.string,
   NameVideo: propTypes.string,
   linkVideo: propTypes.string,
   linkImage: propTypes.string,
@@ -125,7 +94,7 @@ CardMainThree.propTypes = {
   imgPreview2: propTypes.string,
 };
 
-export default CardMainThree;
+export default CardMainThreeMobile;
 
 const ThreePosterExhibition = styled.img`
   width: 360px;
@@ -195,11 +164,9 @@ const TabVideoAndImageBox = styled.div`
     font-size: 3rem;
   }
   &:hover .icon-play {
-        
     font-size: 5rem;
     opacity: 1;
-        
-    }
+  }
 `;
 
 const Overlay = styled.div`
@@ -220,30 +187,30 @@ const Overlay = styled.div`
   }
 `;
 const Text1 = styled.div`
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    text-decoration: none;
-    color: white;
-    z-index: 1;
-    transition: all .3s ease;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+  transition: all 0.3s ease;
 `;
 const Text2 = styled.div`
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    text-decoration: none;
-    color: white;
-    transition: all .3s ease;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
 `;
 const IconPlay = styled.div`
-     position: absolute;
-    top: 30%;
-    left: 80%;
-    font-size: 3rem;
-    color: white;
-    transition: all .3s ease;
-    opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  font-size: 3rem;
+  color: white;
+  transition: all 0.3s ease;
+  opacity: 0;
 `;
 const LineImage = styled.img`
   position: absolute;

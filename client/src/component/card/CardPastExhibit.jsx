@@ -9,11 +9,11 @@ const CardPastExhibit = (props) => {
   return (
     <Link className="" href={props.href || "#"} target="_blank">
       <Row className="justify-content-between hover-card-overlay">
-        <Col xs={3} className="p-0">
+        <Col xs={5} className="p-0">
           <PosterExhibition src={props.poster} />
         </Col>
 
-        <Col xs={8} className="text-start">
+        <Col xs={7} className="text-start">
           <h2 className="txt-head2 txt-bold">
             <span className=" txt-dark-outline">20</span>
             <span className="sub-year">{props.year}</span>
