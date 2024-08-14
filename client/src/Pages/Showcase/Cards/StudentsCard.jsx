@@ -76,11 +76,18 @@ const CardText = styled.div`
   @media (max-width: 767.98px) {
     left: 0.3rem;
   }
+  @media (max-width: 1199.98px) {
+    bottom: 0.3rem;
+  }
   @media (max-width: 991.98px) {
     left: 0.5rem;
   }
   @media (max-width: 575.98px) {
     left: 0.3rem;
+  }
+  @media (max-width: 374.98px) {
+    left: 0.3rem;
+    bottom: 0.1rem;
   }
 `;
 const Caption = styled.div`
@@ -92,11 +99,17 @@ const Caption = styled.div`
     font-size: 0.6rem;
   }
   margin-bottom: 0.2rem;
+  @media (max-width: 1199.98px) {
+    font-size: 0.65rem;
+  }
   @media (max-width: 991.98px) {
     font-size: 0.5rem;
   }
   @media (max-width: 575.98px) {
     font-size: 0.46rem;
+  }
+  @media (max-width: 374.98px) {
+    font-size: 0.45rem;
   }
 `;
 const Title = styled.div`
@@ -108,6 +121,9 @@ const Title = styled.div`
   @media (max-width: 1359.98px) {
     font-size: 0.65rem;
   }
+  @media (max-width: 1199.98px) {
+    font-size: 0.74rem;
+  }
   @media (max-width: 991.98px) {
     font-size: 0.65rem;
   }
@@ -117,12 +133,15 @@ const Title = styled.div`
   @media (max-width: 575.98px) {
     font-size: 0.56rem;
   }
+  @media (max-width: 419.98px) {
+    font-size: 0.47rem;
+  }
 `;
 const ReadMoreText = styled.div`
   font-size: 1rem;
   font-weight: var(--txt-bold);
   color: var(--color-light);
-  margin-left: -80%;
+  margin-left: -60%;
   opacity: 0;
   transition: margin-left 0.3s ease, opacity 0.3s ease;
 `;
@@ -135,8 +154,11 @@ const CardOverlay = styled.div`
   color: white;
   height: 25%;
   width: 100%;
-  @media (min-width: 1440.98px) {
+  @media (max-width: 1439.98px) {
     height: 30%;
+  }
+  @media (max-width: 1359.98px) {
+    height: 25%;
   }
   @media (max-width: 991.98px) {
     height: 28%;
@@ -147,21 +169,35 @@ const CardOverlay = styled.div`
   @media (max-width: 575.98px) {
     height: 30%;
   }
+  @media (max-width: 424.98px) {
+    height: 33%;
+  }
+  @media (max-width: 374.98px) {
+    height: 50%;
+  }
 `;
 const ReadMore = styled.div`
   position: absolute;
   top: 20px;
   font-size: 0.8rem;
   color: var(--color-dark);
-  right: -70px;
+  right: -60px;
   transition: all 0.3s ease;
   z-index: 1;
   align-items: center;
   white-space: nowrap;
   display: flex;
   @media (max-width: 991.98px) {
+    margin-left: -70px;
     top: 10px;
-    right: -80px;
+  }
+  @media (max-width: 575.98px) {
+    margin-left: -60px;
+    top: 10px;
+  }
+  @media (max-width: 374.98px) {
+    margin-left: -30px;
+    top: 10px;
   }
 `;
 const ReadMoreIcon = styled.img`
@@ -172,6 +208,12 @@ const ReadMoreIcon = styled.img`
   max-width: 4rem;
   @media (max-width: 767.98px) {
     max-width: 2rem;
+  }
+  @media (max-width: 565.98px) {
+    max-width: 1.8rem;
+  }
+  @media (max-width: 374.98px) {
+    max-width: 1.4rem;
   }
 `;
 const ImgCreator = styled.img`

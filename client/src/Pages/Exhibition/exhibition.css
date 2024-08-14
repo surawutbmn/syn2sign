@@ -246,7 +246,7 @@
   padding: 3rem;
   width: 100%;
   height: 100%;
-  min-height: 50dvw;
+  min-height: 45em;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     150deg,
@@ -397,6 +397,20 @@
   .crl-icon-line {
     bottom: 0;
   }
+   .feedback-title{
+  font-size: 1.3em;
+}
+  .txt-bubble {
+  font-size: 1em;
+}
+.txt-bubble-con {
+  display: flex;
+  padding: .8rem;
+  align-items: center;
+  justify-content: center;
+}
+   .feedback-con {min-height: 40em; margin-bottom: 3em;}
+
 }
 @media (max-width: 991.98px) {
   .giticon{font-size: 1.3em;}
@@ -415,7 +429,7 @@
       font-size: 1em;
     }
   }
-   .feedback-con {min-height: 75dvw; margin-bottom: 3em;}
+   .feedback-con {min-height: 36em; margin-bottom: 3em;}
   .feedback-title{
   font-size: 1.3em;
 }
