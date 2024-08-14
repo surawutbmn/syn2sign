@@ -121,8 +121,8 @@ const CardCreator = () => {
             <Boxline />
             <div className="text-start">
               <IconImage src="/images/creator_img/email.svg" alt="email" />
-              <span className="ms-3">
-                <a href={`mailto:${student.email}`} className="txt-link">
+              <span className="ms-3 ">
+                <a href={`mailto:${student.email}`} className="txt-link txt-body3">
                   {student.email}
                 </a>
               </span>
@@ -139,7 +139,7 @@ const CardCreator = () => {
                       ? student.linkin
                       : `https://${student.linkin}`
                   }
-                  className="txt-link"
+                  className="txt-link txt-body3 txt-body3"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -150,7 +150,7 @@ const CardCreator = () => {
             <BtnBox>
               <Link
                 to={`/showcase/creators/${student.std_id}`}
-                className="txt-link"
+                className="txt-link txt-body3"
               >
                 <ReadMore className="d-flex">
                   <span className="txt-upper">
@@ -188,7 +188,7 @@ const CardCreator = () => {
             <div className="text-start">
               <IconImage src="/images/creator_img/email.svg" alt="email" />
               <span className="ms-3">
-                <a href={`mailto:${student.email}`} className="txt-link">
+                <a href={`mailto:${student.email}`} className="txt-link txt-body3">
                   {student.email}
                 </a>
               </span>
@@ -206,7 +206,7 @@ const CardCreator = () => {
                       ? student.linkin
                       : `https://${student.linkin}`
                   }
-                  className="txt-link"
+                  className="txt-link txt-body3"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -217,7 +217,7 @@ const CardCreator = () => {
             <BtnBox>
               <Link
                 to={`/showcase/creators/${student.std_id}`}
-                className="txt-link"
+                className="txt-link txt-body3"
               >
                 <ReadMore className="d-flex">
                   <span className="txt-upper">

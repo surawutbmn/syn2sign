@@ -43,6 +43,7 @@ const SocialApprovedMobile = () => {
               <StyledSpan key={item.id} hasBorder={item.id === "2"} className="gap-1">
                 
                 <BiSolidCommentDetail /> {item.socialApproved}
+                
               </StyledSpan>
             ))}
         </CardBox>
@@ -72,10 +73,10 @@ const StyledSpan = styled.span`
   align-items: center;
   justify-content: center;
   padding: 10px; /* Adjust padding as needed */
-  ${(props) =>
+  /* ${(props) =>
     props.hasBorder &&
     `
     border-top: 3px solid var(--color-primary);
     border-bottom: 3px solid var(--color-primary);
-  `}
+  `} */
 `;

@@ -10,8 +10,8 @@
   /* Media query for mobile devices */
   @media (max-width: 768px) { /* You can adjust the max-width value based on your needs */
     .prj-sec-icon {
-      width: 52px;
-      height: 52px;
+      width: 60px;
+      height: 60px;
       border-width: .15em; /* Adjust the border width to maintain proportion if needed */
       border-radius: .65em; /* Adjust the border-radius accordingly */
     }
@@ -24,8 +24,8 @@
   /* Media query for mobile devices */
   @media (max-width: 768px) { /* Adjust the max-width value based on your needs */
     .prj-sec-icon2 {
-      width: 78px;
-      height: 52px;
+      width: 80px;
+      height: 78px;
     }
   }
   
@@ -49,9 +49,16 @@
 }.active .prj_name{color: var(--color-primary); font-weight: var(--txt-bold);}
 .prj_name{font-size: 1.2em;}
 .link-prj-con{position: relative; overflow: hidden; border-radius: 100px; width: fit-content;}
-.link-prj-con2{position: relative; overflow: hidden; border-radius: 100px; width: 65px; height: 65px;}
+.link-prj-con2{position: relative; overflow: hidden; border-radius: 100px; width: 70px; height: 70px;}
 .prj-check-i{display: none;}
 .prj-check-i2{display: none;}
 .outlined-text{font-size: 4rem; font-weight: var(--txt-bold); -webkit-text-stroke: .03rem var(--color-grey); color: transparent; opacity: .8;}
+
+@media (max-width: 768px) { /* Adjust the max-width value based on your needs */
+  .outlined-text {
+    font-size: 2.5rem; 
+  }
+}
+
 .prj-name-line{width: 40dvw; height: 0; border-top: .2rem solid var(--color-primary); opacity: 0;}
 

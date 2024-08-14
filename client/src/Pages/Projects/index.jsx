@@ -174,8 +174,7 @@ function Project() {
     {
       title: "creator",
       subtitle: "ผู้สร้างผลงาน",
-      content:  ""
-
+      content: "",
     },
   ];
   const itemsWithStudents = items.map((item) => {
@@ -229,11 +228,11 @@ function Project() {
               src={`/images/project_img/prj_logo/${project.icon_sqr}`}
               alt={`${project.name_en} icon`}
             />
-            <div className="text-start mx-3">
+            <div className="text-start mx-3 d-none d-md-block">
               <h1 className="txt-pru-head ">
                 <strong>{project.name_en}</strong>
               </h1>
-              <p>{project.name_th}</p>
+              <p className="txt-body1">{project.name_th}</p>
             </div>
           </div>
           <div className="d-flex align-items-baseline">
@@ -246,12 +245,33 @@ function Project() {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3 w-75">
-          <span>
+        <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3 w-70 d-none d-md-block">
+          <div className="text-start d-block d-md-none" >
+            <h1 className="txt-pru-head txt-head1" >
+              <strong >{project.name_en}</strong>
+            </h1>
+            <p className="txt-body3">({project.name_th})</p>
+          </div>
+          <div className="txt-body2">
             <p>{project.fullname_th}</p>
-          </span>
+          </div>
         </div>
-        <div className="text-start txt-grey mb-1">Social Approved</div>
+
+        <div className="d-flex flex-column text-start mb-3 txt-body1 mt-3 w-100 d-block d-md-none">
+          <div className="text-start d-block d-md-none">
+            <h1 className="txt-pru-head txt-head1">
+              <strong>{project.name_en}</strong>
+            </h1>
+            <p className="txt-body3">({project.name_th})</p>
+          </div>
+          <div className="txt-body2">
+            <p>{project.fullname_th}</p>
+          </div>
+        </div>
+
+        <div className="text-start txt-grey mb-2 d-none d-md-block">Social Approved</div>
+
+        <div className="text-start txt-grey mb-2 ms-4 d-block d-md-none">Social Approved</div>
       </Container>
 
       <SocialApproved className="" />
@@ -354,7 +374,7 @@ function Project() {
                   slidesPerView: 5, // Adjusts the number of slides to fit the container
                 },
                 1200: {
-                  slidesPerView: 8, 
+                  slidesPerView: 8,
                 },
               }}
             >
@@ -387,7 +407,6 @@ function Project() {
                           <img
                             className="icon-img-link2"
                             src={`/images/project_img/prj_logo/${proj.icon_sqr}`}
-                            
                             alt={`${proj.name_en} icon`}
                             style={{
                               width: "65px",
