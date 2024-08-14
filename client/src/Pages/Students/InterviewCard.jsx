@@ -13,7 +13,7 @@ function InterviewCard(props) {
           <Row className="justify-content-between position-relative">
             <Col xs={12} md={6}>
               <PreviewImg
-                src={`/syn2sign/demo/images/creator_img/interview/${question.img}`}
+                src={`/images/creator_img/interview/${question.img}`}
                 alt="interview image"
               />
             </Col>

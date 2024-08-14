@@ -28,69 +28,7 @@ const CardCreatorMobile = () => {
 
   return (
     <div className="d-flex row">
-      <div className="col-5">
-        {/* Assuming the same image for demonstration purposes */}
-        <CreatorImg
-          src={`/creator_img/${studentData[0].project_id}.png`}
-        //   style={{ marginTop: "-60px" }}
-        />
-      </div>
-      <div className="col-7">
-        {studentData.map((student, index) => (
-          <DetailBox key={index}>
-            <div className="d-flex align-items-start text-start">
-              <DoubleQoute
-                src={`/icon/double-qoute.svg`}
-                alt="double quote"
-                loading="lazy"
-                className="me-4"
-              />
-              <span className="txt-body2">{student.qoutes}</span>
-            </div>
-            <Boxline />
-            <div className="text-start">
-              <IconImage src="/creator_img/email.svg" alt="email" />
-              <span className="ms-3">
-                <a href={`mailto:${student.email}`} className="txt-link">
-                  {student.email}
-                </a>
-              </span>
-            </div>
-            <div className="text-start mt-3">
-              <IconImage src="/creator_img/linkedin.svg" alt="linkedin" />
-              <span className="ms-3">
-                <a
-                  href={
-                    student.linkin.startsWith("http")
-                      ? student.linkin
-                      : `https://${student.linkin}`
-                  }
-                  className="txt-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {student.name_en}
-                </a>
-              </span>
-            </div>
-            <BtnBox>
-              <Link
-                to={`/showcase/creators/${student.std_id}`}
-                className="txt-link"
-              >
-                <ReadMore className="d-flex">
-                  <span className="txt-upper">
-                    <strong>read more</strong>
-                  </span>
-                  <span className="ms-2">
-                    <FaReadme />
-                  </span>
-                </ReadMore>
-              </Link>
-            </BtnBox>
-          </DetailBox>
-        ))}
-      </div>
+     
     </div>
   );
 };

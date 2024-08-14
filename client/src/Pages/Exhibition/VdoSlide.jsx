@@ -101,7 +101,7 @@ export const VdoSlide = () => {
           {projectDetails.map((project) => (
             <SwiperSlide key={project.id}>
               <div className="d-flex flex-column">
-                <div className="mx-auto ">
+                <div className="mx-auto ratio ratio-16x9">
                   <iframe
                     src={`https://www.youtube-nocookie.com/embed/${project.videoSrc}`}
                     title="YouTube video player"
@@ -110,7 +110,7 @@ export const VdoSlide = () => {
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                     className="video-box"
-                  style={{ width: "100%" , height: "200px"}}></iframe>
+                  ></iframe>
                 </div>
                 <h4 className="text-start txt-sbold mt-3">
                   {project.name} ({project.name_th})

@@ -62,22 +62,22 @@ function HomeElement() {
   return (
     <>
       <EleHomehl className="ele-hl">
-        <Eleimg src="/syn2sign/demo/icon/ele-homeh-l.svg" alt="" />
+        <Eleimg src="/icon/ele-homeh-l.svg" alt="" />
       </EleHomehl>
       <EleHomehr className="ele-hr">
-        <Eleimg src="/syn2sign/demo/icon/ele-homeh-r.svg" alt="" />
+        <Eleimg src="/icon/ele-homeh-r.svg" alt="" />
       </EleHomehr>
       <EleHomel className="ele-l">
-        <Eleimg src="/syn2sign/demo/icon/ele-home-l.svg" alt="" />
+        <Eleimg src="/icon/ele-home-l.svg" alt="" />
       </EleHomel>
       <EleHomer className="ele-r">
-        <Eleimg src="/syn2sign/demo/icon/ele-home-r.svg" alt="" />
+        <Eleimg src="/icon/ele-home-r.svg" alt="" />
       </EleHomer>
       <EleHomebl>
-        <Eleimg src="/syn2sign/demo/icon/ele-btm-l.svg" alt="" />
+        <Eleimg src="/icon/ele-btm-l.svg" alt="" />
       </EleHomebl>
       <EleHomebr>
-        <Eleimg src="/syn2sign/demo/icon/ele-btm-r.svg" alt="" />
+        <Eleimg src="/icon/ele-btm-r.svg" alt="" />
       </EleHomebr>
     </>
   );

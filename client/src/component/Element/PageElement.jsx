@@ -2,12 +2,12 @@ function PageElement() {
   return (
     <>
       <img
-        src="/syn2sign/demo/icon/ele-head-l.svg"
+        src="/icon/ele-head-l.svg"
         className="ele-head-l"
         alt=""
       />
       <img
-        src="/syn2sign/demo/icon/ele-head-r.svg"
+        src="/icon/ele-head-r.svg"
         className="ele-head-r"
         alt=""
       />

@@ -26,21 +26,26 @@ const CardCreator = () => {
     return <div>Loading...</div>; // or a loading spinner
   }
 
+  // Split the data into two halves
+  const midIndex = Math.ceil(studentData.length / 2);
+  const firstHalf = studentData.slice(0, midIndex);
+  const secondHalf = studentData.slice(midIndex);
+
   return (
-    <div className="d-flex row">
-      <div className="col-5">
+    <div className="d-flex row" style={{ marginTop: "-50px" }}>
+      <div className="col-5 d-none d-md-block">
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
-          src={`/syn2sign/demo/images/creator_img/${studentData[0].project_id}.png`}
+          src={`/images/creator_img/${studentData[0].project_id}.png`}
           //   style={{ marginTop: "-60px" }}
         />
       </div>
-      <div className="col-7">
+      <div className="col-7 d-none d-md-block">
         {studentData.map((student, index) => (
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/syn2sign/demo/icon/double-qoute.svg`}
+                src={`/icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -49,10 +54,7 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage
-                src="/syn2sign/demo/images/creator_img/email.svg"
-                alt="email"
-              />
+              <IconImage src="/images/creator_img/email.svg" alt="email" />
               <span className="ms-3">
                 <a href={`mailto:${student.email}`} className="txt-link">
                   {student.email}
@@ -61,7 +63,139 @@ const CardCreator = () => {
             </div>
             <div className="text-start mt-3">
               <IconImage
-                src="/syn2sign/demo/images/creator_img/linkedin.svg"
+                src="/images/creator_img/linkedin.svg"
+                alt="linkedin"
+              />
+              <span className="ms-3">
+                <a
+                  href={
+                    student.linkin.startsWith("http")
+                      ? student.linkin
+                      : `https://${student.linkin}`
+                  }
+                  className="txt-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {student.name_en}
+                </a>
+              </span>
+            </div>
+            <BtnBox>
+              <Link
+                to={`/showcase/creators/${student.std_id}`}
+                className="txt-link"
+              >
+                <ReadMore className="d-flex">
+                  <span className="txt-upper">
+                    <strong>read more</strong>
+                  </span>
+                  <span className="ms-2">
+                    <FaReadme />
+                  </span>
+                </ReadMore>
+              </Link>
+            </BtnBox>
+          </DetailBox>
+        ))}
+      </div>
+
+      <div className="col-12 d-block d-md-none">
+        <CreatorImg
+          src={`/images/creator_img/project/${studentData[0].std_id}.png`}
+        />
+      </div>
+
+      <div className="col-12 mt-5 d-block d-md-none">
+        {firstHalf.map((student, index) => (
+          <DetailBox key={index}>
+            <div className="d-flex align-items-start text-start">
+              <DoubleQoute
+                src={`/icon/double-qoute.svg`}
+                alt="double quote"
+                loading="lazy"
+                className="me-4"
+              />
+              <span className="txt-body2">{student.qoutes}</span>
+            </div>
+            <Boxline />
+            <div className="text-start">
+              <IconImage src="/images/creator_img/email.svg" alt="email" />
+              <span className="ms-3">
+                <a href={`mailto:${student.email}`} className="txt-link">
+                  {student.email}
+                </a>
+              </span>
+            </div>
+            <div className="text-start mt-3">
+              <IconImage
+                src="/images/creator_img/linkedin.svg"
+                alt="linkedin"
+              />
+              <span className="ms-3">
+                <a
+                  href={
+                    student.linkin.startsWith("http")
+                      ? student.linkin
+                      : `https://${student.linkin}`
+                  }
+                  className="txt-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {student.name_en}
+                </a>
+              </span>
+            </div>
+            <BtnBox>
+              <Link
+                to={`/showcase/creators/${student.std_id}`}
+                className="txt-link"
+              >
+                <ReadMore className="d-flex">
+                  <span className="txt-upper">
+                    <strong>read more</strong>
+                  </span>
+                  <span className="ms-2">
+                    <FaReadme />
+                  </span>
+                </ReadMore>
+              </Link>
+            </BtnBox>
+          </DetailBox>
+        ))}
+      </div>
+
+      <div className="col-12 mt-5 d-block d-md-none">
+        <CreatorImg
+          src={`/images/creator_img/project/${studentData[1].std_id}.png`}
+        />
+      </div>
+
+      <div className="col-12 mt-5 d-block d-md-none">
+        {secondHalf.map((student, index) => (
+          <DetailBox key={index}>
+            <div className="d-flex align-items-start text-start">
+              <DoubleQoute
+                src={`/icon/double-qoute.svg`}
+                alt="double quote"
+                loading="lazy"
+                className="me-4"
+              />
+              <span className="txt-body2">{student.qoutes}</span>
+            </div>
+            <Boxline />
+            <div className="text-start">
+              <IconImage src="/images/creator_img/email.svg" alt="email" />
+              <span className="ms-3">
+                <a href={`mailto:${student.email}`} className="txt-link">
+                  {student.email}
+                </a>
+              </span>
+            </div>
+            <div className="text-start mt-3">
+              <IconImage
+                src="/images/creator_img/linkedin.svg"
                 alt="linkedin"
               />
               <span className="ms-3">
@@ -104,7 +238,7 @@ const CardCreator = () => {
 export default CardCreator;
 
 const IconImage = styled.img`
-  max-width: 2.25rem;
+  max-width: 1.5rem;
   width: 100%;
 `;
 

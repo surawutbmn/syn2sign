@@ -5,7 +5,6 @@ import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
-import Creators from "./AccordionContent/Creator";
 import { Container, Breadcrumb } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
@@ -31,9 +30,8 @@ import CardToolDevelopmentMobile from "../../component/card/CardToolDevelopmentM
 import CardFeedbackMobile from "../../component/card/CardFeedbackMobile";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
-
+import CardCreatorMobile from "../../component/card/CardCreatorMobile";
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -176,7 +174,8 @@ function Project() {
     {
       title: "creator",
       subtitle: "ผู้สร้างผลงาน",
-      content: <CardCreator />,
+      content:  ""
+
     },
   ];
   const itemsWithStudents = items.map((item) => {
@@ -227,7 +226,7 @@ function Project() {
           <div className="d-flex">
             <img
               className="prj-sec-icon"
-              src={`/syn2sign/demo/images/project_img/prj_logo/${project.icon_sqr}`}
+              src={`/images/project_img/prj_logo/${project.icon_sqr}`}
               alt={`${project.name_en} icon`}
             />
             <div className="text-start mx-3">
@@ -241,7 +240,7 @@ function Project() {
             <h1 className="outlined-text">#{project.id}</h1>
             <div className="prj-sec-icon2 ms-4">
               <img
-                src={`/syn2sign/demo/images/project_img/prj_icon/${project.icon_std}`}
+                src={`/images/project_img/prj_icon/${project.icon_std}`}
                 alt="creator icon"
               />
             </div>
@@ -277,13 +276,13 @@ function Project() {
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">
-          <div className="col  d-none d-md-block">
+          {/* <div className="col  d-none d-md-block">
             <SectionTitle
               title="Other Projects"
               subtitle="ผลงานอื่นๆ"
               className="header-wline"
             />
-            <div className="d-flex justify-content-around text-center mb-6">
+            <div className="d-flex justify-content-around text-center mb-5">
               {projectsdata.map((proj) => (
                 <div
                   key={proj.project_id}
@@ -312,7 +311,7 @@ function Project() {
                         <div className="icon-prj-ovl"></div>
                         <img
                           className="icon-img-link"
-                          src={`/syn2sign/demo/images/project_img/prj_logo/${proj.icon_sqr}`}
+                          src={`/images/project_img/prj_logo/${proj.icon_sqr}`}
                           alt={`${proj.name_en} icon`}
                         />
                       </div>
@@ -324,84 +323,105 @@ function Project() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Mobile  */}
-          <div className="col-12 d-block d-md-none mb-5">
-  <SectionTitle
-    title="Other Projects"
-    subtitle="ผลงานอื่นๆ"
-    className="header-wline"
-  />
-  <Swiper
-    modules={[Navigation]}
-    slidesPerView="auto" // Adjusts the number of slides to fit the container
-    navigation={{
-      nextEl: ".prj-pl-nav .swiper-button-next",
-      prevEl: ".prj-pl-nav .swiper-button-prev",
-    }}
-    spaceBetween={10} // Space between slides
-  >
-    {projectsdata.map((proj) => (
-      <SwiperSlide key={proj.project_id} style={{ width: "140px" }}>
-        <div
-          className={`list-group-item ${
-            activeProject === proj.project_id ? "active" : ""
-          }`}
-        >
-          <Link
-            to={`/showcase/projects/${proj.project_id}`}
-            onClick={(e) => {
-              e.preventDefault(); // Prevent default behavior of Link
-              setActiveProject(proj.project_id);
-              localStorage.setItem("activeProject", proj.project_id);
-              window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
-            }}
-            className="link-txt"
-          >
-            <div
-              className="d-flex flex-column align-items-center"
-              style={{ width: "140px" }}
+          <div className="col-12 mb-5">
+            <SectionTitle
+              title="Other Projects"
+              subtitle="ผลงานอื่นๆ"
+              className="header-wline"
+            />
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView="auto" // Adjusts the number of slides to fit the container
+              navigation={{
+                nextEl: ".prj-pl-nav .swiper-button-next",
+                prevEl: ".prj-pl-nav .swiper-button-prev",
+              }}
+              spaceBetween={20} // Space between slides
+              breakpoints={{
+                0: {
+                  slidesPerView: 3.5, // Adjusts the number of slides to fit the container
+                },
+                576: {
+                  slidesPerView: 3.5, // Adjusts the number of slides to fit the container
+                },
+                768: {
+                  slidesPerView: 5, // Adjusts the number of slides to fit the container
+                },
+                992: {
+                  slidesPerView: 5, // Adjusts the number of slides to fit the container
+                },
+                1200: {
+                  slidesPerView: 8, 
+                },
+              }}
             >
-              <div className="link-prj-con2">
-                <div className="prj-check-i2">
-                  <BsCheckLg />
-                </div>
-                <div className="icon-prj-ovl2"></div>
-                <img
-                  className="icon-img-link2"
-                  src={`/project_img/prj_logo/${proj.icon_sqr}`}
-                  alt={`${proj.name_en} icon`}
-                  style={{
-                    width: "65px",
-                    height: "65px",
-                    borderRadius: "100px",
-                  }}
-                />
-              </div>
-              <div className="mt-3 txt-upper prj_name">
-                <span>{proj.name_en}</span>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-
+              {projectsdata.map((proj) => (
+                <SwiperSlide key={proj.project_id} style={{ width: "140px" }}>
+                  <div
+                    className={`list-group-item ${
+                      activeProject === proj.project_id ? "active" : ""
+                    }`}
+                  >
+                    <Link
+                      to={`/showcase/projects/${proj.project_id}`}
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent default behavior of Link
+                        setActiveProject(proj.project_id);
+                        localStorage.setItem("activeProject", proj.project_id);
+                        window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
+                      }}
+                      className="link-txt"
+                    >
+                      <div
+                        className="d-flex flex-column align-items-center"
+                        style={{ width: "140px" }}
+                      >
+                        <div className="link-prj-con2">
+                          <div className="prj-check-i2">
+                            <BsCheckLg />
+                          </div>
+                          <div className="icon-prj-ovl2"></div>
+                          <img
+                            className="icon-img-link2"
+                            src={`/images/project_img/prj_logo/${proj.icon_sqr}`}
+                            
+                            alt={`${proj.name_en} icon`}
+                            style={{
+                              width: "65px",
+                              height: "65px",
+                              borderRadius: "100px",
+                            }}
+                          />
+                        </div>
+                        <div className="mt-3 txt-upper prj_name">
+                          <span>{proj.name_en}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
         <BreadcrumbContainer>
           <BreadcrumbImage
-            src="/s2s-logo/s2s-outline-logo.svg"
+            src="/images/s2s-logo/s2s-outline-logo.svg"
             alt="breadcrumb icon"
             onClick={handleImageClick}
           />
-          <Separator><FaArrowRight/></Separator>
+          <Separator>
+            <FaArrowRight />
+          </Separator>
           <BreadcrumbItem onClick={handleShowcaseClick}>
             SHOWCASE
           </BreadcrumbItem>
-          <Separator><FaArrowRight/></Separator>
+          <Separator>
+            <FaArrowRight />
+          </Separator>
           <BreadcrumbItem>{project.name_en}</BreadcrumbItem>
         </BreadcrumbContainer>
       </Container>
