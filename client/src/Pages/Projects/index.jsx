@@ -54,8 +54,9 @@ const projectRefs = useRef([]); // Create an array of refs
   };
 
   const [activeProject, setActiveProject] = useState(
-    localStorage.getItem("activeProject") || null
+    localStorage.getItem("activeProject") || firstProjectId
   );
+  
   useEffect(() => {
     if (activeProject && projectRefs.current[activeProject]) {
       projectRefs.current[activeProject].scrollIntoView({
@@ -65,7 +66,20 @@ const projectRefs = useRef([]); // Create an array of refs
       });
     }
   }, [activeProject]);
-
+const ref = useRef();
+  useEffect(() => {
+   setTimeout(() => {
+    const width = ref?.current
+    ?.querySelector(".active")
+    ?.getClientRects()[0]?.width;
+    const n = projectsdata.findIndex((project) => project.project_id === activeProject) + 1;
+  ref.current.scrollTo({
+    left: (width) * n - (width ),
+    behavior: "smooth",
+  });
+   }, 1000);
+  }, [activeProject]);
+  // console.log("LOG", projectsdata.findIndex((project) => project.project_id === activeProject));
   const findProjectById = (project_id) => {
     return (
       projectsdata.find((project) => project.project_id === project_id) || null
@@ -188,6 +202,8 @@ const projectRefs = useRef([]); // Create an array of refs
       content: "",
     },
   ];
+
+
   const itemsWithStudents = items.map((item) => {
     if (item.title === "creator") {
       return {
@@ -313,7 +329,7 @@ const projectRefs = useRef([]); // Create an array of refs
               subtitle="ผลงานอื่นๆ"
               className="header-wline"
             />
-            <LinkPrjCon className="d-flex justify-content-around text-center mb-5">
+            <LinkPrjCon ref={ref} className="d-flex justify-content-around text-center mb-5">
               {projectsdata.map((proj, index = project.prj_id) => (
                 <div
                   key={index}
