@@ -41,10 +41,7 @@ const Creators: React.FC<CreatorsProps> = ({
     <CardBox>
       <ImgBox className="p-0 text-start">
         <ImgCreator
-          src={
-            `/images/creator_img/card/${profileImg}` ||
-            `/images/creator_img/card/073-card.webp`
-          }
+          src={`${import.meta.env.VITE_BASE_URL}images/creator_img/card/${profileImg}` || import.meta.env.VITE_BASE_URL+`images/creator_img/card/073-card.webp`}
           alt=""
         />
       </ImgBox>
@@ -55,7 +52,7 @@ const Creators: React.FC<CreatorsProps> = ({
         </Title>
         <QouteBox>
           <DoubleQoute
-            src={`/icon/double-qoute.svg`}
+            src={`${import.meta.env.VITE_BASE_URL}icon/double-qoute.svg`}
             alt="double quote"
             loading="lazy"
             className="me-4"

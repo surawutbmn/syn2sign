@@ -3,6 +3,7 @@ import SponLinkRow from "./SponLinkRow";
 import styled from "styled-components";
 
 const SponRow = ({ sponsors }) => {
+  console.log("SRC",sponsors);
   return (
     <>
       <Txt className="txt-cap text-start">Sponsored by:</Txt>
@@ -17,7 +18,9 @@ const SponRow = ({ sponsors }) => {
                 type={sponsor.type}
                 spon={sponsor.tier}
               />
+              
             </RowCon>
+            
           ))}
         </div>
     </>

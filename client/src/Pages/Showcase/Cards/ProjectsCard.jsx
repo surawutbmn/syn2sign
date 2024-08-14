@@ -23,7 +23,7 @@ function ProjectCard({ project }) {
           <div className="d-flex align-items-md-start align-items-center">
             <div className="projects-card-icon">
               <img
-                src={`/images/project_img/prj_logo/${project.icon_sqr}`}
+                src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_logo/${project.icon_sqr}`}
                 alt="project icon"
                 loading="lazy"
               />
@@ -42,7 +42,7 @@ function ProjectCard({ project }) {
           <CreatorSec>
             <div className="creators-icon">
               <img
-                src={`/images/project_img/prj_icon/${project.icon_std}`}
+                src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_icon/${project.icon_std}`}
                 alt="creators icon"
                 loading="lazy"
               />
@@ -64,7 +64,7 @@ function ProjectCard({ project }) {
           </CreatorSec>
           <ImgThumb className="card-prj-thumb d-none d-md-flex">
             <img
-              src={`/images/project_img/prj_thumb/${project.img_thumb}`}
+              src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_thumb/${project.img_thumb}`}
               alt="project thumbnail"
               loading="lazy"
             />

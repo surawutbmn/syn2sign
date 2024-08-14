@@ -39,7 +39,7 @@ const CardMainFunction = (props) => {
       ) : (
         mainFunctions.map((func) => (
           <Card key={func.id} className="col-4 text-center mt-5">
-            <Icon src={`/icon/prj/${func.id}Function.svg`} className="mt-5" />
+            <Icon src={`${import.meta.env.VITE_BASE_URL}icon/prj/${func.id}Function.svg`} className="mt-5" />
             <div className="txt-head3 txt-bold mt-4 mb-3">
               {func.title}
             </div>

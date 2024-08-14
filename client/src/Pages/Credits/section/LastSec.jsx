@@ -56,7 +56,7 @@ function LastSec() {
           </SupporterItem>
           <SupporterItem>
             <p>
-              <strong>Attachments and more:</strong>{" "}
+              <strong className="txt-upper">Attachments and more:</strong>{" "}
               <br className="d-block d-md-none" />
               17bxn.paperprint
             </p>

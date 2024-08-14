@@ -21,7 +21,7 @@ function CreatorHeadSection(props) {
           <ProfileImg>
             <img
               loading="lazy"
-              src={`/images/creator_img/profile/${student.profile_img}`}
+              src={`${import.meta.env.VITE_BASE_URL}images/creator_img/profile/${student.profile_img}`}
               alt="creator profile"
             />
           </ProfileImg>
@@ -56,7 +56,7 @@ function CreatorHeadSection(props) {
             <QouteBox className="my-4">
               <QouteBoxCon>
                 <img
-                  src={`/icon/double-qoute.svg`}
+                  src={`${import.meta.env.VITE_BASE_URL}icon/double-qoute.svg`}
                   alt="double qoute"
                   loading="lazy"
                 />
@@ -91,7 +91,7 @@ function CreatorHeadSection(props) {
               <ProfileImg>
                 <img
                   loading="lazy"
-                  src={`/images/creator_img/profile/${student.profile_img}`}
+                  src={`${import.meta.env.VITE_BASE_URL}images/creator_img/profile/${student.profile_img}`}
                   alt="creator profile"
                 />
               </ProfileImg>

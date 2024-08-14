@@ -55,15 +55,15 @@ function Project() {
     localStorage.getItem("activeProject") || firstProjectId
   );
   
-  useEffect(() => {
-    if (activeProject && projectRefs.current[activeProject]) {
-      projectRefs.current[activeProject].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-      });
-    }
-  }, [activeProject]);
+  // useEffect(() => {
+  //   if (activeProject && projectRefs.current[activeProject]) {
+  //     projectRefs.current[activeProject].scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "center",
+  //       inline: "center",
+  //     });
+  //   }
+  // }, [activeProject]);
 const ref = useRef();
   useEffect(() => {
    setTimeout(() => {
@@ -250,7 +250,7 @@ const ref = useRef();
           <div className="d-flex">
             <img
               className="prj-sec-icon"
-              src={`/images/project_img/prj_logo/${project.icon_sqr}`}
+              src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_logo/${project.icon_sqr}`}
               alt={`${project.name_en} icon`}
             />
             <div className="text-start mx-3 d-none d-md-block">
@@ -264,7 +264,7 @@ const ref = useRef();
             <h1 className="outlined-text">#{project.id}</h1>
             <div className="prj-sec-icon2 ms-4">
               <img
-                src={`/images/project_img/prj_icon/${project.icon_std}`}
+                src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_icon/${project.icon_std}`}
                 alt="creator icon"
               />
             </div>
@@ -355,7 +355,7 @@ const ref = useRef();
                         <div className="icon-prj-ovl"></div>
                         <img
                           className="icon-img-link"
-                          src={`/images/project_img/prj_logo/${proj.icon_sqr}`}
+                          src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_logo/${proj.icon_sqr}`}
                           alt={`${proj.name_en} icon`}
                         />
                       </div>
@@ -452,7 +452,7 @@ const ref = useRef();
         </div>
         <BreadcrumbContainer className="position-relative">
           <BreadcrumbImage
-            src="/images/s2s-logo/syn2sign_logo.svg"
+            src={import.meta.env.VITE_BASE_URL+"images/s2s-logo/syn2sign_logo.svg"}
             alt="breadcrumb icon"
             onClick={handleImageClick}
           />

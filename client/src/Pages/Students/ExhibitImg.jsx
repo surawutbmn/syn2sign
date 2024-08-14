@@ -35,7 +35,7 @@ function ExhibitImg({ name, std_id }) {
           {images.slice(0, 1).map((img, index) => (
             <Col key={index}>
               <CardImg
-                src={`/images/creator_img/exhImg/${img.exhimg}`}
+                src={`${import.meta.env.VITE_BASE_URL}images/creator_img/exhImg/${img.exhimg}`}
                 alt={`image-${index + 1}`}
               />
             </Col>
@@ -45,7 +45,7 @@ function ExhibitImg({ name, std_id }) {
               {images.slice(1).map((img, index) => (
                 <Col key={index}>
                   <CardImg
-                    src={`/images/creator_img/exhImg/${img.exhimg}`}
+                    src={`${import.meta.env.VITE_BASE_URL}images/creator_img/exhImg/${img.exhimg}`}
                     alt={`image-${index + 2}`}
                   />
                 </Col>

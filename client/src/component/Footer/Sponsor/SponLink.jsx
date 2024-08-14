@@ -74,7 +74,7 @@ const SponLink = (props) => {
   return (
     // <LogoContainer tier={tier} type={type}>
     <LinkBox href={href} target="_blank" rel="noopener noreferrer">
-      <LogoContainer $tier={tier} type={type} src={imgSrc} alt={alt} />
+      <LogoContainer $tier={tier} type={type} src={import.meta.env.VITE_BASE_URL+imgSrc} alt={alt} />
     </LinkBox>
     // </LogoContainer>
   );

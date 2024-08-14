@@ -37,7 +37,7 @@ const CardToolDesignPresentation = (props) => {
         {designPresentItems.map((item) => (
           <ItemBox key={item.id}>
             <img
-              src={`/icon/prj/designPresent/${item.design_present
+              src={`${import.meta.env.VITE_BASE_URL}icon/prj/designPresent/${item.design_present
                 .toLowerCase()
                 .replace(/\s+/g, "-")}.svg`}
               alt={item.design_present}

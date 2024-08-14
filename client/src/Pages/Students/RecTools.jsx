@@ -63,7 +63,7 @@ function RecTools(props) {
                     >
                       <div className="me-4">
                         <img
-                          src={`/tools/${toolItem.toolIcon}`}
+                          src={`${import.meta.env.VITE_BASE_URL}tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
                       </div>

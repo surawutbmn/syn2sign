@@ -10,7 +10,7 @@ const CardPastExhibit = (props) => {
     <Link className="" href={props.href || "#"} target="_blank">
       <Row className="justify-content-between hover-card-overlay">
         <Col xs={5} className="p-0">
-          <PosterExhibition src={props.poster} />
+          <PosterExhibition src={import.meta.env.VITE_BASE_URL+props.poster} />
         </Col>
 
         <Col xs={7} className="text-start">
@@ -20,7 +20,7 @@ const CardPastExhibit = (props) => {
           </h2>
 
           <div className="d-flex align-items-center gap-4  my-4">
-            <LogoExhibition src={props.logo} />
+            <LogoExhibition src={import.meta.env.VITE_BASE_URL+props.logo} />
             <div className="txt-head3 txt-bold">{props.name}</div>
           </div>
           <div className="txt-body2 txt-grey">{props.description}</div>

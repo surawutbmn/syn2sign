@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
-import syn_ele from "./img/s2s-ele.svg";
-import paper_plane from "./img/paper-plane.png";
+import syn_ele from "/img/s2s-ele.svg";
+// import paper_plane from "./img/paper-plane.png";
 import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
@@ -211,7 +211,7 @@ function Exhibition() {
       <Container className="">
         <div className="feedback-con">
           <div className="paper-plane">
-            <img src={`${import.meta.env.VITE_BASE_URL}${paper_plane}`} alt="paper plane" loading="lazy" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/paper-plane.png`} alt="paper plane" loading="lazy" />
           </div>
           <span className="txt-prim feedback-title">
             ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)

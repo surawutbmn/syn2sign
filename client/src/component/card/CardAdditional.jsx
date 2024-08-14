@@ -11,7 +11,8 @@ const CardAdditional = (props) => {
 
         <Col md={5} lg={5} className=" me-4">
           <ImagePreview
-            src={`/other/${props.img}` || "/images/s2s-logo/fb-profile.png"}
+              src={`${import.meta.env.VITE_BASE_URL}other/${props.img || `${import.meta.env.VITE_BASE_URL}images/s2s-logo/fb-profile.png`}`}
+              
           />
         </Col>
         <BoxContent>

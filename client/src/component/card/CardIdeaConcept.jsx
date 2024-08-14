@@ -70,7 +70,7 @@ const CardIdeaConcept = (props) => {
         <DeviceContainer className="">
           <DeviceImage
             className="text-end"
-            src={`/showcase/Project/${props.proj_id}/${projectData.preview_img}`}
+            src={`${import.meta.env.VITE_BASE_URL}showcase/Project/${props.proj_id}/${projectData.preview_img}`}
           />
         </DeviceContainer>
         <div className="mt-3 txt-upper">

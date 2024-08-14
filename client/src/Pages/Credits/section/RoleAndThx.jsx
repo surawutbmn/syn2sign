@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import graphic from "../img/icon/graphic.svg";
-import thx from "../img/icon/thx.svg";
-import sp from "../img/icon/spon.svg";
-import web from "../img/icon/web.svg";
-import int from "../img/icon/interact.svg";
-import pr from "../img/icon/pr.svg";
-import knb from "../img/icon/knowboard.svg";
-import lo from "../img/icon/location.svg";
-import led from "../img/icon/led.svg";
+// import graphic from "../img/icon/graphic.svg";
+// import thx from "../img/icon/thx.svg";
+// import sp from "../img/icon/spon.svg";
+// import web from "../img/icon/web.svg";
+// import int from "../img/icon/interact.svg";
+// import pr from "../img/icon/pr.svg";
+// import knb from "../img/icon/knowboard.svg";
+// import lo from "../img/icon/location.svg";
+// import led from "../img/icon/led.svg";
 
 const Section = styled.div`
   margin-bottom: 3rem;
@@ -95,7 +95,7 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${graphic}`} alt="graphic icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/graphic.svg`} alt="graphic icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -114,7 +114,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${sp}`} alt="sponsor icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/spon.svg`} alt="sponsor icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -132,7 +132,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${web}`} alt="website icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/web.svg`} alt="website icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -152,7 +152,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${int}`} alt="interactive icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/interact.svg`} alt="interactive icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -173,7 +173,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${pr}`} alt="public relation icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}/img/icon/pr.svg`} alt="public relation icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -194,7 +194,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src= {`${import.meta.env.VITE_BASE_URL}${knb}`} alt="knowledge board icon" />
+            <img src= {`${import.meta.env.VITE_BASE_URL}img/icon/knowboard.svg`} alt="knowledge board icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -212,7 +212,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${lo}`} alt="location icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/location.svg`} alt="location icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -227,7 +227,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${led}`} alt="led media icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/led.svg`} alt="led media icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -248,7 +248,7 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${thx}`} alt="thank icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`} alt="thank icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -265,7 +265,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}${thx}`} alt="thank icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`} alt="thank icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>

@@ -26,15 +26,14 @@ const CardMainThree = (props) => {
             Poster
           </div>
           <div className="col-12 text-end">
-            <ThreePosterExhibition src={props.poster} />
+            <ThreePosterExhibition src={import.meta.env.VITE_BASE_URL+props.poster} />
           </div>
         </div>
 
         <div className="col-1">
           {/* <div className="line"> */}
           {props.line && (
-            <LineImage
-              src={props.line}
+            <LineImage src={import.meta.env.VITE_BASE_URL+props.line}
               onError={(e) => (e.target.style.display = "none")}
             />
           )}
@@ -44,7 +43,7 @@ const CardMainThree = (props) => {
         <div className="col-7 text-start">
           {/* R */}
           <div className="col-12 txt-body1">
-            <ThreeLogoExhibition src={props.logo} />
+            <ThreeLogoExhibition src={import.meta.env.VITE_BASE_URL+props.logo} />
           </div>
           <div className="col-12 txt-head3 txt-bold txt-prim mt-4">
             {props.name}

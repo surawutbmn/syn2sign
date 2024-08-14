@@ -9,9 +9,7 @@ function CardKnowledge(props) {
         <Overlay></Overlay>
         <div>
           <ImagePreview
-            src={
-              `/other/${props.img}` ||
-              "/images/s2s-logo/fb-profile.png"
+            src={ `${import.meta.env.VITE_BASE_URL}other/${props.img}` || import.meta.env.VITE_BASE_URL+"images/s2s-logo/fb-profile.png"
             }
           />
         </div>

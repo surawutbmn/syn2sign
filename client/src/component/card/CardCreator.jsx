@@ -36,7 +36,7 @@ const CardCreator = () => {
       <div className="col-5 d-none d-md-block">
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
-          src={`/images/creator_img/${studentData[0].project_id}.png`}
+          src={`${import.meta.env.VITE_BASE_URL}images/creator_img/${studentData[0].project_id}.png`}
           //   style={{ marginTop: "-60px" }}
         />
       </div>
@@ -45,7 +45,7 @@ const CardCreator = () => {
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/icon/double-qoute.svg`}
+                src={`${import.meta.env.VITE_BASE_URL}icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -54,7 +54,7 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage src="/images/creator_img/email.svg" alt="email" />
+              <IconImage src= {import.meta.env.VITE_BASE_URL+"images/creator_img/email.svg"} alt="email" />
               <span className="ms-3">
                 <a href={`mailto:${student.email}`} className="txt-link">
                   {student.email}
@@ -63,7 +63,7 @@ const CardCreator = () => {
             </div>
             <div className="text-start mt-3">
               <IconImage
-                src="/images/creator_img/linkedin.svg"
+                src={import.meta.env.VITE_BASE_URL+"images/creator_img/linkedin.svg"}
                 alt="linkedin"
               />
               <span className="ms-3">
@@ -102,7 +102,7 @@ const CardCreator = () => {
 
       <div className="col-12 d-block d-md-none">
         <CreatorImg
-          src={`/images/creator_img/project/${studentData[0].std_id}.png`}
+          src={`${import.meta.env.VITE_BASE_URL}images/creator_img/project/${studentData[0].std_id}.png`}
         />
       </div>
 
@@ -111,7 +111,7 @@ const CardCreator = () => {
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/icon/double-qoute.svg`}
+                src={`${import.meta.env.VITE_BASE_URL}icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -120,7 +120,7 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage src="/images/creator_img/email.svg" alt="email" />
+              <IconImage src= {import.meta.env.VITE_BASE_URL+"images/creator_img/email.svg"} alt="email" />
               <span className="ms-3 ">
                 <a href={`mailto:${student.email}`} className="txt-link txt-body3">
                   {student.email}
@@ -129,7 +129,7 @@ const CardCreator = () => {
             </div>
             <div className="text-start mt-3">
               <IconImage
-                src="/images/creator_img/linkedin.svg"
+                src={import.meta.env.VITE_BASE_URL+"images/creator_img/linkedin.svg"}
                 alt="linkedin"
               />
               <span className="ms-3">
@@ -168,7 +168,7 @@ const CardCreator = () => {
 
       <div className="col-12 mt-5 d-block d-md-none">
         <CreatorImg
-          src={`/images/creator_img/project/${studentData[1].std_id}.png`}
+          src={`${import.meta.env.VITE_BASE_URL}images/creator_img/project/${studentData[1].std_id}.png`}
         />
       </div>
 
@@ -177,7 +177,7 @@ const CardCreator = () => {
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/icon/double-qoute.svg`}
+                src={`${import.meta.env.VITE_BASE_URL}icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -186,7 +186,7 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage src="/images/creator_img/email.svg" alt="email" />
+              <IconImage src={import.meta.env.VITE_BASE_URL+"images/creator_img/email.svg"} alt="email" />
               <span className="ms-3">
                 <a href={`mailto:${student.email}`} className="txt-link txt-body3">
                   {student.email}
@@ -195,7 +195,7 @@ const CardCreator = () => {
             </div>
             <div className="text-start mt-3">
               <IconImage
-                src="/images/creator_img/linkedin.svg"
+                src={import.meta.env.VITE_BASE_URL+"images/creator_img/linkedin.svg"}
      
                 alt="linkedin"
               />

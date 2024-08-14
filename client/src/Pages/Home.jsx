@@ -91,7 +91,7 @@ import { Link } from "react-router-dom";
             <Col xs={12} className="d-block d-md-none mt-5">
               <img
                 className="w-75 "
-                src="/images/s2s-logo/s2s-outline-logo.svg"
+                src={import.meta.env.VITE_BASE_URL + "images/s2s-logo/s2s-outline-logo.svg"}
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
@@ -150,7 +150,7 @@ import { Link } from "react-router-dom";
                       </FrontBox2>
                     )}
                     <DeviceImage
-                      src={`/images/project_img/device/${project.device_img}`}
+                      src={`${import.meta.env.VITE_BASE_URL}images/project_img/device/${project.device_img}`}
                     />
                   </DeviceBox>
                 </Link>
@@ -177,7 +177,7 @@ import { Link } from "react-router-dom";
             <Col xs={4} className="mb-4 align-self-start d-none d-md-block">
               <img
                 className="w-100"
-                src="/images/s2s-logo/s2s-outline-logo.svg"
+                src={import.meta.env.VITE_BASE_URL+"images/s2s-logo/s2s-outline-logo.svg"}
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
@@ -235,7 +235,7 @@ import { Link } from "react-router-dom";
                       </FrontBox2>
                     )}
                     <DeviceImage
-                      src={`/images/project_img/device/${project.device_img}`}
+                      src={`${import.meta.env.VITE_BASE_URL}images/project_img/device/${project.device_img}`}
                     />
                   </DeviceBox>
                 </Link>

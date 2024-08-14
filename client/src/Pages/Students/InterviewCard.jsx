@@ -13,7 +13,7 @@ function InterviewCard(props) {
           <Row className="justify-content-between position-relative">
             <Col xs={12} md={6}>
               <PreviewImg
-                src={`/images/creator_img/interview/${question.img}`}
+                src={`${import.meta.env.VITE_BASE_URL}images/creator_img/interview/${question.img}`}
                 alt="interview image"
               />
             </Col>

@@ -9,7 +9,7 @@ const StudentCard = ({ student }) => (
       <Link to={`/showcase/creators/${student.std_id}`} className="card-link">
         <ReadMore className="read-more">
           <ReadMoreIcon
-            src="/icon/read-more.svg"
+            src= {import.meta.env.VITE_BASE_URL+"icon/read-more.svg"}
             alt="readmore icon"
             className="rdm-icon"
           />
@@ -17,7 +17,7 @@ const StudentCard = ({ student }) => (
         </ReadMore>
         <div className="card-std-img">
           <ImgCreator
-            src={`/images/creator_img/profile/${student.profile_img}`}
+            src={`${import.meta.env.VITE_BASE_URL}images/creator_img/profile/${student.profile_img}`}
             loading="lazy"
             alt="creator profile"
           />

@@ -12,7 +12,7 @@ const CardMainThreeMobile = (props) => {
       <div className="d-flex row" style={{ marginBottom: "9rem" }}>
         <div className="col-12 text-start">
           <div className="txt-body1">
-            <ThreeLogoExhibition src={props.logo} />
+            <ThreeLogoExhibition src={import.meta.env.VITE_BASE_URL+props.logo} />
           </div>
           <div className="txt-head3 txt-bold txt-prim mt-2">{props.name}</div>
           <div className="col-12 txt-body1 txt-grey mb-4 mt-2">
@@ -36,7 +36,7 @@ const CardMainThreeMobile = (props) => {
             Poster
           </div>
           <div className="text-end">
-            <ThreePosterExhibition src={props.poster} />
+            <ThreePosterExhibition src={import.meta.env.VITE_BASE_URL+props.poster} />
           </div>
           <VideoBoxExhibition className="col-12 txt-body1 mt-5">
             <div className="col-12 txt-body1 text-start mt-4 mb-4 ms-4">

@@ -89,7 +89,7 @@ const TextContainer = styled.p`
 const SponsorLogo = ({ href, imgSrc, alt, type, tier, text }) => {
   return (
     <LinkBox href={href} target="_blank" rel="noopener noreferrer">
-      <LogoContainer className="spl" $tier={tier} type={type} src={imgSrc} alt={alt} />
+      <LogoContainer className="spl" $tier={tier} type={type} src={import.meta.env.VITE_BASE_URL+imgSrc} alt={alt} />
       <TextContainer>
         <u>{text.title}</u> <br /> {text.subtitle}
       </TextContainer>

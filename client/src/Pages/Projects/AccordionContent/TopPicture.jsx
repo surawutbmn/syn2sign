@@ -12,17 +12,17 @@ const CardThreePictureProject = () => {
     <div className="d-flex row mt-5 mb-5">
       <CardBox className="col-4">
         <CardImage
-          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-1.png`}
+          src={`${import.meta.env.VITE_BASE_URL}showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-1.png`}
         />
       </CardBox>
       <CardBox className="col-4">
         <CardImage
-          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-2.png`}
+          src={`${import.meta.env.VITE_BASE_URL}showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-2.png`}
         />
       </CardBox>
       <CardBox className="col-4">
         <CardImage
-          src={`/showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-3.png`}
+          src={`${import.meta.env.VITE_BASE_URL}showcase/Project/${projectIdentifier}/preview-${projectIdentifier}-3.png`}
         />
       </CardBox>
     </div>
