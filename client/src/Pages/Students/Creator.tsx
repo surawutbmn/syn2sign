@@ -34,8 +34,9 @@ const Creators: React.FC<CreatorsProps> = ({
     }
   }, [paramStdID, stdID]);
 
-  const handleStudentClick = () => {
-    navigate(`/showcase/creators/${stdID}`);
+  const handleStudentClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = `/showcase/creators/${stdID}`;
   };
   return (
     <CardBox>
