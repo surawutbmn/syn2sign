@@ -32,7 +32,7 @@ const CardCreator = () => {
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
           src={`/creator_img/${studentData[0].project_id}.png`}
-          style={{ marginTop: "-60px" }}
+        //   style={{ marginTop: "-60px" }}
         />
       </div>
       <div className="col-7">
@@ -45,7 +45,7 @@ const CardCreator = () => {
                 loading="lazy"
                 className="me-4"
               />
-              <span className="txt-body1">{student.qoutes}</span>
+              <span className="txt-body2">{student.qoutes}</span>
             </div>
             <Boxline />
             <div className="text-start">
@@ -69,7 +69,7 @@ const CardCreator = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {student.linkin}
+                  {student.name_en}
                 </a>
               </span>
             </div>
