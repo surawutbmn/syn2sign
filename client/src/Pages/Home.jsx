@@ -4,6 +4,7 @@
   import styled from "styled-components";
   import messagesData from "/src/Pages/Exhibition/messages.json"; // Adjust path as needed
   import projectsData from "./Home.json"; // Adjust path as needed
+  import { Helmet } from "react-helmet";
 
   function Home() {
     const [messages, setMessages] = useState([]);
@@ -53,9 +54,20 @@
       // Cleanup interval on unmount
       return () => clearInterval(interval);
     }, []);
-
+    const ogTitle = "Your Page Title";
+    const ogDescription = "A brief description of your page.";
+    const ogImage = "/path/to/your/image.jpg"; // Update as needed
+    const ogUrl = "https://example.com/page-url"; // Update as needed
     return (
       <div>
+        <Helmet>
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
+        <meta property="og:type" content="website" />
+        {/* Add more meta tags as needed */}
+      </Helmet>
         <HomeElement />
         <Container className="position-relative" style={{
           // marginTop: window.innerWidth <= 767 ? '1rem' : '0', // Adjust the value as needed
