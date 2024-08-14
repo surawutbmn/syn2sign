@@ -87,19 +87,11 @@ const StyledSpan = styled.span`
   justify-content: center;
   padding: 0 10px; /* Adjust the padding as needed */
   ${(props) =>
-    props.hasBorder &&
+    props.$hasBorder &&
     `
     border-right:  solid var(--color-primary);
     border-left:  solid var(--color-primary);
     padding: 0 1.3em;
   `}
-  @media (max-width: 575.98px) {
-    ${(props) =>
-      props.$hasBorder &&
-      `
-    border-top:  none;
-    border-left:  none;
-    padding: 0 1.3em;
-  `}
-  }
+  
 `;
