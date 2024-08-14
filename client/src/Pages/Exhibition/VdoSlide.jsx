@@ -81,7 +81,7 @@ export const VdoSlide = () => {
           spaceBetween={30}
           slidesPerView={1.1}
           breakpoints={{
-            0: { slidesPerView: 1.6 },
+            0: { slidesPerView: 1.1 },
             768: { slidesPerView: 1.6 },
             1440: { slidesPerView: 2 },
           }}

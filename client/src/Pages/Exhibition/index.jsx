@@ -52,7 +52,7 @@ function Exhibition() {
   return (
     <>
       <div className="bg-gd-btr"></div>
-      <div className="exh-banner exh-banner-bg mt-5 mb-6">
+      <div className="exh-banner exh-banner-bg">
         <div className="exh-banner-overlay"></div>
         <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
         <div className="git-link">
