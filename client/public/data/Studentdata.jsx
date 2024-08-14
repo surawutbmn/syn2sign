@@ -11,7 +11,7 @@ const studentsdata = [
     qoutes:
       "ให้โอกาสตัวเองได้ลองเรียนรู้อะไรใหม่ๆ บ้าง ถ้าสิ่งที่ลองทำมันเกิดข้อผิดพลาด ก็แค่เรียนรู้จากข้อผิดพลาด และทำมันใหม่อีกครั้ง",
     email: "chanamonn.kaew@gmail.com",
-    linkin: "http://linkedin.com/in/chanamon-kaewsomnuk-33466728a",
+    linkin: "https://www.linkedin.com/in/chanamon-kaewsomnuk-9bbb55321",
     resume_filename: "-",
     project_id: "cpl01",
     project_name: "EVAL BALANCE",
