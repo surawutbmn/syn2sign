@@ -1,6 +1,3 @@
-import gsap, { Power1 } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 import "./credit.css";
 import { Container } from "react-bootstrap";
 import PageElement from "../../component/Element/PageElement";
@@ -20,14 +17,14 @@ function Credit() {
       <div className="w-100 su-line mt-5">
         <div className="container">
           <Logo
-            src="../../s2s-logo/su_logo.svg"
+            src="/syn2sign/demo/images/s2s-logo/su_logo.svg"
             alt="ict slipakorn logo"
           />
         </div>
       </div>
       <Container className="mt-5">
         <RoleAndThx />
-        <Sponser/>
+        <Sponser />
         <LastSec />
       </Container>
     </>

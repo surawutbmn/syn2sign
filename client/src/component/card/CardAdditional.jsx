@@ -10,7 +10,9 @@ const CardAdditional = (props) => {
         <Overlay></Overlay>
 
         <Col md={5} lg={5} className=" me-4">
-          <ImagePreview src={props.img || "/s2s-logo/fb-profile.png"} />
+          <ImagePreview
+            src={`/syn2sign/demo/other/${props.img}` || "/images/s2s-logo/fb-profile.png"}
+          />
         </Col>
         <BoxContent>
           <div className="txt-head2 txt-prim text-start">
@@ -25,13 +27,13 @@ const CardAdditional = (props) => {
                 `เราได้จัดทำ Youtube Playlist รวบรวมคลิป Showreel ของแต่ละผลงาน<br />จุลนิพนธ์ ประจำปีการศึกษา 2566 เพื่อให้ทุกคนเข้าถึงได้ง่ายขึ้น`,
             }}
           />
-            <ArrowButton
-              text={`${props.btn}`}
-              link={props.link}
-              style={`txt-head4`}
-              icon={props.btnIcon}
-              text2={props.btn2}
-            />
+          <ArrowButton
+            text={`${props.btn}`}
+            link={props.link}
+            style={`txt-head4`}
+            icon={props.btnIcon}
+            text2={props.btn2}
+          />
         </BoxContent>
       </CardBox>
     </div>

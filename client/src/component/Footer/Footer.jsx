@@ -18,7 +18,7 @@ export const Footers = () => {
           <div className="d-none d-md-flex flex-column">
             <SponRow sponsors={sponsors} />
           </div>
-          <div className="d-none d-md-flex flex-column">
+          <div className="d-flex flex-column">
               <SocialLinks />
           </div>
         </Container>

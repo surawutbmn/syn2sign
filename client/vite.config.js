@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// vite.config.js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  // base: "/syn2sign/",
+  base: "/syn2sign/demo/",
   plugins: [react()],
   // base: "/syn2sign/demo/",
   // build: {

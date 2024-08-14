@@ -61,7 +61,7 @@ function Exhibition() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoLogoGithub className="fs-4" /> Syn2sign Website Repo
+            <IoLogoGithub className="giticon" /> Syn2sign Website Repo
           </a>
         </div>
         <div className="exh-banner-content exh-txt-shadow">
@@ -71,7 +71,7 @@ function Exhibition() {
           </h1>
           <h5>
             <strong>
-              <MdLocationOn size={25} /> SPHERE GALLERY 1, M FLOOR, EMSPHERE
+              <MdLocationOn /> SPHERE GALLERY 1, M FLOOR, EMSPHERE
             </strong>
           </h5>
           <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
@@ -199,15 +199,15 @@ function Exhibition() {
           </Row>
         </div>
       </Container>
-      <div className="mb-6">
+      <Container className="mb-6">
         <VdoSlide />
-      </div>
-      <div className="mb-5">
+      </Container>
+      <Container className="mb-5">
         <PlaylistSlider />
-      </div>
-      <div className="mb-">
+      </Container>
+      <Container className="mb-">
         <Knowslide />
-      </div>
+      </Container>
       <Container className="mt- mb-6">
         <div className="feedback-con">
           <div className="paper-plane">

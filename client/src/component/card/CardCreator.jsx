@@ -31,8 +31,8 @@ const CardCreator = () => {
       <div className="col-5">
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
-          src={`/creator_img/${studentData[0].project_id}.png`}
-        //   style={{ marginTop: "-60px" }}
+          src={`/syn2sign/demo/images/creator_img/${studentData[0].project_id}.png`}
+          //   style={{ marginTop: "-60px" }}
         />
       </div>
       <div className="col-7">
@@ -40,7 +40,7 @@ const CardCreator = () => {
           <DetailBox key={index}>
             <div className="d-flex align-items-start text-start">
               <DoubleQoute
-                src={`/icon/double-qoute.svg`}
+                src={`/syn2sign/demo/icon/double-qoute.svg`}
                 alt="double quote"
                 loading="lazy"
                 className="me-4"
@@ -49,7 +49,10 @@ const CardCreator = () => {
             </div>
             <Boxline />
             <div className="text-start">
-              <IconImage src="/creator_img/email.svg" alt="email" />
+              <IconImage
+                src="/syn2sign/demo/images/creator_img/email.svg"
+                alt="email"
+              />
               <span className="ms-3">
                 <a href={`mailto:${student.email}`} className="txt-link">
                   {student.email}
@@ -57,7 +60,10 @@ const CardCreator = () => {
               </span>
             </div>
             <div className="text-start mt-3">
-              <IconImage src="/creator_img/linkedin.svg" alt="linkedin" />
+              <IconImage
+                src="/syn2sign/demo/images/creator_img/linkedin.svg"
+                alt="linkedin"
+              />
               <span className="ms-3">
                 <a
                   href={

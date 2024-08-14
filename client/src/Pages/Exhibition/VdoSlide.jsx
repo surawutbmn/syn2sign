@@ -165,7 +165,8 @@ const SlideCon = styled.div`
     width: 130px;
     height: 100%;
     top: 5%;
-    right: 0;
+    right: -5%;
+    z-index: 1;
   }
   .prj-vdoslide-nav .swiper-button-prev {
     background: linear-gradient(
@@ -173,7 +174,8 @@ const SlideCon = styled.div`
       rgba(255, 255, 255, 0) 0%,
       rgba(5, 186, 100, 0.5) 100%
     );
-    left: 0;
+    left: -5%;
+    z-index: 1;
   }
   .prj-vdoslide-nav .swiper-button-prev.swiper-button-disabled,
   .prj-vdoslide-nav .swiper-button-next.swiper-button-disabled {
@@ -185,7 +187,7 @@ const SlideCon = styled.div`
   }
   @media (max-width: 767.98px) {
     .prj-vdoslide-nav .swiper-button-next::after {
-      margin-right:-1rem;
+      margin-right: -1rem;
     }
     .prj-vdoslide-nav .swiper-button-prev::after {
       margin-left: -2rem;

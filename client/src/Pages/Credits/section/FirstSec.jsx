@@ -58,7 +58,7 @@ function FirstSec() {
           </span>
         </div>
         <Logo
-          src="../../s2s-logo/syn2sign_logo_cl.webp"
+          src="/syn2sign/demo/images/s2s-logo/syn2sign_logo_cl.webp"
           alt="syn2sign logo"
           className="s2s-logo"
         />

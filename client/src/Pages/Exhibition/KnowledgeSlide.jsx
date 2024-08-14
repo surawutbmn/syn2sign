@@ -19,7 +19,8 @@ const SlideCon = styled.div`
     width: 130px;
     height: 100%;
     top: 4%;
-    right: 0%;
+    z-index: 1;
+    right: -5%;
   }
   .prj-knbslide-nav .swiper-button-prev {
     opacity: 0;
@@ -33,7 +34,8 @@ const SlideCon = styled.div`
     width: 130px;
     height: 100%;
     top: 4%;
-    left: 0%;
+    left: -5%;
+    z-index: 1;
   }
   .prj-knbslide-nav .swiper-button-prev.swiper-button-disabled,
   .prj-knbslide-nav .swiper-button-next.swiper-button-disabled {
@@ -94,7 +96,7 @@ function KnowledgeSlide() {
       >
         <SwiperSlide>
           <CardKnowledge
-            img={`/other/tenKnow.webp`}
+            img={`tenKnow.webp`}
             title={`Starting Up • 10 Components
 for a Digital Platform`}
             desc={`นิทรรศการความรู้ “10 ชุดประกอบสร้างดิจิทัลแพลตฟอร์ม” ที่รวบรวม องค์ความรู้ทั้งในมุมมองด้านการออกแบบร่วมกับด้านพัฒนาโค้ดดิ้ง พร้อมทั้งกรณีศึกษาที่เป็นประโยชน์อีกมากมาย`}
@@ -107,7 +109,7 @@ for a Digital Platform`}
         <SwiperSlide>
           <CardKnowledge
             link={`https://medium.com/funcslash/%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%9A%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87-graphic-design-team-%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%97%E0%B8%A3%E0%B8%A3%E0%B8%A8%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%81-syn2sign-96dc2d3caf03`}
-            img={`/other/knowLogo.webp`}
+            img={`knowLogo.webp`}
             title={`Syn2sign Story`}
             desc={`เราได้รวบรวมเรื่องราวที่มากว่าจะเป็น...ชื่อ โลโก้ โปสเตอร์ มาเล่าในบทความนี้ “กว่าจะเป็น... #syn2sign”`}
             btn={`Read more`}
@@ -118,7 +120,7 @@ for a Digital Platform`}
         <SwiperSlide>
           <CardKnowledge
             link={`https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/ESfmqJ0dVnVDq-Cis42C06sB5CdibUT5V-Qusya9tVQoGw?e=efRxsT`}
-            img={`/other/stickerKnow.webp`}
+            img={`stickerKnow.webp`}
             title={`Download Syn2sign Stickers Free`}
             desc={`สติกเกอร์ลายพิเศษจากนิทรรศการ Syn2sign ที่ออกแบบ สำหรับงานนี้โดยเฉพาะ (สามารถดาวน์โหลดไฟล์ได้ที่นี่)`}
             btn={`download`}

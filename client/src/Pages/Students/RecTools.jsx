@@ -63,7 +63,7 @@ function RecTools(props) {
                     >
                       <div className="me-4">
                         <img
-                          src={`/tools/${toolItem.toolIcon}`}
+                          src={`/syn2sign/demo/tools/${toolItem.toolIcon}`}
                           alt={toolItem.toolName}
                         />
                       </div>
@@ -143,6 +143,14 @@ const ToolText = styled.div`
   p {
     font-size: 1.5rem;
   }
+  @media (max-width: 991.98px) {
+    p {
+      font-size: 1em;
+    }
+    h2 {
+      font-size: 1.3em;
+    }
+  }
   @media (max-width: 767.98px) {
     p {
       font-size: 0.8em;
@@ -161,6 +169,20 @@ const ToolBox = styled.div`
     max-width: 10dvw;
     border-radius: 2.3rem;
     box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
+  }
+  @media (max-width: 1449.98px) {
+    img {
+      max-width: 12dvw;
+      border-radius: 1.3rem;
+      box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
+    }
+  }
+  @media (max-width: 991.98px) {
+    img {
+      max-width: 14dvw;
+      border-radius: 1.3rem;
+      box-shadow: 2px 4px 10px rgba(5, 186, 100, 0.4);
+    }
   }
   @media (max-width: 767.98px) {
     img {
@@ -192,6 +214,17 @@ const CardBox = styled.div`
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+  @media (max-width: 991.98px) {
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5rem;
+    .tt {
+      font-size: 1.5em;
+    }
+    .tst {
+      font-size: 1.3em;
+    }
   }
   @media (max-width: 767.98px) {
     padding-top: 1.5em;

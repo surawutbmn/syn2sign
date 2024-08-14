@@ -41,6 +41,7 @@
     .onsite-thx .d-flex{justify-content: center;}
     .ele-icon{max-width: 14dvw;}
     .team-credit{margin-left: 1.3rem;}
+    .d-md-grid{display: grid !important;}
 }
 
 @media (max-width: 575.98px) {

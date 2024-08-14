@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 import { IoLogoYoutube } from "react-icons/io";
-import LinkButtonIG from "../../component/Button/LinkButtonIG";
 
 const LinkButton = () => {
   // Get the current URL path
