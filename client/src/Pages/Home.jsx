@@ -7,36 +7,49 @@
 
   function Home() {
     const [messages, setMessages] = useState([]);
+    const [messagesContainer2, setMessagesContainer2] = useState([]);
     const [projects, setProjects] = useState([]);
-
+  
     useEffect(() => {
-      // Function to get 5 random messages
-      const getRandomMessages = () => {
+      // Function to get messages for SocialContainer
+      const getMessagesForContainer1 = () => {
         const messagesObject = messagesData.find(
           (item) => item.type === "table" && item.name === "messages"
         );
         const allMessages = messagesObject ? messagesObject.data : [];
         const shuffled = [...allMessages].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, 5);
+        return shuffled.slice(0, 5); // 5 messages for SocialContainer
       };
-
+  
+      // Function to get messages for SocialContainer2
+      const getMessagesForContainer2 = () => {
+        const messagesObject = messagesData.find(
+          (item) => item.type === "table" && item.name === "messages"
+        );
+        const allMessages = messagesObject ? messagesObject.data : [];
+        const shuffled = [...allMessages].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 3); // 3 messages for SocialContainer2
+      };
+  
       // Function to get 2 random projects
       const getRandomProjects = () => {
         const projectKeys = Object.keys(projectsData);
         const shuffledKeys = projectKeys.sort(() => 0.5 - Math.random());
         return [projectsData[shuffledKeys[0]], projectsData[shuffledKeys[1]]];
       };
-
+  
       // Set initial messages and projects
-      setMessages(getRandomMessages());
+      setMessages(getMessagesForContainer1());
+      setMessagesContainer2(getMessagesForContainer2());
       setProjects(getRandomProjects());
-
+  
       // Update messages and projects every 5 seconds
       const interval = setInterval(() => {
-        setMessages(getRandomMessages());
+        setMessages(getMessagesForContainer1());
+        setMessagesContainer2(getMessagesForContainer2());
         setProjects(getRandomProjects());
       }, 5000);
-
+  
       // Cleanup interval on unmount
       return () => clearInterval(interval);
     }, []);
@@ -77,6 +90,17 @@
                 brought into syn2sign&rdquo;
               </h2>
             </Col>
+            <Col xs={12} className="d-block d-md-none mt-4">
+            {/* test */}
+            <p className="">Review Records (3★ Out of 20)</p>
+            <SocialContainer2 >
+                {messagesContainer2.map((msg, index) => (
+                  <SocialBox2 className="txt-body3 " key={index} >
+                    {msg.message}
+                  </SocialBox2>
+                ))}
+              </SocialContainer2>
+            </Col>
             {projects.map((project, index) => (
               <Col style={{marginTop: "5rem"}}
                 xs={6}
@@ -85,7 +109,7 @@
                 }`}
                 key={index}
               >
-                <a href={project.link} className="mt-5">
+                <a href={project.link} className="mt-">
                   <DeviceBox>
                     {index === 0 ? (
                       <FrontBox>
@@ -213,12 +237,26 @@
     text-align: right; /* Align text to the right */
   `;
 
+ const SocialBox2 = styled.div`
+ width: fit-content;
+ height: auto;
+ border: 1px solid #fff;
+ border-radius: 20px;
+ padding: 10px;
+ margin: 0 10px;
+ /* margin-bottom: 10px; */
+ text-align: center; /* Align text to the right */
+`;
   const SocialContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Align all boxes to the right */
   `;
-
+  const SocialContainer2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align all boxes to the right */
+`;
   // Styled components
   const DeviceBox = styled.div`
     position: relative;
