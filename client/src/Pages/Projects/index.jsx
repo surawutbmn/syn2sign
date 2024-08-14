@@ -5,8 +5,7 @@ import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
-import Creators from "./AccordionContent/Creator";
-import { Container, Breadcrumb } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
@@ -31,7 +30,6 @@ import CardToolDevelopmentMobile from "../../component/card/CardToolDevelopmentM
 import CardFeedbackMobile from "../../component/card/CardFeedbackMobile";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa6";
 
 
