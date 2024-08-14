@@ -55,7 +55,7 @@ const SocialApproved = ({ proj_id }) => {
 };
 
 SocialApproved.propTypes = {
-  // Define any required prop types here if needed
+  proj_id: PropTypes.string,
 };
 
 export default SocialApproved;

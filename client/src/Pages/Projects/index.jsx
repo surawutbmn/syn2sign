@@ -265,7 +265,7 @@ const projectRefs = useRef([]); // Create an array of refs
         <div className="text-start txt-grey mb-1">Social Approved</div>
       </Container>
 
-      <SocialApproved className="" />
+      <SocialApproved proj_id={prj_id} />
       <SocialApprovedMobile className="" />
       <Container>
         <CardThreePictureProject />
