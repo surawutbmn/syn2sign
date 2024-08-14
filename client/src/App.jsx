@@ -31,14 +31,14 @@ function App() {
         setTitle("Syn2sign senior project exhibition 2024 - Home Page");
         setMetaTags({
           description: "Welcome to Syn2sign senior project exhibition 2024.",
-          image: "home-image-url", // Replace with the appropriate image URL
+          image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
       case "/showcase":
         setTitle("8 Projects and 16 Creators List - Syn2sign senior project exhibition 2024");
         setMetaTags({
           description: "Explore 8 projects and 16 creators in our showcase.",
-          image: "showcase-image-url", // Replace with the appropriate image URL
+          image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
 
@@ -103,21 +103,21 @@ function App() {
         setTitle("EXHIBITION ARCHIVE - Syn2sign senior project exhibition 2024");
         setMetaTags({
           description: "Browse our exhibition archive.",
-          image: "exhibition-image-url", // Replace with the appropriate image URL
+          image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
       case "/credit":
         setTitle("CREDIT - Syn2sign senior project exhibition 2024");
         setMetaTags({
           description: "Credits for the Syn2sign senior project exhibition 2024.",
-          image: "credit-image-url", // Replace with the appropriate image URL
+          image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
       case "/stay-tune":
         setTitle("STAY TUNE - Syn2sign senior project exhibition 2024");
         setMetaTags({
           description: "Stay tuned for more updates.",
-          image: "stay-tune-image-url", // Replace with the appropriate image URL
+          image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
     }

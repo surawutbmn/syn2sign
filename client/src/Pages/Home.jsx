@@ -4,7 +4,6 @@
   import styled from "styled-components";
   import messagesData from "/src/Pages/Exhibition/messages.json"; // Adjust path as needed
   import projectsData from "./Home.json"; // Adjust path as needed
-  import { Helmet } from "react-helmet";
 
   function Home() {
     const [messages, setMessages] = useState([]);
@@ -57,15 +56,6 @@
 
     return (
       <div>
-           <Helmet>
-        <title>Home - Showcase of Projects</title>
-        <meta property="og:title" content="Home - Showcase of Projects" />
-        <meta property="og:description" content="Explore the latest student senior projects from 2024. A collection of innovative work from the academic year 2566." />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
-        <meta property="og:url" content="http://localhost:5173/showcase/projects" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Showcase Projects" />
-      </Helmet>
         <HomeElement />
         <Container className="position-relative" style={{
           // marginTop: window.innerWidth <= 767 ? '1rem' : '0', // Adjust the value as needed
