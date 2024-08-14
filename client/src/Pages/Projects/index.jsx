@@ -448,7 +448,7 @@ const LinkPrjCon = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   .icon-img-link {
-    max-width: 6em;
+    max-width: 8em;
   }
   ::-webkit-scrollbar {
     display: none;
