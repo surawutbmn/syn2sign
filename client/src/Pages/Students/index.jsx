@@ -5,7 +5,7 @@ import projectdata from "../../../public/data/Projectdata";
 import studentsdata from "../../../public/data/Studentdata";
 import SectionTitle from "../../component/SectionTitle";
 import PageElement from "../../component/Element/PageElement";
-import Creators from "../Projects/AccordionContent/Creator";
+import Creators from "./Creator";
 import InterviewCard from "./InterviewCard";
 import { Container, Row } from "react-bootstrap";
 import RecTools from "./RecTools";
@@ -159,20 +159,16 @@ function Students() {
           </Row>
         </Container>
         <Container>
-          <SectionTitle
-            title={`${student.nickname_en}\u2019s collaborate`}
-            subtitle={`ผู้ที่ทำงานร่วมกับ${student.nickname_th}`}
-            className={"header-wline mt-5"}
-          />
           <div className="my-5">
             {otherStudents.map((student, index) => (
-              <Row key={index}>
+              <Row className="justify-content-center" key={index}>
                 <Creators
                   nameEN={student.name_en}
+                  nicknameEN={student.nickname_en}
                   email={student.email}
                   linkedin={student.linkin}
                   qoutes={student.qoutes}
-                  profileImg={`/creator_img/card/073-card.webp`}
+                  profileImg={student.thumb_img}
                   stdID={student.std_id}
                 />
               </Row>

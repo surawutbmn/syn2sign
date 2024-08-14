@@ -15,7 +15,7 @@ function CircleLinkBtn(props) {
     <>
       <BtnCon href={link} target="_blank" rel="noopener noreferrer">
         <Icon className={color}>
-          <IconComponent size={16} />
+          <IconComponent />
         </Icon>
         <h5>
           <u>{txt}</u>
@@ -54,6 +54,7 @@ const Icon = styled.span`
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
+  font-size: 1em;
   padding: 0;
   transition: all 0.3s ease;
   &.bg-light {
@@ -63,5 +64,10 @@ const Icon = styled.span`
   &.bg-second {
     background: var(--color-primary);
     color: var(--color-dark);
+  }
+  @media (max-width: 991.98px) {
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 0.8em;
   }
 `;

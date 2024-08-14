@@ -1,6 +1,3 @@
-import gsap, { Power1 } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 import "./credit.css";
 import { Container } from "react-bootstrap";
 import PageElement from "../../component/Element/PageElement";

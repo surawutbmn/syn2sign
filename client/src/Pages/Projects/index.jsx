@@ -5,7 +5,7 @@ import { BsCheckLg } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
-import Creators from "./AccordionContent/Creator";
+import Creators from "../Students/Creator";
 import { Container,Breadcrumb  } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";

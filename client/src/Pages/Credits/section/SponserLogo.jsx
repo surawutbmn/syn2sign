@@ -79,7 +79,7 @@ const TextContainer = styled.p`
     margin-top: 0.5em;
   }
   @media (max-width: 767.98px) {
-    font-size: 0.6em;
+    font-size: .7em;
     u {
       font-size: 1em;
     }

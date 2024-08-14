@@ -1,5 +1,6 @@
 import { Col } from "react-bootstrap";
 import propTypes from "prop-types";
+import styled from "styled-components";
 
 
 function RoleCard(props) {
@@ -10,7 +11,7 @@ function RoleCard(props) {
           return (
             <Col key={index} className="d-flex align-items-center">
                 <img src={`/icon/roles/${roleItem.icon}`} alt="" />
-                <span className="ms-3 txt-upper">{roleItem.name}</span>
+                <RoleName className="ms-3 txt-upper">{roleItem.name}</RoleName>
             </Col>
           );
         })}
@@ -28,3 +29,9 @@ RoleCard.propTypes = {
 };
 
 export default RoleCard;
+
+const RoleName = styled.span`
+  @media (max-width: 991.98px) {
+      font-size: .8em;
+  }
+`;
