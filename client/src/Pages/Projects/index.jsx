@@ -41,8 +41,6 @@ function Project() {
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // Hook to programmatically navigate
   const isMobile = useIsMobile();
-const projectRefs = useRef([]); // Create an array of refs
-
   const handleImageClick = () => {
     navigate("/"); // Replace with your desired URL
   };
@@ -56,15 +54,6 @@ const projectRefs = useRef([]); // Create an array of refs
   const [activeProject, setActiveProject] = useState(
     localStorage.getItem("activeProject") || null
   );
-  useEffect(() => {
-    if (activeProject && projectRefs.current[activeProject]) {
-      projectRefs.current[activeProject].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-      });
-    }
-  }, [activeProject]);
 
   const findProjectById = (project_id) => {
     return (
@@ -319,9 +308,7 @@ const projectRefs = useRef([]); // Create an array of refs
                   key={index}
                   className={`list-group-item ${
                     activeProject === proj.project_id ? "active" : ""
-                  }`}
-                  ref={(el) => (projectRefs.current[proj.project_id] = el)} // Set ref for each project
-                >
+                  }`}>
                   <Link
                     to={`/showcase/projects/${proj.project_id}`}
                     onClick={(e) => {

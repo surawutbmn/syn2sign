@@ -190,6 +190,7 @@ const CardProjects = styled.div`
   @media (max-width: 991.98px) {
     .projects-card-icon {
       width: 3em;
+      height: 3em;
       margin-right: 0.5em;
     }
   }
@@ -197,6 +198,7 @@ const CardProjects = styled.div`
     padding: 10px 15px;
     .projects-card-icon {
       width: 4em;
+      height: 4em;
     }
     hr {
       margin: 0.3em 0 1em 0;
