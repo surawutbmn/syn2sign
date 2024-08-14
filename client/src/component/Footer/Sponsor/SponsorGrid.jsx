@@ -1,10 +1,12 @@
 import propTypes from "prop-types";
 import SponLink from "./SponLink";
+import styled from "styled-components";
 
 
 const SponsorsGrid = ({ sponsors }) => {
   return (
     <>
+      <Txt className="txt-cap text-center">sponsored by:</Txt>
       <div className="d-flex justify-content-around align-items-center">
         {sponsors
           .filter((sponsor) => sponsor.tier.startsWith("tier-1"))
@@ -62,3 +64,5 @@ SponsorsGrid.propTypes = {
   ),
 };
 export default SponsorsGrid;
+
+const Txt =styled.span`font-size: 1rem;`

@@ -70,6 +70,9 @@ const CardBox = styled.div`
     color: var(--color-primary);
     border: solid 0.05rem var(--color-primary);
   } */
+  @media (max-width: 1199.98px) {
+    padding: 1.3rem;
+  }
   @media (max-width: 991.98px) {
     padding: 1rem;
   }

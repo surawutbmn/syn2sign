@@ -28,9 +28,8 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const   SocialApproved = () => {
-  const location = useLocation();
-  const projectId = location.pathname.split("/").pop(); // Get the project identifier from the URL
+const SocialApproved = ({ proj_id }) => {
+  const projectId = proj_id; // Get the project identifier from the URL
   const projectData = dataMapping[projectId]?.find(
     (item) => item.type === "table" && item.name === "social_approved"
   );
@@ -41,7 +40,11 @@ const   SocialApproved = () => {
         <CardBox className="d-flex text-center">
           {projectData &&
             projectData.data.map((item) => (
-              <StyledSpan className="gap-1" key={item.id} hasBorder={item.id === "2"}>
+              <StyledSpan
+                className="gap-1"
+                key={item.id}
+                $hasBorder={item.id === "2"}
+              >
                 <BiSolidCommentDetail /> {item.socialApproved}
               </StyledSpan>
             ))}
@@ -64,7 +67,7 @@ const CardBox = styled.div`
   border-left: none;
   border-right: none;
   position: relative;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -86,7 +89,17 @@ const StyledSpan = styled.span`
   ${(props) =>
     props.hasBorder &&
     `
-    border-right: 3px solid var(--color-primary);
-    border-left: 3px solid var(--color-primary);
+    border-right:  solid var(--color-primary);
+    border-left:  solid var(--color-primary);
+    padding: 0 1.3em;
   `}
+  @media (max-width: 575.98px) {
+    ${(props) =>
+      props.$hasBorder &&
+      `
+    border-top:  none;
+    border-left:  none;
+    padding: 0 1.3em;
+  `}
+  }
 `;

@@ -1,6 +1,33 @@
 import styled from "styled-components";
 import { socialLinks } from "./Social";
 
+const SocialLinks = () => (
+  <>
+    <Txt className="txt-cap text-start d-none d-md-flex">Follow us:</Txt>
+    <h6 className="txt-cap justify-content-center d-flex d-md-none">
+      Follow us:
+    </h6>
+    <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+      {socialLinks.map((link, index) => (
+        <FooterLink
+          key={index}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={link.src} alt={link.alt} />
+        </FooterLink>
+      ))}
+    </div>
+  </>
+);
+
+export default SocialLinks;
+
+const Txt = styled.span`
+  font-size: 0.7em;
+  margin-bottom: 1.1em;
+`;
 const FooterLink = styled.a`
   display: block;
   margin-right: 0.8em;
@@ -27,24 +54,3 @@ const FooterLink = styled.a`
     font-size: 0.9rem;
   }
 `;
-
-const SocialLinks = () => (
-  <>
-      <span className="txt-cap text-start d-none d-md-flex mb-1" style={{ fontSize: "0.625rem" }}>Follow us:</span>
-      <h6 className="txt-cap text-center d-flex d-md-none "style={{ fontSize: "0.625rem" }}>Follow us:</h6>
-      <div className="d-flex align-items-center mt-2">
-        {socialLinks.map((link, index) => (
-          <FooterLink
-            key={index}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={link.src} alt={link.alt} />
-          </FooterLink>
-        ))}
-      </div>
-  </>
-);
-
-export default SocialLinks;
