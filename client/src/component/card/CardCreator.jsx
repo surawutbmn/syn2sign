@@ -37,6 +37,7 @@ const CardCreator = () => {
         {/* Assuming the same image for demonstration purposes */}
         <CreatorImg
           src={`/images/creator_img/${studentData[0].project_id}.png`}
+          src={`/images/creator_img/${studentData[0].project_id}.png`}
           //   style={{ marginTop: "-60px" }}
         />
       </div>
@@ -196,6 +197,7 @@ const CardCreator = () => {
             <div className="text-start mt-3">
               <IconImage
                 src="/images/creator_img/linkedin.svg"
+     
                 alt="linkedin"
               />
               <span className="ms-3">

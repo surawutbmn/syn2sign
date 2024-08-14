@@ -25,7 +25,7 @@ export const Nav2 = () => {
         <Navbar expand="xl">
           <Container className="pt-3 position-relative">
             <Navbar.Brand>
-              <NavLink className="me-3" to="/syn2sign/demo">
+              <NavLink className="me-3" to="">
                 <img
                   src="/images/s2s-logo/syn2sign_logo.svg"
                   alt="syn2sign_logo"

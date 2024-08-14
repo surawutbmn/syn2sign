@@ -14,7 +14,7 @@ function CreatorHeadSection(props) {
         <BackBtn className="text-start link-txt txt-upper">
           <Link to={`/showcase#creator`}>
             <FaArrowLeft className="me-2" size={20} />
-            <strong>back</strong>
+            <strong>all creators</strong>
           </Link>
         </BackBtn>
         <div className="text-start d-flex d-md-none justify-content-center flex-column">
@@ -35,7 +35,7 @@ function CreatorHeadSection(props) {
           </div>
         </div>
         <DetailCon>
-          <div className="d-flex flex-column pe-3">
+          <div className="d-flex w-100 flex-column pe-3">
             <GreetBox>
               <LineHead />
               <Heading className="txt-prim txt-upper">
@@ -167,7 +167,7 @@ const GreetBox = styled.div`
   }
 `;
 const DetailCon = styled.div`
-  display: flex;
+  display: flex; justify-content: space-between;
 `;
 const Heading = styled.h1`
   @media (max-width: 991.98px) {
