@@ -9,7 +9,7 @@ const StudentCard = ({ student }) => (
       <Link to={`/showcase/creators/${student.std_id}`} className="card-link">
         <ReadMore className="read-more">
           <ReadMoreIcon
-            src="/icon/read-more.svg"
+            src="/syn2sign/demo/icon/read-more.svg"
             alt="readmore icon"
             className="rdm-icon"
           />
@@ -17,7 +17,7 @@ const StudentCard = ({ student }) => (
         </ReadMore>
         <div className="card-std-img">
           <ImgCreator
-            src={`/images/creator_img/profile/${student.profile_img}`}
+            src={`/syn2sign/demo/images/creator_img/profile/${student.profile_img}`}
             loading="lazy"
             alt="creator profile"
           />
@@ -85,10 +85,13 @@ const CardText = styled.div`
 `;
 const Caption = styled.div`
   font-size: 0.7rem;
-  margin-bottom: 0.2rem;
-  @media (max-width: 767.98px) {
-    font-size: 0.45rem;
+  @media (max-width: 1439.98px) {
+    font-size: 0.8rem;
   }
+  @media (max-width: 1359.98px) {
+    font-size: 0.6rem;
+  }
+  margin-bottom: 0.2rem;
   @media (max-width: 991.98px) {
     font-size: 0.5rem;
   }
@@ -99,6 +102,12 @@ const Caption = styled.div`
 const Title = styled.div`
   font-weight: var(--txt-sbold);
   font-size: 0.9rem;
+  @media (max-width: 1439.98px) {
+    font-size: 0.75rem;
+  }
+  @media (max-width: 1359.98px) {
+    font-size: 0.65rem;
+  }
   @media (max-width: 991.98px) {
     font-size: 0.65rem;
   }

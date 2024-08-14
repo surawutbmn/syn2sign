@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
+
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import { Nav2 } from "./component/Nav/Nav";

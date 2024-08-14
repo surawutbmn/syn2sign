@@ -57,7 +57,7 @@ const Tabs = ({ activeTab, onTabClick }) => (
     >
       <div className="d-flex align-items-center justify-content-center">
         <TabIcon
-          src="/icon/prj-tab.svg"
+          src="/syn2sign/demo/icon/prj-tab.svg"
           alt="tab icon"
           className={`me-3 tab-icon ${activeTab === 1 ? "active" : ""}`}
         />
@@ -70,7 +70,7 @@ const Tabs = ({ activeTab, onTabClick }) => (
     >
       <div className="d-flex align-items-center justify-content-center">
         <TabIcon
-          src="/icon/creator-tab.svg"
+          src="/syn2sign/demo/icon/creator-tab.svg"
           className={`me-3 tab-icon ${activeTab === 2 ? "active" : ""}`}
           alt="tab icon"
         />
