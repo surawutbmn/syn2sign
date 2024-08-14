@@ -54,19 +54,14 @@
       // Cleanup interval on unmount
       return () => clearInterval(interval);
     }, []);
-    const ogTitle = "Your Page Title";
-    const ogDescription = "A brief description of your page.";
-    const ogImage = "/path/to/your/image.jpg"; // Update as needed
-    const ogUrl = "https://example.com/page-url"; // Update as needed
+
     return (
       <div>
-        <Helmet>
-        <meta property="og:title" content={ogTitle} />
-        <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={ogUrl} />
-        <meta property="og:type" content="website" />
-        {/* Add more meta tags as needed */}
+      <Helmet>
+        <meta property="og:title" content="syn2sign Home" />
+        <meta property="og:description" content="Home description" />
+        <meta property="og:image" content="/s2s-logo/s2s-outline-logo.svg" />
+        <meta property="og:url" content="http://localhost:5173/" />
       </Helmet>
         <HomeElement />
         <Container className="position-relative" style={{
