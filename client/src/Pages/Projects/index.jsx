@@ -438,9 +438,9 @@ const projectRefs = useRef([]); // Create an array of refs
             </Swiper>
           </div> */}
         </div>
-        <BreadcrumbContainer>
+        <BreadcrumbContainer className="position-relative">
           <BreadcrumbImage
-            src="/images/s2s-logo/s2s-outline-logo.svg"
+            src="/images/s2s-logo/syn2sign_logo.svg"
             alt="breadcrumb icon"
             onClick={handleImageClick}
           />

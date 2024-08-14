@@ -10,10 +10,10 @@
   /* Media query for mobile devices */
   @media (max-width: 768px) { /* You can adjust the max-width value based on your needs */
     .prj-sec-icon {
-      width: 60px;
-      height: 60px;
-      border-width: .15em; /* Adjust the border width to maintain proportion if needed */
-      border-radius: .65em; /* Adjust the border-radius accordingly */
+      width: 100px;
+      height: 100px;
+      border-width: .2em; /* Adjust the border width to maintain proportion if needed */
+      border-radius: .8em; /* Adjust the border-radius accordingly */
     }
   }
   .prj-sec-icon2 {
