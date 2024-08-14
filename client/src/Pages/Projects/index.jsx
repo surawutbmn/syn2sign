@@ -35,7 +35,7 @@ import CardCreatorMobile from "../../component/card/CardCreatorMobile";
 
 function Project() {
   const [project, setProject] = useState(null);
-  const [students, setStudents] = useState([]);
+  // const [students, setStudents] = useState([]);
   const { prj_id } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -55,15 +55,15 @@ function Project() {
     localStorage.getItem("activeProject") || firstProjectId
   );
   
-  useEffect(() => {
-    if (activeProject && projectRefs.current[activeProject]) {
-      projectRefs.current[activeProject].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-      });
-    }
-  }, [activeProject]);
+  // useEffect(() => {
+  //   if (activeProject && projectRefs.current[activeProject]) {
+  //     projectRefs.current[activeProject].scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "center",
+  //       inline: "center",
+  //     });
+  //   }
+  // }, [activeProject]);
 const ref = useRef();
   useEffect(() => {
    setTimeout(() => {
@@ -133,13 +133,6 @@ const ref = useRef();
   if (error) return <div>Error: {error}</div>;
   if (!project) return <div>No project data available</div>;
 
-  const getMatchedStudents = () => {
-    return students.filter(
-      (student) => student.project_id === project.project_id
-    );
-  };
-
-  const matchedStudents = getMatchedStudents();
   // console.log(students);
   const items = [
     {
@@ -209,27 +202,6 @@ const ref = useRef();
         content: (
           <>
             <CardCreator />
-            {/* <ul>
-              {matchedStudents.length > 0 ? (
-                matchedStudents.map((student) => (
-                  <li key={student.id}>
-                    <div>
-                      
-                      <Creators
-                        nameEN={student.name_en}
-                        email={student.email}
-                        linkedin={student.linkin}
-                        qoutes={student.qoutes}
-                        profileImg={`/images/creator_img/078-card.png`}
-                        stdID={student.std_id}
-                      />
-                    </div>
-                  </li>
-                ))
-              ) : (
-                <p>No students found</p>
-              )}
-            </ul> */}
           </>
         ),
       };
