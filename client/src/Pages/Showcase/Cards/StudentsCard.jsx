@@ -141,7 +141,7 @@ const ReadMoreText = styled.div`
   font-size: 1rem;
   font-weight: var(--txt-bold);
   color: var(--color-light);
-  margin-left: -80%;
+  margin-left: -60%;
   opacity: 0;
   transition: margin-left 0.3s ease, opacity 0.3s ease;
 `;
@@ -181,15 +181,23 @@ const ReadMore = styled.div`
   top: 20px;
   font-size: 0.8rem;
   color: var(--color-dark);
-  right: -70px;
+  right: -60px;
   transition: all 0.3s ease;
   z-index: 1;
   align-items: center;
   white-space: nowrap;
   display: flex;
   @media (max-width: 991.98px) {
+    margin-left: -70px;
     top: 10px;
-    right: -80px;
+  }
+  @media (max-width: 575.98px) {
+    margin-left: -60px;
+    top: 10px;
+  }
+  @media (max-width: 374.98px) {
+    margin-left: -30px;
+    top: 10px;
   }
 `;
 const ReadMoreIcon = styled.img`
@@ -200,6 +208,12 @@ const ReadMoreIcon = styled.img`
   max-width: 4rem;
   @media (max-width: 767.98px) {
     max-width: 2rem;
+  }
+  @media (max-width: 565.98px) {
+    max-width: 1.8rem;
+  }
+  @media (max-width: 374.98px) {
+    max-width: 1.4rem;
   }
 `;
 const ImgCreator = styled.img`
