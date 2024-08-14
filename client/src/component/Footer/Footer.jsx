@@ -15,10 +15,14 @@ export const Footers = () => {
             <span className="txt-cap text-center">sponsored by:</span>
             <SponsorsGrid sponsors={sponsors} />
           </div>
-          <div className="d-none d-md-flex flex-column">
+          <div className="d-none d-md-flex flex-column ">
             <SponRow sponsors={sponsors} />
           </div>
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column d-none d-md-block">
+              <SocialLinks />
+          </div>
+
+          <div className="d-flex flex-column d-block d-md-none align-items-center">
               <SocialLinks />
           </div>
         </Container>
