@@ -40,7 +40,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingLanguages.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_launguage.toLowerCase()}.svg`} alt={item.coding_launguage} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_launguage.toLowerCase()}.svg`} alt={item.coding_launguage} />
                 {item.coding_launguage}
               </ItemBox>
             ))}
@@ -52,7 +52,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {databaseSystems.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
                 {item.database_system}
               </ItemBox>
             ))}
@@ -66,7 +66,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingPlugins.map((item, index) => (
               <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
-                <img src={`/icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
                 {item.coding_plugin}
               </ItemBox>
             ))}
@@ -78,7 +78,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingTools.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
                 {item.coding_tool}
               </ItemBox>
             ))}
@@ -95,7 +95,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingLanguages.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_launguage.toLowerCase()}.svg`} alt={item.coding_launguage} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_launguage.toLowerCase()}.svg`} alt={item.coding_launguage} />
                 {item.coding_launguage}
               </ItemBox>
             ))}
@@ -107,7 +107,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingPlugins.map((item, index) => (
               <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
-                <img src={`/icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
                 {item.coding_plugin}
               </ItemBox>
             ))}
@@ -119,7 +119,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {codingTools.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
                 {item.coding_tool}
               </ItemBox>
             ))}
@@ -131,7 +131,7 @@ const CardToolDevelopment = () => {
           <FlexContainer>
             {databaseSystems.map((item) => (
               <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
+                <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
                 {item.database_system}
               </ItemBox>
             ))}

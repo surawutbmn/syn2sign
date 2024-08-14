@@ -46,7 +46,7 @@ const CardMainThreeMobile = (props) => {
               <TabVideoAndImageBox className="col-12">
               <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1>
               <Text2 className="txt-bold txt-head2 text2">บรรยากาศ</Text2>
-                <img src={props.imgPreview1}>
+                <img src={`${import.meta.env.VITE_BASE_URL}${props.imgPreview1}`}>
                 </img>
                 
                 <Overlay />
@@ -61,7 +61,7 @@ const CardMainThreeMobile = (props) => {
               <TabVideoAndImageBox className="col-12">
               {/* <Text1 className="txt-body3 text1">คลิกเพื่อรับชม</Text1> */}
               <Text2 className="txt-bold txt-head2 text2">ภาพบรรยากาศ</Text2>
-                <img src={props.imgPreview2}>
+                <img src={`${import.meta.env.VITE_BASE_URL}${props.imgPreview2}`}>
                 </img>
                 
                 <Overlay />

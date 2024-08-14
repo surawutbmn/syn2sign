@@ -15,7 +15,7 @@ const SocialLinks = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={link.src} alt={link.alt} />
+          <img src={`${import.meta.env.VITE_BASE_URL}${link.src}`} alt={link.alt} />
         </FooterLink>
       ))}
     </div>

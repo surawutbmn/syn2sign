@@ -13,6 +13,10 @@ dist.zip
 dist-ssr
 syn2sign
 syn2sign.zip
+.env
+.env.example
+.env.local
+.env.staging
 *.local
 
 # Editor directories and files

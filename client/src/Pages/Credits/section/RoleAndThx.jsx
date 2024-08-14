@@ -95,7 +95,7 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={graphic} alt="graphic icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${graphic}`} alt="graphic icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -114,7 +114,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={sp} alt="sponsor icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${sp}`} alt="sponsor icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -132,7 +132,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={web} alt="website icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${web}`} alt="website icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -152,7 +152,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={int} alt="interactive icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${int}`} alt="interactive icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -173,7 +173,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={pr} alt="public relation icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${pr}`} alt="public relation icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -194,7 +194,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={knb} alt="knowledge board icon" />
+            <img src= {`${import.meta.env.VITE_BASE_URL}${knb}`} alt="knowledge board icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -212,7 +212,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={lo} alt="location icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${lo}`} alt="location icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -227,7 +227,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={led} alt="led media icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${led}`} alt="led media icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -248,7 +248,7 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={thx} alt="thank icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${thx}`} alt="thank icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -265,7 +265,7 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={thx} alt="thank icon" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${thx}`} alt="thank icon" />
           </IconContainer>
           <TextContainer>
             <UpperText>

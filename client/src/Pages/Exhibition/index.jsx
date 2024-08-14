@@ -54,7 +54,7 @@ function Exhibition() {
       <div className="bg-gd-btr"></div>
       <div className="exh-banner exh-banner-bg">
         <div className="exh-banner-overlay"></div>
-        <img src={syn_ele} alt="syn2sign element" className="exh-banner-ele" />
+        <img src={`${import.meta.env.VITE_BASE_URL}${syn_ele}`} alt="syn2sign element" className="exh-banner-ele" />
         <div className="git-link">
           <a
             href="https://syn2sign-test.netlify.app"
@@ -211,7 +211,7 @@ function Exhibition() {
       <Container className="">
         <div className="feedback-con">
           <div className="paper-plane">
-            <img src={paper_plane} alt="paper plane" loading="lazy" />
+            <img src={`${import.meta.env.VITE_BASE_URL}${paper_plane}`} alt="paper plane" loading="lazy" />
           </div>
           <span className="txt-prim feedback-title">
             ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)

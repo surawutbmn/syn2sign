@@ -1,8 +1,8 @@
 function Notfound() {
   return (
     <div>
-      <img src="/icon/ele-head-l.svg" className="ele-head-l" alt="" />
-      <img src="/icon/ele-head-r.svg" className="ele-head-r" alt="" />
+      <Image src={`${import.meta.env.VITE_BASE_URL}icon/ele-head-l.svg`} className="ele-head-l" alt="" />
+      <Image src= {`${import.meta.env.VITE_BASE_URL}icon/ele-head-r.svg"`} alt="" />
       <div className="bg-gd-btf"></div>
       <div className="d-flex flex-column position-relative">
         <h1 className="txt-prim" style={{ fontSize: "5rem" }}>
