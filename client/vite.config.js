@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   // base: "/syn2sign/",
   plugins: [react()],
+  // base: "/syn2sign/demo/",
+  // build: {
+  //   outDir: "syn2sign",
+  // },
 });

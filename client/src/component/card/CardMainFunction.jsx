@@ -33,12 +33,12 @@ const CardMainFunction = (props) => {
   const mainFunctions = mainFunctionTable ? mainFunctionTable.data : []; // Extract main function data
 
   return (
-    <div className="d-flex row justify-content-evenly" style={{ marginTop: "-50px" }}>
+    <div className="d-flex row justify-content-evenly" style={{ marginTop: "-100px" }}>
       {mainFunctions.length === 0 ? (
         <p>No data available</p>
       ) : (
         mainFunctions.map((func) => (
-          <Card key={func.id} className="col-4 text-center">
+          <Card key={func.id} className="col-4 text-center mt-5">
             <Icon src={`/icon/prj/${func.id}Function.svg`} className="mt-5" />
             <div className="txt-head3 txt-bold mt-4 mb-3">
               {func.title}

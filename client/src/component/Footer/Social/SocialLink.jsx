@@ -30,7 +30,7 @@ const FooterLink = styled.a`
 
 const SocialLinks = () => (
   <>
-      <span className="txt-cap text-start d-none d-md-flex mb-1">Follow us:</span>
+      <span className="txt-cap text-start d-none d-md-flex mb-1" style={{ fontSize: "0.625rem" }}>Follow us:</span>
       <h6 className="txt-cap text-center d-flex d-md-none">Follow us:</h6>
       <div className="d-flex align-items-center">
         {socialLinks.map((link, index) => (

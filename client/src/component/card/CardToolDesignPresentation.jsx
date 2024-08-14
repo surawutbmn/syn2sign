@@ -29,7 +29,7 @@ const CardToolDesignPresentation = (props) => {
     projectData.find((item) => item.name === "design_present")?.data || [];
 
   return (
-    <Container>
+    <Container style={{height: "fit-content"}}>
       <Title className="txt-prim txt-head3 text-start">
         DESIGN & PRESENTATION
       </Title>

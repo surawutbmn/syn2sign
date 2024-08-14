@@ -49,14 +49,14 @@ const CardKeyword = (props) => {
 
   return (
     <div className="row justify-content-center" style={{ marginTop: "-2rem" }}>
-      <div className="col-8 mb-5">
+      <div className="col-12 mb-4">
         <span className="description">
           {data.find((item) => item.id === activeButton)?.description}
         </span>
       </div>
-      <div className="col-12 mb-5">
+      <div className="col-12 mb-">
         {data.slice(0, 3).map((item) => (
-          <KeywordButton
+          <KeywordButton className="mt-5"
             key={item.id}
             active={activeButton === item.id}
             onClick={() => handleButtonClick(item.id)}
@@ -65,9 +65,10 @@ const CardKeyword = (props) => {
           </KeywordButton>
         ))}
       </div>
+
       <div className="col-12 mb-5">
         {data.slice(3).map((item) => (
-          <KeywordButton
+          <KeywordButton  className="mt-5"
             key={item.id}
             active={activeButton === item.id}
             onClick={() => handleButtonClick(item.id)}
@@ -94,7 +95,7 @@ const KeywordButton = styled.button`
   color: white;
   padding: 10px;
   width: fit-content;
-  margin-left: 50px;
+  margin-left: 20px;
 
   &:hover {
     cursor: pointer;

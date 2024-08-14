@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 
-const LinkButtonIG = () => {
+const LinkButtonIGMobile = () => {
   // Get the current URL path
   const url = window.location.pathname;
 
@@ -49,7 +49,7 @@ const LinkButtonIG = () => {
   const currentLink = linkMappings[projectId] || linkMappings.cpl01;
 
   return (
-    <div className="d-flex row align-items-start txt-body3 ms-4">
+    <div className="d-flex row align-items-start txt-body3 mt-3 mb-3">
        <LinkButtonContainer>
         <Link href={currentLink.href} target="_blank">
           <Icon className='txt-body1'/> <span className="ms-2 pe-2">{currentLink.text}</span>
@@ -59,11 +59,11 @@ const LinkButtonIG = () => {
   );
 };
 
-LinkButtonIG.propTypes = {
+LinkButtonIGMobile.propTypes = {
   name: PropTypes.string.isRequired, // Check if 'name' is needed here
 };
 
-export default LinkButtonIG;
+export default LinkButtonIGMobile;
 
 const LinkButtonContainer = styled.div`
   display: flex; /* Ensure this is set to flex or inline-flex */

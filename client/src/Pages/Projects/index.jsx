@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import Accordions from "./Accordion/Accordion";
 import projectsdata from "/public/data/Projectdata";
 import Creators from "./AccordionContent/Creator";
-import { Container,Breadcrumb  } from "react-bootstrap";
+import { Container, Breadcrumb } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
 import studentsdata from "../../../public/data/Studentdata";
 import PageElement from "../../component/Element/PageElement";
@@ -24,8 +24,14 @@ import CardTargetGroup from "../../component/card/CardTargetGroup";
 import CardFeedback from "../../component/card/CardFeedback";
 import CardCreator from "../../component/card/CardCreator";
 import styled from "styled-components";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
+import SocialApprovedMobile from "./AccordionContent/SocialApprovedMobile";
+import CardIdeaConceptMobile from "../../component/card/CardIdeaConceptMobile";
+import useIsMobile from "./useIsMobile";
+import CardToolDevelopmentMobile from "../../component/card/CardToolDevelopmentMobile";
+import CardFeedbackMobile from "../../component/card/CardFeedbackMobile";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 function Project() {
   const [project, setProject] = useState(null);
@@ -34,15 +40,16 @@ function Project() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate(); // Hook to programmatically navigate
+  const isMobile = useIsMobile();
   const handleImageClick = () => {
     // Navigate to a different link when the image is clicked
-    navigate('/'); // Replace with your desired URL
+    navigate("/"); // Replace with your desired URL
   };
-  
+
   const handleShowcaseClick = (event) => {
     event.preventDefault(); // Prevent default behavior of link
     handleScrollToTop();
-    navigate('/showcase#project'); // Programmatically navigate to the desired URL
+    navigate("/showcase#project"); // Programmatically navigate to the desired URL
   };
 
   const [activeProject, setActiveProject] = useState(
@@ -57,7 +64,7 @@ function Project() {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Smooth scroll effect
+      behavior: "smooth", // Smooth scroll effect
     });
   };
   const fetchProject = async (project_id) => {
@@ -115,7 +122,11 @@ function Project() {
     {
       title: "idea concept",
       subtitle: "แนวคิดของผลงาน",
-      content: <CardIdeaConcept proj_id={prj_id} />,
+      content: isMobile ? (
+        <CardIdeaConceptMobile proj_id={prj_id} />
+      ) : (
+        <CardIdeaConcept proj_id={prj_id} />
+      ),
     },
     {
       title: "KeyWORDS",
@@ -130,7 +141,11 @@ function Project() {
     {
       title: "DEVELOPMENT TOOLs",
       subtitle: "เครื่องมือในการพัฒนาผลงาน",
-      content: <CardToolDevelopment proj_id={prj_id} />,
+      content: isMobile ? (
+        <CardToolDevelopmentMobile proj_id={prj_id} />
+      ) : (
+        <CardToolDevelopment proj_id={prj_id} />
+      ),
     },
     {
       title: "DESIGN & PRESENTATION TOOLs",
@@ -150,7 +165,11 @@ function Project() {
     {
       title: "Testing & Feedback",
       subtitle: "ทดสอบจากผู้ใช้งาน และผลตอบรับ",
-      content: <CardFeedback proj_id={prj_id} />,
+      content: isMobile ? (
+        <CardFeedbackMobile proj_id={prj_id} />
+      ) : (
+        <CardFeedback proj_id={prj_id} />
+      ),
     },
     {
       title: "creator",
@@ -164,7 +183,7 @@ function Project() {
         ...item,
         content: (
           <>
-          <CardCreator/>
+            <CardCreator />
             {/* <ul>
               {matchedStudents.length > 0 ? (
                 matchedStudents.map((student) => (
@@ -234,7 +253,8 @@ function Project() {
         <div className="text-start txt-grey mb-1">Social Approved</div>
       </Container>
 
-      <SocialApproved className="mb-4" />
+      <SocialApproved className="" />
+      <SocialApprovedMobile className="" />
       <Container>
         <CardThreePictureProject />
         <div className="mx-auto ratio ratio-16x9">
@@ -249,13 +269,13 @@ function Project() {
           ></iframe>
         </div>
         <div>
-        <LinkButton className="mt-4" name={project.name_en} />
+          <LinkButton className="mt-4" name={project.name_en} />
         </div>
-        
+
         <Accordions items={itemsWithStudents} />
 
         <div className="mt-4">
-          <div className="col">
+          <div className="col  d-none d-md-block">
             <SectionTitle
               title="Other Projects"
               subtitle="ผลงานอื่นๆ"
@@ -303,24 +323,86 @@ function Project() {
               ))}
             </div>
           </div>
+
+          {/* Mobile  */}
+          <div className="col-12 d-block d-md-none mb-5">
+  <SectionTitle
+    title="Other Projects"
+    subtitle="ผลงานอื่นๆ"
+    className="header-wline"
+  />
+  <Swiper
+    modules={[Navigation]}
+    slidesPerView="auto" // Adjusts the number of slides to fit the container
+    navigation={{
+      nextEl: ".prj-pl-nav .swiper-button-next",
+      prevEl: ".prj-pl-nav .swiper-button-prev",
+    }}
+    spaceBetween={10} // Space between slides
+  >
+    {projectsdata.map((proj) => (
+      <SwiperSlide key={proj.project_id} style={{ width: "140px" }}>
+        <div
+          className={`list-group-item ${
+            activeProject === proj.project_id ? "active" : ""
+          }`}
+        >
+          <Link
+            to={`/showcase/projects/${proj.project_id}`}
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default behavior of Link
+              setActiveProject(proj.project_id);
+              localStorage.setItem("activeProject", proj.project_id);
+              window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
+            }}
+            className="link-txt"
+          >
+            <div
+              className="d-flex flex-column align-items-center"
+              style={{ width: "140px" }}
+            >
+              <div className="link-prj-con2">
+                <div className="prj-check-i2">
+                  <BsCheckLg />
+                </div>
+                <div className="icon-prj-ovl2"></div>
+                <img
+                  className="icon-img-link2"
+                  src={`/project_img/prj_logo/${proj.icon_sqr}`}
+                  alt={`${proj.name_en} icon`}
+                  style={{
+                    width: "65px",
+                    height: "65px",
+                    borderRadius: "100px",
+                  }}
+                />
+              </div>
+              <div className="mt-3 txt-upper prj_name">
+                <span>{proj.name_en}</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
         </div>
         <BreadcrumbContainer>
-      <BreadcrumbImage
-        src="/s2s-logo/s2s-outline-logo.svg"
-        alt="breadcrumb icon"
-        onClick={handleImageClick}
-      />
-      <Separator>→</Separator>
-      <BreadcrumbItem onClick={handleShowcaseClick}>
-        SHOWCASE
-      </BreadcrumbItem>
-      <Separator>→</Separator>
-      <BreadcrumbItem>
-        {project.name_en}
-      </BreadcrumbItem>
-    </BreadcrumbContainer>
+          <BreadcrumbImage
+            src="/s2s-logo/s2s-outline-logo.svg"
+            alt="breadcrumb icon"
+            onClick={handleImageClick}
+          />
+          <Separator>→</Separator>
+          <BreadcrumbItem onClick={handleShowcaseClick}>
+            SHOWCASE
+          </BreadcrumbItem>
+          <Separator>→</Separator>
+          <BreadcrumbItem>{project.name_en}</BreadcrumbItem>
+        </BreadcrumbContainer>
       </Container>
-      
     </>
   );
 }
@@ -343,7 +425,6 @@ const BreadcrumbImage = styled.img`
   /* background-color: rgba(255, 0, 0, 0.2); */
   /* border: 1px solid red; */
 `;
-
 
 const BreadcrumbItem = styled.span`
   font-size: 16px; // Adjust font size as needed

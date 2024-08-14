@@ -81,6 +81,7 @@ export const VdoSlide = () => {
           spaceBetween={30}
           slidesPerView={1.1}
           breakpoints={{
+            0: { slidesPerView: 1.6 },
             768: { slidesPerView: 1.6 },
             1440: { slidesPerView: 2 },
           }}
@@ -100,7 +101,7 @@ export const VdoSlide = () => {
           {projectDetails.map((project) => (
             <SwiperSlide key={project.id}>
               <div className="d-flex flex-column">
-                <div className="mx-auto ratio ratio-16x9">
+                <div className="mx-auto ">
                   <iframe
                     src={`https://www.youtube-nocookie.com/embed/${project.videoSrc}`}
                     title="YouTube video player"
@@ -109,7 +110,7 @@ export const VdoSlide = () => {
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                     className="video-box"
-                  ></iframe>
+                  style={{ width: "100%" , height: "200px"}}></iframe>
                 </div>
                 <h4 className="text-start txt-sbold mt-3">
                   {project.name} ({project.name_th})

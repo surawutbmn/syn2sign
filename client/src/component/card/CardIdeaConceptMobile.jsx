@@ -11,7 +11,7 @@ import cpl05Data from "/src/Pages/Projects/database_Json/cpl05_project.json";
 import cpl06Data from "/src/Pages/Projects/database_Json/cpl06_project.json";
 import cpl07Data from "/src/Pages/Projects/database_Json/cpl07_project.json";
 import cpl08Data from "/src/Pages/Projects/database_Json/cpl08_project.json";
-import LinkButtonIG from "../Button/LinkButtonIG";
+import LinkButtonIGMobile from "../Button/LinkButtonIGMobile";
 
 // Add more imports as needed
 
@@ -39,7 +39,7 @@ const textMapping = {
   cpl08: "TINY THAI",
 };
 
-const CardIdeaConcept = (props) => {
+const CardIdeaConceptMobile = (props) => {
   const [projectData, setProjectData] = useState({
     preview_img: "",
     technology: "",
@@ -65,43 +65,52 @@ const CardIdeaConcept = (props) => {
   }, [props.proj_id]);
 
   return (
-    <div className="d-flex row text-start" style={{ marginTop: "-60px" }}>
-      <div className="col-5">
+    <div
+      className="d-block d-md-none d-flex row text-start "
+      style={{ marginTop: "-60px" }}
+    >
+      <div className="col-12">
+        
         <DeviceContainer className="">
           <DeviceImage
             className="text-end"
             src={`/showcase/Project/${props.proj_id}/${projectData.preview_img}`}
           />
+          
         </DeviceContainer>
+        
+      </div>
+
+      <div className="col-12 mt-3">
+        <span
+          className="txt-upper txt-prim txt-head3"
+          style={{ display: "flex", alignItems: "start" }}
+        >
+          connect IDEA w/ 
+        </span>
+        
+
+        <div className="txt-upper txt-head2">
+          {textMapping[props.proj_id]}
+          <LinkButtonIGMobile className="" name={props.proj_id} />
+        </div>
+        <div className="txt-body2">{projectData.concept_th}</div>
+        <Line className="txt-body2 mt-3">
+          <span className="">{projectData.concept_en}</span>
+        </Line>
         <div className="mt-3 txt-upper">
           <FaMicrochip /> TECHNOLOGY: {projectData.technology} <br />
           <MdOutlineCategory /> CATEGORY: {projectData.category}
         </div>
       </div>
-      <div className="col-7">
-        <span
-          className="txt-upper txt-prim txt-head2 "
-          style={{ display: "flex", alignItems: "center" }}
-        >
-          connect IDEA w/ <LinkButtonIG name={props.proj_id} className="" />
-        </span>
-        <span></span>
-        <div className="txt-upper txt-head2">
-          {textMapping[props.proj_id] || "EVAL Balance"}
-        </div>
-        <div className="txt-body2">{projectData.concept_th}</div>
-        <Line className="txt-body3 mt-3">
-          <span className="">{projectData.concept_en}</span>
-        </Line>
-      </div>
     </div>
   );
 };
 
-CardIdeaConcept.propTypes = {
+CardIdeaConceptMobile.propTypes = {
   proj_id: PropTypes.string.isRequired,
 };
-export default CardIdeaConcept;
+export default CardIdeaConceptMobile;
 
 const DeviceContainer = styled.div`
   display: flex;

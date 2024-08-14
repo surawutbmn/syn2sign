@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BiSolidCommentDetail } from "react-icons/bi";
-import { Container, Row } from "react-bootstrap";
-import PropTypes from "prop-types";
+import { Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
 // Import your JSON data
@@ -28,7 +27,7 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const   SocialApproved = () => {
+const SocialApprovedMobile = () => {
   const location = useLocation();
   const projectId = location.pathname.split("/").pop(); // Get the project identifier from the URL
   const projectData = dataMapping[projectId]?.find(
@@ -36,57 +35,47 @@ const   SocialApproved = () => {
   );
 
   return (
-    <Container fluid className="d-none d-md-block">
-      <Row>
-        <CardBox className="d-flex text-center">
+    <Container fluid className="d-block d-md-none">
+      <div className="d-block">
+        <CardBox>
           {projectData &&
             projectData.data.map((item) => (
-              <StyledSpan className="gap-1" key={item.id} hasBorder={item.id === "2"}>
+              <StyledSpan key={item.id} hasBorder={item.id === "2"} className="gap-1">
+                
                 <BiSolidCommentDetail /> {item.socialApproved}
               </StyledSpan>
             ))}
         </CardBox>
-      </Row>
+      </div>
     </Container>
   );
 };
 
-SocialApproved.propTypes = {
-  // Define any required prop types here if needed
-};
-
-export default SocialApproved;
+export default SocialApprovedMobile;
 
 const CardBox = styled.div`
   width: 100%;
-  height: 100px;
+  height: 100%;
   border: solid var(--color-primary);
   border-left: none;
   border-right: none;
-  position: relative;
-  justify-content: space-evenly;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 `;
 
-// If you still need this style, keep it, or remove it if unnecessary
-const CardBoxSub = styled.span`
-  width: 33.33%;
-  height: 60%;
-  border-right: 3px solid var(--color-primary);
-  border-left: 3px solid var(--color-primary);
-  align-items: center;
-  justify-content: center;
-`;
 const StyledSpan = styled.span`
-  height: 60%;
+  width: fit-content; /* Adjust width as needed */
+  height: 60px; /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px; /* Adjust the padding as needed */
+  padding: 10px; /* Adjust padding as needed */
   ${(props) =>
     props.hasBorder &&
     `
-    border-right: 3px solid var(--color-primary);
-    border-left: 3px solid var(--color-primary);
+    border-top: 3px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
   `}
 `;

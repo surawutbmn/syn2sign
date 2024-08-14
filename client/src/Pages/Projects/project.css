@@ -1,14 +1,57 @@
 .project-content-sec{position: relative; z-index: 1;}
 .video-box{border-radius: 1.3rem;}
-.prj-sec-icon{width: 100%; max-width: 10dvw; border: .3em solid var(--color-primary); border-radius: 1.3em;}
-.prj-sec-icon2{width: 100%; max-width: 10dvw; min-width: 10dvw;}
+.prj-sec-icon {
+    width: 104px;
+    height: 104px;
+    border: .3em solid var(--color-primary);
+    border-radius: 1.3em;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) { /* You can adjust the max-width value based on your needs */
+    .prj-sec-icon {
+      width: 52px;
+      height: 52px;
+      border-width: .15em; /* Adjust the border width to maintain proportion if needed */
+      border-radius: .65em; /* Adjust the border-radius accordingly */
+    }
+  }
+  .prj-sec-icon2 {
+    width: 156px;
+    height: 104px;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) { /* Adjust the max-width value based on your needs */
+    .prj-sec-icon2 {
+      width: 78px;
+      height: 52px;
+    }
+  }
+  
 .prj-sec-icon2 img{width: 100%;}
 .icon-img-link{width: 100%; border-radius: 100px; max-width: 8dvw;}
+.icon-img-link2{width: 65px; height: 65px; border-radius: 100px;}
 .active .icon-prj-ovl{ width: 100%; height: 100%; content: ' '; position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7);}
+.active .icon-prj-ovl2{ width:65px; height: 65px; content: ' '; position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.7);}
+
 .active .link-prj-con .prj-check-i{display: block; font-size: 4rem; z-index: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; color: var(--color-primary);}
-.active .prj_name{color: var(--color-primary); font-weight: var(--txt-bold);}
+.active .link-prj-con2 .prj-check-i2 {
+  display: block; /* Ensure the icon is displayed */
+  font-size: 4rem; /* Adjust size if needed */
+  z-index: 1; /* Ensure it’s above other elements */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent; /* Ensure transparency if needed */
+  color: var(--color-primary); /* Ensure the color is correct */
+}.active .prj_name{color: var(--color-primary); font-weight: var(--txt-bold);}
 .prj_name{font-size: 1.2em;}
 .link-prj-con{position: relative; overflow: hidden; border-radius: 100px; width: fit-content;}
+.link-prj-con2{position: relative; overflow: hidden; border-radius: 100px; width: 65px; height: 65px;}
 .prj-check-i{display: none;}
+.prj-check-i2{display: none;}
 .outlined-text{font-size: 4rem; font-weight: var(--txt-bold); -webkit-text-stroke: .03rem var(--color-grey); color: transparent; opacity: .8;}
 .prj-name-line{width: 40dvw; height: 0; border-top: .2rem solid var(--color-primary); opacity: 0;}
+

@@ -80,6 +80,7 @@ function KnowledgeSlide() {
           disableOnInteraction: true, // Continue autoplay after user interactions
         }}
         breakpoints={{
+          0: { slidesPerView: 1.5 },
           768: { slidesPerView: 1.5 },
           1024: { slidesPerView: 2 },
           1200: { slidesPerView: 2.5 },

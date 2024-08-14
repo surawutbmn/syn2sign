@@ -54,7 +54,7 @@ const DesignProcessSlider = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="position-relativ">
+    <div className="position-relative">
       <Swiper
         modules={[Navigation]}
         slidesPerView={slidesPerView}
@@ -77,7 +77,7 @@ const DesignProcessSlider = () => {
 export default DesignProcessSlider;
 
 const DesignProcess = styled.img`
-  height: 500px;
+  /* height: 500px; */
   width: auto; 
   max-width: 100%;
   object-fit: contain; 

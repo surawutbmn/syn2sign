@@ -9,7 +9,10 @@ lerna-debug.log*
 
 node_modules
 dist
+dist.zip
 dist-ssr
+syn2sign
+syn2sign.zip
 *.local
 
 # Editor directories and files

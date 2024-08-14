@@ -22,7 +22,7 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardToolDevelopment = () => {
+const CardToolDevelopmentMobile = () => {
   const location = useLocation();
   const projectId = location.pathname.split('/').pop();
   const projectData = dataMapping[projectId] || {};
@@ -46,7 +46,17 @@ const CardToolDevelopment = () => {
             ))}
           </FlexContainer>
         </Section>
-
+        <Section className="coding-plugin text-start">
+          <div className="txt-prim txt-head3 txt-upper">Coding Plugin / Library</div>
+          <FlexContainer>
+            {codingPlugins.map((item, index) => (
+              <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
+                <img src={`/icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
+                {item.coding_plugin}
+              </ItemBox>
+            ))}
+          </FlexContainer>
+        </Section>
         <Section className="database-system text-start">
           <div className="txt-prim txt-head3 txt-upper">Database System</div>
           <FlexContainer>
@@ -54,97 +64,30 @@ const CardToolDevelopment = () => {
               <ItemBox key={item.id}>
                 <img src={`/icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
                 {item.database_system}
+              </ItemBox>
+            ))}
+          </FlexContainer>
+        </Section>
+
+        <Section className="coding-tools text-start">
+          <div className="txt-prim txt-head3 txt-upper">Coding Tools</div>
+          <FlexContainer>
+            {codingTools.map((item) => (
+              <ItemBox key={item.id}>
+                <img src={`/icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
+                {item.coding_tool}
               </ItemBox>
             ))}
           </FlexContainer>
         </Section>
       </LeftColumn>
-
-      <RightColumn>
-        <Section className="coding-plugin text-start">
-          <div className="txt-prim txt-head3 txt-upper">Coding Plugin / Library</div>
-          <FlexContainer>
-            {codingPlugins.map((item, index) => (
-              <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
-                <img src={`/icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
-                {item.coding_plugin}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-
-        <Section className="coding-tools text-start">
-          <div className="txt-prim txt-head3 txt-upper">Coding Tools</div>
-          <FlexContainer>
-            {codingTools.map((item) => (
-              <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
-                {item.coding_tool}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-      </RightColumn>
       
 
-{/* Mobile */}
-      {/* <div class="d-block d-md-none">
-        <LeftColumn>
-        <Section className="coding-language text-start">
-          <div className="txt-prim txt-head3 txt-upper">Coding Language</div>
-          <FlexContainer>
-            {codingLanguages.map((item) => (
-              <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_launguage.toLowerCase()}.svg`} alt={item.coding_launguage} />
-                {item.coding_launguage}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-
-        <Section className="coding-plugin text-start">
-          <div className="txt-prim txt-head3 txt-upper">Coding Plugin / Library</div>
-          <FlexContainer>
-            {codingPlugins.map((item, index) => (
-              <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
-                <img src={`/icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
-                {item.coding_plugin}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-
-        <Section className="coding-tools text-start">
-          <div className="txt-prim txt-head3 txt-upper">Coding Tools</div>
-          <FlexContainer>
-            {codingTools.map((item) => (
-              <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.coding_tool.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_tool} />
-                {item.coding_tool}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-
-        <Section className="database-system text-start">
-          <div className="txt-prim txt-head3 txt-upper">Database System</div>
-          <FlexContainer>
-            {databaseSystems.map((item) => (
-              <ItemBox key={item.id}>
-                <img src={`/icon/prj/codingTools/${item.database_system.toLowerCase()}.svg`} alt={item.database_system} />
-                {item.database_system}
-              </ItemBox>
-            ))}
-          </FlexContainer>
-        </Section>
-
-        </LeftColumn>
-      </div> */}
     </Container>
   );
 };
 
-export default CardToolDevelopment;
+export default CardToolDevelopmentMobile;
 
 const Container = styled.div`
   display: flex;
@@ -175,19 +118,19 @@ const Section = styled.div`
   width: 100%;
 
   &.coding-language {
-    min-height: 250px; /* Specific minimum height for Coding Language */
+    min-height: fit-content; /* Specific minimum height for Coding Language */
   }
 
   &.database-system {
-    min-height: 150px; /* Specific minimum height for Database System */
+    min-height: fit-content; /* Specific minimum height for Database System */
   }
 
   &.coding-plugin {
-    min-height: 250px; /* Specific minimum height for Coding Plugin / Library */
+    min-height: fit-content; /* Specific minimum height for Coding Plugin / Library */
   }
 
   &.coding-tools {
-    min-height: 150px; /* Specific minimum height for Coding Tools */
+    min-height: fit-content; /* Specific minimum height for Coding Tools */
   }
 `;
 

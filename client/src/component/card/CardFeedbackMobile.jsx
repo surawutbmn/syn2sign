@@ -21,7 +21,7 @@ const dataMapping = {
   // Add more mappings as needed
 };
 
-const CardFeedback = ({proj_id}) => {
+const CardFeedbackMobile = ({proj_id}) => {
 
   const projectData = dataMapping[proj_id] || [];
   const testingData = projectData.find(item => item.type === 'table' && item.name === 'testing');
@@ -29,7 +29,7 @@ const CardFeedback = ({proj_id}) => {
 
   return (
     <div className="d-flex row" style={{ marginTop: "-50px" }}>
-      <div className="col-7 col-md-12 text-start">
+      <div className="col-12 text-start">
         <div className="txt-prim txt-head2 txt-upper">Testing</div>
         <div className="txt-body2 mb-4">
           {feedback.th || "No data available"}
@@ -40,44 +40,52 @@ const CardFeedback = ({proj_id}) => {
       </div>
       <div className="col-3"></div>
       <CircleContainer>
-        <BoxCircle>
-          <div className="txt-head3">ด้านการออกแบบ</div>
+        <BoxCircle className="row">
+          <div className="txt-head3 mt-5">ด้านการออกแบบ</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
           <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_design || "0"}
           </div>
         </BoxCircle>
 
-        <BoxCircle>
-          <div className="txt-head3">ด้านการใช้งาน</div>
+      </CircleContainer>
+
+      <CircleContainer>
+      <BoxCircle  className="row mt-5">
+          <div className="txt-head3 mt-5">ด้านการใช้งาน</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
           <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_use || "0"}
           </div>
         </BoxCircle>
+      </CircleContainer>
 
-        <BoxCircle>
-          <div className="txt-head3">ด้านภาพรวม</div>
+      <CircleContainer>
+      <BoxCircle  className="row mt-5 mb-3">
+          <div className="txt-head3 mt-5">ด้านภาพรวม</div>
           <div className="txt-body3">ค่าเฉลี่ย</div>
           <div className="txt-prim txt-bold" style={{ fontSize: "4rem" }}>
             {feedback.num_overall || "0"}
           </div>
         </BoxCircle>
       </CircleContainer>
+      
+
+   
 
       <div className="col-12 text-start mt-4 mb-4 txt-head2 txt-sbold">
         ความคิดเห็นจากผู้ใช้งาน
       </div>
 
-      <div className="col-4 text-start">
+      <div className="col-12 text-start">
         <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านการออกแบบ</div>
         <div>{feedback.opinion_design || "No data available"}</div>
       </div>
-      <div className="col-4 text-start">
+      <div className="col-12 text-start mt-3">
         <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านการใช้งาน</div>
         <div>{feedback.opinion_use || "No data available"}</div>
       </div>
-      <div className="col-4 text-start">
+      <div className="col-12 text-start mt-3">
         <div className="txt-prim txt-sbold txt-head3 mb-3">ด้านภาพรวม</div>
         <div>{feedback.opinion_overall || "No data available"}</div>
       </div>
@@ -85,18 +93,18 @@ const CardFeedback = ({proj_id}) => {
   );
 };
 
-CardFeedback.propTypes = {
+CardFeedbackMobile.propTypes = {
   proj_id: PropTypes.string,
 };
-export default CardFeedback;
+export default CardFeedbackMobile;
 
 const BoxCircle = styled.div`
   width: 300px;
   height: 300px;
-  border-radius: 200px;
+  border-radius: 50%;
   border: 1px solid #8e8e8e;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
   text-align: center;

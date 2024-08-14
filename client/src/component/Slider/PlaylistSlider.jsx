@@ -95,6 +95,7 @@ export default function PlaylistSlider() {
             prevEl: ".prj-pl-nav-2 .swiper-button-prev",
           }}
           breakpoints={{
+            0: { slidesPerView: 1.5 },
             768: { slidesPerView: 1.5 },
             1440: { slidesPerView: 2.2 },
           }}

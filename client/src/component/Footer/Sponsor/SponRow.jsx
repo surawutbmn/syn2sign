@@ -5,7 +5,7 @@ import styled from "styled-components";
 const SponRow = ({ sponsors }) => {
   return (
     <>
-      <span className="txt-cap text-start">Sponsored by:</span>
+      <span className="txt-cap text-start" style={{ fontSize: "0.625rem" }}>Sponsored by:</span>
         <div className="d-flex align-items-center">
        
           {sponsors.map((sponsor, index) => (
