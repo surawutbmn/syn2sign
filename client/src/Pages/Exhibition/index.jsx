@@ -112,7 +112,7 @@ function Exhibition() {
             </div>
             <div className="col">
               <a
-                href="http://"
+                href="https://silpakorn-my.sharepoint.com/personal/meboon_k_su_ac_th/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmeboon%5Fk%5Fsu%5Fac%5Fth%2FDocuments%2F%5F%5F%5F2024%5F%5FSYN2SIGN%5FRESOURCES%2FWebsite%2FFile%20Details%20for%20Website%2F2024%2D08%2Dsyn2sign%2Dcomplete%2Dreport%2Epdf&parent=%2Fpersonal%2Fmeboon%5Fk%5Fsu%5Fac%5Fth%2FDocuments%2F%5F%5F%5F2024%5F%5FSYN2SIGN%5FRESOURCES%2FWebsite%2FFile%20Details%20for%20Website&ga=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-txt"
@@ -171,7 +171,7 @@ function Exhibition() {
             </div>
             <div className="col">
               <a
-                href="https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/EbEjAOTvh3VKs360KFTqdVgBfe7DZZ7vVyPbEXTvkVzF_Q?e=1t23IC"
+                href="https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/EXlWmJMxO3RJp3p5d30oPsABb-mZTBkp3nv0dxtWO-BIIA?e=QWnDry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link-txt"

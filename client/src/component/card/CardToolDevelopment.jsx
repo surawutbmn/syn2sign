@@ -65,7 +65,7 @@ const CardToolDevelopment = () => {
           <div className="txt-prim txt-head3 txt-upper">Coding Plugin / Library</div>
           <FlexContainer>
             {codingPlugins.map((item, index) => (
-              <ItemBox key={item.id} className={index >= 4 ? "second-row" : ""}>
+              <ItemBox key={item.id} className={index >= 4 ? "second" : ""}>
                 <img src = {`${import.meta.env.VITE_BASE_URL}icon/prj/codingTools/${item.coding_plugin.toLowerCase().replace(/\s+/g, '-')}.svg`} alt={item.coding_plugin} />
                 {item.coding_plugin}
               </ItemBox>
@@ -204,7 +204,8 @@ const ItemBox = styled.div`
   align-items: center;
   text-align: center;
   width: 100px;
-  height: auto;
+  height: 110px;
+  /* height: auto; */
 
   img {
     width: 40px;

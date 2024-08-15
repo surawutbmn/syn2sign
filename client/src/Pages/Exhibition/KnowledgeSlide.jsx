@@ -119,7 +119,7 @@ for a Digital Platform`}
         </SwiperSlide>
         <SwiperSlide>
           <CardKnowledge
-            link={`https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/ESfmqJ0dVnVDq-Cis42C06sB5CdibUT5V-Qusya9tVQoGw?e=efRxsT`}
+            link={`https://silpakorn-my.sharepoint.com/:b:/g/personal/meboon_k_su_ac_th/EbdG31lUVw1Ns_cyOwSKe14BCyjZ3uOcLkKfshNaEHZBsg?e=RpjIdy`}
             img={`stickerKnow.webp`}
             title={`Download Syn2sign Stickers Free`}
             desc={`สติกเกอร์ลายพิเศษจากนิทรรศการ Syn2sign ที่ออกแบบ สำหรับงานนี้โดยเฉพาะ (สามารถดาวน์โหลดไฟล์ได้ที่นี่)`}
