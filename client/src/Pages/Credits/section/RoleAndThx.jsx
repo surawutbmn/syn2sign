@@ -95,7 +95,10 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/graphic.svg`} alt="graphic icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/graphic.svg`}
+              alt="graphic icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -114,7 +117,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/spon.svg`} alt="sponsor icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/spon.svg`}
+              alt="sponsor icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -132,7 +138,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/web.svg`} alt="website icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/web.svg`}
+              alt="website icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -142,26 +151,6 @@ function RoleAndThx() {
               <strong>Designer: </strong> <br />
               Chalida Ingkapattanakul
               <br /> Panita Lainananukul
-              <br /> Sasikan Tianchanthuek
-              <br />
-              <strong>Developer: </strong>
-              <br />
-              Chawakorn Jitpathak <br /> Surawut Binmamud
-            </p>
-          </TextContainer>
-        </FlexContainer>
-        <FlexContainer>
-          <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/interact.svg`} alt="interactive icon" />
-          </IconContainer>
-          <TextContainer>
-            <UpperText>
-              <strong>Interactive</strong>
-            </UpperText>
-            <p>
-              <strong>Designer: </strong>
-              <br />
-              Chalida Ingkapattanakul
               <br /> Natthanan Vaowkhajon
               <br /> Sasikan Tianchanthuek
               <br />
@@ -173,7 +162,31 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}/img/icon/pr.svg`} alt="public relation icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/interact.svg`}
+              alt="interactive icon"
+            />
+          </IconContainer>
+          <TextContainer>
+            <UpperText>
+              <strong>Interactive</strong>
+            </UpperText>
+            <p>
+              <strong>Designer: </strong>
+              <br /> Sasikan Tianchanthuek
+              <br />
+              <strong>Developer: </strong>
+              <br />
+              Chawakorn Jitpathak <br /> Surawut Binmamud
+            </p>
+          </TextContainer>
+        </FlexContainer>
+        <FlexContainer>
+          <IconContainer>
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}/img/icon/pr.svg`}
+              alt="public relation icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -183,9 +196,9 @@ function RoleAndThx() {
               <strong>Leader:</strong> Chanamon Kewsomnuk
               <br />
               Chawakorn Jitpathak <br />
-              Panita Lainananukul <br />
+              Methasit Sitthametha <br />
+              Onranpha Morsamarn <br />
               Panyada Suxruxsa <br />
-              Piyapat Homkrajay <br />
               Sasikan Tianchanthuek <br />
               Surawut Binmamud
               <br /> Supakorn Achcha
@@ -194,7 +207,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src= {`${import.meta.env.VITE_BASE_URL}img/icon/knowboard.svg`} alt="knowledge board icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/knowboard.svg`}
+              alt="knowledge board icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -212,7 +228,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/location.svg`} alt="location icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/location.svg`}
+              alt="location icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -227,7 +246,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/led.svg`} alt="led media icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/led.svg`}
+              alt="led media icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -248,7 +270,10 @@ function RoleAndThx() {
       <GridContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`} alt="thank icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`}
+              alt="thank icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>
@@ -265,7 +290,10 @@ function RoleAndThx() {
         </FlexContainer>
         <FlexContainer>
           <IconContainer>
-            <img src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`} alt="thank icon" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/icon/thx.svg`}
+              alt="thank icon"
+            />
           </IconContainer>
           <TextContainer>
             <UpperText>

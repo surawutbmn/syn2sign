@@ -12,7 +12,7 @@ export const VdoSlide = () => {
   const projectDetails = [
     {
       id: "cpl01",
-      name: "EVAL Balance",
+      name: "EVAL BALANCE",
       name_th: "อีวาล บาลานซ์",
       videoSrc: "_41WQgd5qKw",
       instagramLink: "C84rbNBBfC4/",
@@ -54,7 +54,7 @@ export const VdoSlide = () => {
     },
     {
       id: "cpl07",
-      name: "Tent Care",
+      name: "TENT CARE",
       name_th: "เท็นท์แคร์",
       videoSrc: "KhAfnkMRctc",
       instagramLink: "C9BnC_UpbT2/",
@@ -124,7 +124,7 @@ export const VdoSlide = () => {
                     <span className="icon-crl me-2">
                       <FaInstagram />
                     </span>
-                    <span>บทสัมภาษณ์กลุ่ม “{project.name}”</span>
+                    <span >บทสัมภาษณ์กลุ่ม “{project.name}”</span>
                   </a>
                 </div>
               </div>

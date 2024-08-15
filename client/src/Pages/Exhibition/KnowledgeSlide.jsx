@@ -111,7 +111,7 @@ for a Digital Platform`}
             link={`https://medium.com/funcslash/%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%9A%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87-graphic-design-team-%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B4%E0%B8%97%E0%B8%A3%E0%B8%A3%E0%B8%A8%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%81-syn2sign-96dc2d3caf03`}
             img={`knowLogo.webp`}
             title={`Syn2sign Story`}
-            desc={`เราได้รวบรวมเรื่องราวที่มากว่าจะเป็น...ชื่อ โลโก้ โปสเตอร์ มาเล่าในบทความนี้ “กว่าจะเป็น... #syn2sign”`}
+            desc={`เราได้รวบรวมเรื่องราว “เส้นทางการประกบพลังของ Graphic Design Team สู่งานนิทรรศการครั้งแรก Syn2sign !!” ที่เล่าถึงกระบวนการ ทำงานของทีมกราฟิกในบทความนี้`}
             btn={`Read more`}
             btn2={`on medium`}
             btnIcon={`arrow`}
@@ -124,7 +124,7 @@ for a Digital Platform`}
             title={`Download Syn2sign Stickers Free`}
             desc={`สติกเกอร์ลายพิเศษจากนิทรรศการ Syn2sign ที่ออกแบบ สำหรับงานนี้โดยเฉพาะ (สามารถดาวน์โหลดไฟล์ได้ที่นี่)`}
             btn={`download`}
-            btn2={`1.5mb`}
+            btn2={`1.94mb`}
             btnIcon={`download`}
           />
         </SwiperSlide>

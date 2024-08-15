@@ -90,9 +90,9 @@ function FirstSec() {
                 <strong>ADVISORS GROUP 1</strong>
               </span>
               <p>
-                Rakchanok Sukagalanan (Chairman) <br />
-                Nattavut Luenthaisong <br />
+                Rakchanok Sukagalanan<br />
                 Sranya Maraprygsavan <br />
+                Nattavut Luenthaisong <br />
                 Sarayut Thibhodee
               </p>
             </AdviceCon>
@@ -103,7 +103,7 @@ function FirstSec() {
                 <strong>ADVISORS GROUP 2</strong>
               </span>
               <p>
-                Orawan Praphruetdee (Chairman) <br />
+                Orawan Praphruetdee <br />
                 Methin Pingsutthiwong <br />
                 Kittinon Oywongpaisan <br />
                 Nathapong Masathien
@@ -116,7 +116,7 @@ function FirstSec() {
                 <strong>ADVISORS GROUP 3</strong>
               </span>
               <p>
-                Kachornpon Hiranchotepaisan (Chairman) <br />
+                Kachornpon Hiranchotepaisan <br />
                 Kanpat Kalumpahaiti <br />
                 Chuladid Suntitoranee <br />
                 Pasupong Prasertroongrueng
