@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import studentsdata from "../../../public/data/Studentdata";
 import { FaReadme } from "react-icons/fa6";
 
 const CardCreator = () => {
   const [studentData, setStudentData] = useState([]);
+  const { prj_id } = useParams();
 
+  
   useEffect(() => {
-    // Extract project_id from URL
-    const url = window.location.href;
-    const projectIdMatch = url.match(/\/showcase\/projects\/([^\/]+)/);
-    const projectId = projectIdMatch ? projectIdMatch[1] : null;
-
+    const projectId = prj_id;
     if (projectId) {
       // Find all student data by project ID
       const filteredData = studentsdata.filter(
@@ -20,12 +18,12 @@ const CardCreator = () => {
       );
       setStudentData(filteredData);
     }
-  }, []);
+  }, [prj_id]);
 
   if (studentData.length === 0) {
     return <div>Loading...</div>; // or a loading spinner
   }
-
+  
   // Split the data into two halves
   const midIndex = Math.ceil(studentData.length / 2);
   const firstHalf = studentData.slice(0, midIndex);

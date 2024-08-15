@@ -52,7 +52,7 @@ function Project() {
   };
 
   const [activeProject, setActiveProject] = useState(
-    localStorage.getItem("activeProject") || firstProjectId
+    prj_id
   );
   
   // useEffect(() => {
@@ -95,7 +95,7 @@ const ref = useRef();
       const localProject = findProjectById(project_id);
       if (localProject) {
         setProject(localProject);
-        setActiveProject(project_id);
+        
         localStorage.setItem("activeProject", project_id);
         setError(null); // Clear any previous errors
       }
@@ -311,8 +311,9 @@ const ref = useRef();
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default behavior of Link
                       setActiveProject(proj.project_id);
-                      localStorage.setItem("activeProject", proj.project_id);
-                      window.location.href = `${import.meta.env.VITE_BASE_URL}showcase/projects/${proj.project_id}`; 
+                      navigate(`/showcase/projects/${proj.project_id}`);
+                      handleScrollToTop();
+                      // window.location.href = `${import.meta.env.VITE_BASE_URL}showcase/projects/${proj.project_id}`; 
                     }}
                     className="link-txt"
                   >

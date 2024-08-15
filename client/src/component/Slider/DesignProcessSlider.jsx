@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation ,useParams} from 'react-router-dom';
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from 'styled-components';
 
-const imageDataUrl = '/imageData.json';
+const imageDataUrl = import.meta.env.VITE_BASE_URL+'imageData.json';
 
 const DesignProcessSlider = () => {
   const [imageList, setImageList] = useState([]);
@@ -14,10 +14,10 @@ const DesignProcessSlider = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const location = useLocation();
-
+ 
+  const { prj_id } = useParams();
   useEffect(() => {
-    const projectId = location.pathname.match(/cpl0\d{1}/)?.[0];
-
+const projectId = prj_id;
     const fetchImageData = async () => {
       try {
         const response = await fetch(imageDataUrl);
@@ -48,7 +48,7 @@ const DesignProcessSlider = () => {
     };
 
     fetchImageData();
-  }, [location]);
+  }, [prj_id]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;

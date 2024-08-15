@@ -3,7 +3,7 @@ import styled from "styled-components";
 function LoadingPage() {
   return (
     <LoadingWrapper>
-      <Syntosign src={import.meta.env.VITE_BASE_URL+ "images/s2s-logo/syn2sign_logo_cl.svg"} alt="" />
+      <Syntosign src={import.meta.env.VITE_BASE_URL+ "images/s2s-logo/syn2sign_logo_cl.webp"} alt="" />
       <LoadingText>Syn2sign....</LoadingText>
     </LoadingWrapper>
   );
