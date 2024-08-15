@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
 }
-.scroll{font-size: 1.3em;}
+.scroll{font-size: 1.3em; color: var(--color-light);}
 
 .scrollTop:hover {
   background-color: transparent;

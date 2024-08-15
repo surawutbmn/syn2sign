@@ -103,7 +103,7 @@ for a Digital Platform`}
             btn={`See more`}
             btn2={`on figma`}
             btnIcon={`arrow`}
-            link={`https://www.figma.com/design/lQcCtWZLHIkAvhGOHwHmod/2024-syn2sign-10digital-platform?node-id=0-1&t=itzuGUzEMSundGkV-1`}
+            link={`https://www.figma.com/design/bccBVFU4Xkcv1LtIAkO51G/2024-syn2sign-10digital-platform?node-id=2002-7&t=u4kfDHoyJE13zMQX-1`}
           />
         </SwiperSlide>
         <SwiperSlide>
