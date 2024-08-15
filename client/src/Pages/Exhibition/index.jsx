@@ -15,6 +15,7 @@ import { VdoSlide } from "./VdoSlide";
 import PlaylistSlider from "../../component/Slider/PlaylistSlider";
 import { Container, Row } from "react-bootstrap";
 import SectionTitle from "../../component/SectionTitle";
+import styled from "styled-components";
 // import { FaYoutube } from "react-icons/fa";
 //
 function Exhibition() {
@@ -27,12 +28,10 @@ function Exhibition() {
     config: { duration: 1500 },
   });
 
-
   useEffect(() => {
-    const initialMessages = messagesData[2].data.map(item => item.message);
+    const initialMessages = messagesData[2].data.map((item) => item.message);
     setMessages(initialMessages);
   }, []);
-  
 
   useEffect(() => {
     const shuffleMessages = () => {
@@ -52,7 +51,7 @@ function Exhibition() {
   return (
     <>
       <div className="bg-gd-btr"></div>
-      <div className="exh-banner exh-banner-bg">
+      <BannerBox className="exh-banner-bg">
         <div className="exh-banner-overlay"></div>
         <img
           src={`${import.meta.env.VITE_BASE_URL}img/s2s-ele.svg`}
@@ -80,7 +79,7 @@ function Exhibition() {
           </h5>
           <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
         </div>
-      </div>
+      </BannerBox>
       <Container className="">
         <div className="exh-report-sec mb-6">
           <Row xs={1} md={2} className=" g-4">
@@ -215,7 +214,11 @@ function Exhibition() {
       <Container className="">
         <div className="feedback-con">
           <div className="paper-plane">
-            <img src={`${import.meta.env.VITE_BASE_URL}img/paper-plane.png`} alt="paper plane" loading="lazy" />
+            <img
+              src={`${import.meta.env.VITE_BASE_URL}img/paper-plane.png`}
+              alt="paper plane"
+              loading="lazy"
+            />
           </div>
           <span className="txt-prim feedback-title">
             ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)
@@ -262,3 +265,27 @@ function Exhibition() {
 }
 
 export default Exhibition;
+
+const BannerBox = styled.div`
+  position: relative;
+  width: 100%;
+  height: 40dvw;
+  margin-top: 3em;
+  margin-bottom: 4em;
+  a {
+    color: var(--color-light);
+  }
+  &.exh-banner-bg {
+    background-image: url(${import.meta.env.VITE_BASE_URL}img/exh-banner.webp);
+    background-size: 100%;
+  }
+  @media (max-width: 575.98px) {
+    margin-top: 0.8em;
+    margin-bottom: 1.5em;
+    &.exh-banner-bg {
+      height: 55dvw;
+      background-size: cover;
+      background-position: top center;
+    }
+  }
+`;

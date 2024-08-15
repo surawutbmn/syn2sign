@@ -22,7 +22,7 @@ function Sponser() {
         <SponsorLogo
           imgSrc={"img/logo_spon/em_cl.svg"}
           alt="emdistrict logo"
-          href="http://https://emdistrict.com/"
+          href="https://emdistrict.com/"
           text={{ title: "The Em District", subtitle: "ดิ เอ็มดิสทริค" }}
           type="rect"
           tier="tier1"
@@ -60,7 +60,7 @@ function Sponser() {
           tier="tier2-dl"
         />
         <SponsorLogo
-          imgSrc={""}
+          imgSrc={"img/logo_spon/mg_cl.svg"}
           alt="merge logo"
           href="https://www.merge.co.th/"
           text={{
@@ -130,7 +130,7 @@ function Sponser() {
         <SponsorLogo
           imgSrc={"img/logo_spon/em_cl.svg"}
           alt="emdistrict logo"
-          href="http://https://emdistrict.com/"
+          href="https://emdistrict.com/"
           text={{ title: "The Em District", subtitle: "ดิ เอ็มดิสทริค" }}
           type="rect"
           tier="tier1"
@@ -166,7 +166,7 @@ function Sponser() {
           tier="tier2-dl"
         />
         <SponsorLogo
-          imgSrc={""}
+          imgSrc={"img/logo_spon/mg_cl.svg"}
           alt="merge logo"
           href="https://www.merge.co.th/"
           text={{

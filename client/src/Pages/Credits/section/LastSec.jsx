@@ -129,10 +129,19 @@ const SupporterGrid = styled.div`
   gap: 1rem;
   margin-left: 14rem;
 
-  @media (max-width: 767.99px) {
+  @media (max-width: 1439.98px) {
+    margin-left: 4rem;
+  }
+  @media (max-width: 1359.98px) {
+    margin-left: 5rem;
+  }
+  @media (max-width: 1199.98px) {
+    margin-left: 4rem;
+  }
+  @media (max-width: 767.98px) {
     margin-left: 1rem;
   }
-  @media (max-width: 575.99px) {
+  @media (max-width: 575.98px) {
     /* grid-template-columns: 1fr; */
     display: flex;
     flex-direction: column;
