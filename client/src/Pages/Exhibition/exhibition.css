@@ -10,7 +10,7 @@
   color: var(--color-light);
 }
 .exh-banner-bg {
-  background: url(./img/exh-banner.webp);
+  background: url(${{import.meta.env.VITE_BASE_URL}}img/exh-banner.webp);
   background-size: 100%;
 }
 .exh-banner-overlay {

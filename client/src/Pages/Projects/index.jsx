@@ -312,7 +312,7 @@ const ref = useRef();
                       e.preventDefault(); // Prevent default behavior of Link
                       setActiveProject(proj.project_id);
                       localStorage.setItem("activeProject", proj.project_id);
-                      window.location.href = `/showcase/projects/${proj.project_id}`; // Force a full page reload
+                      window.location.href = `${import.meta.env.VITE_BASE_URL}showcase/projects/${proj.project_id}`; 
                     }}
                     className="link-txt"
                   >

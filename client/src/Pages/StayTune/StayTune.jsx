@@ -2,7 +2,7 @@ import "./staytuneCustome.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 // import { faGlobe, faCirclePlay } from "@fortawesome/free-solid-svg-icons";
-// import { FaGlobe, FaCirclePlay, FaUserSecret } from "react-icons/fa";
+import { FaGlobe , FaYoutube } from "react-icons/fa";
 
 import CardPastExhibit from "../../component/card/CardPastExhibit";
 // import TwoABC from "../../component/card/TwoABC";
@@ -40,6 +40,7 @@ function StayTune() {
             name="SYN2SIGN (2024)"
             year="24"
             NameVideo="SYN2SIGN"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             linkText="Syn2sign's Website"
             link="https://funcslash.com/syn2sign/"
             linkVideo="https://youtu.be/Kkvge3HhIZc?si=H0Yt_MX1pG71z5Kg"
@@ -60,6 +61,7 @@ function StayTune() {
             year="23"
             NameVideo="DOTWISH/*ON"
             link="https://funcslash.com/dotwishion/"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             linkText="Dotwishion's Website"
             linkVideo="https://www.facebook.com/reel/797297252002902?rdid=0lROPLGnkYxdfZTX"
             linkImage="https://youtu.be/ovDdRpS3pns?si=m8xALqy3pihyRFP1"
@@ -78,6 +80,7 @@ function StayTune() {
             year="22"
             NameVideo="STY}E:YEET"
             link="https://funcslash.com/styleyeet/"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             linkText="STY}E:YEET's Website"
             linkVideo="https://youtu.be/FF2HUOdQqgM?si=aaR8zeR6Bz8IEtrl"
             linkImage="https://youtu.be/7Qm-h_boM5c?si=rTU3qJ7IxxDWgYqN"
@@ -95,6 +98,7 @@ function StayTune() {
             year="21"
             NameVideo="&TIVIRUS"
             link="https://www.youtube.com/playlist?list=PLiCmIB88gkWSOhh-DCS-kF6LqRvJS5Aay"
+            Icon={<FaYoutube size="1.3em" className="me-2" />}
             linkText="&TIVIRUS's Youtube Playlist"
             linkVideo="https://fb.watch/tSyyX6yz5w/"
             linkImage="https://fb.watch/tSyAiGZuTM/"
@@ -117,6 +121,7 @@ function StayTune() {
             name="SYN2SIGN (2020)"
             link="#"
             linkText="SYN2SIGN's Website"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             description1="เว็บไซต์รวบรวมจัดแสดง 8 ผลงานสำเร็จการศึกษาปีการศึกษา 2566 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 18 มหาวิทยาลัยศิลปากร"
             NameVideo="SYN2SIGN"
             imgPreview1="/staytune/syn2sign-video-preview.png"
@@ -131,6 +136,7 @@ function StayTune() {
             logo="/staytune/dotwishion-logo.svg"
             name="DOTWISH/*ON (2023)"
             link="https://funcslash.com/dotwishion/"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             linkText="DOTWISH/*ON's Website"
             description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษาปีการศึกษา 2565 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 17 มหาวิทยาลัยศิลปากร"
             NameVideo="DOTWISH/*ON"
@@ -146,6 +152,7 @@ function StayTune() {
             logo="/staytune/STY}E_YEET-logo.svg"
             name="STY}E:YEET (2022)"
             link="https://funcslash.com/styleyeet/"
+            Icon={<FaGlobe size="1.3em" className="me-2" />}
             linkText="STY}E:YEET's Website"
             description1="เว็บไซต์รวบรวมจัดแสดง 17 ผลงานสำเร็จการศึกษาปีการศึกษา 2564 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 16 มหาวิทยาลัยศิลปากร"
             NameVideo="STY}E:YEET"
@@ -161,6 +168,7 @@ function StayTune() {
             logo="/staytune/&TIVIRUS-logo.svg"
             name="&TIVIRUS (2021)"
             link="https://www.youtube.com/playlist?list=PLiCmIB88gkWSOhh-DCS-kF6LqRvJS5Aay"
+            Icon={<FaYoutube size="1.3em" className="me-2" />}
             linkText="&TIVIRUS 's Youtube Playlist"
             description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษาปีการศึกษา 2563 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 15 มหาวิทยาลัยศิลปากร"
             NameVideo="&TIVIRUS"
