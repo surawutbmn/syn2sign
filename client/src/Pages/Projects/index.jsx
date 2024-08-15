@@ -107,19 +107,19 @@ const ref = useRef();
     }
   };
 
-  const fetchStudents = async () => {
-    try {
-      if (studentsdata) {
-        setStudents(studentsdata);
-      }
-    } catch (error) {
-      console.error("Error fetching student data", error);
-    }
-  };
+  // const fetchStudents = async () => {
+  //   try {
+  //     if (studentsdata) {
+  //       setStudents(studentsdata);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching student data", error);
+  //   }
+  // };
 
   useEffect(() => {
     fetchProject(prj_id);
-    fetchStudents();
+    // fetchStudents();
   }, [prj_id]);
 
   useEffect(() => {

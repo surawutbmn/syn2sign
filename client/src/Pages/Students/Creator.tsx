@@ -36,7 +36,9 @@ const Creators: React.FC<CreatorsProps> = ({
 
   const handleStudentClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.location.href = `/showcase/creators/${stdID}`;
+    window.location.href = `${
+      import.meta.env.VITE_BASE_URL
+    }showcase/creators/${stdID}`;
   };
   return (
     <CardBox>
