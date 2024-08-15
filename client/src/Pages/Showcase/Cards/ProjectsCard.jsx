@@ -34,7 +34,7 @@ function ProjectCard({ project }) {
                   #{project.id} {project.name_en}
                 </strong>
               </Title>
-              <p>Tech: {project.type}</p>
+              <p className="text-capitalize">Tech: {project.type}</p>
               {/* <p className="line-clamp-2">{project.fullname_th}</p> */}
             </HeadText>
           </div>
