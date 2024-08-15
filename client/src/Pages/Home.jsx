@@ -338,7 +338,7 @@ import { Link } from "react-router-dom";
 
 const FrontBox = styled.div`
   position: absolute;
-  width: 167px; /* Adjusted width for mobile */
+  width: 175px; /* Adjusted width for mobile */
   height: 60px; /* Adjusted height for mobile */
   background-color: rgba(255, 255, 255);
   border-radius: 10px; /* Rounded corners */
@@ -360,7 +360,7 @@ const FrontBox = styled.div`
 
 const FrontBox2 = styled.div`
   position: absolute;
-  width: 167px; /* Adjusted width for mobile */
+  width: 175px; /* Adjusted width for mobile */
   height: 60px; /* Adjusted height for mobile */
   background-color: rgba(255, 255, 255);
   border-radius: 10px; /* Rounded corners */
