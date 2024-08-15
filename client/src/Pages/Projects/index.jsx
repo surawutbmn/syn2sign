@@ -273,7 +273,7 @@ const ref = useRef();
 
       <SocialApproved proj_id={prj_id} />
       <SocialApprovedMobile className="" />
-      <Container>
+      <Container className="position-relative">
         <CardThreePictureProject />
         <div className="mx-auto ratio ratio-16x9">
           <iframe
