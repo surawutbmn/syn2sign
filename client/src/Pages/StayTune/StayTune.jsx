@@ -48,7 +48,7 @@ function StayTune() {
             description1="การจัดรวบรวม 8 ผลงานสำเร็จการศึกษา ปีการศึกษา 2566"
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 18 "
             description3="มหาวิทยาลัยศิลปากร"
-            line="/other/line.png"
+            line="other/line.png"
             imgPreview1="/staytune/syn2sign-video-preview.png"
             imgPreview2="/staytune/syn2sign-video-preview2.png"
           />
@@ -68,7 +68,7 @@ function StayTune() {
             description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษา ปีการศึกษา 2565 "
             description2="ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน รุ่น 17 "
             description3="มหาวิทยาลัยศิลปากร"
-            line="/other/line.png"
+            // line="/other/line.svg"
             imgPreview1="/staytune/dotwishion-video-preview.png"
             imgPreview2="/staytune/dotwishion-video-preview2.png"
           />
@@ -170,7 +170,7 @@ function StayTune() {
             link="https://www.youtube.com/playlist?list=PLiCmIB88gkWSOhh-DCS-kF6LqRvJS5Aay"
             Icon={<FaYoutube size="1.3em" className="me-2" />}
             linkText="&TIVIRUS 's Youtube Playlist"
-            description1="เว็บไซต์รวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษาปีการศึกษา 2563 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 15 มหาวิทยาลัยศิลปากร"
+            description1="การจัดรวบรวมจัดแสดง 21 ผลงานสำเร็จการศึกษาปีการศึกษา 2563 ของ นักศึกษาวิชาเอกอินเทอร์แอคทีฟ แอปพลิเคชัน รุ่น 15 มหาวิทยาลัยศิลปากร"
             NameVideo="&TIVIRUS"
             imgPreview1="/staytune/&TIVIRUS-video-preview.png"
             imgPreview2="/staytune/&TIVIRUS-video-preview2.png"

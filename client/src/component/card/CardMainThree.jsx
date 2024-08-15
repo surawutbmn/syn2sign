@@ -245,11 +245,36 @@ const IconPlay = styled.div`
     transition: all .3s ease;
     opacity: 0;
 `;
+const breakpoints = {
+  large: '1400px',
+  medium: '1200px',
+  small: '992px',
+  extraSmall: '768px',
+  mini: '576px'
+};
+
 const LineImage = styled.img`
   position: absolute;
-  width: 3%;
-  height: 3000px;
+  width: 4%;
+  height: 3230px; /* Default height for width > 1400px */
   top: 6%;
-  left: 37%;
+  left: 36%;
   border: none;
+
+  @media (max-width: ${breakpoints.large}) {
+    height: 3000px; /* Height for width ≤ 1400px */
+  }
+
+  @media (max-width: ${breakpoints.medium}) {
+    height: 3050px; /* Height for width ≤ 1200px */
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    height: 3180px; /* Height for width ≤ 992px */
+  }
+
+  @media (max-width: ${breakpoints.extraSmall}) {
+    height: 1500px; /* Height for width ≤ 768px */
+  }
 `;
+

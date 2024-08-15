@@ -21,8 +21,8 @@ const CardMainThreeMobile = (props) => {
               href={props.link}
               target="_blank"
             >
-              
-              <FaGlobe size="1.3em" className="me-2" />
+              {props.Icon}
+              {/* <FaGlobe size="1.3em" className="me-2" /> */}
               {props.linkText}
             </ThreeLinkExhibition>
           </div>

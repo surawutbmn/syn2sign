@@ -1,56 +1,56 @@
 {
   "cpl01": [
-    { "src": "/showcase/Project/cpl01/designProcess/cpl01-mobile-1.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl01/designProcess/cpl01-mobile-2.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl01/designProcess/cpl01-mobile-3.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl01/designProcess/cpl01-mobile-4.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl01/designProcess/cpl01-mobile-5.png", "aspect": "mobile" }
+    { "src": "showcase/Project/cpl01/designProcess/cpl01-mobile-1.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl01/designProcess/cpl01-mobile-2.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl01/designProcess/cpl01-mobile-3.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl01/designProcess/cpl01-mobile-4.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl01/designProcess/cpl01-mobile-5.png", "aspect": "mobile" }
   ],
   "cpl02": [
-    { "src": "/showcase/Project/cpl02/designProcess/cpl02-desktop-1.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl02/designProcess/cpl02-desktop-2.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl02/designProcess/cpl02-desktop-3.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl02/designProcess/cpl02-desktop-4.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl02/designProcess/cpl02-desktop-5.png", "aspect": "desktop" }
+    { "src": "showcase/Project/cpl02/designProcess/cpl02-desktop-1.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl02/designProcess/cpl02-desktop-2.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl02/designProcess/cpl02-desktop-3.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl02/designProcess/cpl02-desktop-4.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl02/designProcess/cpl02-desktop-5.png", "aspect": "desktop" }
   ],
   "cpl03": [
-    { "src": "/showcase/Project/cpl03/designProcess/cpl03-desktop-1.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl03/designProcess/cpl03-desktop-2.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl03/designProcess/cpl03-desktop-3.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl03/designProcess/cpl03-desktop-4.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl03/designProcess/cpl03-desktop-5.png", "aspect": "desktop" }
+    { "src": "showcase/Project/cpl03/designProcess/cpl03-desktop-1.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl03/designProcess/cpl03-desktop-2.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl03/designProcess/cpl03-desktop-3.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl03/designProcess/cpl03-desktop-4.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl03/designProcess/cpl03-desktop-5.png", "aspect": "desktop" }
   ],
   "cpl04": [
-    { "src": "/showcase/Project/cpl04/designProcess/cpl04-mobile-1.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl04/designProcess/cpl04-mobile-2.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl04/designProcess/cpl04-mobile-3.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl04/designProcess/cpl04-mobile-4.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl04/designProcess/cpl04-mobile-5.png", "aspect": "mobile" }
+    { "src": "showcase/Project/cpl04/designProcess/cpl04-mobile-1.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl04/designProcess/cpl04-mobile-2.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl04/designProcess/cpl04-mobile-3.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl04/designProcess/cpl04-mobile-4.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl04/designProcess/cpl04-mobile-5.png", "aspect": "mobile" }
   ],
   "cpl05": [
-    { "src": "/showcase/Project/cpl05/designProcess/cpl05-desktop-1.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl05/designProcess/cpl05-desktop-2.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl05/designProcess/cpl05-desktop-3.png", "aspect": "desktop" }
+    { "src": "showcase/Project/cpl05/designProcess/cpl05-desktop-1.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl05/designProcess/cpl05-desktop-2.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl05/designProcess/cpl05-desktop-3.png", "aspect": "desktop" }
   ],
   "cpl06": [
-    { "src": "/showcase/Project/cpl06/designProcess/CPL06-Desktop-1.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl06/designProcess/CPL06-Desktop-2.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl06/designProcess/CPL06-Desktop-3.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl06/designProcess/CPL06-Desktop-4.png", "aspect": "desktop" },
-    { "src": "/showcase/Project/cpl06/designProcess/CPL06-Desktop-5.png", "aspect": "desktop" }
+    { "src": "showcase/Project/cpl06/designProcess/CPL06-Desktop-1.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl06/designProcess/CPL06-Desktop-2.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl06/designProcess/CPL06-Desktop-3.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl06/designProcess/CPL06-Desktop-4.png", "aspect": "desktop" },
+    { "src": "showcase/Project/cpl06/designProcess/CPL06-Desktop-5.png", "aspect": "desktop" }
   ],
   "cpl07": [
-    { "src": "/showcase/Project/cpl07/designProcess/CPL07-Mobile-1.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl07/designProcess/CPL07-Mobile-2.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl07/designProcess/CPL07-Mobile-3.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl07/designProcess/CPL07-Mobile-4.png", "aspect": "mobile" },
-    { "src": "/showcase/Project/cpl07/designProcess/CPL07-Mobile-5.png", "aspect": "mobile" }
+    { "src": "showcase/Project/cpl07/designProcess/CPL07-Mobile-1.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl07/designProcess/CPL07-Mobile-2.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl07/designProcess/CPL07-Mobile-3.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl07/designProcess/CPL07-Mobile-4.png", "aspect": "mobile" },
+    { "src": "showcase/Project/cpl07/designProcess/CPL07-Mobile-5.png", "aspect": "mobile" }
   ],
   "cpl08": [
-    { "src": "/showcase/Project/cpl08/designProcess/CPL08-Tablet-1.png", "aspect": "tablet" },
-    { "src": "/showcase/Project/cpl08/designProcess/CPL08-Tablet-2.png", "aspect": "tablet" },
-    { "src": "/showcase/Project/cpl08/designProcess/CPL08-Tablet-3.png", "aspect": "tablet" },
-    { "src": "/showcase/Project/cpl08/designProcess/CPL08-Tablet-4.png", "aspect": "tablet" },
-    { "src": "/showcase/Project/cpl08/designProcess/CPL08-Tablet-5.png", "aspect": "tablet" }
+    { "src": "showcase/Project/cpl08/designProcess/CPL08-Tablet-1.png", "aspect": "tablet" },
+    { "src": "showcase/Project/cpl08/designProcess/CPL08-Tablet-2.png", "aspect": "tablet" },
+    { "src": "showcase/Project/cpl08/designProcess/CPL08-Tablet-3.png", "aspect": "tablet" },
+    { "src": "showcase/Project/cpl08/designProcess/CPL08-Tablet-4.png", "aspect": "tablet" },
+    { "src": "showcase/Project/cpl08/designProcess/CPL08-Tablet-5.png", "aspect": "tablet" }
   ]
 }

@@ -67,11 +67,14 @@ const DesignProcessSlider = () => {
         {imageList.map((image, index) => (
           <SwiperSlide key={index}>
             <DesignProcess src={import.meta.env.VITE_BASE_URL+image.src} alt={`Design Process ${index + 1}`} />
+            
           </SwiperSlide>
         ))}
+       
       </Swiper>
     </div>
   );
+  
 };
 
 export default DesignProcessSlider;

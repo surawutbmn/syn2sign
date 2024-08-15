@@ -158,12 +158,12 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/showcase" element={<Showcase />} />
+            <Route path="/showcase/" element={<Showcase />} />
             <Route path="/showcase/projects/:prj_id" element={<Project />} />
-            <Route path="/exhibition" element={<Exhibition />} />
+            <Route path="/exhibition/" element={<Exhibition />} />
             <Route path="/showcase/creators/:std_id" element={<Students />} />
-            <Route path="/credit" element={<Credit />} />
-            <Route path="/stay-tune" element={<StayTune />} />
+            <Route path="/credit/" element={<Credit />} />
+            <Route path="/stay-tune/" element={<StayTune />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
             <Route path="/404" element={<Notfound />} />
           </Routes>
