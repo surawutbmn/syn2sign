@@ -1005,7 +1005,7 @@ const studentsdata = [
         "Learning Media Game DesignCase Study of Second Grade Children Spelling and Meaning of Thai Words",
       fullname_th:
         "การออกแบบเกมสื่อการเรียนรู้ สำหรับเด็กชั้นประถมศึกษาปีที่ 2 กรณีศึกษา ปัญหาด้านการสะกดคำและบอกความหมายของคำกลุ่มสาระภาษาไทย",
-      type: "TABLET INTERACTIVE",
+      type: "Tablet Interactive",
       icon: "cpl08.svg",
       img_thumb: "cpl08-thumb.webp",
       icon_card: "cpl08-icard.webp",
@@ -1101,7 +1101,7 @@ const studentsdata = [
         "Learning Media Game DesignCase Study of Second Grade Children Spelling and Meaning of Thai Words",
       fullname_th:
         "การออกแบบเกมสื่อการเรียนรู้ สำหรับเด็กชั้นประถมศึกษาปีที่ 2 กรณีศึกษา ปัญหาด้านการสะกดคำและบอกความหมายของคำกลุ่มสาระภาษาไทย",
-      type: "TABLET INTERACTIVE",
+      type: "Tablet Interactive",
       icon: "cpl08.svg",
       img_thumb: "cpl08-card.webp",
       icon_card: "cpl08-icard.webp",
