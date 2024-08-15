@@ -77,8 +77,18 @@ const LogoContainer = styled.img`
 const SponLinkRow = (props) => {
   const { href, imgSrc, alt, type, spon } = props;
   return (
-    <LinkBox className="spon-row" href={href} target="_blank" rel="noopener noreferrer">
-      <LogoContainer $spon={spon} type={type} src={imgSrc} alt={alt} />
+    <LinkBox
+      className="spon-row"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <LogoContainer
+        $spon={spon}
+        type={type}
+        src={import.meta.env.VITE_BASE_URL + imgSrc}
+        alt={alt}
+      />
     </LinkBox>
   );
 };
