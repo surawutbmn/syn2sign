@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./exhibition.css";
 import { useSpring, animated } from "@react-spring/web";
-import syn_ele from "/img/s2s-ele.svg";
+// import syn_ele from "/img/s2s-ele.svg";
 // import paper_plane from "./img/paper-plane.png";
 import messagesData from "./messages.json";
 import { MdLocationOn, MdPerson } from "react-icons/md";
@@ -55,7 +55,7 @@ function Exhibition() {
       <div className="exh-banner exh-banner-bg">
         <div className="exh-banner-overlay"></div>
         <img
-          src={`${import.meta.env.VITE_BASE_URL}${syn_ele}`}
+          src={`${import.meta.env.VITE_BASE_URL}img/s2s-ele.svg`}
           alt="syn2sign element"
           className="exh-banner-ele"
         />

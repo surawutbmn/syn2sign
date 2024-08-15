@@ -20,7 +20,7 @@ function Sponser() {
       </h2>
       <div className="d-none d-md-flex justify-content-center align-items-center">
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/em_cl.svg"}
+          imgSrc={"img/logo_spon/em_cl.svg"}
           alt="emdistrict logo"
           href="http://https://emdistrict.com/"
           text={{ title: "The Em District", subtitle: "ดิ เอ็มดิสทริค" }}
@@ -30,7 +30,7 @@ function Sponser() {
       </div>
       <div className="d-none d-md-grid grid-cols-3 gap-4 align-items-center">
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dd_cl.svg"}
+          imgSrc={"img/logo_spon/dd_cl.svg"}
           alt="ddproperty logo"
           href="https://www.ddproperty.com/en"
           text={{
@@ -41,7 +41,7 @@ function Sponser() {
           tier="tier2"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/st_cl.svg"}
+          imgSrc={"img/logo_spon/st_cl.svg"}
           alt="styleyeet logo"
           href="https://funcslash.com/styleyeet/"
           text={{
@@ -52,7 +52,7 @@ function Sponser() {
           tier="tier2"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dl_cl.svg"}
+          imgSrc={"img/logo_spon/dl_cl.svg"}
           alt="ducklab logo"
           href="https://ducklab.co.th/"
           text={{ title: "DUCK LAB", subtitle: "บริษัท ดัค แล็บ จำกัด" }}
@@ -60,7 +60,7 @@ function Sponser() {
           tier="tier2-dl"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+""}
+          imgSrc={""}
           alt="merge logo"
           href="https://www.merge.co.th/"
           text={{
@@ -71,7 +71,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/nb_cl.svg"}
+          imgSrc={"img/logo_spon/nb_cl.svg"}
           alt="nabladigital logo"
           href="https://nabladigital.com/"
           text={{
@@ -82,7 +82,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dm_cl.svg"}
+          imgSrc={"img/logo_spon/dm_cl.svg"}
           alt="deemi logo"
           href="https://www.deemmi.com/"
           text={{
@@ -93,7 +93,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dlo_cl.svg"}
+          imgSrc={"img/logo_spon/dlo_cl.svg"}
           alt="dilo logo"
           href="https://www.diloproducts.com/"
           text={{
@@ -104,7 +104,7 @@ function Sponser() {
           tier="tier4"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/ql_cl.svg"}
+          imgSrc={"img/logo_spon/ql_cl.svg"}
           alt="qlight logo"
           href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
           text={{
@@ -115,7 +115,7 @@ function Sponser() {
           tier="tier4"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/m7_cl.svg"}
+          imgSrc={"img/logo_spon/m7_cl.svg"}
           alt="mango7 logo"
           href="https://www.youtube.com/@ApologizeCh122"
           text={{
@@ -128,7 +128,7 @@ function Sponser() {
       </div>
       <div className="grid d-md-none grid-cols-2 gap-4 align-items-center ms-4">
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/em_cl.svg"}
+          imgSrc={"img/logo_spon/em_cl.svg"}
           alt="emdistrict logo"
           href="http://https://emdistrict.com/"
           text={{ title: "The Em District", subtitle: "ดิ เอ็มดิสทริค" }}
@@ -136,7 +136,7 @@ function Sponser() {
           tier="tier1"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dd_cl.svg"}
+          imgSrc={"img/logo_spon/dd_cl.svg"}
           alt="ddproperty logo"
           href="https://www.ddproperty.com/en"
           text={{
@@ -147,7 +147,7 @@ function Sponser() {
           tier="tier2"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/st_cl.svg"}
+          imgSrc={"img/logo_spon/st_cl.svg"}
           alt="styleyeet logo"
           href="https://funcslash.com/styleyeet/"
           text={{
@@ -158,7 +158,7 @@ function Sponser() {
           tier="tier2"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dl_cl.svg"}
+          imgSrc={"img/logo_spon/dl_cl.svg"}
           alt="ducklab logo"
           href="https://ducklab.co.th/"
           text={{ title: "DUCK LAB", subtitle: "บริษัท ดัค แล็บ จำกัด" }}
@@ -166,7 +166,7 @@ function Sponser() {
           tier="tier2-dl"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+""}
+          imgSrc={""}
           alt="merge logo"
           href="https://www.merge.co.th/"
           text={{
@@ -177,7 +177,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/nb_cl.svg"}
+          imgSrc={"img/logo_spon/nb_cl.svg"}
           alt="nabladigital logo"
           href="https://nabladigital.com/"
           text={{
@@ -188,7 +188,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dm_cl.svg"}
+          imgSrc={"img/logo_spon/dm_cl.svg"}
           alt="deemi logo"
           href="https://www.deemmi.com/"
           text={{
@@ -199,7 +199,7 @@ function Sponser() {
           tier="tier3"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/dlo_cl.svg"}
+          imgSrc={"img/logo_spon/dlo_cl.svg"}
           alt="dilo logo"
           href="https://www.diloproducts.com/"
           text={{
@@ -210,7 +210,7 @@ function Sponser() {
           tier="tier4"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/ql_cl.svg"}
+          imgSrc={"img/logo_spon/ql_cl.svg"}
           alt="qlight logo"
           href="https://www.facebook.com/p/Q-Light-Sound-100063757264018/"
           text={{
@@ -221,7 +221,7 @@ function Sponser() {
           tier="tier4"
         />
         <SponsorLogo
-          imgSrc={import.meta.env.VITE_BASE_URL+"img/logo_spon/m7_cl.svg"}
+          imgSrc={"img/logo_spon/m7_cl.svg"}
           alt="mango7 logo"
           href="https://www.youtube.com/@ApologizeCh122"
           text={{

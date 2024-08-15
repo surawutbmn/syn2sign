@@ -45,7 +45,7 @@ import { Link } from "react-router-dom";
       setMessages(getMessagesForContainer1());
       setMessagesContainer2(getMessagesForContainer2());
       setProjects(getRandomProjects());
-      console.log(projects);
+      // console.log(projects);
       
   
       // Update messages and projects every 5 seconds
