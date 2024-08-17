@@ -1468,7 +1468,7 @@ const studentsdata = [
     std_id: "520",
     name_th: "ณัฏฐธิดา ศรีตุลานนท์",
     name_en: "Natthatida Sritulanontha",
-    nickname_th: "จูน",
+    nickname_th: "จูเน่",
     nickname_en: "June",
     profile_img: "520-profile.webp",
     thumb_img: "520-card.webp",
