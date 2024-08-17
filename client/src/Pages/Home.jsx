@@ -109,7 +109,7 @@ import { Link } from "react-router-dom";
             </Col>
             <Col xs={12} className="d-block d-md-none mt-4">
               {/* test */}
-              <p className="" style={{ fontSize: "0.7em" }}>Review Records (3★ Out of 20)</p>
+              <p className="" style={{ fontSize: "0.7em" }}>Review Records (20)</p>
               <SocialContainer2>
                 {messagesContainer2.map((msg, index) => (
                   <SocialBox2 className="txt-body3 " key={index}>

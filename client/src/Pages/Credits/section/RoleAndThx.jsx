@@ -129,7 +129,7 @@ function RoleAndThx() {
             <p>
               <strong>Leader:</strong> Panita Lainananuku
               <br />
-              Chanamon Kewsomnuk <br /> Natthanan Vaowkhajon <br />
+              Chanamon Kaewsomnuk <br /> Natthanan Vaowkhajon <br />
               Nattharnunt Zooriyarzazithum <br />
               Natthatida Sritulanontha <br />
               Sasikan Tianchanthuek
@@ -193,7 +193,7 @@ function RoleAndThx() {
               <strong>Public relation & marketing</strong>
             </UpperText>
             <p>
-              <strong>Leader:</strong> Chanamon Kewsomnuk
+              <strong>Leader:</strong> Chanamon Kaewsomnuk
               <br />
               Chawakorn Jitpathak <br />
               Methasit Sitthametha <br />
@@ -218,7 +218,7 @@ function RoleAndThx() {
             </UpperText>
             <p>
               <strong>Leader:</strong> Nattharnunt Zooriyarzazithum <br />{" "}
-              Chanamon Kewsomnuk <br />
+              Chanamon Kaewsomnuk <br />
               Natthanan Vaowkhajon <br />
               Natthatida Sritulanontha <br />
               Panita Lainananukul <br />
@@ -256,7 +256,7 @@ function RoleAndThx() {
               <strong>pillar LED screen & Video Editor</strong>
             </UpperText>
             <p>
-              Chanamon Kewsomnuk <br />
+              Chanamon Kaewsomnuk <br />
               Chalida Ingkapattanakul <br />
               Panita Lainananukul <br />
               Panyada Suxruxsa <br />

@@ -4,7 +4,7 @@ const studentsdata = [
     std_id: "073",
     name_th: "ชนมน แก้วสมนึก",
     nickname_th: "มุก",
-    name_en: "Chanamon Kewsomnuk",
+    name_en: "Chanamon Kaewsomnuk",
     nickname_en: "Mook",
     profile_img: "073-profile.webp",
     thumb_img: "073-card.webp",
