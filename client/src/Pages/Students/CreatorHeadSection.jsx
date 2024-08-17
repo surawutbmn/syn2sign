@@ -100,7 +100,7 @@ function CreatorHeadSection(props) {
                   {student.name_en} ({student.nickname_en})
                 </h4>
                 <h6>
-                  {student.name_th}({student.nickname_th})
+                  {student.name_th} ({student.nickname_th})
                 </h6>
               </CreatorBox>
             </div>

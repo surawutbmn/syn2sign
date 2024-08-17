@@ -279,13 +279,11 @@ function RoleAndThx() {
             <UpperText>
               <strong>Supporter in counseling and assistance</strong>
             </UpperText>
-            <p>
-              Wutiporn Fungkajorn <br />
-              Nattakit Jaruyotin <br />
-              Chanchon Pansuwan
-              <br />
-              Alongkron Worasuit
-            </p>
+            <div>Alongkron Worasuit</div>
+            <div>Chanchon Pansuwan</div>
+            <div>Nattakit Jaruyotin</div>
+            <div>Wutiporn Fungkajorn</div>
+  
           </TextContainer>
         </FlexContainer>
         <FlexContainer>
@@ -302,10 +300,10 @@ function RoleAndThx() {
                 EQUIPMENTs, FOODs <br className="d-block d-md-none" /> AND OTHER
               </strong>
             </UpperText>
-            <p>
-              Methin Pingsutthiwong <br /> Sarayut Thibhodee <br /> ICT Web &
-              Interactive design Alumni
-            </p>
+            <div>ICT Web & Interactive design Alumni</div>
+            <div>Methin Pingsutthiwong</div>
+            <div>Sarayut Thibhodee</div>
+
           </TextContainer>
         </FlexContainer>
       </GridContainer>

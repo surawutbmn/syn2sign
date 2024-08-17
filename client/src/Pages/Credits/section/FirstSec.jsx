@@ -46,7 +46,7 @@ function FirstSec() {
       <div className="text-center mt-5">
         <HeadTxt>CREDIT Syn2sign</HeadTxt>
         <div className="mt-5">
-          <span className="txt-sbold">
+          <span className="txt-sbold txt-upper">
             <h3 className="mb-4">SENIOR PROJECT ACADEMIC YEAR 2023</h3>
             Senior Project Exhibition 2024 • FROM SENIOR PROJECT PREPARATION AND
             SENIOR PROJECT

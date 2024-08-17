@@ -142,7 +142,7 @@ function Students() {
         <ExhibitImg name={student.nickname_en} std_id={std_id} />
         <Container>
           <SectionTitle
-            title={`${student.nickname_en}\u2019s INTERVIEWS`}
+            title={`${student.nickname_en}\u2019s Interviews`}
             subtitle={`บทสัมภาษณ์ของ${student.nickname_th}`}
             className=""
           />
@@ -151,7 +151,7 @@ function Students() {
         </Container>
         <Container>
           <SectionTitle
-            title={`${student.nickname_en}\u2019s role in Syn2sign`}
+            title={`${student.nickname_en}\u2019s Role in Syn2sign`}
             subtitle={`บทบาทของ${student.nickname_th}ใน Syn2sign`}
           />
           <Row xs={1} md={3} className="gy-4 text-start">
