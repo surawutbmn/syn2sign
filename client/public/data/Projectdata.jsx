@@ -92,7 +92,7 @@ const projectsdata = [
       "Design and Development Web Application With Line Chatbot System to Provide Services for the Business of Organizing a Sacrificial Offering.",
     fullname_th:
       "การออกแบบและพัฒนาแอปพลิเคชันควบคู่กับระบบไลน์แชตบอต เพื่อให้บริการสำหรับธุรกิจร้านจัดของไหว้เจ้า",
-    type: "Line OA Web application",
+    type: "Line OA Web Application",
     icon: "cpl02.svg",
     img_thumb: "cpl02-thumb.webp",
     icon_card: "cpl02-icard.webp",
@@ -174,7 +174,7 @@ const projectsdata = [
       "Design and Development Web Application to Search for Artists and Post Job Advertisements for Organizer.",
     fullname_th:
       "การออกแบบและพัฒนาเว็บแอปพลิเคชันเพื่อค้นหาศิลปินและลงประกาศรับสมัครสำหรับผู้จัดงาน",
-    type: "Web application",
+    type: "Web Application",
     icon: "cpl03.svg",
     img_thumb: "cpl03-thumb.webp",
     icon_card: "cpl03-icard.webp",
@@ -276,7 +276,7 @@ const projectsdata = [
       "Web Application Design and Development in Conjunction System to Promote Refill Shops Management in Bangkok.",
     fullname_th:
       "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมการบริหาร ร้านรีฟิล ในกรุงเทพมหานคร",
-    type: "Web application",
+    type: "Web Application",
     icon: "cpl05.svg",
     img_thumb: "cpl05-thumb.webp",
     icon_card: "cpl05-icard.webp",
@@ -327,7 +327,7 @@ const projectsdata = [
       "Web Application Design and Development to Promote the Young Thai Designers to Increase the Job Opportunities.",
     fullname_th:
       "การออกแบบและพัฒนาเว็บแอปพลิเคชัน เพื่อส่งเสริมแฟชั่นดีไซน์เนอร์ไทยรุ่นใหม่ในการเพิ่มโอกาสการหางาน",
-    type: "Web application",
+    type: "Web Application",
     icon: "cpl06.svg",
     img_thumb: "cpl06-thumb.webp",
     icon_card: "cpl06-icard.webp",
@@ -380,7 +380,7 @@ const projectsdata = [
       "Designing and Developing a Tool System for the Franchise Operators of the Tent Cleaning Business",
     fullname_th:
       "การออกแบบและพัฒนาระบบเครื่องมือสำหรับผู้ประกอบการแฟรนไชส์ธุรกิจทำความสะอาดเต็นท์",
-    type: "Line OA Web application",
+    type: "Line OA Web Application",
     icon: "cpl07.svg",
     img_thumb: "cpl07-thumb.webp",
     icon_card: "cpl07-icard.webp",

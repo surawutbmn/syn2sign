@@ -270,7 +270,7 @@ const BtnBox = styled.div`
 const ReadMore = styled.span`
   width: fit-content;
   border: 0.1rem solid;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.4rem;
   border-radius: 100px;
   transition: all 0.3s ease;
   &:hover {

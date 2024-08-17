@@ -185,7 +185,7 @@ const ReadMore = styled.div`
   top: 20px;
   font-size: 0.8rem;
   color: var(--color-dark);
-  right: -60px;
+  right: 20px;
   transition: all 0.3s ease;
   z-index: 1;
   align-items: center;
@@ -193,15 +193,18 @@ const ReadMore = styled.div`
   display: flex;
   @media (max-width: 991.98px) {
     margin-left: -70px;
-    top: 10px;
+    top: 20px;
+    right: 20px;
   }
   @media (max-width: 575.98px) {
     margin-left: -60px;
-    top: 10px;
+    top: 20px;
+    right: 20px;
   }
   @media (max-width: 374.98px) {
     margin-left: -30px;
-    top: 10px;
+    top: 20px;
+    right: 20px;
   }
 `;
 const ReadMoreIcon = styled.img`
