@@ -11,7 +11,16 @@ import { Link } from "react-router-dom";
     const [messages, setMessages] = useState([]);
     const [messagesContainer2, setMessagesContainer2] = useState([]);
     const [projects, setProjects] = useState([]);
-  
+    const [animate, setAnimate] = useState(false);
+    useEffect(() => {
+      // Trigger animation when data updates
+      if (projects && projects.length > 0) {
+        setAnimate(true);
+        // Reset animation state after animation completes (adjust timing as needed)
+        const timer = setTimeout(() => setAnimate(false), 500);
+        return () => clearTimeout(timer);
+      }
+    }, [projects]);
     useEffect(() => {
       // Function to get messages for SocialContainer
       const getMessagesForContainer1 = () => {
@@ -75,7 +84,7 @@ import { Link } from "react-router-dom";
             <Col xs={6} className="text-start d-block d-md-none">
               <h1>
                 <strong>
-                  0<span className="txt-prim">8*2</span>
+                  <span className="txt-prim">8*2</span>
                 </strong>
                 <h4 className="txt-head3 txt-upper">projects</h4>
               </h1>
@@ -85,7 +94,7 @@ import { Link } from "react-router-dom";
                 Student Senior Project 2024 <br />
                 รวบรวมผลงานสำเร็จการศึกษา
                 <br />
-                นักศึกษาปีการศึกษา 2566
+                ของนักศึกษา ปีการศึกษา 2566
               </p>
             </Col>
             <Col xs={12} className="d-block d-md-none mt-5">
@@ -115,7 +124,7 @@ import { Link } from "react-router-dom";
                 xs={6}
                 className={`d-flex text-end d-block d-md-none ${
                   index === 0 ? "justify-content-end" : "justify-content-start"
-                }`}
+                }${animate ? "card-animate" : ""}`}
                 key={index}
               >
                 <Link
@@ -162,7 +171,7 @@ import { Link } from "react-router-dom";
             >
               <h1>
                 <strong>
-                  <span className="txt-prim ">0</span><span className="txt-light">8</span><span className="txt-prim ">*2</span>
+                  <span className="txt-prim "></span><span className="txt-light">8</span><span className="txt-prim ">*2</span>
                   {/* 0<span className="txt-prim">8</span> */}
                 </strong>
               </h1>
@@ -171,7 +180,7 @@ import { Link } from "react-router-dom";
                 Student Senior Project 2024 <br />
                 รวบรวมผลงานสำเร็จการศึกษา
                 <br />
-                นักศึกษาปีการศึกษา 2566
+                ของนักศึกษา ปีการศึกษา 2566
               </p>
             </Col>
             <Col xs={4} className="mb-4 align-self-start d-none d-md-block">
@@ -200,7 +209,7 @@ import { Link } from "react-router-dom";
                 xs={6}
                 className={`d-flex text-end ${
                   index === 0 ? "justify-content-end" : "justify-content-start"
-                } `}
+                } ${animate ? "card-animate" : ""}`}
                 key={index}
               >
                 <Link
@@ -252,7 +261,7 @@ import { Link } from "react-router-dom";
   const SocialBox = styled.div`
     width: fit-content;
     height: auto;
-    border: 1px solid #fff;
+    border: .1em solid rgba(142, 142, 142, .5);
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 10px; /* Add spacing between each box */
@@ -262,7 +271,7 @@ import { Link } from "react-router-dom";
  const SocialBox2 = styled.div`
  width: fit-content;
  height: auto;
- border: 1px solid #fff;
+ border: .1em solid rgba(142, 142, 142, .5);
  border-radius: 20px;
  padding: 10px;
  margin: 0 10px;

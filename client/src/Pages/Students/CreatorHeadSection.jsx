@@ -11,10 +11,10 @@ function CreatorHeadSection(props) {
   return (
     <>
       <Container>
-        <BackBtn className="text-start link-txt txt-upper">
+        <BackBtn className="text-start link-txt ">
           <Link to={`/showcase#creator`}>
             <FaArrowLeft className="me-2" size={20} />
-            <strong>all creators</strong>
+            <strong>All Creators</strong>
           </Link>
         </BackBtn>
         <div className="text-start d-flex d-md-none justify-content-center flex-column">

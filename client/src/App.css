@@ -25,3 +25,7 @@
 .bg-grey {
   background-color: #ECECEC;
 }
+.card-animate {
+  transition: all 0.3s cubic-bezier(0.33, 2, 0.41, 0.69);
+  transform: scale(1.02);
+}

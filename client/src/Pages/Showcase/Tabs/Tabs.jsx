@@ -5,6 +5,8 @@ const TabBtnCon = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  border: .1em solid rgba(142, 142, 142, .2);
+  border-radius: 10rem;
 `;
 
 const TabIcon = styled.img`
@@ -24,11 +26,12 @@ const TabButton = styled.div`
   color: var(--color-grey);
   /* text-transform: uppercase; */
   font-size: 1.3rem;
-  &::before {
+  /* &::before {
+    border-radius: 8px;
     content: "";
     position: absolute;
     inset: 0;
-    padding: 0px 0px 4px 0;
+    padding: 0px 0px 2px 0;
     background: linear-gradient(
       90deg,
       rgb(142, 142, 142) 0%,
@@ -38,23 +41,22 @@ const TabButton = styled.div`
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-  }
+  } */
   img {
     width: 1.9rem;
   }
   &.active {
     color: var(--color-primary);
-    /* border-bottom: 4px solid var(--color-primary); */
     &::before {
       content: "";
       position: absolute;
       inset: 0;
-      padding: 0px 0px 4px 0;
-      background: linear-gradient(
+      padding: 0px 0px 2px 0;
+      /* background: linear-gradient(
         90deg,
         rgba(5, 186, 100, 1) 0%,
         rgba(255, 255, 255, 0) 100%
-      );
+      ); */
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
@@ -86,7 +88,7 @@ const Tabs = ({ activeTab, onTabClick }) => (
       className={`tab ${activeTab === 1 ? "active" : ""}`}
       onClick={() => onTabClick(1)}
     >
-      <div className="d-flex align-items-center justify-content-start">
+      <div className="d-flex align-items-center justify-content-center">
         <TabIcon
           src={import.meta.env.VITE_BASE_URL + "icon/prj-tab.svg"}
           alt="tab icon"
@@ -99,7 +101,7 @@ const Tabs = ({ activeTab, onTabClick }) => (
       className={`tab ${activeTab === 2 ? "active" : ""}`}
       onClick={() => onTabClick(2)}
     >
-      <div className="d-flex align-items-center justify-content-start">
+      <div className="d-flex align-items-center justify-content-center">
         <TabIcon
           src={import.meta.env.VITE_BASE_URL + "icon/creator-tab.svg"}
           className={`me-3 tab-icon ${activeTab === 2 ? "active" : ""}`}
