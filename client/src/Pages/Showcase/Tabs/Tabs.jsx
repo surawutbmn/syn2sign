@@ -14,21 +14,52 @@ const TabIcon = styled.img`
 `;
 
 const TabButton = styled.div`
-  padding: 10px 20px;
+  padding: 10px 20px 10px 0px;
   cursor: pointer;
+  position: relative;
   max-width: 40dvw;
   font-weight: var(--txt-bold);
   flex: 1;
-  border-bottom: 4px solid var(--color-grey);
+  /* border-bottom: 4px solid var(--color-grey); */
   color: var(--color-grey);
   text-transform: uppercase;
   font-size: 1.3rem;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0px 0px 4px 0;
+    background: linear-gradient(
+      90deg,
+      rgb(142, 142, 142) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
   img {
     width: 1.9rem;
   }
   &.active {
     color: var(--color-primary);
-    border-bottom: 4px solid var(--color-primary);
+    /* border-bottom: 4px solid var(--color-primary); */
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 0px 0px 4px 0;
+      background: linear-gradient(
+        90deg,
+        rgba(5, 186, 100, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
   }
   @media (max-width: 991.98px) {
     img {
@@ -55,9 +86,9 @@ const Tabs = ({ activeTab, onTabClick }) => (
       className={`tab ${activeTab === 1 ? "active" : ""}`}
       onClick={() => onTabClick(1)}
     >
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-start">
         <TabIcon
-          src={import.meta.env.VITE_BASE_URL+"icon/prj-tab.svg"}
+          src={import.meta.env.VITE_BASE_URL + "icon/prj-tab.svg"}
           alt="tab icon"
           className={`me-3 tab-icon ${activeTab === 1 ? "active" : ""}`}
         />
@@ -68,9 +99,9 @@ const Tabs = ({ activeTab, onTabClick }) => (
       className={`tab ${activeTab === 2 ? "active" : ""}`}
       onClick={() => onTabClick(2)}
     >
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-start">
         <TabIcon
-          src={import.meta.env.VITE_BASE_URL+"icon/creator-tab.svg"}
+          src={import.meta.env.VITE_BASE_URL + "icon/creator-tab.svg"}
           className={`me-3 tab-icon ${activeTab === 2 ? "active" : ""}`}
           alt="tab icon"
         />
