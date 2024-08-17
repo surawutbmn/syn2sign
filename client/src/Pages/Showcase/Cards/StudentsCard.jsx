@@ -14,7 +14,7 @@ const StudentCard = ({ student }) => (
             className="rdm-icon"
             
           />
-          <ReadMoreText className="rdm-text">SEE MORE</ReadMoreText>
+          {/* <ReadMoreText className="rdm-text">SEE MORE</ReadMoreText> */}
         </ReadMore>
         <div className="card-std-img">
           <ImgCreator
@@ -22,7 +22,7 @@ const StudentCard = ({ student }) => (
             loading="lazy"
             alt="creator profile"
           />
-          <CardOverlay className="std-card-overlay">
+          {/* <CardOverlay className="std-card-overlay"> */}
             <CardText className="card-std-txt">
               <Title>
                 {student.name_en}{" "}
@@ -43,7 +43,7 @@ const StudentCard = ({ student }) => (
                   </span>
               </Caption>
             </CardText>
-          </CardOverlay>
+          {/* </CardOverlay> */}
         </div>
       </Link>
     </CardStudents>
@@ -141,45 +141,45 @@ const Title = styled.div`
     font-size: 0.47rem;
   }
 `;
-const ReadMoreText = styled.div`
-  font-size: 1rem;
-  font-weight: var(--txt-bold);
-  color: var(--color-light);
-  margin-left: -60%;
-  opacity: 0;
-  transition: margin-left 0.3s ease, opacity 0.3s ease;
-`;
-const CardOverlay = styled.div`
-  transition: all 0.3s ease;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  /* background: rgba(38, 46, 42, 0.6); */
-  color: white;
-  height: 25%;
-  width: 100%;
-  @media (max-width: 1439.98px) {
-    height: 30%;
-  }
-  @media (max-width: 1359.98px) {
-    height: 25%;
-  }
-  @media (max-width: 991.98px) {
-    height: 28%;
-  }
-  @media (max-width: 767.98px) {
-    height: 35%;
-  }
-  @media (max-width: 575.98px) {
-    height: 30%;
-  }
-  @media (max-width: 424.98px) {
-    height: 33%;
-  }
-  @media (max-width: 374.98px) {
-    height: 50%;
-  }
-`;
+// const ReadMoreText = styled.div`
+//   font-size: 1rem;
+//   font-weight: var(--txt-bold);
+//   color: var(--color-light);
+//   margin-left: -60%;
+//   opacity: 0;
+//   transition: margin-left 0.3s ease, opacity 0.3s ease;
+// `;
+// const CardOverlay = styled.div`
+//   transition: all 0.3s ease;
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   /* background: rgba(38, 46, 42, 0.6); */
+//   color: white;
+//   height: 25%;
+//   width: 100%;
+//   @media (max-width: 1439.98px) {
+//     height: 30%;
+//   }
+//   @media (max-width: 1359.98px) {
+//     height: 25%;
+//   }
+//   @media (max-width: 991.98px) {
+//     height: 28%;
+//   }
+//   @media (max-width: 767.98px) {
+//     height: 35%;
+//   }
+//   @media (max-width: 575.98px) {
+//     height: 30%;
+//   }
+//   @media (max-width: 424.98px) {
+//     height: 33%;
+//   }
+//   @media (max-width: 374.98px) {
+//     height: 50%;
+//   }
+// `;
 const ReadMore = styled.div`
   position: absolute;
   top: 20px;
@@ -192,17 +192,14 @@ const ReadMore = styled.div`
   white-space: nowrap;
   display: flex;
   @media (max-width: 991.98px) {
-    margin-left: -70px;
     top: 20px;
     right: 20px;
   }
   @media (max-width: 575.98px) {
-    margin-left: -60px;
     top: 20px;
     right: 20px;
   }
   @media (max-width: 374.98px) {
-    margin-left: -30px;
     top: 20px;
     right: 20px;
   }
