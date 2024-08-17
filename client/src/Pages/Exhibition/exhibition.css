@@ -23,10 +23,25 @@
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
+    rgba(0, 0, 0, .9) 0%,
     rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 60%,
     rgba(5, 186, 100, 0.9) 100%
   );
 }
+/* .exh-banner-overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(5, 186, 100, 0.9) 100%
+  );
+} */
 .exh-banner-ele {
   position: absolute;
   left: 0;
@@ -86,6 +101,9 @@
     background-color: var(--color-primary);
   }
 }
+/* .exh-report-sec{
+  margin-top: -3em;
+} */
 
 .btn-icon {
   font-weight: var(--txt-sbold);
@@ -243,7 +261,7 @@
 .feedback-con {
   position: relative;
   margin-top: 10rem;
-  margin-bottom: 6em;
+  margin-bottom: 2em;
   padding: 3rem;
   width: 100%;
   height: 100%;

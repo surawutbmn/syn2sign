@@ -95,13 +95,12 @@ import { Link } from "react-router-dom";
                 alt=""
               />
               <h2 className="txt-body3 txt-upper mt-4">
-                &ldquo;Syn of art and technology, the force of ideas combined
-                and brought into syn2sign&rdquo;
+                &ldquo;Syn of Art and Technology, the Force of Ideas Combined and Brought Into Syn2sign&rdquo;
               </h2>
             </Col>
             <Col xs={12} className="d-block d-md-none mt-4">
               {/* test */}
-              <p className="">Review Records (3★ Out of 20)</p>
+              <p className="" style={{ fontSize: "0.7em" }}>Review Records (3★ Out of 20)</p>
               <SocialContainer2>
                 {messagesContainer2.map((msg, index) => (
                   <SocialBox2 className="txt-body3 " key={index}>
@@ -130,7 +129,7 @@ import { Link } from "react-router-dom";
                           className="txt-upper txt-prim text-start txt-bold ms-3 mt-1"
                           style={{ fontSize: "1.25rem" }}
                         >
-                          {project.name_en}
+                          {project.name_en} 
                         </div>
                         <div className="txt-dark text-start ms-3 txt-body3">
                           {project.type}
@@ -163,10 +162,11 @@ import { Link } from "react-router-dom";
             >
               <h1>
                 <strong>
-                  0<span className="txt-prim">8*2</span>
+                  <span className="txt-prim ">0</span><span className="txt-light">8</span><span className="txt-prim ">*2</span>
+                  {/* 0<span className="txt-prim">8</span> */}
                 </strong>
               </h1>
-              <h4 className="txt-head3 txt-upper">projects</h4>
+              <h4 className="txt-head3 txt-upper">showcases</h4>
               <p className="d-none d-md-block txt-body">
                 Student Senior Project 2024 <br />
                 รวบรวมผลงานสำเร็จการศึกษา
@@ -180,13 +180,12 @@ import { Link } from "react-router-dom";
                 src={import.meta.env.VITE_BASE_URL+"images/s2s-logo/s2s-outline-logo.svg"}
                 alt=""
               />
-              <h2 className="txt-body3 txt-upper mt-4">
-                &ldquo;Syn of art and technology, the force of ideas combined
-                and brought into syn2sign&rdquo;
+              <h2 className="txt-body3  mt-4">
+                &ldquo;Syn of Art and Technology, the Force of Ideas Combined and Brought Into Syn2sign&rdquo;
               </h2>
             </Col>
             <Col xs={4} className="text-end mt-3 d-none d-md-block">
-              <p className="">Review Records (5★ Out of 20)</p>
+              <p className="" style={{ fontSize: "0.7em" }}>Review Records (20)</p>
               <SocialContainer>
                 {messages.map((msg, index) => (
                   <SocialBox className="txt-body3" key={index}>
@@ -289,8 +288,8 @@ import { Link } from "react-router-dom";
     background-color: rgba(255, 255, 255, 0.1); /* #fff at 10% opacity */
     padding: 20px; /* Reduced padding */
     margin-top: -60px; /* Adjusted margin */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
-
+    /* transition: background-color 0.3s, box-shadow 0.3s; */
+    transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
     &:before {
       content: "";
       position: absolute;
@@ -311,22 +310,22 @@ import { Link } from "react-router-dom";
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       z-index: -1;
-      transition: background 0.3s; /* Smooth transition for the gradient */
+      
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
-    }
+      
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
 
-    &:hover:before {
+    /* &:hover:before {
       background: linear-gradient(
         131deg,
         rgba(255, 255, 255, 0.5) 0%,
         rgba(255, 255, 255, 0.5) 50%,
         rgba(5, 186, 100, 0.8) 100%
       );
-    }
+    } */
 
     @media (min-width: 768px) {
       width: 210px; /* Original width for larger screens */

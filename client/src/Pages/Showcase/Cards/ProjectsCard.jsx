@@ -62,6 +62,7 @@ function ProjectCard({ project }) {
               )}
             </CreatorName>
           </CreatorSec>
+          
           <ImgThumb className="card-prj-thumb d-none d-md-flex">
             <img
               src={`${import.meta.env.VITE_BASE_URL}images/project_img/prj_thumb/${project.img_thumb}`}
@@ -127,13 +128,14 @@ const Title = styled.h4`
 `;
 const ImgThumb = styled.div`
   overflow: hidden;
-  border-radius: 1.2rem;
+  border-radius: 0rem 1.2rem 1.2rem 1.2rem;
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  padding-top: 56.25%; 
   background-color: #f0f0f0; /* Placeholder color */
 
   img {
+    /* padding: -1.2em -1em; */
     position: absolute;
     top: 0;
     left: 0;
@@ -147,13 +149,17 @@ const CardProjects = styled.div`
   padding: 1.2em 1em;
   border-radius: 1.2rem;
   overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
+
   &:hover {
     transform: scale3d(1.02, 1.02, 1.02);
-    transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
   }
   hr {
-    margin: 0.3em 0 1em 0;
+    
+    margin: 0.6em -1.2em .6em -1.2em;
     border: 0.05em solid;
+    /* display: none; */
+    /* visibility: hidden; */
   }
   .creators-icon {
     min-width: 4em;
@@ -201,7 +207,7 @@ const CardProjects = styled.div`
       height: 4em;
     }
     hr {
-      margin: 0.3em 0 1em 0;
+      margin: 0.6em -1.2em .6em -1.2em;
     }
   }
 `;

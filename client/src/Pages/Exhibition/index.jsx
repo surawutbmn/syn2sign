@@ -53,6 +53,7 @@ function Exhibition() {
       <div className="bg-gd-btr"></div>
       <BannerBox className="exh-banner-bg">
         <div className="exh-banner-overlay"></div>
+
         <img
           src={`${import.meta.env.VITE_BASE_URL}img/s2s-ele.svg`}
           alt="syn2sign element"
@@ -64,24 +65,25 @@ function Exhibition() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IoLogoGithub className="giticon" /> Syn2sign Website Repo
+            
           </a>
         </div>
-        <div className="exh-banner-content exh-txt-shadow">
-          <h1 className="txt-upper exh-txt-shadow">
+        <div className="exh-banner-content exh-txt-shadow mt-5">
+          {/* <h1 className="txt-upper exh-txt-shadow">
             The combination of art <br />
             and technology has lead to Syn2sign
-          </h1>
+          </h1> */}
           <h5>
             <strong>
               <MdLocationOn /> SPHERE GALLERY 1, M FLOOR, EMSPHERE
             </strong>
           </h5>
           <p>จำนวนผู้เข้าชมนิทรรศการ Syn2sign 26-29 June 2024 ~140 persons</p>
+         
         </div>
       </BannerBox>
       <Container className="">
-        <div className="exh-report-sec mb-6">
+        <div className="exh-report-sec mb-5">
           <Row xs={1} md={2} className=" g-4">
             <div className="col">
               <div className="card text-start">
@@ -220,6 +222,7 @@ function Exhibition() {
               loading="lazy"
             />
           </div>
+          <div className="text-start" style={{ fontSize: "0.7em" }}>Review Records (20)</div>
           <span className="txt-prim feedback-title">
             ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)
           </span>
@@ -259,6 +262,10 @@ function Exhibition() {
             </div> */}
           </div>
         </div>
+        <div className="mb-4">
+        <IoLogoGithub className="giticon" /> Syn2sign Website Repo (GitHub)
+        </div>
+
       </Container>
     </>
   );
@@ -270,8 +277,8 @@ const BannerBox = styled.div`
   position: relative;
   width: 100%;
   height: 40dvw;
-  margin-top: 3em;
-  margin-bottom: 4em;
+  margin-top: -5.5em;
+  margin-bottom: 2em;
   a {
     color: var(--color-light);
   }

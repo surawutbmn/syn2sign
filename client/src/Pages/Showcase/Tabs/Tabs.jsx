@@ -14,21 +14,21 @@ const TabIcon = styled.img`
 `;
 
 const TabButton = styled.div`
-  padding: 10px 20px;
+  padding: 10px  20px 10px 0 ;
   cursor: pointer;
   max-width: 40dvw;
   font-weight: var(--txt-bold);
   flex: 1;
-  border-bottom: 4px solid var(--color-grey);
+  border-bottom: 2px solid var(--color-grey);
   color: var(--color-grey);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 1.3rem;
   img {
     width: 1.9rem;
   }
   &.active {
     color: var(--color-primary);
-    border-bottom: 4px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
   }
   @media (max-width: 991.98px) {
     img {
@@ -55,26 +55,26 @@ const Tabs = ({ activeTab, onTabClick }) => (
       className={`tab ${activeTab === 1 ? "active" : ""}`}
       onClick={() => onTabClick(1)}
     >
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-start">
         <TabIcon
           src={import.meta.env.VITE_BASE_URL+"icon/prj-tab.svg"}
           alt="tab icon"
           className={`me-3 tab-icon ${activeTab === 1 ? "active" : ""}`}
         />
-        8 Projects
+        8 Showcases
       </div>
     </TabButton>
     <TabButton
       className={`tab ${activeTab === 2 ? "active" : ""}`}
       onClick={() => onTabClick(2)}
     >
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-start">
         <TabIcon
           src={import.meta.env.VITE_BASE_URL+"icon/creator-tab.svg"}
           className={`me-3 tab-icon ${activeTab === 2 ? "active" : ""}`}
           alt="tab icon"
         />
-        8*2 Creators
+        *2 = 16 Creators
       </div>
     </TabButton>
   </TabBtnCon>

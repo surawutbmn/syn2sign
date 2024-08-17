@@ -39,7 +39,7 @@ padding: 0;
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.4s ease, color 0.4s ease;
-    padding: 4px 20px;
+    padding: 4px 20px 2px 20px;
     font-weight: var(--txt-med);
 
 }

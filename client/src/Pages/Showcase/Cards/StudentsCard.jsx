@@ -12,6 +12,7 @@ const StudentCard = ({ student }) => (
             src= {import.meta.env.VITE_BASE_URL+"icon/read-more.svg"}
             alt="readmore icon"
             className="rdm-icon"
+            
           />
           <ReadMoreText className="rdm-text">SEE MORE</ReadMoreText>
         </ReadMore>
@@ -28,15 +29,18 @@ const StudentCard = ({ student }) => (
                 {student.nickname_en && `(${student.nickname_en})`}
               </Title>
               <Caption>
-                <span>{student.email}</span>
+                {/* <span>{student.email}</span> */}
                 {/* {student.name_th}{" "}
                 {student.nickname_th && `(${student.nickname_th})`} */}
-                <br />
-                เจ้าของผลงาน: #{student.project?.id ||
+                {/* <br /> */}
+                เจ้าของผลงาน: 
+                <span className="">
+                #{student.project?.id ||
                   student.project[0].id}{" "}
                 {student.project?.name_en ||
                   student.project[0].name_en ||
                   "Unknown"}
+                  </span>
               </Caption>
             </CardText>
           </CardOverlay>
@@ -67,7 +71,7 @@ export default StudentCard;
 
 const CardText = styled.div`
   transition: all 0.3s ease;
-  color: var(--color-light);
+  color: var(--color-dark);
   text-align: start;
   position: absolute;
   left: 1rem;
@@ -150,7 +154,7 @@ const CardOverlay = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(38, 46, 42, 0.6);
+  /* background: rgba(38, 46, 42, 0.6); */
   color: white;
   height: 25%;
   width: 100%;
@@ -201,11 +205,10 @@ const ReadMore = styled.div`
   }
 `;
 const ReadMoreIcon = styled.img`
-  filter: brightness(0) saturate(100%) invert(1%) sepia(12%) saturate(6%)
-    hue-rotate(314deg) brightness(93%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(55%) sepia(24%) saturate(7224%) hue-rotate(118deg) brightness(96%) contrast(96%);
   opacity: 0.8;
   transition: all 0.3s ease;
-  max-width: 4rem;
+  max-width: 2.5rem;
   @media (max-width: 767.98px) {
     max-width: 2rem;
   }
@@ -226,7 +229,9 @@ const CardStudents = styled.div`
   position: relative;
   border-radius: 1rem;
   height: auto;
-  &:hover .rdm-icon {
+  transition: transform 0.3s cubic-bezier(0.37, -0.59, 0.71, 1.44);
+
+  /* &:hover .rdm-icon {
     filter: brightness(0) saturate(100%) invert(100%) sepia(72%) saturate(79%)
       hue-rotate(308deg) brightness(113%) contrast(92%);
     opacity: 0.8;
@@ -246,7 +251,11 @@ const CardStudents = styled.div`
   }
   &:hover .std-card-overlay {
     height: 100%;
-  }
+  } */
+
+    &:hover  {
+      transform: scale3d(1.02, 1.02, 1.02);
+    } 
 
   @media (max-width: 767.98px) {
     border-radius: 0.7rem;

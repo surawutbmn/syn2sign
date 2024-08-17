@@ -65,7 +65,7 @@ export const Nav2 = () => {
               className={`navbar-collapse ${menuOpen ? "show" : ""}`}
               id="navbarText"
             >
-              <Nav className="nav-r txt-upper ms-auto mb-2 mb-lg-0">
+              <Nav className="nav-r  ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <NavLink
                     to="/"
@@ -105,7 +105,7 @@ export const Nav2 = () => {
                       menuClick();
                     }}
                   >
-                    exhibition
+                    Exhibition
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -119,7 +119,7 @@ export const Nav2 = () => {
                       menuClick();
                     }}
                   >
-                    CREDIT
+                    Credit
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -133,7 +133,7 @@ export const Nav2 = () => {
                       menuClick();
                     }}
                   >
-                    STAY TUNE
+                    Stay tune
                   </NavLink>
                 </li>
               </Nav>
