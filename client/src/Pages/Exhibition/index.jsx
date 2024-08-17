@@ -68,7 +68,7 @@ function Exhibition() {
             
           </a>
         </div>
-        <div className="exh-banner-content exh-txt-shadow mt-5">
+        <div className="exh-banner-content exh-txt-shadow">
           {/* <h1 className="txt-upper exh-txt-shadow">
             The combination of art <br />
             and technology has lead to Syn2sign
@@ -263,7 +263,10 @@ function Exhibition() {
           </div>
         </div>
         <div className="mb-4">
-        <IoLogoGithub className="giticon" /> Syn2sign Website Repo (GitHub)
+          <a href="https://github.com/surawutbmn/syn2sign" target="_blank" style={{ textDecoration: "", color: "inherit" }}>
+          <IoLogoGithub className="giticon" /> Syn2sign Website Repo (GitHub)
+          </a>
+
         </div>
 
       </Container>
@@ -287,7 +290,7 @@ const BannerBox = styled.div`
     background-size: 100%;
   }
   @media (max-width: 575.98px) {
-    margin-top: 0.8em;
+    margin-top: -5.5em;
     margin-bottom: 1.5em;
     &.exh-banner-bg {
       height: 55dvw;

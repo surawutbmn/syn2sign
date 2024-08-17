@@ -50,8 +50,17 @@
 }
 .exh-banner-content {
   position: relative;
-  top: 85%;
+  top: 90%;
   transform: translate(0, -85%);
+  @media (max-width: 991.98px) {
+    top: 90%;
+  }
+  @media (max-width: 767.98px) {
+    top: 85%;
+  }
+  @media (max-width: 575.98px) {
+    top: 55%;
+  }
 }
 .git-link {
   font-size: 1rem;
