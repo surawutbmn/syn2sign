@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
       if (projects && projects.length > 0) {
         setAnimate(true);
         // Reset animation state after animation completes (adjust timing as needed)
-        const timer = setTimeout(() => setAnimate(false), 500);
+        const timer = setTimeout(() => setAnimate(false), 700);
         return () => clearTimeout(timer);
       }
     }, [projects]);
@@ -81,7 +81,7 @@ import { Link } from "react-router-dom";
           }
         >
           <Row className="align-items-start mb-5 mt-3">
-            <Col xs={6} className="text-start d-block d-md-none">
+            <Col xs={5} className="text-start d-block d-md-none">
               <h1>
                 <strong>
                   <span className="txt-prim">8*2</span>
@@ -89,7 +89,7 @@ import { Link } from "react-router-dom";
                 <h4 className="txt-head3 txt-upper">projects</h4>
               </h1>
             </Col>
-            <Col xs={6} className="d-block d-md-none">
+            <Col xs={7} className="d-block d-md-none">
               <p className="txt-body3 text-end">
                 Student Senior Project 2024 <br />
                 รวบรวมผลงานสำเร็จการศึกษา
@@ -109,7 +109,7 @@ import { Link } from "react-router-dom";
             </Col>
             <Col xs={12} className="d-block d-md-none mt-4">
               {/* test */}
-              <p className="" style={{ fontSize: "0.7em" }}>Review Records (20)</p>
+              <p className="" style={{ fontSize: "0.7em" }}>Review June '24 Onward Exhibition Records (20)</p>
               <SocialContainer2>
                 {messagesContainer2.map((msg, index) => (
                   <SocialBox2 className="txt-body3 " key={index}>
@@ -123,7 +123,7 @@ import { Link } from "react-router-dom";
                 style={{ marginTop: "5rem" }}
                 xs={6}
                 className={`d-flex text-end d-block d-md-none ${
-                  index === 0 ? "justify-content-end" : "justify-content-start"
+                  index === 0 ? "justify-content-end " : "justify-content-start "
                 }${animate ? "card-animate" : ""}`}
                 key={index}
               >
@@ -194,7 +194,7 @@ import { Link } from "react-router-dom";
               </h2>
             </Col>
             <Col xs={4} className="text-end mt-3 d-none d-md-block">
-              <p className="" style={{ fontSize: "0.7em" }}>Review Records (20)</p>
+              <p className="" style={{ fontSize: "0.7em" }}>Review June '24 Onward Exhibition Records (20)</p>
               <SocialContainer>
                 {messages.map((msg, index) => (
                   <SocialBox className="txt-body3" key={index}>
@@ -207,11 +207,12 @@ import { Link } from "react-router-dom";
             {projects.map((project, index) => (
               <Col
                 xs={6}
-                className={`d-flex text-end ${
-                  index === 0 ? "justify-content-end" : "justify-content-start"
-                } ${animate ? "card-animate" : ""}`}
+                className={`d-none d-md-flex text-end ${
+                  index === 0 ? "justify-content-end " : "justify-content-start "
+                } ${animate ? " card-animate" : ""}`}
                 key={index}
               >
+                
                 <Link
                   to={`/showcase/projects/${project.project_id}`}
                   className="d-none d-md-block"
@@ -352,7 +353,7 @@ const FrontBox = styled.div`
   border-radius: 10px; /* Rounded corners */
   bottom: 0px;
   left: 40%;
-  transform: translateX(-50%); /* Center horizontally on mobile */
+  transform: translateX(-50%); 
   z-index: 1; /* Ensure it's on top of DeviceBox */
   top: 100px; /* Adjust the top positioning for larger screens if needed */
   @media (min-width: 768px) {

@@ -109,21 +109,21 @@ function App() {
           break;
            
       case "/exhibition":
-        setTitle("EXHIBITION ARCHIVE - Syn2sign Senior Project Exhibition 2024");
+        setTitle("Exhibition Archive - Syn2sign Senior Project Exhibition 2024");
         setMetaTags({
           description: "Browse our exhibition archive.",
           image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
       case "/credit":
-        setTitle("CREDIT - Syn2sign Senior Project Exhibition 2024");
+        setTitle("Exhibition Archive - Syn2sign Senior Project Exhibition 2024");
         setMetaTags({
           description: "Credits for the Syn2sign Senior Project Exhibition 2024.",
           image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",
         });
         break;
       case "/stay-tune":
-        setTitle("STAY TUNE - Syn2sign Senior Project Exhibition 2024");
+        setTitle("Stay Tune - Syn2sign Senior Project Exhibition 2024");
         setMetaTags({
           description: "Stay tuned for more updates.",
           image: "https://img5.pic.in.th/file/secure-sv1/syn2sign-og.png",

@@ -123,14 +123,14 @@ function Exhibition() {
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
-                      <strong>Exhibition brife report</strong>
+                      <strong>Exhibition report</strong>
                       <LuArrowUpRight size={20} />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ ที่เกี่ยวข้องกับนิทรรศการแสดง
-                      ผลงานสำเร็จการศึกษาของนักศึกษา syn2sign Senior Project
+                      รายงานฉบับสมบูรณ์ ที่เกี่ยวข้องกับนิทรรศการแสดง
+                      ผลงานสำเร็จการศึกษาของนักศึกษา Syn2sign Senior Project
                       Exhibition 2024
                     </p>
                     <br className="d-xl-none d-block" />
@@ -182,13 +182,13 @@ function Exhibition() {
                   <div className="exh-ovl"></div>
                   <div className="card-body">
                     <h3 className="card-exh-title txt-upper">
-                      <strong>T-Shirt brife report</strong>
+                      <strong>T-Shirt report</strong>
                       <LuArrowUpRight size={20} />
                     </h3>
                     <span className="txt-grey">(Data Collection, PDF)</span>
 
                     <p className="card-text mt-4">
-                      รายงานฉบับย่อ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ
+                      รายงานฉบับสมบูรณ์ การเปิดจำหน่ายเสื้อยืดโอกาสพิเศษ
                       ของนักศึกษาวิชาเอกอินเทอร์แอคทีฟแอปพลิเคชัน ชั้นปีที่ 4
                       ปีการศึกษา 2566
                     </p>
@@ -222,7 +222,7 @@ function Exhibition() {
               loading="lazy"
             />
           </div>
-          <div className="text-start" style={{ fontSize: "0.7em" }}>Review Records (20)</div>
+          <div className="text-start" style={{ fontSize: "0.7em" }}>Review June '24 Onward Exhibition Records (20)</div>
           <span className="txt-prim feedback-title">
             ส่งมอบพลังและกำลังใจถึงผู้จัดงาน (จากผู้ร่วมงาน)
           </span>
