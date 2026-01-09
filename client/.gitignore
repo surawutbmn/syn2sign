@@ -24,6 +24,7 @@ syn2sign.zip
 !.vscode/extensions.json
 .idea
 .DS_Store
+.htaccess
 *.suo
 *.ntvs*
 *.njsproj
