@@ -13,6 +13,7 @@ dist.zip
 dist-ssr
 syn2sign
 syn2sign.zip
+package-lock.json
 .env
 .env.example
 .env.local
